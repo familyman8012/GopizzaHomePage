@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "ComponentsFarm/*": ["./components/*"],
+      "LibFarm/*": ["./src/lib/*"],
+      "HookFarm/*": ["./src/hook/*"],
+      "ApiFarm/*": ["./src/api/*"],
+      "PagesFarm/*": ["./pages/*"],
+      "InterfaceFarm/*": ["./src/interface/*"],
+      "MobxFarm/*": ["./src/mobx/*"],
+      "FontFarm/*": ["./public/font/*"]
+    }
+  }
+}
