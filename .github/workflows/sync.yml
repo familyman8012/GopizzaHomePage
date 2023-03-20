@@ -20,7 +20,8 @@ jobs:
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "noreply@example.com"
-          git remote add destination https://$PERSONAL_ACCESS_TOKEN@github.com/$DESTINATION_REPOSITORY.git
+          git remote add destination https://$PERSONAL_ACCESS_TOKEN@github.com/$DESTINATION_REPOSITORY
+          git fetch destination
           git checkout $DESTINATION_BRANCH
-          git pull destination $DESTINATION_BRANCH
+          git pull destination $DESTINATION_BRANCH --rebase
           git push destination $DESTINATION_BRANCH
