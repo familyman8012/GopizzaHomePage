@@ -8,8 +8,6 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout source repository
         uses: actions/checkout@v2
@@ -20,8 +18,8 @@ jobs:
           DESTINATION_REPOSITORY: futureplanning/homepage
           DESTINATION_BRANCH: master
         run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "noreply@example.com"
+          git config --global user.name "yuneunsuk"
+          git config --global user.email "familyman80@naver.com"
           git remote add destination https://$PERSONAL_ACCESS_TOKEN@github.com/$DESTINATION_REPOSITORY.git
           git checkout $DESTINATION_BRANCH
           git pull destination $DESTINATION_BRANCH
