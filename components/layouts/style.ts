@@ -52,15 +52,18 @@ export const HeaderWrap = styled.header`
       }
     }
   }
+
+  @media (max-width: 400px) {
+    &.off .pop_mobile_not {
+      display: none;
+    }
+  }
+
   .pop_mobile_not {
     display: none;
 
     @media (max-width: 400px) {
       display: block;
-
-      &.off {
-        display: none;
-      }
     }
     position: fixed;
     z-index: 9999;
