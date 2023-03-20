@@ -23,6 +23,6 @@ jobs:
           git remote add destination https://$PERSONAL_ACCESS_TOKEN@github.com/$DESTINATION_REPOSITORY
           git fetch destination
           git checkout $DESTINATION_BRANCH
-          git pull destination $DESTINATION_BRANCH --allow-unrelated-histories
+          git pull --no-rebase destination $DESTINATION_BRANCH
           git merge origin/$DESTINATION_BRANCH --allow-unrelated-histories -X ours
           git push destination $DESTINATION_BRANCH
