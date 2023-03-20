@@ -1,26 +1,30 @@
-name: Sync to Personal Repo
+name: git push into another repo to deploy to vercel
 
 on:
   push:
-    branches:
-      - master # 조직 계정의 기본 브랜치
+    branches: [main]
 
 jobs:
-  sync:
+  build:
     runs-on: ubuntu-latest
+    container: pandoc/latex
     steps:
-      - name: Checkout source repository
-        uses: actions/checkout@v2
-
-      - name: Push to personal repository
+      - uses: actions/checkout@v2
+      - name: Install mustache (to update the date)
+        run: apk add ruby && gem install mustache
+      - name: creates output
+        run: sh ./build.sh
+      - name: Pushes to another repository
+        id: push_directory
+        uses: cpina/github-action-push-to-another-repository@main
         env:
-          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          DESTINATION_REPOSITORY: futureplanning/homepage
-          DESTINATION_BRANCH: master
-        run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "noreply@example.com"
-          git remote add destination https://x-access-token:$PERSONAL_ACCESS_TOKEN@github.com/$DESTINATION_REPOSITORY
-          git checkout $DESTINATION_BRANCH
-          git pull --no-rebase destination $DESTINATION_BRANCH --allow-unrelated-histories
-          git push destination $DESTINATION_BRANCH
+          API_TOKEN_GITHUB: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        with:
+          source-directory: "output"
+          destination-github-username: [futureplanning]
+          destination-repository-name: [homepage]
+          user-email: ${{ secrets.OFFICIAL_ACCOUNT_EMAIL }}
+          commit-message: ${{ github.event.commits[0].message }}
+          target-branch: main
+      - name: Test get variable exported by push-to-another-repository
+        run: echo $DESTINATION_CLONED_DIRECTORY
