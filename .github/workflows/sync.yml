@@ -20,9 +20,7 @@ jobs:
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "noreply@example.com"
-          git remote add destination https://$PERSONAL_ACCESS_TOKEN@github.com/$DESTINATION_REPOSITORY
-          git fetch destination
+          git remote add destination https://$PERSONAL_ACCESS_TOKEN@github.com/$DESTINATION_REPOSITORY.git
           git checkout $DESTINATION_BRANCH
-          git pull --no-rebase destination $DESTINATION_BRANCH
-          git merge origin/$DESTINATION_BRANCH --allow-unrelated-histories -X ours
+          git pull destination $DESTINATION_BRANCH
           git push destination $DESTINATION_BRANCH
