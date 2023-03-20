@@ -18,9 +18,9 @@ jobs:
           DESTINATION_REPOSITORY: futureplanning/homepage
           DESTINATION_BRANCH: master
         run: |
-          git config --global user.name "yuneunsuk"
-          git config --global user.email "familyman80@naver.com"
-          git remote add destination https://$PERSONAL_ACCESS_TOKEN@github.com/$DESTINATION_REPOSITORY.git
+          git config --global user.name "GitHub Action"
+          git config --global user.email "noreply@example.com"
+          git remote add destination https://x-access-token:$PERSONAL_ACCESS_TOKEN@github.com/$DESTINATION_REPOSITORY
           git checkout $DESTINATION_BRANCH
-          git pull destination $DESTINATION_BRANCH
+          git pull --no-rebase destination $DESTINATION_BRANCH
           git push destination $DESTINATION_BRANCH
