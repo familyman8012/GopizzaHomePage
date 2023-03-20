@@ -14,6 +14,14 @@ jobs:
         run: apk add ruby && gem install mustache
       - name: creates output
         run: sh ./build.sh
+      - name: Check output directory
+        run: |
+          if [ -d "output" ]; then
+            echo "Output directory exists"
+          else
+            echo "Output directory does not exist"
+            exit 1
+          fi
       - name: Pushes to another repository
         id: push_directory
         uses: cpina/github-action-push-to-another-repository@master
