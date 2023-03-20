@@ -16,7 +16,7 @@ jobs:
         env:
           PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           DESTINATION_REPOSITORY: futureplanning/homepage
-          DESTINATION_BRANCH: master
+          DESTINATION_BRANCH: main
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "noreply@example.com"
