@@ -27,7 +27,7 @@ export const fetchEventVideoVisual = async () => {
 
 export const fetchInstaFeed = async () => {
   const data = await AxiosUtil.get(
-    `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&limit=5&access_token=${process.env.INSTAGRAM_KEY}`
+    `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&limit=8&access_token=${process.env.INSTAGRAM_KEY}`
   );
 
   return data.data;
