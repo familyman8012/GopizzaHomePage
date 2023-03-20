@@ -1,0 +1,26 @@
+name: Sync to Personal Repo
+
+on:
+  push:
+    branches:
+      - master # 조직 계정의 기본 브랜치
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source repository
+        uses: actions/checkout@v2
+
+      - name: Push to personal repository
+        env:
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          DESTINATION_REPOSITORY: futureplanning/homepage.git
+          DESTINATION_BRANCH: master
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "noreply@example.com"
+          git remote add destination https://$PERSONAL_ACCESS_TOKEN@github.com/$DESTINATION_REPOSITORY.git
+          git checkout $DESTINATION_BRANCH
+          git pull destination $DESTINATION_BRANCH
+          git push destination $DESTINATION_BRANCH
