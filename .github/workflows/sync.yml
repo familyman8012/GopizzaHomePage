@@ -22,5 +22,5 @@ jobs:
           git config --global user.email "noreply@example.com"
           git remote add destination https://x-access-token:$PERSONAL_ACCESS_TOKEN@github.com/$DESTINATION_REPOSITORY
           git checkout $DESTINATION_BRANCH
-          git pull --no-rebase destination $DESTINATION_BRANCH
+          git pull --no-rebase destination $DESTINATION_BRANCH --allow-unrelated-histories
           git push destination $DESTINATION_BRANCH
