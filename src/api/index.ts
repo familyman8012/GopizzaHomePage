@@ -7,7 +7,7 @@ export interface AxiosUtilResponse<T> {
 }
 
 const getBaseUrl = () => {
-  let reVal = "http://dev.api.gopizza.kr";
+  let reVal = "http://api.gopizza.kr";
 
   let host;
   if (typeof window !== "undefined") {
@@ -17,9 +17,9 @@ const getBaseUrl = () => {
   const hostSplit = host?.split(".");
 
   if (hostSplit && hostSplit[0] === "dev") {
-    reVal = "http://dev.api.gopizza.kr";
+    reVal = "http://api.gopizza.kr";
   } else if ((hostSplit && hostSplit[0] === "192") || (hostSplit && hostSplit[0].indexOf("localhost") >= 0) || (hostSplit && hostSplit[0] === "local")) {
-    reVal = "http://dev.api.gopizza.kr";
+    reVal = "http://api.gopizza.kr";
     //reVal = "http://feature.api.gopizza.kr";
     //reVal = "http://api.gopizza.kr";
     // reVal = "http://192.168.0.10:8000";
