@@ -17,10 +17,6 @@ function Index({ storeInfo2 }: { storeInfo2: IStoreSearch[] }) {
   const [storeData, setStoreData] = useState<IStoreSearch[]>([]);
   const { sido, sigugun } = hangjungdong;
 
-  const res = fetchStoreSearch();
-
-  console.log("fetchStoreSearch()", res);
-
   //타이머
   useEffect(() => {
     if (1 > timer) {

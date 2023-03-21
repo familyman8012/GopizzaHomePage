@@ -3,16 +3,11 @@ import { menuItem, menuTab } from "ComponentsFarm/pageComp/menu/constant";
 import { MenuList, MenuVisual, MenuWrap } from "ComponentsFarm/pageComp/menu/style";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Image from "next/image";
-import React, { useMemo, useRef } from "react";
-import Dialog from "ComponentsFarm/common/Dialog";
-import styled from "@emotion/styled";
+import { useMemo, useRef } from "react";
 import Tip from "ComponentsFarm/popup/Tip";
 import Head from "next/head";
-import { MenuSeo, Seo } from "ComponentsFarm/Seo";
-import { NextSeo } from "next-seo";
 
-function Menu({ seo }: { seo: object }) {
+function Menu() {
   const router = useRouter();
   const popref = useRef<any>(null);
   const category = ["/pizza", "/pasta", "/tteokbokki", "/sides", "/set", "/powertime"];
