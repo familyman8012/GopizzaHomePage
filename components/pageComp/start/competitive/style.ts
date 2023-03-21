@@ -484,34 +484,86 @@ export const GovenWrap = styled.section`
     }
 
     .tit2 {
-      display: flex;
+      position: relative;
+
       margin-bottom: 3.8rem;
       font-family: "solano";
       font-size: 16rem;
       font-weight: bold;
+
+      &:before {
+        position: absolute;
+        content: "";
+        top: 7.9rem;
+        left: 36.8rem;
+        display: block;
+        width: 64.4rem;
+        height: 1rem;
+        background: var(--color-orange);
+      }
+
+      &.line3 {
+        &:before {
+          width: 40rem;
+          margin-left: 41.8rem;
+        }
+      }
+
+      .swiper-button-prev2,
+      .swiper-button-next2 {
+        position: absolute;
+        z-index: 10;
+        right: 0;
+        width: 2.6rem;
+        height: 1.7rem;
+        padding: 0 2.5rem;
+        cursor: pointer;
+      }
+
+      .swiper-button-prev2 {
+        top: 5.3rem;
+        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/arrow_goven_up.svg") no-repeat center;
+      }
+      .swiper-button-next2 {
+        top: 9.3rem;
+        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/arrow_goven_down.svg") no-repeat center;
+      }
+
+      span {
+        font-family: "solano";
+        line-height: 1;
+
+        &.txt2 {
+          margin-left: 72.6rem;
+        }
+      }
+
+      .swiper {
+        height: 16rem;
+
+        .swiper-slide {
+          display: flex;
+        }
+      }
 
       span {
         color: var(--color-orange);
 
         &:last-of-type {
           display: flex;
-
-          &:before {
-            content: "";
-            display: block;
-            width: 64.4rem;
-            height: 1rem;
-            margin: 7.9rem 4.1rem 3.7rem;
-            background: var(--color-orange);
-          }
         }
       }
+    }
+
+    .box_thumb {
+      height: 74.2rem;
     }
 
     ${TxtQuotes} {
       margin-top: 4rem;
     }
   }
+
   .wrap_rating {
     .txt {
       display: flex;

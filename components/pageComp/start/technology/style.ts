@@ -58,7 +58,7 @@ export const GopizzaTechWrap = styled.section`
           width: 1.1rem;
           height: 1rem;
           margin: 1.8rem 0 0 0.8rem;
-          background: url("/images/start/tech/arrow_tech.svg") no-repeat left top;
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/tech/arrow_tech.svg") no-repeat left top;
         }
       }
       dd {

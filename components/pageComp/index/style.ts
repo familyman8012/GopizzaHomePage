@@ -113,7 +113,7 @@ export const IndexWrap = styled.main`
         width: 82.5px;
         height: 75.5px;
         margin: 0 auto 28px;
-        background: url("/images/common/ico_mobile_not.svg") no-repeat left top / 100%;
+        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_mobile_not.svg") no-repeat left top / 100%;
       }
 
       .box_txt {

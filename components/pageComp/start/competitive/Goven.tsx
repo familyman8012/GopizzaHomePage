@@ -2,24 +2,13 @@ import React from "react";
 import { Bnr, GovenWrap, TxtQuotes } from "./style";
 import { SwiperSlide } from "swiper/react";
 import VisibilitySensorSwiper from "ComponentsFarm/common/VisibilitySensorSwiper";
+import GovenRolling from "./GovenRolling";
 
 function Operation() {
   return (
     <GovenWrap>
       <div className="wrap_inner">
-        <div className="box_title">
-          <h5>
-            <div className="tit1">편리하고 빠른 자동화덕</div>
-            <div className="tit2">
-              <span className="txt1">GOVEN</span>
-              <span className="txt2">2.0</span>
-            </div>
-          </h5>
-          <div className="box_btn"></div>
-        </div>
-        <div className="box_thumb">
-          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/img_goven1.webp" alt="고븐2.0" />
-        </div>
+        <GovenRolling />
         <TxtQuotes>
           <strong className="txt1">
             누구든지 손쉽게
