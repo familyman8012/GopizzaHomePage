@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useMemo } from "react";
 import Nutrient from "ComponentsFarm/popup/Nutrient";
 import { NextSeo } from "next-seo";
+import Head from "next/head";
 
 function DetailView({ seo }: any) {
   const router = useRouter();
@@ -63,7 +64,32 @@ function DetailView({ seo }: any) {
 
   return (
     <>
-      <NextSeo {...seo} />
+      <Head>
+        <title>MENU | 고피자</title>
+        <meta name="twitter:site" content="@gopizza" />
+        <meta property="og:type" content="website" />
+        <meta
+          name="description"
+          content="고피자에서는 다양한 종류의 맛있는 피자와 함께 파스타, 떡볶이, 다양한 사이드들과 함께하는 즐거운 시간을 제공합니다. 치킨앤콘 반반 피자, 슈퍼 콤비네이션 피자, K-불고기 피자 등 다양한 메뉴를 만나보세요."
+        />
+        <meta property="og:title" content="MENU | 고피자" />
+        <meta
+          property="og:description"
+          content="고피자에서는 다양한 종류의 맛있는 피자와 함께 파스타, 떡볶이, 다양한 사이드들과 함께하는 즐거운 시간을 제공합니다. 치킨앤콘 반반 피자, 슈퍼 콤비네이션 피자, K-불고기 피자 등 다양한 메뉴를 만나보세요."
+        />
+        <meta property="og:url" content="https://gopizzahometest.vercel.app/menu" />
+        <meta property="og:image" content="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/img_menu_visual1x2.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@gopizza" />
+        <meta name="twitter:site" content="@gopizza" />
+        <meta name="twitter:title" content="MENU | 고피자" />
+        <meta name="twitter:url" content="https://gopizzahometest.vercel.app/menu" />
+        <meta
+          name="twitter:description"
+          content="고피자에서는 다양한 종류의 맛있는 피자와 함께 파스타, 떡볶이, 다양한 사이드들과 함께하는 즐거운 시간을 제공합니다. 치킨앤콘 반반 피자, 슈퍼 콤비네이션 피자, K-불고기 피자 등 다양한 메뉴를 만나보세요."
+        />
+        <meta name="twitter:image" content="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/img_menu_visual1x2.webp"></meta>
+      </Head>
       <MenuWrap>
         <Detail>
           <h2 className="tit">메뉴</h2>
@@ -150,39 +176,39 @@ function DetailView({ seo }: any) {
 
 export default DetailView;
 
-export const getServerSideProps = async (context: any) => {
-  const { idx } = context.query;
+// export const getServerSideProps = async (context: any) => {
+//   const { idx } = context.query;
 
-  const menuSeoData = {
-    canonical: `https://gopizzahometest.vercel.app/menu/detail/${idx}`,
-    title: `${menuDetail[`${idx}`].name} | 고피자`,
-    description: `${menuDetail[`${idx}`].txt}, 고피자의 ${menuDetail[`${idx}`].name}`,
+//   const menuSeoData = {
+//     canonical: `https://gopizzahometest.vercel.app/menu/detail/${idx}`,
+//     title: `${menuDetail[`${idx}`].name} | 고피자`,
+//     description: `${menuDetail[`${idx}`].txt}, 고피자의 ${menuDetail[`${idx}`].name}`,
 
-    openGraph: {
-      type: "website",
-      title: `${menuDetail[`${idx}`].name} | 고피자`,
-      description: `${menuDetail[`${idx}`].txt}, 고피자의 ${menuDetail[`${idx}`].name}`,
-      url: `https://gopizzahometest.vercel.app/menu/detail/${idx}`,
-      images: [
-        {
-          url: `https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/${menuDetail[`${idx}`]?.category}/${idx}x2.webp`,
-          alt: `${menuDetail[`${idx}`].name}`,
-        },
-      ],
-      site_name: "고피자",
-    },
-    twitter: {
-      card: "summary_large_image",
-      site: "@gopizza",
-      title: `${menuDetail[`${idx}`].name} | 고피자`,
-      description: `${menuDetail[`${idx}`].txt}, 고피자의 ${menuDetail[`${idx}`].name}`,
-      image: {
-        url: `https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/${menuDetail[`${idx}`]?.category}/${idx}x2.webp`,
-      },
-    },
-  };
+//     openGraph: {
+//       type: "website",
+//       title: `${menuDetail[`${idx}`].name} | 고피자`,
+//       description: `${menuDetail[`${idx}`].txt}, 고피자의 ${menuDetail[`${idx}`].name}`,
+//       url: `https://gopizzahometest.vercel.app/menu/detail/${idx}`,
+//       images: [
+//         {
+//           url: `https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/${menuDetail[`${idx}`]?.category}/${idx}x2.webp`,
+//           alt: `${menuDetail[`${idx}`].name}`,
+//         },
+//       ],
+//       site_name: "고피자",
+//     },
+//     twitter: {
+//       card: "summary_large_image",
+//       site: "@gopizza",
+//       title: `${menuDetail[`${idx}`].name} | 고피자`,
+//       description: `${menuDetail[`${idx}`].txt}, 고피자의 ${menuDetail[`${idx}`].name}`,
+//       image: {
+//         url: `https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/${menuDetail[`${idx}`]?.category}/${idx}x2.webp`,
+//       },
+//     },
+//   };
 
-  return {
-    props: { seo: menuSeoData },
-  };
-};
+//   return {
+//     props: { seo: menuSeoData },
+//   };
+// };
