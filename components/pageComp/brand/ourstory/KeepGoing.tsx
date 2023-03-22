@@ -101,7 +101,7 @@ function KeepGoing() {
                 spaceBetween={30}
                 breakpoints={{
                   320: {
-                    spaceBetween: 20,
+                    spaceBetween: 10,
                   },
                   800: {
                     spaceBetween: 30,
