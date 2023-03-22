@@ -34,9 +34,6 @@ export const StartWrap = styled.div`
   &.info {
     padding-bottom: 22.4rem;
 
-    h2.tit {
-      margin-top: 0;
-    }
     .tit_desc {
       opacity: 0.5;
       margin: 6.2rem 0 3.2rem;

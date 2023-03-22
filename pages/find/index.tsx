@@ -19,7 +19,7 @@ function Index({ storeInfo2 }: { storeInfo2: IStoreSearch[] }) {
 
   //타이머
   useEffect(() => {
-    if (1 > timer) {
+    if (3 > timer) {
       setTimeout(() => {
         setTimer((prev) => prev + 1);
       }, 2000);
@@ -168,7 +168,7 @@ function Index({ storeInfo2 }: { storeInfo2: IStoreSearch[] }) {
             <div className="box_spinner">
               <div className="location_indicator"></div>
             </div>
-            {timer > 0 ? (
+            {timer > 2 ? (
               <div className="box_basicInfo">
                 <p>현재 고객님의 위치정보를 가져올 수 없습니다.</p>
                 <button onClick={handlerTimeOut}>기본목록 불러오기</button>

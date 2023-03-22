@@ -11,7 +11,7 @@ import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 
 const FormWrap = styled.div`
-  margin: 11rem 0 0 11rem;
+  margin: 11rem 0 0 0;
   padding-bottom: 11.95rem;
   border-bottom: 1px solid #e6e6e6;
 

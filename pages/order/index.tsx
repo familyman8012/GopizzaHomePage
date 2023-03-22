@@ -31,17 +31,17 @@ const Bnr = styled.div`
   .div_img1 {
     width: 128.2rem;
     height: 198.5rem;
-    background: url("/images/order/group/img_group_bnr1.webp") no-repeat left top / auto 100%;
+    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/img_group_bnr1.webp") no-repeat left top / auto 100%;
   }
   .div_img2 {
     width: 128.2rem;
     height: 48.7rem;
-    background: url("/images/order/group/bg_group_bnr2.webp") no-repeat left top / auto 100%;
+    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/bg_group_bnr2.webp") no-repeat left top / auto 100%;
   }
   .div_img3 {
     width: 128.2rem;
     height: 178.3rem;
-    background: url("/images/order/group/img_group_bnr3.webp") no-repeat left top / auto 100%;
+    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/img_group_bnr3.webp") no-repeat left top / auto 100%;
   }
 `;
 
@@ -56,7 +56,7 @@ function Group() {
           </div>
         </div>
         <div className="div_img2">
-          <VisibilitySensorSwiper view={1}>
+          <VisibilitySensorSwiper view={1} delay={2000}>
             <SwiperSlide>
               <img
                 src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/bnr_pizza1x2.webp"

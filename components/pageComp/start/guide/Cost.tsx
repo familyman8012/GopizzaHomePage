@@ -51,7 +51,8 @@ function Cost() {
         <span className="txt">개설 비용 안내</span>
       </h4>
       <p className="notice">
-        <span>15평 기준(vat별도)</span>
+        <span className="txt1">매장 형태 및 상황에 따라 금액이 변동 될 수 있으며, 동일한 평수라도 요구사항에 따라 상이할 수 있습니다.</span>
+        <span className="txt2">15평 기준(vat별도)</span>
       </p>
       <table>
         <caption>개설비용안내표</caption>

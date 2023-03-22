@@ -160,7 +160,14 @@ export const CostWrap = styled.section`
       text-align: center;
       font-weight: bold;
       border: 1px solid #ddd;
-
+      &:nth-of-type(1) {
+        border-left: none;
+      }
+      &:nth-of-type(3) {
+        border-right: none;
+      }
+    }
+    td {
       &:nth-of-type(1) {
         background: #fbfbfb;
       }
@@ -179,6 +186,7 @@ export const CostWrap = styled.section`
       padding: 3.15rem 0;
       font-size: 2.4rem;
       border-bottom: 0;
+      background: rgb(255, 70, 0, 0.1);
       &:nth-of-type(1) {
         width: 33.7rem;
       }

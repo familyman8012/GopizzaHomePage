@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { RegionWrap } from "../style";
 
 const FormWrap = styled.div`
-  margin: 11rem 0 0 11rem;
+  margin: 11rem 0 0 0;
   padding-bottom: 11.95rem;
 
   h4 {

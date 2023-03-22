@@ -140,7 +140,8 @@ export const RedBox = styled.div`
   position: relative;
   z-index: -1;
   padding-bottom: 20.2rem;
-  background: #fd4600;
+
+  background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/howwemake/bg_gobot.webp") #fd4600 no-repeat right bottom / 98.9rem 87.3rem;
 
   video {
     width: 100%;
@@ -279,6 +280,7 @@ export const AiSmartWrap = styled.div`
 
 export const GobotStationWrap = styled.section`
   margin-top: 23.9rem;
+
   h4 {
     margin-right: 5.6rem;
     span {
