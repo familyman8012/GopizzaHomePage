@@ -49,10 +49,10 @@ function VisibilitySensorSwiper({ children, view = 1, viewBetween = 40, paging, 
           }}
           breakpoints={{
             320: {
-              spaceBetween: 10,
+              spaceBetween: view === 1 ? 0 : 10,
             },
             800: {
-              spaceBetween: 30,
+              spaceBetween: view === 1 ? 0 : 30,
             },
             1200: {
               spaceBetween: view === 1 ? 0 : viewBetween,
