@@ -123,12 +123,10 @@ function Consulting() {
       }
     }
 
-    console.log("sendData", sendData);
     Inquiry.mutate(sendData, {
       onSuccess: (data) => {
         document.body.classList.add("overflowhidden");
         popref.current?.showModal();
-        console.log("data", data);
         reset();
         setAddressDetail({ address: "", buildingName: "" });
         setShopAddressDetail({ address: "", buildingName: "" });

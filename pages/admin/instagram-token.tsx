@@ -4,7 +4,6 @@ import React, { useState } from "react";
 async function refreshToken() {
   try {
     const response = await axios.get("/api/refresh-instar-token");
-    console.log(response.data);
   } catch (error) {
     console.error(error);
   }

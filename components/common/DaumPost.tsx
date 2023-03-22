@@ -12,8 +12,6 @@ interface IDaumPost {
 
 const DaumPost = ({ isOpenPost, setIsOpenPost, setAddress, setAddressDetail }: IDaumPost) => {
   const onCompletePost = (data: any) => {
-    console.log("DaumPost DaumPost", data);
-
     let fullAddress = data.address;
     let extraAddr = "";
 

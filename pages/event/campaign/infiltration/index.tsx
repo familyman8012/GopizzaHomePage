@@ -129,7 +129,6 @@ function Campaign() {
   // const GropuOrder = useMutation(["groupOrder"], (request: IGroupOrderReq) => fetchGroupOrder(request));
 
   const onSubmit = (data: Record<string, string>) => {
-    console.log("data", data);
     // GropuOrder.mutate(sendData, {
     //   onSuccess: (data) => {
     //     document.body.classList.add("overflowhidden");

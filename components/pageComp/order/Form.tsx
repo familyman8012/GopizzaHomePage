@@ -107,7 +107,6 @@ function Form({ type }: { type?: string }) {
         onSuccess: (data) => {
           document.body.classList.add("overflowhidden");
           popref.current?.showModal();
-          console.log("data", data);
           reset();
           setStartDate(null);
           setAddressDetail({ address: "", buildingName: "" });
@@ -123,7 +122,6 @@ function Form({ type }: { type?: string }) {
         onSuccess: (data) => {
           document.body.classList.add("overflowhidden");
           popref.current?.showModal();
-          console.log("data", data);
           reset();
           setStartDate(null);
           setAddressDetail({ address: "", buildingName: "" });

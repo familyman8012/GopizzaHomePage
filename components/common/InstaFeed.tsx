@@ -21,7 +21,6 @@ function InstaFeed({ feed }: { feed: IInstarItem }) {
     <InstarWrap>
       {feed &&
         feed.data.map((media: any, i: number) => {
-          console.log("media", media);
           return (
             <li key={media.id}>
               {media.media_type === "VIDEO" ? (
