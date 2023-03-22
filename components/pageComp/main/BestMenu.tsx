@@ -99,7 +99,24 @@ function BestMenu() {
             <Link href="/menu">메뉴 바로가기</Link>
           </div>
           <div className="box_swiper">
-            <Swiper onInit={onInit} slidesPerView={"auto"} spaceBetween={30} onProgress={handleProgress} autoplay={{ delay: 2000, disableOnInteraction: false }}>
+            <Swiper
+              onInit={onInit}
+              slidesPerView={"auto"}
+              spaceBetween={30}
+              breakpoints={{
+                320: {
+                  spaceBetween: 20,
+                },
+                800: {
+                  spaceBetween: 30,
+                },
+                1200: {
+                  spaceBetween: 40,
+                },
+              }}
+              onProgress={handleProgress}
+              autoplay={{ delay: 2000, disableOnInteraction: false }}
+            >
               {data.map((el, i) => (
                 <SwiperSlide key={i}>
                   <ThumbItem key={i} data={el} />

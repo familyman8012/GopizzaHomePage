@@ -38,7 +38,6 @@ function VisibilitySensorSwiper({ children, view = 1, viewBetween = 40, paging, 
         <Swiper
           onInit={onInit}
           slidesPerView={view}
-          spaceBetween={view === 1 ? 0 : viewBetween}
           speed={500}
           loop={true}
           pagination={paging}
@@ -47,6 +46,17 @@ function VisibilitySensorSwiper({ children, view = 1, viewBetween = 40, paging, 
           autoplay={{
             delay,
             disableOnInteraction: false,
+          }}
+          breakpoints={{
+            320: {
+              spaceBetween: 20,
+            },
+            800: {
+              spaceBetween: 30,
+            },
+            1200: {
+              spaceBetween: view === 1 ? 0 : viewBetween,
+            },
           }}
           centeredSlides={center}
         >

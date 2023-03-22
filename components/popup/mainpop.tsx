@@ -106,6 +106,17 @@ function MainPopUp() {
               onInit={onInit}
               loop={true}
               pagination={true}
+              breakpoints={{
+                320: {
+                  spaceBetween: 20,
+                },
+                800: {
+                  spaceBetween: 30,
+                },
+                1200: {
+                  spaceBetween: 40,
+                },
+              }}
               navigation={{
                 nextEl: ".swiper-button-prev",
                 prevEl: ".swiper-button-next",

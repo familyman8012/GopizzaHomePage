@@ -108,6 +108,17 @@ function MainPopUp() {
           <div className="content">
             <Swiper
               onInit={onInit}
+              breakpoints={{
+                320: {
+                  spaceBetween: 20,
+                },
+                800: {
+                  spaceBetween: 30,
+                },
+                1200: {
+                  spaceBetween: 40,
+                },
+              }}
               direction={"vertical"}
               loop={true}
               pagination={true}
