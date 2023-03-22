@@ -449,10 +449,14 @@ const reset = css`
   }
 
   .list_form_notice {
+    margin-top: 3.2rem;
     padding-left: 22rem;
-    font-size: 1.6rem;
-    line-height: 2;
-    color: #7b7b7b;
+    dt,
+    dd {
+      font-size: 1.6rem;
+      line-height: 2;
+      color: #7b7b7b;
+    }
   }
 
   .box_custom_radio {

@@ -15,16 +15,12 @@ function GobotStation() {
             </span>
           </h4>
           <div className="thumb">
-            {/* <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/howwemake/img_make5_1.webp" alt="GOBOT STATION" /> */}
-            <VisibilitySensorVideo src="img_make5_1" />
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/howwemake/img_make5_1.webp" alt="GOBOT STATION" />
           </div>
         </div>
         <div className="box2">
           <div className="thumb">
-            <img
-              src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/howwemake/img_make5_2.webp"
-              alt="GOBOT STATION"
-            />
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/howwemake/img_make5_2.webp" alt="GOBOT STATION" />
           </div>
           <p>
             고피자 로보틱스의 정점인

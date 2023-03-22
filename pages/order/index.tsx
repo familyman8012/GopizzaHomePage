@@ -59,18 +59,21 @@ function Group() {
           <VisibilitySensorSwiper view={1}>
             <SwiperSlide>
               <img
-                src="/images/order/group/bnr_pizza1x2.webp"
+                src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/bnr_pizza1x2.webp"
                 alt="오리지널 페퍼로니 피자 - 고소하고 짭조름한 페퍼로니가 듬뿍 들어간 정통 페퍼로니 피자의 맛을 느껴보세요."
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src="/images/order/group/bnr_pizza2x2.webp"
+                src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/bnr_pizza2x2.webp"
                 alt="슈퍼 콤비네이션 피자 - 남녀노소 모두가 좋아하는 피자로, 다양하고 풍부한 토핑의 조합을 맛볼 수 있습니다."
               />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/images/order/group/bnr_pizza3x2.webp" alt="베이컨 포테이토 피자 - 담백한 감자와 바삭한 베이컨이 입안 가득! 기분 좋은 든든함을 느껴보세요." />
+              <img
+                src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/bnr_pizza3x2.webp"
+                alt="베이컨 포테이토 피자 - 담백한 감자와 바삭한 베이컨이 입안 가득! 기분 좋은 든든함을 느껴보세요."
+              />
             </SwiperSlide>
           </VisibilitySensorSwiper>
         </div>
