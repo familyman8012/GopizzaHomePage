@@ -5,20 +5,14 @@ import styled from "@emotion/styled";
 function InstaFeed({ feed }: { feed: IInstarItem }) {
   const processCaption = useMemo(
     () => (caption: string) => {
-      return (
-        caption.replace(/#[\wㄱ-ㅎㅏ-ㅣ가-힣]+/g, "").length > 250
-          ? `${caption.replace(/#[\wㄱ-ㅎㅏ-ㅣ가-힣]+/g, "").substring(0, 250)}...`
-          : caption.replace(/#[\wㄱ-ㅎㅏ-ㅣ가-힣]+/g, "")
-      )
-        ?.split("\n")
-        .map((txt: string, i: number) => {
-          return (
-            <React.Fragment key={`line${i}`}>
-              {txt}
-              <br />
-            </React.Fragment>
-          );
-        });
+      return (caption.length > 240 ? `${caption.substring(0, 240)}...` : caption)?.split("\n").map((txt: string, i: number) => {
+        return (
+          <React.Fragment key={`line${i}`}>
+            {txt}
+            <br />
+          </React.Fragment>
+        );
+      });
     },
     []
   );
@@ -26,14 +20,24 @@ function InstaFeed({ feed }: { feed: IInstarItem }) {
   return (
     <InstarWrap>
       {feed &&
-        feed.data.map((image: any, i: number) => (
-          <li key={image.id}>
-            <a target="_blank" href={image.permalink} rel="noreferrer">
-              <img src={image.media_url} alt="고피자 인스타그램" />
-              <span className="txt">{processCaption(image.caption)}</span>
-            </a>
-          </li>
-        ))}
+        feed.data.map((media: any, i: number) => {
+          console.log("media", media);
+          return (
+            <li key={media.id}>
+              {media.media_type === "VIDEO" ? (
+                <a target="_blank" href={media.permalink} rel="noreferrer">
+                  <video src={media.media_url} width="100%" height="100%" />
+                  <span className="txt">{processCaption(media.caption)}</span>
+                </a>
+              ) : (
+                <a target="_blank" href={media.permalink} rel="noreferrer">
+                  <img src={media.media_url} alt="고피자 인스타그램" />
+                  <span className="txt">{processCaption(media.caption)}</span>
+                </a>
+              )}
+            </li>
+          );
+        })}
     </InstarWrap>
   );
 }

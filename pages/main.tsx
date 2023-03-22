@@ -16,7 +16,6 @@ interface IMain {
 }
 
 function Main({ mainVisual, youtube, feed }: IMain) {
-  const instarFeed = { data: feed.data.filter((el) => el.media_type !== "VIDEO").slice(0, 3) };
   return (
     <div className="index">
       <MainVisual data={mainVisual} />
@@ -24,7 +23,7 @@ function Main({ mainVisual, youtube, feed }: IMain) {
       <BestMenu />
       <Competitiveness />
       <Order />
-      <Instagram feed={instarFeed} />
+      <Instagram feed={feed} />
       <Youtube data={youtube} />
     </div>
   );
