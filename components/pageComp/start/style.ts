@@ -218,15 +218,6 @@ export const MediaWrap = styled.section`
           font-size: 1.6rem;
           line-height: 2.75;
           color: #7b7b7b;
-
-          &:first-of-type {
-            width: 10rem;
-          }
-
-          &:last-of-type {
-            padding-left: 0.8rem;
-            background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/media/line_board.svg") no-repeat left 1.5rem / 0.1rem 1.7rem;
-          }
         }
       }
     }

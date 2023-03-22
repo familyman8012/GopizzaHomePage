@@ -19,7 +19,7 @@ function Media({ news }: { news: INews }) {
               <dl>
                 <dt>{el.subject}</dt>
                 <dd>
-                  <span className="date">{dayjs(el.created_date).format(`YYYY-MM-DD`)}</span>
+                  {/* <span className="date">{dayjs(el.created_date).format(`YYYY-MM-DD`)}</span> */}
                   <span className="cp">{el.company}</span>
                 </dd>
               </dl>
