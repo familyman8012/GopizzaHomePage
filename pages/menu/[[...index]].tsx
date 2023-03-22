@@ -3,11 +3,16 @@ import { menuItem, menuTab } from "ComponentsFarm/pageComp/menu/constant";
 import { MenuList, MenuVisual, MenuWrap } from "ComponentsFarm/pageComp/menu/style";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useMemo, useRef } from "react";
+import Image from "next/image";
+import React, { useMemo, useRef } from "react";
+import Dialog from "ComponentsFarm/common/Dialog";
+import styled from "@emotion/styled";
 import Tip from "ComponentsFarm/popup/Tip";
 import Head from "next/head";
+import { MenuSeo, Seo } from "ComponentsFarm/Seo";
+import { NextSeo } from "next-seo";
 
-function Menu() {
+function Menu({ seo }: { seo: object }) {
   const router = useRouter();
   const popref = useRef<any>(null);
   const category = ["/pizza", "/pasta", "/tteokbokki", "/sides", "/set", "/powertime"];
@@ -15,32 +20,7 @@ function Menu() {
 
   return (
     <>
-      <Head>
-        <title>MENU | 고피자</title>
-        <meta name="twitter:site" content="@gopizza" />
-        <meta property="og:type" content="website" />
-        <meta
-          name="description"
-          content="고피자에서는 다양한 종류의 맛있는 피자와 함께 파스타, 떡볶이, 다양한 사이드들과 함께하는 즐거운 시간을 제공합니다. 치킨앤콘 반반 피자, 슈퍼 콤비네이션 피자, K-불고기 피자 등 다양한 메뉴를 만나보세요."
-        />
-        <meta property="og:title" content="MENU | 고피자" />
-        <meta
-          property="og:description"
-          content="고피자에서는 다양한 종류의 맛있는 피자와 함께 파스타, 떡볶이, 다양한 사이드들과 함께하는 즐거운 시간을 제공합니다. 치킨앤콘 반반 피자, 슈퍼 콤비네이션 피자, K-불고기 피자 등 다양한 메뉴를 만나보세요."
-        />
-        <meta property="og:url" content="https://gopizzahometest.vercel.app/menu" />
-        <meta property="og:image" content="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/img_menu_visual1x2.webp" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@gopizza" />
-        <meta name="twitter:site" content="@gopizza" />
-        <meta name="twitter:title" content="MENU | 고피자" />
-        <meta name="twitter:url" content="https://gopizzahometest.vercel.app/menu" />
-        <meta
-          name="twitter:description"
-          content="고피자에서는 다양한 종류의 맛있는 피자와 함께 파스타, 떡볶이, 다양한 사이드들과 함께하는 즐거운 시간을 제공합니다. 치킨앤콘 반반 피자, 슈퍼 콤비네이션 피자, K-불고기 피자 등 다양한 메뉴를 만나보세요."
-        />
-        <meta name="twitter:image" content="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/img_menu_visual1x2.webp"></meta>
-      </Head>
+      <NextSeo {...seo} />
       <MenuWrap>
         <h2 className="tit">메뉴</h2>
         <Tab data={menuTab} />
@@ -84,10 +64,26 @@ function Menu() {
 
 export default Menu;
 
-// export const getServerSideProps = async (context: any) => {
-//   const { index } = context.query;
-//   const menu = ["pasta", "tteokbokki", "sides", "set"];
-//   return {
-//     props: { seo: index === undefined ? MenuSeo[0] : MenuSeo[menu.indexOf(index[0]) + 1] },
-//   };
-// };
+export const getStaticProps = async (context: any) => {
+  const { index } = context.params;
+  const menu = ["pasta", "tteokbokki", "sides", "set", "powertime"];
+  return {
+    props: { seo: index === undefined ? MenuSeo[0] : MenuSeo[menu.indexOf(index[0]) + 1] },
+  };
+};
+
+export const getStaticPaths = async () => {
+  const paths = [
+    { params: { index: undefined } },
+    { params: { index: ["pasta"] } },
+    { params: { index: ["tteokbokki"] } },
+    { params: { index: ["sides"] } },
+    { params: { index: ["set"] } },
+    { params: { index: ["powertime"] } },
+  ];
+
+  return {
+    paths,
+    fallback: false, // 이 페이지에 대해 존재하지 않는 경로는 404 페이지를 표시합니다.
+  };
+};
