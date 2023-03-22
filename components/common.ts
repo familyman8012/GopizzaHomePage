@@ -862,7 +862,7 @@ const reset = css`
   }
   @media (min-width: 1000px) and (max-width: 1200px) {
     html {
-      font-size: 8px;
+      font-size: 7px;
     }
   }
   @media (min-width: 800px) and (max-width: 1000px) {
