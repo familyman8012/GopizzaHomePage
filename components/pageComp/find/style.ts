@@ -15,7 +15,7 @@ export const FindWrap = styled.section`
       width: 29rem;
       padding: 0 2.4rem;
       border-radius: 5.6rem;
-      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/find/sel_find.webp") no-repeat #fff 94% 51%;
+      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/find/sel_find.webp") no-repeat #fff 94% 51% / 1.8rem 1.1rem;
 
       &:last-of-type {
         margin: 0 2.4rem;

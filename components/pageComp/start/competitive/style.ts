@@ -522,11 +522,11 @@ export const GovenWrap = styled.section`
 
       .swiper-button-prev2 {
         top: 5.3rem;
-        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/arrow_goven_up.svg") no-repeat center;
+        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/arrow_goven_up.svg") no-repeat center / 2.6rem 1.7rem;
       }
       .swiper-button-next2 {
         top: 9.3rem;
-        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/arrow_goven_down.svg") no-repeat center;
+        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/arrow_goven_down.svg") no-repeat center / 2.6rem 1.7rem;
       }
 
       span {

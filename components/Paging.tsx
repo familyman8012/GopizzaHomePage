@@ -40,14 +40,14 @@ const PaginationWrap = styled.div`
   .long-arrow-left {
     display: block;
     margin: 30px auto;
-    width: 13px;
-    height: 13px;
+    width: 1.3rem;
+    height: 1.3rem;
     border-top: 2px solid #707070;
     border-left: 2px solid #707070;
 
     &:hover {
-      border-top: 2px solid #2c2c2c;
-      border-left: 2px solid #2c2c2c;
+      border-top: 0.2rem solid #2c2c2c;
+      border-left: 0.2rem solid #2c2c2c;
     }
   }
   .arrow-right,

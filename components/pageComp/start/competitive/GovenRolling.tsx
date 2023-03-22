@@ -19,7 +19,7 @@ function GovenRolling() {
     <div>
       <div className="box_title">
         <h5>
-          <div className="tit1">편리하고 빠른 자동화덕</div>
+          <div className="tit1">편리하고 빠른 AI오븐</div>
           <div className={`tit2 line${realIndex}`}>
             <div className="">
               <i className="swiper-button-prev2">
