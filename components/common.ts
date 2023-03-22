@@ -222,6 +222,11 @@ const reset = css`
     font-style: normal;
   }
 
+  //임시 모바일
+  .webShow .pop_mobile_not {
+    display: none !important;
+  }
+
   //TypoSetting
   h2 {
     font-size: var(--size-h2);

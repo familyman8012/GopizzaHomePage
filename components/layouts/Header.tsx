@@ -8,7 +8,7 @@ function Header() {
   const router = useRouter();
   const [hiddenPopMobile, setHiddenPopMobile] = useState(false);
   const handlerShowPopMobile = useCallback(() => {
-    setHiddenPopMobile(true);
+    document.body.classList.add("webShow");
   }, []);
   return (
     <>
