@@ -391,7 +391,6 @@ function Form({ type }: { type?: string }) {
           </button>
         </ApplicationWrap>
       </Modal>
-      <Application popref={popref} />
     </>
   );
 }
