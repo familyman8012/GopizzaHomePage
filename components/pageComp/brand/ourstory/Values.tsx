@@ -15,7 +15,6 @@ function Values() {
             <h5>INNOVATION</h5>
             <Waypoint
               topOffset="50px"
-              fireOnRapidScroll
               onEnter={() => {
                 txtAni === false && setTxtAni(true);
               }}
