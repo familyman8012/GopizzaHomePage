@@ -2,13 +2,17 @@ import styled from "@emotion/styled";
 import DatePick from "ComponentsFarm/common/DatePick";
 import DaumPost from "ComponentsFarm/common/DaumPost";
 import dayjs from "dayjs";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { IContactUsReq, IGroupOrderReq } from "ApiFarm/interface/homeInterface";
 import { fetchContactUs, fetchGroupOrder } from "ApiFarm/home";
 import Application from "ComponentsFarm/popup/Application";
 import Privacy from "ComponentsFarm/popup/Privacy";
+
+import Modal from "ComponentsFarm/common/Modal";
+import DOMPurify from "isomorphic-dompurify";
+import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
 
 const FormWrap = styled.form`
   position: relative;
@@ -60,6 +64,22 @@ function Form({ type }: { type?: string }) {
   const [startDate, setStartDate] = useState(null);
   const [isOpenPost, setIsOpenPost] = useState(false);
   const [addressDetail, setAddressDetail] = useState({ address: "", buildingName: "" }); // 상세주소 - api에 사용
+  const [open, setOpen] = useState(false);
+  const openStoreModal = useCallback(() => {
+    setOpen(true);
+  }, []);
+  const close = useCallback(() => {
+    setOpen(false);
+  }, []);
+
+  const [open2, setOpen2] = useState(false);
+  const openStoreModal2 = useCallback(() => {
+    setOpen2(true);
+  }, []);
+  const close2 = useCallback(() => {
+    setOpen2(false);
+  }, []);
+
   const {
     register,
     handleSubmit,
@@ -105,8 +125,7 @@ function Form({ type }: { type?: string }) {
       };
       GropuOrder.mutate(sendData, {
         onSuccess: (data) => {
-          document.body.classList.add("overflowhidden");
-          popref.current?.showModal();
+          openStoreModal2();
           reset();
           setStartDate(null);
           setAddressDetail({ address: "", buildingName: "" });
@@ -120,8 +139,7 @@ function Form({ type }: { type?: string }) {
       sendData = { name, phone, email: `${email1}@${email2}`, detail_contents };
       ContactUs.mutate(sendData, {
         onSuccess: (data) => {
-          document.body.classList.add("overflowhidden");
-          popref.current?.showModal();
+          openStoreModal2();
           reset();
           setStartDate(null);
           setAddressDetail({ address: "", buildingName: "" });
@@ -335,8 +353,7 @@ function Form({ type }: { type?: string }) {
             className="openPrivacy"
             onClick={(e) => {
               e.stopPropagation();
-              document.body.classList.add("overflowhidden");
-              popref2.current?.showModal();
+              openStoreModal();
             }}
           >
             전문보기
@@ -346,10 +363,91 @@ function Form({ type }: { type?: string }) {
           신청하기
         </button>
       </FormWrap>
-      <Privacy popref={popref2} index={0} />
+      <Modal open={open} onClose={close}>
+        <PrivacyWrap>
+          <p className="tit">{PrivacyArr[0].title}</p>
+          <div className="box_info">
+            <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(PrivacyArr[0].txt) }} />
+          </div>
+          <button className="btn_close" onClick={close}>
+            <span className="hiddenZoneV">닫기</span>
+          </button>
+        </PrivacyWrap>
+      </Modal>
+      <Modal open={open2} onClose={close2}>
+        <ApplicationWrap>
+          <p className="tit">신청이 완료되었습니다.</p>
+          <p className="txt_success">정상적으로 접수 처리되었습니다. 감사합니다.</p>
+          <p className="txt_notice">
+            추후 본사에서 진행하는 창업 프로모션에 관한 정보를 받아보시는데 동의하십니까?
+            <br />
+            동의 시 다양한 창업 혜택 정보를 기입하신 연락처 및 이메일로 받아보실 수 있습니다.
+          </p>
+          <button className="btn_agree" onClick={close2}>
+            동의하기
+          </button>
+          <button className="btn_close" onClick={close2}>
+            <span className="hiddenZoneV">닫기</span>
+          </button>
+        </ApplicationWrap>
+      </Modal>
       <Application popref={popref} />
     </>
   );
 }
 
 export default Form;
+
+export const ApplicationWrap = styled.div`
+  position: relative;
+  width: 72.9rem;
+  padding: 6.4rem 0 6.6rem;
+  text-align: center;
+  border-radius: 3rem;
+  background: #fff;
+
+  .txt_success {
+    margin: 0.8rem 0 5.1rem;
+    font-size: 2.4rem;
+  }
+
+  .txt_notice {
+    font-size: 1.6rem;
+  }
+
+  .btn_agree {
+    margin-top: 3.6rem;
+    width: 36rem;
+    height: 8rem;
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 500;
+    border-radius: 4rem;
+    background-color: var(--color-bluedark);
+  }
+  .btn_close {
+    top: auto;
+    bottom: -11.2rem;
+    left: 50%;
+    right: auto;
+    margin-left: -4rem;
+  }
+`;
+
+export const PrivacyWrap = styled.div`
+  position: relative;
+  width: 90%;
+  max-width: 132rem;
+  padding: 6.4rem 0 6.6rem;
+  border-radius: 3rem;
+  background: #fff;
+
+  .box_info {
+    overflow-y: scroll;
+    width: 95%;
+    height: 57.8rem;
+    margin: 5.6rem auto 0;
+    padding-right: 4.5rem;
+    font-size: 1.6rem;
+  }
+`;
