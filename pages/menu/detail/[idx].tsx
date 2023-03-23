@@ -2,16 +2,26 @@ import Link from "next/link";
 import { Ingredients, menuDetail, menuItem, menuTab } from "ComponentsFarm/pageComp/menu/constant";
 import { BtnConfirm, Detail, Info, MenuWrap, Nav } from "ComponentsFarm/pageComp/menu/style";
 import { useRouter } from "next/router";
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import { useMemo } from "react";
 import Nutrient from "ComponentsFarm/popup/Nutrient";
 import { NextSeo } from "next-seo";
+import Modal from "ComponentsFarm/common/Modal";
+import styled from "@emotion/styled";
 
 function DetailView({ seo }: any) {
   const router = useRouter();
   const popref = useRef<any>(null);
   const { idx } = router.query;
+
+  const [open, setOpen] = useState(false);
+  const openStoreModal = useCallback(() => {
+    setOpen(true);
+  }, []);
+  const close = useCallback(() => {
+    setOpen(false);
+  }, []);
 
   const currentMenu = useMemo(() => menuDetail[`${idx}`], [idx]);
   const category = ["pizza", "pasta", "tteokbokki", "sides", "set", "powertime"];
@@ -133,15 +143,24 @@ function DetailView({ seo }: any) {
               </dd>
             </dl>
           </Info>
+          <Modal open={open} onClose={close}>
+            <NutrientWrap>
+              <p className="tit">영양성분 / 알레르기 / 원산지</p>
+              <div className="box_info">
+                <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/popup/info_nutrientx2.webp" alt="고피자 영양분석표" />
+              </div>
+              <button className="btn_close" onClick={close}>
+                <span className="hiddenZoneV">닫기</span>
+              </button>
+            </NutrientWrap>
+          </Modal>
           {/* <BtnConfirm
           onClick={() => {
-            document.body.classList.add("overflowhidden");
-            popref.current?.showModal();
+           openStoreModal();
           }}
         >
           영양성분 / 알레르기 / 원산지 확인하기
         </BtnConfirm> */}
-          <Nutrient popref={popref} />
         </Detail>
       </MenuWrap>
     </>
@@ -199,3 +218,19 @@ export const getStaticPaths = async () => {
     fallback: false, // 이 페이지에 대해 존재하지 않는 경로는 404 페이지를 표시합니다.
   };
 };
+
+export const NutrientWrap = styled.div`
+  position: relative;
+  width: 132rem;
+  padding: 6.4rem 0 6.6rem;
+  border-radius: 3rem;
+  background: #fff;
+
+  .box_info {
+    overflow-y: scroll;
+    width: 112.5rem;
+    height: 57.8rem;
+    margin: 5.6rem auto 0;
+    padding-right: 4.5rem;
+  }
+`;
