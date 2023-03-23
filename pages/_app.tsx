@@ -19,6 +19,7 @@ import "react-ig-feed/dist/index.css";
 import { CommonSeo, menu, Seo } from "ComponentsFarm/Seo";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
+import { Analytics } from "@vercel/analytics/react";
 
 export type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -63,6 +64,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       <NextSeo {...Seo[menu.indexOf(router.asPath)]} />
       <CookiesProvider>{getLayout(<Component {...pageProps} />)}</CookiesProvider>
       <ReactQueryDevtools />
+      <Analytics />
     </QueryClientProvider>
   );
 }
