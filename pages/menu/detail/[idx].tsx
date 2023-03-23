@@ -97,11 +97,11 @@ function DetailView({ seo }: any) {
             <h4>{currentMenu?.name}</h4>
           </Nav>
           <Info>
-            <Link className="prev" href={PrevHandler()}>
+            <Link className="prev" href={PrevHandler()} scroll={false}>
               <span className="hiddenZoneV">이전</span>
             </Link>
 
-            <Link className="next" href={NextHandler()}>
+            <Link className="next" href={NextHandler()} scroll={false}>
               <span className="hiddenZoneV">다음</span>
             </Link>
 
