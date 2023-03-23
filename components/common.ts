@@ -44,6 +44,7 @@ const notoSansKR = krFontTypes.map((weight) => {
         url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/font/noto-sans-kr-v21-korean-${weight}.eot?#iefix") format("embedded-opentype"),
         url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/font/noto-sans-kr-v21-korean-${weight}.woff2") format("woff2"),
         url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/font/noto-sans-kr-v21-korean-${weight}.woff") format("woff"),
+        url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/font/noto-sans-kr-v21-korean-${weight}.ttf") format("truetype"),
         url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/font/noto-sans-kr-v21-korean-${weight}.svg#NotoSansKR") format("svg");
     }
   `;
