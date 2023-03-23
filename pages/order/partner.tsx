@@ -1,9 +1,4 @@
 import Form from "ComponentsFarm/pageComp/order/Form";
-import Tab from "ComponentsFarm/layouts/Tab";
-import { orderTab } from "ComponentsFarm/pageComp/order/constant";
-import Banner from "ComponentsFarm/pageComp/order/group/Banner";
-import { OrderWrap } from "ComponentsFarm/pageComp/order/style";
-import React from "react";
 import OrderLayout from "ComponentsFarm/layouts/pageLayouts/OrderLayout";
 
 function Group() {

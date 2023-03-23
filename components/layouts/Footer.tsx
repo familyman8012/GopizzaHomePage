@@ -77,7 +77,7 @@ function Footer() {
               <dd key={j}>
                 <span
                   onClick={() => {
-                    setprivacyIndex(0);
+                    setprivacyIndex(j + 1);
                     openStoreModal();
                   }}
                 >
