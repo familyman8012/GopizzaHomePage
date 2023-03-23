@@ -11,13 +11,22 @@ function MainVisual({ data }: { data: IMainVisual }) {
       <MainVisualWrap>
         <VisibilitySensorSwiper view={1} paging>
           {data &&
-            data.list.map((el) => (
-              <SwiperSlide key={el.brand_main_banner_idx}>
-                <Link href={el.landing_url}>
-                  <img src={el.image_url} alt={el.subject} />
-                </Link>
-              </SwiperSlide>
-            ))}
+            data.list.map((el) => {
+              console.log(el);
+              return (
+                <SwiperSlide key={el.brand_main_banner_idx}>
+                  {(el.landing_url.indexOf("http") !== -1 || el.landing_url.indexOf("www")) !== -1 && el.landing_url.indexOf("gopizza.kr") === -1 ? (
+                    <a target="_blank" href={el.landing_url} rel="noreferrer">
+                      <img src={el.image_url} alt={el.subject} />
+                    </a>
+                  ) : (
+                    <Link href={el.landing_url}>
+                      <img src={el.image_url} alt={el.subject} />
+                    </Link>
+                  )}
+                </SwiperSlide>
+              );
+            })}
         </VisibilitySensorSwiper>
       </MainVisualWrap>
     </>
