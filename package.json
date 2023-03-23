@@ -24,6 +24,7 @@
     "axios-token-interceptor": "^0.2.0",
     "date-fns": "^2.29.3",
     "dayjs": "^1.11.7",
+    "dialog-polyfill": "^0.5.6",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
     "instagram-scraper": "^1.0.6",
@@ -49,6 +50,7 @@
     "react-kakao-maps-sdk": "^1.1.6",
     "react-player": "^2.11.2",
     "react-toastify": "^9.1.1",
+    "react-transition-group": "^4.4.5",
     "react-waypoint": "^10.3.0",
     "sharp": "^0.31.3",
     "swiper": "^9.0.3",
@@ -58,6 +60,7 @@
   "devDependencies": {
     "@types/lodash": "^4.14.191",
     "@types/react-datepicker": "^4.8.0",
-    "@types/react-js-pagination": "^3.0.4"
+    "@types/react-js-pagination": "^3.0.4",
+    "@types/react-transition-group": "^4.4.5"
   }
 }

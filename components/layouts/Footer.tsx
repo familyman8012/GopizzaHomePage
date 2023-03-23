@@ -1,12 +1,43 @@
 import Privacy from "ComponentsFarm/popup/Privacy";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useRef, useState, useCallback } from "react";
 import { FooterMenu, FooterPrivacy, Global, Sns } from "./constant";
 import { FooterWrap } from "./style";
+
+import styled from "@emotion/styled";
+import Modal from "ComponentsFarm/common/Modal";
+import DOMPurify from "isomorphic-dompurify";
+import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
+
+export const PrivacyWrap = styled.div`
+  position: relative;
+  width: 90%;
+  max-width: 132rem;
+  padding: 6.4rem 0 6.6rem;
+  border-radius: 3rem;
+  background: #fff;
+
+  .box_info {
+    overflow-y: scroll;
+    width: 95%;
+    height: 57.8rem;
+    margin: 5.6rem auto 0;
+    padding-right: 4.5rem;
+    font-size: 1.6rem;
+  }
+`;
 
 function Footer() {
   const popref = useRef<any>(null);
   const [privacyIndex, setprivacyIndex] = useState(0);
+
+  const [open, setOpen] = useState(false);
+  const openStoreModal = useCallback(() => {
+    setOpen(true);
+  }, []);
+  const close = useCallback(() => {
+    setOpen(false);
+  }, []);
 
   return (
     <FooterWrap>
@@ -35,9 +66,8 @@ function Footer() {
             <dt>
               <span
                 onClick={() => {
-                  document.body.classList.add("overflowhidden");
                   setprivacyIndex(0);
-                  popref.current?.showModal();
+                  openStoreModal();
                 }}
               >
                 {FooterPrivacy.depth1}
@@ -47,9 +77,8 @@ function Footer() {
               <dd key={j}>
                 <span
                   onClick={() => {
-                    document.body.classList.add("overflowhidden");
-                    setprivacyIndex(j + 1);
-                    popref.current?.showModal();
+                    setprivacyIndex(0);
+                    openStoreModal();
                   }}
                 >
                   {item.menuName}
@@ -91,6 +120,17 @@ function Footer() {
           </ul>
         </div>
       </div>
+      <Modal open={open} onClose={close}>
+        <PrivacyWrap>
+          <p className="tit">{PrivacyArr[privacyIndex].title}</p>
+          <div className="box_info">
+            <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(PrivacyArr[privacyIndex].txt) }} />
+          </div>
+          <button className="btn_close" onClick={close}>
+            <span className="hiddenZoneV">닫기</span>
+          </button>
+        </PrivacyWrap>
+      </Modal>
       <Privacy popref={popref} index={privacyIndex} />
     </FooterWrap>
   );
