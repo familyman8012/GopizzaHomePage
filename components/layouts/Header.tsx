@@ -6,6 +6,7 @@ import { HeadMenuUrl, HeadAsideUrl } from "./constant";
 import { HeaderWrap } from "./style";
 
 export const TopBanner = styled.div`
+  display: none;
   @media (max-width: 400px) {
     display: flex;
     justify-content: center;
