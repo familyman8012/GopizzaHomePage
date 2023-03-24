@@ -6,20 +6,22 @@ import { HeadMenuUrl, HeadAsideUrl } from "./constant";
 import { HeaderWrap } from "./style";
 
 export const TopBanner = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 31px;
-  padding: 0 13.5px;
-  background-color: #171c8f;
+  @media (max-width: 400px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 31px;
+    padding: 0 13.5px;
+    background-color: #171c8f;
 
-  span {
-    color: #ffce00;
-    font-size: 14px;
-    line-height: 13px;
+    span {
+      color: #ffce00;
+      font-size: 14px;
+      line-height: 13px;
 
-    padding-left: 22.5px;
-    background: url("/images/common/ico_mobile_not.svg") no-repeat left top / 14.5px 13px;
+      padding-left: 22.5px;
+      background: url("/images/common/ico_mobile_not.svg") no-repeat left top / 14.5px 13px;
+    }
   }
 `;
 
