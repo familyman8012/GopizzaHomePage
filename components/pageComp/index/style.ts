@@ -75,6 +75,43 @@ export const IndexWrap = styled.main`
       }
     }
   }
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    .box_goto {
+      width: 100vw !important;
+      h1 {
+        margin-bottom: 8px;
+        font-family: "solano";
+        font-size: 20px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 1.47;
+      }
+
+      a {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 105px;
+        height: 32px;
+        margin-top: 12px;
+        padding-left: 3px;
+        display: block;
+        font-size: 12px;
+        border-radius: 16px;
+        .txt {
+          position: relative;
+          top: -1px;
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/arrow_right.svg") no-repeat right 5px / 5px 8px;
+        }
+      }
+    }
+  }
+
   @media (max-width: 400px) {
     &.off .pop_mobile_not {
       display: none;
