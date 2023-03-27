@@ -520,7 +520,7 @@ export const menuDetail: IMenuDetail = {
     ingredients: [],
   },
   set3: {
-    id: 4,
+    id: 3,
     category: "set",
     name: "1.5인 피떡 세트",
     enName: "Pizza & Tteokbokki Set",
@@ -531,7 +531,7 @@ export const menuDetail: IMenuDetail = {
     ingredients: [],
   },
   set4: {
-    id: 3,
+    id: 4,
     category: "set",
     name: "1.5인 피치 세트",
     enName: "Pizza & Chicken Set",
