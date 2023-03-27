@@ -520,17 +520,6 @@ export const menuDetail: IMenuDetail = {
     ingredients: [],
   },
   set3: {
-    id: 3,
-    category: "set",
-    name: "1.5인 피치 세트",
-    enName: "Pizza & Chicken Set",
-    txt: `피자+순살치킨+음료
-
-    순살치킨앤프라이
-    ALL순살치킨 중 택1`,
-    ingredients: [],
-  },
-  set4: {
     id: 4,
     category: "set",
     name: "1.5인 피떡 세트",
@@ -539,6 +528,17 @@ export const menuDetail: IMenuDetail = {
 
     화덕 떡볶이
     화덕 치즈 떡볶이 중 택1`,
+    ingredients: [],
+  },
+  set4: {
+    id: 3,
+    category: "set",
+    name: "1.5인 피치 세트",
+    enName: "Pizza & Chicken Set",
+    txt: `피자+순살치킨+음료
+
+    순살치킨앤프라이
+    ALL순살치킨 중 택1`,
     ingredients: [],
   },
   set5: {
