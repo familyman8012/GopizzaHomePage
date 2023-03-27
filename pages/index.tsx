@@ -14,7 +14,7 @@ function Index() {
   return (
     <>
       <TopBanner>
-        <span className="txt">모바일 최적화 준비 중에 있습니다.1111</span>
+        <span className="txt">모바일 최적화 준비 중에 있습니다.</span>
       </TopBanner>
       <IndexWrap className={hiddenPopMobile ? `off` : ""}>
         <div className="box_goto">
