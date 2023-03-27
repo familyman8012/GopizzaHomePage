@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
 <channel>
-  <title>ROR Sitemap for https://gopizzahometest.vercel.app/</title>
-  <link>https://gopizzahometest.vercel.app/</link>
+  <title>ROR Sitemap for https://gopizza.kr/</title>
+  <link>https://gopizza.kr/</link>
 
 <item>
-     <link>https://gopizzahometest.vercel.app/</link>
+     <link>https://gopizza.kr/</link>
      <title>1인피자의 시작, 고피자</title>
      <description>고피자에서는 다양한 맛의 피자와 함께 즐거운 시간을 제공합니다. 메뉴와 매장을 확인하고, 창업에 대한 정보를 얻으세요.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -13,7 +13,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/main</link>
+     <link>https://gopizza.kr/main</link>
      <title>FAST, BUT DELICIOUS  | 고피자</title>
      <description>고피자는 혁신적인 1인 피자 브랜드로, 빠르고 맛있는 피자를 제공합니다. 다양한 취향을 반영한 맛있는 피자와 함께 즐거운 외식 경험을 선사해드립니다.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -21,7 +21,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/start</link>
+     <link>https://gopizza.kr/start</link>
      <title>창업경쟁력 | 고피자</title>
      <description>고피자의 창업경쟁력과 매출성장 전략을 확인하세요. 독보적인 1인 피자의 선두주자, 혁신적인 오퍼레이션, 소자본 창업 및 고매출 실현! 본사의 지원과 함께 성공적인 창업을 시작하세요.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -29,7 +29,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/brand</link>
+     <link>https://gopizza.kr/brand</link>
      <title>OUR STORY | 고피자</title>
      <description>당신이 원하던 1인 피자, GOPIZZA! 빠르고 간편하게 즐길 수 있는 고피자는 신선한 재료와 고피자만의 AI오븐으로 최고의 맛과 서비스를 제공합니다.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -37,7 +37,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu</link>
+     <link>https://gopizza.kr/menu</link>
      <title>PIZZA | 고피자</title>
      <description>고피자에서는 다양한 종류의 맛있는 피자와 함께하는 즐거운 시간을 제공합니다. 치킨앤콘 반반 피자, 슈퍼 콤비네이션 피자, K-불고기 피자 등 다양한 메뉴를 만나보세요.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -45,7 +45,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/find</link>
+     <link>https://gopizza.kr/find</link>
      <title>매장찾기 | 고피자</title>
      <description>가까운 고피자 매장을 찾아보세요! 자신의 위치를 기반으로 자동으로 찾아드립니다. 혹은 도/시와 구/군을 선택하거나 검색어를 입력하여 가장 가까운 고피자 매장을 찾을 수 있습니다.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -53,7 +53,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/event</link>
+     <link>https://gopizza.kr/event</link>
      <title>PROMOTION | 고피자</title>
      <description>고피자의 최신 이벤트 및 프로모션 정보를 확인하세요! 배달 주문 할인, 파워타임 프로모션, 배달의 민족 프로모션 등 다양한 이벤트가 진행 중입니다.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -61,7 +61,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/order</link>
+     <link>https://gopizza.kr/order</link>
      <title>단체주문 | 고피자</title>
      <description>GoPizza에서 단체주문 및 제휴문의를 편리하게 진행하세요. 행사, 기업, 학교 등 다양한 단체행사를 위한 피자 주문과 제휴를 지원합니다.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -69,7 +69,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/start/inquiry</link>
+     <link>https://gopizza.kr/start/inquiry</link>
      <title>가맹문의 | 고피자</title>
      <description>가맹 문의 작성. 필수 입력 항목을 작성하신 후 문의내용을 남겨주시면 빠르게 연락드리겠습니다.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -77,7 +77,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/brand/howwemake</link>
+     <link>https://gopizza.kr/brand/howwemake</link>
      <title>HOW WE MAKE | 고피자</title>
      <description>고피자의 최고의 맛을 자랑하는 피자를 만들기 위한 제조과정과 비결을 알려드립니다. 경험하세요, 고피자의 혁신과 맛의 차이를!</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -85,15 +85,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/event/campaign/infiltration</link>
-     <title></title>
-     
-     <ror:updatePeriod></ror:updatePeriod>
-     <ror:sortOrder>2</ror:sortOrder>
-     <ror:resourceOf>sitemap</ror:resourceOf>
-</item>
-<item>
-     <link>https://gopizzahometest.vercel.app/brand/goglobal</link>
+     <link>https://gopizza.kr/brand/goglobal</link>
      <title>GO GLOBAL | 고피자</title>
      <description>한국을 시작으로 싱가포르, 인도, 홍콩, 인도네시아 등 전 세계적으로 인기 있는 고피자! 글로벌 시장에서 성장하고 있습니다.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -101,7 +93,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/event/video</link>
+     <link>https://gopizza.kr/event/video</link>
      <title>VIDEO | 고피자</title>
      <description>고피자와 관련된 다양한 영상들을 보실 수 있습니다.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -109,7 +101,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/order/partner</link>
+     <link>https://gopizza.kr/order/partner</link>
      <title>기업제휴 | 고피자</title>
      <description>기업 제휴 문의 작성. 필수 입력 항목을 작성하신 후 문의내용을 남겨주시면 빠르게 연락드리겠습니다.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -117,7 +109,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/order/location</link>
+     <link>https://gopizza.kr/order/location</link>
      <title>찾아오시는길 | 고피자</title>
      <description>고피자 글로벌 본사에 찾아오시는 길을 안내합니다.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -125,7 +117,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/start/guide</link>
+     <link>https://gopizza.kr/start/guide</link>
      <title>창업안내 | 고피자</title>
      <description>고피자 가맹안내에서 소자본 창업, 매출 향상 전략, 효율적인 오픈 절차를 확인하세요. 창업문의부터 인테리어 공사 및 본사 교육까지 일정 소요기간 내에 창업을 시작할 수 있습니다.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -133,7 +125,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/start/technology</link>
+     <link>https://gopizza.kr/start/technology</link>
      <title>혁신기술력 | 고피자</title>
      <description>고피자의 혁신 기술력과 창업 지원 시스템을 확인하고, 성공적인 피자 프랜차이즈 창업을 시작하세요. 크리스피 빠삭 도우, 고븐, 고봇 스테이션, AI 스마트 토핑 테이블 등 독보적인 기술력을 경험해보세요.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -141,7 +133,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/start/media</link>
+     <link>https://gopizza.kr/start/media</link>
      <title>CEO &amp;amp; 언론보도 | 고피자</title>
      <description>고피자 가맹안내 페이지에서 CEO의 메시지와 언론보도를 통해 고피자의 혁신적인 기술과 성장 스토리를 확인하세요. 착한 마음으로 성실하게 고피자를 전 세계적인 피자 브랜드로 성장시키는 임재원 대표님의 철학을 만나보세요.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -149,7 +141,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/pasta</link>
+     <link>https://gopizza.kr/menu/pasta</link>
      <title>PASTA | 고피자</title>
      <description>고피자의 다양한 파스타 메뉴를 만나보세요! 토마토 치즈 파스타와 미트 치즈 파스타 등 고피자만의 특별한 맛을 경험해 보십시오. 혼자서도, 다 같이도 즐길 수 있는 맛있는 파스타!</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -157,7 +149,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/tteokbokki</link>
+     <link>https://gopizza.kr/menu/tteokbokki</link>
      <title>TTEOKBOKKI | 고피자</title>
      <description>고피자의 맛있는 떡볶이 메뉴를 만나보세요! 화덕 떡볶이와 화덕 치즈 떡볶이 등 고피자만의 특별한 맛을 경험해 보십시오. 혼자서도, 다 같이도 즐길 수 있는 맛있는 떡볶이!</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -165,7 +157,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/sides</link>
+     <link>https://gopizza.kr/menu/sides</link>
      <title>SIDES | 고피자</title>
      <description>고피자의 다양한 사이드 메뉴를 만나보세요! 순살치킨, 프렌치 프라이, 버팔로 윙, 치즈스틱 등 고피자만의 특별한 사이드 메뉴를 즐겨보세요. 혼자서도, 다 같이도 즐길 수 있는 맛있는 사이드!</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -173,7 +165,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/set</link>
+     <link>https://gopizza.kr/menu/set</link>
      <title>SET | 고피자</title>
      <description>혼자서도, 다 같이도 즐겁고 맛있는 고피자 세트 메뉴! 1인 피자 세트부터 친구들과 함께 나눠 먹기 좋은 2.5인 피자 세트까지 다양한 메뉴와 조합으로 만나보세요.</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -181,15 +173,15 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/powertime</link>
-     <title>PIZZA | 고피자</title>
-     <description>고피자에서는 다양한 종류의 맛있는 피자와 함께하는 즐거운 시간을 제공합니다. 치킨앤콘 반반 피자, 슈퍼 콤비네이션 피자, K-불고기 피자 등 다양한 메뉴를 만나보세요.</description>
+     <link>https://gopizza.kr/menu/powertime</link>
+     <title>POWER TIME | 고피자</title>
+     <description>고피자 파워타임 메뉴를 즐겨보세요! 오리지널 페퍼로니 피자, 허니 고르곤졸라 피자, 이달의 피자 등 다양한 메뉴를 특별한 할인 가격으로 경험해 보십시오.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>3</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pizza1</link>
+     <link>https://gopizza.kr/menu/detail/pizza1</link>
      <title>치킨앤콘 반반 피자 | 고피자</title>
      <description>스윗 &amp;amp; 스파이시 치킨앤콘 피자가 반반으로, 고피자의 치킨앤콘 반반 피자</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -197,7 +189,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pizza2</link>
+     <link>https://gopizza.kr/menu/detail/pizza2</link>
      <title>페퍼로니 앤 포테이토 반반 피자 | 고피자</title>
      <description>오리지널 페퍼로니 피자와 베이컨 포테이토
     피자가 반반으로, 고피자의 페퍼로니 앤 포테이토 반반 피자</description>
@@ -206,7 +198,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pizza3</link>
+     <link>https://gopizza.kr/menu/detail/pizza3</link>
      <title>슈퍼 콤비네이션 피자 | 고피자</title>
      <description>다양하고 풍부한 토핑의 꿀맛조합, 남녀노소가 좋
     아하는 베스트 피자, 고피자의 슈퍼 콤비네이션 피자</description>
@@ -215,7 +207,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pizza4</link>
+     <link>https://gopizza.kr/menu/detail/pizza4</link>
      <title>K-불고기 피자 | 고피자</title>
      <description>짭짤하고 고소한 한국의 맛 불고기가 듬뿍, 
     남녀노소 사랑하는 맛, 고피자의 K-불고기 피자</description>
@@ -224,7 +216,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pizza5</link>
+     <link>https://gopizza.kr/menu/detail/pizza5</link>
      <title>스윗 치킨앤콘 피자 | 고피자</title>
      <description>통 옥수수, 감칠맛 가득한 치킨, 콘소메 소스가
     어우러진 단짠단짠 중독성 강한 맛, 고피자의 스윗 치킨앤콘 피자</description>
@@ -233,7 +225,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pizza6</link>
+     <link>https://gopizza.kr/menu/detail/pizza6</link>
      <title>스파이시 치킨앤콘 피자 | 고피자</title>
      <description>통 옥수수, 감칠맛 가득한 치킨, 특제 파이어 소스가
     어우러진 화끈한 맛, 고피자의 스파이시 치킨앤콘 피자</description>
@@ -242,7 +234,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pizza7</link>
+     <link>https://gopizza.kr/menu/detail/pizza7</link>
      <title>베이컨 포테이토 피자 | 고피자</title>
      <description>담백한 감자와 고소한 베이컨, 햄이 어우러져
     짭조름하면서도 풍성한 맛의 피자, 고피자의 베이컨 포테이토 피자</description>
@@ -251,7 +243,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pizza8</link>
+     <link>https://gopizza.kr/menu/detail/pizza8</link>
      <title>매니악 페퍼로니 피자 | 고피자</title>
      <description>페퍼로니 피자에 페퍼로니를 꽉~ 채운!
     찐 페퍼로니 매니아를 위한 피자, 고피자의 매니악 페퍼로니 피자</description>
@@ -260,7 +252,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pizza9</link>
+     <link>https://gopizza.kr/menu/detail/pizza9</link>
      <title>달콤 고구마 피자 | 고피자</title>
      <description>부드럽고 달콤한 고구마 무스 듬뿍~
     달콤 든든 베스트 셀러, 고피자의 달콤 고구마 피자</description>
@@ -269,7 +261,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pizza10</link>
+     <link>https://gopizza.kr/menu/detail/pizza10</link>
      <title>오리지널 페퍼로니 피자 | 고피자</title>
      <description>고소하고 짭조름한 페퍼로니가 듬뿍 들어간
     정통 페퍼로니 피자, 고피자의 오리지널 페퍼로니 피자</description>
@@ -278,7 +270,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pizza11</link>
+     <link>https://gopizza.kr/menu/detail/pizza11</link>
      <title>마약 옥수수 피자 | 고피자</title>
      <description>연유크림소스에 옥수수와 치즈가 가득, 단짠단짠!
     카이엔페퍼가 살짝 뿌려져 매울 수 있어요, 고피자의 마약 옥수수 피자</description>
@@ -287,7 +279,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pizza12</link>
+     <link>https://gopizza.kr/menu/detail/pizza12</link>
      <title>허니 고르곤졸라 피자 | 고피자</title>
      <description>달콤한 꿀과 함께~블루치즈의 풍미를 더욱
     깊게 즐길 수 있는 정통 이태리 스타일 피자, 고피자의 허니 고르곤졸라 피자</description>
@@ -296,7 +288,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pizza13</link>
+     <link>https://gopizza.kr/menu/detail/pizza13</link>
      <title>크레이지 미트치즈 피자 | 고피자</title>
      <description>육즙을 품은 미트에 토마토소스가 풍미를 올리고,
     레드페퍼가 뿌려져 강렬한 매운 맛의 피자, 고피자의 크레이지 미트치즈 피자</description>
@@ -305,7 +297,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pizza14</link>
+     <link>https://gopizza.kr/menu/detail/pizza14</link>
      <title>클래식 마르게리타 피자 | 고피자</title>
      <description>토마토 소스와 바질오일이 어우러져 신선한
     풍미가 가득, 기본에 충실한 맛!, 고피자의 클래식 마르게리타 피자</description>
@@ -314,7 +306,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pizza15</link>
+     <link>https://gopizza.kr/menu/detail/pizza15</link>
      <title>아메리칸 치즈 피자 | 고피자</title>
      <description>고소한 풍미의 치즈와 신선한 토마토가
     어우러져 피자 본연의 맛에 충실한 피자, 고피자의 아메리칸 치즈 피자</description>
@@ -323,7 +315,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pasta1</link>
+     <link>https://gopizza.kr/menu/detail/pasta1</link>
      <title>토마토 치즈 파스타 | 고피자</title>
      <description>신선한 토마토소스에 자연 치즈가 듬뿍
     들어간 토마토 베이스 파스타, 고피자의 토마토 치즈 파스타</description>
@@ -332,7 +324,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/pasta2</link>
+     <link>https://gopizza.kr/menu/detail/pasta2</link>
      <title>미트 치즈 파스타 | 고피자</title>
      <description>토마토소스에 미트를 듬뿍 넣어 끓인 소스와
     자연 치즈가 어우러져 감칠맛이 가득, 고피자의 미트 치즈 파스타</description>
@@ -341,7 +333,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/tteokbokki1</link>
+     <link>https://gopizza.kr/menu/detail/tteokbokki1</link>
      <title>화덕 떡볶이 | 고피자</title>
      <description>화덕에서 갓 구워 더 맛있는 갓 떡볶이, 군만두와
  계란이 쏘옥, 고피자의 화덕 떡볶이</description>
@@ -350,7 +342,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/tteokbokki2</link>
+     <link>https://gopizza.kr/menu/detail/tteokbokki2</link>
      <title>화덕 치즈 떡볶이 | 고피자</title>
      <description>화덕에서 갓 구워 더 맛있는 갓 치즈 떡볶이, 군만두와
  계란이 쏘옥, 고피자의 화덕 치즈 떡볶이</description>
@@ -359,7 +351,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/sides1</link>
+     <link>https://gopizza.kr/menu/detail/sides1</link>
      <title>ALL 순살치킨 | 고피자</title>
      <description>짭쪼롬 순살치킨으로 가득채운 
     든든한 사이드, 고피자의 ALL 순살치킨</description>
@@ -368,7 +360,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/sides2</link>
+     <link>https://gopizza.kr/menu/detail/sides2</link>
      <title>순살 치킨 앤 프라이 | 고피자</title>
      <description>순살 치킨과 프렌치 프라이를 한 번에!, 고피자의 순살 치킨 앤 프라이</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -376,7 +368,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/sides3</link>
+     <link>https://gopizza.kr/menu/detail/sides3</link>
      <title>버팔로 윙/봉 | 고피자</title>
      <description>짭짤한 맛이 일품인 오리지널
     버팔로 윙&amp;amp;봉, 고피자의 버팔로 윙/봉</description>
@@ -385,7 +377,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/sides4</link>
+     <link>https://gopizza.kr/menu/detail/sides4</link>
      <title>프렌치 프라이 | 고피자</title>
      <description>겉은 바삭 속은 촉촉~ 무엇과 먹어도
     찰떡궁합 감자튀김, 고피자의 프렌치 프라이</description>
@@ -394,7 +386,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/sides5</link>
+     <link>https://gopizza.kr/menu/detail/sides5</link>
      <title>치즈 스틱 | 고피자</title>
      <description>쭉쭉 늘어나는 스트링 치즈의 고소한 맛의
     치즈스틱, 고피자의 치즈 스틱</description>
@@ -403,7 +395,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/set1</link>
+     <link>https://gopizza.kr/menu/detail/set1</link>
      <title>1인 피자 세트 | 고피자</title>
      <description>피자+사이드+음료, 고피자의 1인 피자 세트</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -411,7 +403,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/set2</link>
+     <link>https://gopizza.kr/menu/detail/set2</link>
      <title>1.5인 피파 세트 | 고피자</title>
      <description>피자+파스타+음료, 고피자의 1.5인 피파 세트</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -419,7 +411,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/set3</link>
+     <link>https://gopizza.kr/menu/detail/set3</link>
      <title>1.5인 피치 세트 | 고피자</title>
      <description>피자+순살치킨+음료
 
@@ -430,7 +422,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/set4</link>
+     <link>https://gopizza.kr/menu/detail/set4</link>
      <title>1.5인 피떡 세트 | 고피자</title>
      <description>피자+떡볶이+음료
 
@@ -441,7 +433,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/set5</link>
+     <link>https://gopizza.kr/menu/detail/set5</link>
      <title>2인 피자 세트 | 고피자</title>
      <description>피자2+사이드+음료2, 고피자의 2인 피자 세트</description>
      <ror:updatePeriod></ror:updatePeriod>
@@ -449,7 +441,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/set6</link>
+     <link>https://gopizza.kr/menu/detail/set6</link>
      <title>2.5인 피자 세트 | 고피자</title>
      <description>피자2+떡볶이+사이드+음료2
     또는 피자2+파스타+사이드+음료2
@@ -463,7 +455,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/powertime1</link>
+     <link>https://gopizza.kr/menu/detail/powertime1</link>
      <title>오리지널 페퍼로니 피자 + 콜라 | 고피자</title>
      <description>고소하고 짭조름한 페퍼로니가 듬뿍 들어간
     정통 페퍼로니 피자, 고피자의 오리지널 페퍼로니 피자 + 콜라</description>
@@ -472,7 +464,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/powertime2</link>
+     <link>https://gopizza.kr/menu/detail/powertime2</link>
      <title>허니 고르곤졸라 피자 + 콜라 | 고피자</title>
      <description>달콤한 꿀과 함께~블루치즈의 풍미를 더욱
     깊게 즐길 수 있는 정통 이태리 스타일 피자, 고피자의 허니 고르곤졸라 피자 + 콜라</description>
@@ -481,7 +473,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizzahometest.vercel.app/menu/detail/powertime3</link>
+     <link>https://gopizza.kr/menu/detail/powertime3</link>
      <title>이달의 피자 + 콜라 | 고피자</title>
      <description>, 고피자의 이달의 피자 + 콜라</description>
      <ror:updatePeriod></ror:updatePeriod>
