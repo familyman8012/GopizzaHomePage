@@ -9,18 +9,8 @@ const CapmpaignWrap = styled.div`
   img {
     display: block;
   }
-  .box_1 {
-    height: 108rem;
-    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/1.webp") no-repeat center / auto 100%;
-  }
-  .box_2 {
-    height: 108rem;
-    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/2.webp") no-repeat center / auto 100%;
-  }
-  .box_3 {
+  .box_4 {
     position: relative;
-    height: 108rem;
-    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/3_2.webp") no-repeat center / auto 100%;
     .box_inp {
       max-width: 480px;
       position: absolute;
@@ -148,15 +138,31 @@ function Campaign() {
   return (
     <CapmpaignWrap>
       <div className="box_1">
+        <img src="/images/event/campaign/infiltration/1.webp" alt="" />
         <div className="hiddenZoneV">
           <h1>GOPIZZA</h1>
           <p>2023 전국! 고피자 침투!</p>
         </div>
       </div>
       <div className="box_2">
+        <img src="/images/event/campaign/infiltration/2.webp" alt="" />
         <div className="hiddenZoneV">사연 보내고 당첨되면 매주 한 팀씩, 피자 90판 공짜로 쏜다!</div>
       </div>
-      <form className="box_3" onSubmit={handleSubmit(onSubmit)}>
+      <div className="box_3">
+        <img src="/images/event/campaign/infiltration/3.webp" alt="" />
+        <div className="hiddenZoneV">
+          전국 침투작전 소개 :
+          <ol>
+            <li>1. 사연접수 : 하단접수</li>
+            <li>2. 사연선정 : 접수 후 30일 이내 확인</li>
+            <li>3. 선정자 통보 : 문자로 메세지 발송</li>
+            <li>4. 90판 배달 방법 조율 : (트럭 or 배달)</li>
+            <li>5. 침투 D-day!</li>
+          </ol>
+        </div>
+      </div>
+      <form className="box_4" onSubmit={handleSubmit(onSubmit)}>
+        <img src="/images/event/campaign/infiltration/4.webp" alt="" />
         <div className="hiddenZoneV">
           <h2>사연들을 받습니다!</h2>
           <p>
@@ -216,6 +222,10 @@ function Campaign() {
           </button>
         </div>
       </form>
+      <div className="box_5">
+        <img src="/images/event/campaign/infiltration/5.webp" alt="" />
+        <div className="hiddenZoneV">침투 성공 후기! - 생생한 포토리뷰 확인하라구~</div>
+      </div>
       <div className="box_notice">
         <div className="inner">
           <h2 className="tit_notice">유의사항 꼭 읽어주세요!</h2>

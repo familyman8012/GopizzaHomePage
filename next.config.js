@@ -22,6 +22,11 @@ const nextConfig = {
         destination: "/brand",
         permanent: true,
       },
+      {
+        source: "/html/story.html",
+        destination: "/start",
+        permanent: true,
+      },
     ];
   },
   reactStrictMode: true,
