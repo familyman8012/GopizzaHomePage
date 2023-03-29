@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/board/index.php?board=inquiry_01&sca=1n1_01",
+      "destination": "/start/inquiry",
+      "permanent": true
+    }
+  ]
+}
