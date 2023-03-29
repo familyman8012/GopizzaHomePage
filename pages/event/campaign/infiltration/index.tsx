@@ -6,6 +6,17 @@ import { ReactElement } from "react";
 import { useForm } from "react-hook-form";
 
 const CapmpaignWrap = styled.div`
+  .wrap_mobile {
+    display: none;
+  }
+  @media (max-width: 400px) {
+    .wrap_mobile {
+      display: block;
+    }
+    .wrap_pc {
+      display: none;
+    }
+  }
   img {
     display: block;
   }
@@ -160,18 +171,33 @@ function Campaign() {
   return (
     <CapmpaignWrap>
       <div className="box_1">
-        <img src="/images/event/campaign/infiltration/1.webp" alt="" />
+        <div className="wrap_pc">
+          <img src="/images/event/campaign/infiltration/1.webp" alt="" />
+        </div>
+        <div className="wrap_mobile">
+          <img src="/images/event/campaign/infiltration/1_mob.webp" alt="" />
+        </div>
         <div className="hiddenZoneV">
           <h1>GOPIZZA</h1>
           <p>2023 전국! 고피자 침투!</p>
         </div>
       </div>
       <div className="box_2">
-        <img src="/images/event/campaign/infiltration/2.webp" alt="" />
+        <div className="wrap_pc">
+          <img src="/images/event/campaign/infiltration/2.webp" alt="" />
+        </div>
+        <div className="wrap_mobile">
+          <img src="/images/event/campaign/infiltration/2_mob.webp" alt="" />
+        </div>
         <div className="hiddenZoneV">사연 보내고 당첨되면 매주 한 팀씩, 피자 90판 공짜로 쏜다!</div>
       </div>
       <div className="box_3">
-        <img src="/images/event/campaign/infiltration/3.webp" alt="" />
+        <div className="wrap_pc">
+          <img src="/images/event/campaign/infiltration/3.webp" alt="" />
+        </div>
+        <div className="wrap_mobile">
+          <img src="/images/event/campaign/infiltration/3_mob.webp" alt="" />
+        </div>
         <div className="hiddenZoneV">
           전국 침투작전 소개 :
           <ol>
@@ -184,7 +210,12 @@ function Campaign() {
         </div>
       </div>
       <form className="box_4" onSubmit={handleSubmit(onSubmit)}>
-        <img src="/images/event/campaign/infiltration/4.webp" alt="" />
+        <div className="wrap_pc">
+          <img src="/images/event/campaign/infiltration/4.webp" alt="" />
+        </div>
+        <div className="wrap_mobile">
+          <img src="/images/event/campaign/infiltration/4_mob.webp" alt="" />
+        </div>
         <div className="hiddenZoneV">
           <h2>사연들을 받습니다!</h2>
           <p>
@@ -247,7 +278,12 @@ function Campaign() {
         </div>
       </form>
       <div className="box_5">
-        <img src="/images/event/campaign/infiltration/5.webp" alt="" />
+        <div className="wrap_pc">
+          <img src="/images/event/campaign/infiltration/5.webp" alt="" />
+        </div>
+        <div className="wrap_mobile">
+          <img src="/images/event/campaign/infiltration/5_mob.webp" alt="" />
+        </div>
         <div className="hiddenZoneV">침투 성공 후기! - 생생한 포토리뷰 확인하라구~</div>
       </div>
       <div className="box_notice">
