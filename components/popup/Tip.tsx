@@ -51,7 +51,7 @@ function Tip({ popref }: any) {
         <ul>
           {TipArr.map((el, i) => (
             <li key={i}>
-              <img key={i} src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/popup/tip${i + 1}x2.webp`} alt={el} />
+              <img key={i} src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/popup/tip${i + 1}x2.webp?v=2`} alt={el} />
             </li>
           ))}
         </ul>

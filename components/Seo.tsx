@@ -127,7 +127,7 @@ export const Seo = [
       url: "https://gopizza.kr/brand",
       images: [
         {
-          url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/sub_visual1x2.webp",
+          url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/sub_visual1x2.webp?v=2",
         },
       ],
     },
@@ -137,7 +137,7 @@ export const Seo = [
       title: "OUR STORY | 고피자",
       description: "당신이 원하던 1인 피자, GOPIZZA! 빠르고 간편하게 즐길 수 있는 고피자는 신선한 재료와 고피자만의 AI오븐으로 최고의 맛과 서비스를 제공합니다.",
       image: {
-        url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/sub_visual1x2.webp",
+        url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/sub_visual1x2.webp?v=2",
       },
     },
   },
