@@ -21,7 +21,7 @@ export const TopBanner = styled.div`
       line-height: 13px;
 
       padding-left: 22.5px;
-      background: url("/images/common/ico_mobile_not.svg") no-repeat left top / 14.5px 13px;
+      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_mobile_not.svg") no-repeat left top / 14.5px 13px;
     }
   }
 `;

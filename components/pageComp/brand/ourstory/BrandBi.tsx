@@ -26,7 +26,7 @@ function BrandBi() {
         </div>
         <div className="brand_color">
           <img
-            src="/images/brand/ourstory/img_brandbi4.webp"
+            src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/img_brandbi4.webp"
             alt="[BRAND COLOR] PRIMARY ORANGE - 고피자의 열정과 도전 (RGB : 255 70 0, CMYK : 0 80 95 0, PANTONE : 02IC), PRIMARY NAVY - 피자에 임하는 마음가짐 (RGB : 23 28 143, CMYK : 100 92 15 0, PANTONE : 2746C)"
           />
         </div>

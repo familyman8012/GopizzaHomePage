@@ -131,7 +131,7 @@ function Menu({ seo }: { seo: object }) {
               <ul className="list_tip">
                 {TipArr.map((el, i) => (
                   <li key={i}>
-                    <img key={i} src={`/images/popup/tip${i + 1}x2.webp`} alt="예시 이미지" />
+                    <img key={i} src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/popup/tip${i + 1}x2.webp`} alt="예시 이미지" />
                     <div className="box_txt">
                       <span className="txt1">
                         {i === 2 ? (

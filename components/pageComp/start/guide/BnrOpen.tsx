@@ -16,7 +16,7 @@ function BnrOpen() {
                 컬러와 컨셉의 인테리어
               </p>
             )}
-            <img src={`/images/start/info/bnr_info${i + 1}x2.webp`} alt="" />
+            <img src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/info/bnr_info${i + 1}x2.webp`} alt="" />
           </SwiperSlide>
         ))}
       </VisibilitySensorSwiper>

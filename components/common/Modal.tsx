@@ -72,7 +72,7 @@ export const ModalHead = styled.div<{ closeButton?: boolean }>`
     height: 1em;
     padding: 0.25em 0.25em;
     color: #000;
-    background: url("/images/btn_close.svg") no-repeat center/1em auto;
+    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/btn_close.svg") no-repeat center/1em auto;
     border: 0;
     border-radius: 0.25rem;
     opacity: 0.5;

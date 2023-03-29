@@ -21,16 +21,16 @@ function Operation() {
       <Bnr>
         <VisibilitySensorSwiper view={1} nav>
           <SwiperSlide>
-            <img src="/images/start/competitive/slide_goven1.webp" alt="" />
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_goven1.webp" alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/images/start/competitive/slide_goven2.webp" alt="" />
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_goven2.webp" alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/images/start/competitive/slide_goven3.webp" alt="" />
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_goven3.webp" alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/images/start/competitive/slide_goven4.webp" alt="" />
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_goven4.webp" alt="" />
           </SwiperSlide>
         </VisibilitySensorSwiper>
       </Bnr>
