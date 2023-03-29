@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/board/index.php",
+      "destination": "/start/inquiry",
+      "permanent": true
+    }
+  ]
+}
