@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/board/index.php?board=inquiry_01&sca=1n1_01",
+        destination: "/start/inquiry",
+        permanent: true,
+      },
+    ];
+  },
   reactStrictMode: true,
   images: {
     imageSizes: [64, 128, 384],
