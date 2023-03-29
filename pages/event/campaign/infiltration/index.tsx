@@ -9,19 +9,53 @@ const CapmpaignWrap = styled.div`
   .wrap_mobile {
     display: none;
   }
-  @media (max-width: 400px) {
-    .wrap_mobile {
-      display: block;
+
+  .box_aree {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+    input {
+      width: 18px;
+      height: 18px !important;
+      accent-color: #00ff29;
     }
-    .wrap_pc {
-      display: none;
+    label {
+      width: fit-content;
+      margin-left: 5px !important;
+      margin-bottom: 0 !important;
+      font-size: 16px;
+      line-height: 18px;
+      color: #00ff29 !important;
     }
   }
+
+  .box_4 {
+    &:after {
+      content: "";
+      position: absolute;
+      right: 3%;
+      bottom: 0;
+      width: 44.2rem;
+      height: 68.6rem;
+      background: url("/images/event/campaign/infiltration/bg_person.webp") no-repeat left top / cover;
+    }
+  }
+
   img {
     display: block;
   }
   .box_4 {
     position: relative;
+    .tit_notice {
+      position: absolute;
+      top: 4%;
+      left: 50%;
+      width: 80.6rem;
+      height: 21.5rem;
+      margin-left: -40rem;
+      background: url("/images/event/campaign/infiltration/bg_txt.webp") no-repeat left top / cover;
+    }
+
     .box_inp {
       max-width: 480px;
       position: absolute;
@@ -45,18 +79,18 @@ const CapmpaignWrap = styled.div`
           height: 7.2rem;
           margin-top: 2.8rem;
           cursor: pointer;
-          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/btn_apply.png") no-repeat center / auto 100%;
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/btn_apply.png") no-repeat center / cover;
         }
       }
 
       label {
         padding: 0;
         margin-bottom: 1rem;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         color: #fff;
       }
 
-      input,
+      input:not(#agree),
       textarea {
         max-width: 480px;
         width: 100%;
@@ -94,7 +128,7 @@ const CapmpaignWrap = styled.div`
       padding: 5rem 0;
       margin: 0 auto;
       h2 {
-        margin-bottom: 2rem;
+        margin-bottom: 20px;
         font-weight: bold;
         font-size: 16px;
 
@@ -110,34 +144,105 @@ const CapmpaignWrap = styled.div`
         }
       }
       @media (max-width: 800px) {
-        h2 {
-          font-size: 1.6rem;
-        }
-        ul li {
-          font-size: 1.2rem;
+        .box_notice {
+          padding: 0 10px;
+          h2 {
+            font-size: 14px !important;
+          }
+          .inner li {
+            font-size: 12px !important;
+            background-position: left 12px !important;
+          }
         }
       }
     }
   }
-  @media (max-width: 1080px) {
-    textarea {
-      height: 13rem !important;
+
+  @media (max-width: 1000px) {
+    .wrap_mobile {
+      display: block;
     }
-    button {
-      margin-top: 1.2rem !important;
+    .wrap_pc {
+      display: none;
+    }
+    label {
+      font-size: 14px !important;
+    }
+    input {
+      height: 6.5rem !important;
+    }
+    .box_4 {
+      &:after {
+        right: -2%;
+      }
     }
   }
-  @media (min-width: 1920px) {
+  @media (min-width: 600px) {
+    .box_4 {
+      .tit_notice {
+        top: 6.75%;
+      }
+    }
     .wrap_form {
       position: absolute;
       top: 25.2%;
       left: 50%;
-      width: 48rem;
+      width: fit-content;
+      transform: translateX(-50%);
 
       .box_inp {
         position: static;
         width: 100%;
         margin-bottom: 20px;
+        transform: none;
+      }
+    }
+  }
+  @media (max-width: 550px) {
+    .box_4 .box_aree {
+      margin-top: 5px !important;
+      input {
+        height: auto !important;
+      }
+      label {
+        margin-bottom: 0 !important;
+      }
+    }
+    .box_4:after {
+      right: -10% !important;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .box_4:after {
+      display: none;
+    }
+  }
+  @media (max-width: 670px) {
+    .box_4 {
+      .wrap_mobile {
+        display: none;
+      }
+      min-height: 572px;
+      background: url("/images/event/campaign/infiltration/4_2mob.webp") no-repeat left top / cover;
+      .tit_notice {
+        width: 340px !important;
+        margin-left: -170px !important;
+      }
+      label {
+        margin-bottom: 5px !important;
+      }
+      input {
+        height: 32px !important;
+      }
+      .box_inp {
+        width: 250px !important;
+      }
+      textarea {
+        height: 82px !important;
+      }
+      button {
+        min-height: 36px;
       }
     }
   }
@@ -211,18 +316,20 @@ function Campaign() {
       </div>
       <form className="box_4" onSubmit={handleSubmit(onSubmit)}>
         <div className="wrap_pc">
-          <img src="/images/event/campaign/infiltration/4.webp" alt="" />
+          <img src="/images/event/campaign/infiltration/4_2.png" alt="" />
         </div>
         <div className="wrap_mobile">
-          <img src="/images/event/campaign/infiltration/4_mob.webp" alt="" />
+          <img src="/images/event/campaign/infiltration/4_2mob.webp" alt="" />
         </div>
-        <div className="hiddenZoneV">
-          <h2>사연들을 받습니다!</h2>
-          <p>
-            단 한명을 위한 사연부터 여러명을 위한 단체 사연까지!
-            <br />
-            고피자가 필요한 곳이라면 어디든 찾아갑니다. 지금 사연을 남겨주세요
-          </p>
+        <div className="tit_notice">
+          <div className="hiddenZoneV">
+            <h2>사연들을 받습니다!</h2>
+            <p>
+              단 한명을 위한 사연부터 여러명을 위한 단체 사연까지!
+              <br />
+              고피자가 필요한 곳이라면 어디든 찾아갑니다. 지금 사연을 남겨주세요
+            </p>
+          </div>
         </div>
         <div className="wrap_form">
           <div className="box_inp box_inp1">
@@ -271,6 +378,10 @@ function Campaign() {
                 required: true,
               })}
             ></textarea>
+            <div className="box_aree">
+              <input type="checkbox" id="agree" name="agree" />
+              <label htmlFor="agree">개인 정보 활용에 동의합니다.</label>
+            </div>
             <button type="submit">
               <div className="hiddenZoneV">신청하기</div>
             </button>
