@@ -19,16 +19,16 @@ const CapmpaignWrap = styled.div`
       transform: translateX(-50%);
 
       &.box_inp1 {
-        top: 28.2%;
+        top: 25.2%;
       }
       &.box_inp2 {
-        top: 39.7%;
+        top: calc(36.7% + 1.6rem);
       }
       &.box_inp3 {
-        top: 51.2%;
+        top: calc(48.2% + 3.2rem);
       }
       &.box_inp4 {
-        top: 62.7%;
+        top: calc(59.7% + 4.8rem);
         button {
           width: 100%;
           height: 7.2rem;
@@ -40,8 +40,8 @@ const CapmpaignWrap = styled.div`
 
       label {
         padding: 0;
-        margin-bottom: 2.4%;
-        font-size: 14px;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
         color: #fff;
       }
 
@@ -108,6 +108,28 @@ const CapmpaignWrap = styled.div`
       }
     }
   }
+  @media (max-width: 1080px) {
+    textarea {
+      height: 13rem !important;
+    }
+    button {
+      margin-top: 1.2rem !important;
+    }
+  }
+  @media (min-width: 1920px) {
+    .wrap_form {
+      position: absolute;
+      top: 25.2%;
+      left: 50%;
+      width: 48rem;
+
+      .box_inp {
+        position: static;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
 `;
 
 function Campaign() {
@@ -171,55 +193,57 @@ function Campaign() {
             고피자가 필요한 곳이라면 어디든 찾아갑니다. 지금 사연을 남겨주세요
           </p>
         </div>
-        <div className="box_inp box_inp1">
-          <label htmlFor="name">이름</label>
-          <input
-            type="text"
-            id="name"
-            autoComplete="off"
-            className={`inp1 ${errors.name ? "on" : ""}`}
-            {...register("name", {
-              required: true,
-            })}
-          />
-        </div>
-        <div className="box_inp box_inp2">
-          <label htmlFor="phone">연락처</label>
-          <input
-            type="tel"
-            id="phone"
-            autoComplete="off"
-            className={`inp1 ${errors.phone ? "on" : ""}`}
-            {...register("phone", {
-              required: true,
-            })}
-          />
-        </div>
-        <div className="box_inp box_inp3">
-          <label htmlFor="place">방문장소</label>
-          <input
-            type="text"
-            id="place"
-            autoComplete="off"
-            className={`inp1 ${errors.area ? "on" : ""}`}
-            {...register("place", {
-              required: true,
-            })}
-          />
-        </div>
-        <div className="box_inp box_inp4">
-          <label htmlFor="story">사연</label>
-          <textarea
-            id="story"
-            autoComplete="off"
-            className={`inp1 ${errors.content ? "on" : ""}`}
-            {...register("story", {
-              required: true,
-            })}
-          ></textarea>
-          <button type="submit">
-            <div className="hiddenZoneV">신청하기</div>
-          </button>
+        <div className="wrap_form">
+          <div className="box_inp box_inp1">
+            <label htmlFor="name">이름</label>
+            <input
+              type="text"
+              id="name"
+              autoComplete="off"
+              className={`inp1 ${errors.name ? "on" : ""}`}
+              {...register("name", {
+                required: true,
+              })}
+            />
+          </div>
+          <div className="box_inp box_inp2">
+            <label htmlFor="phone">연락처</label>
+            <input
+              type="tel"
+              id="phone"
+              autoComplete="off"
+              className={`inp1 ${errors.phone ? "on" : ""}`}
+              {...register("phone", {
+                required: true,
+              })}
+            />
+          </div>
+          <div className="box_inp box_inp3">
+            <label htmlFor="place">방문장소</label>
+            <input
+              type="text"
+              id="place"
+              autoComplete="off"
+              className={`inp1 ${errors.area ? "on" : ""}`}
+              {...register("place", {
+                required: true,
+              })}
+            />
+          </div>
+          <div className="box_inp box_inp4">
+            <label htmlFor="story">사연</label>
+            <textarea
+              id="story"
+              autoComplete="off"
+              className={`inp1 ${errors.content ? "on" : ""}`}
+              {...register("story", {
+                required: true,
+              })}
+            ></textarea>
+            <button type="submit">
+              <div className="hiddenZoneV">신청하기</div>
+            </button>
+          </div>
         </div>
       </form>
       <div className="box_5">
