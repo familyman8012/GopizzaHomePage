@@ -40,10 +40,10 @@ function GovenRolling() {
                 prevEl: ".swiper-button-next2",
               }}
             >
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <span className="txt1">GOVEN</span>
                 <span className="txt2">1.0</span>
-              </SwiperSlide>
+              </SwiperSlide> */}
               <SwiperSlide>
                 <span className="txt1">GOVEN</span>
                 <span className="txt2">2.0</span>
@@ -66,9 +66,9 @@ function GovenRolling() {
             prevEl: ".swiper-button-next2",
           }}
         >
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/img_goven1x2.webp" alt="GOVEN 1.0" />
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide>
             <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/img_goven2x2.webp" alt="GOVEN 2.0" />
           </SwiperSlide>

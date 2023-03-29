@@ -158,3 +158,16 @@ export interface IInquiryReq {
 export interface IInquiryReq {
   info: IInquiryReq;
 }
+
+//캠페인 - 침투
+
+export interface IInfiltration {
+  name: string;
+  phone: string;
+  place: string;
+  story: string;
+}
+
+export interface IInfiltrationRes {
+  info: IInfiltration;
+}

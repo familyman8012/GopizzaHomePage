@@ -41,13 +41,52 @@ export const TipWrap = styled.div`
     display: grid;
     gap: 1.4rem;
     grid-template-columns: repeat(3, 1fr);
+
+    img {
+      display: block;
+    }
+    .box_txt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2.5rem;
+      .txt1 {
+        margin-right: 1.1rem;
+        font-size: 4.5rem;
+        font-weight: bold;
+
+        .number {
+          font-family: "Montserrat";
+        }
+      }
+      .txt2 {
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+      .txt3 {
+        font-size: 1.2rem;
+      }
+    }
+    .txt_box span {
+      display: block;
+      white-space: pre-wrap;
+    }
   }
 `;
 
 const TipArr = [
-  "1인 피자를 즐길 줄 아는 진정한 피자러버인 당신을 위해 - 피자 1판 + 프렌치 프라이 + 음료 1잔",
-  "2인 각자 원하는 맛 골라서 나눠먹자! 양과 가성비 둘 다 챙기기 - 피자 2판 + 파스타 1개 + 음료2잔",
-  "3인 ~  여럿이도 문제없GO! 취향존중 - 피자 2판 + 파스타 1개 + 떡볶이 1개 + 음료 3잔",
+  {
+    txt1: `피자를 즐길 줄 아는 진정한\n피자러버인 당신을 위해`,
+    txt2: "피자 1종 + 사이드 1종 + 음료 1종",
+  },
+  {
+    txt1: `각자 원하는 맛 골라서 나눠먹자!\n양과 가성비 둘 다 챙기기`,
+    txt2: "피자 2종 + 사이드 1종 + 음료 2종",
+  },
+  {
+    txt1: `여럿이도 문제없GO! 취향존중`,
+    txt2: `피자 2종 + 떡볶이 or 파스타 1종\n+ 사이드 1종 + 음료 2종`,
+  },
 ];
 
 function Menu({ seo }: { seo: object }) {
@@ -89,10 +128,27 @@ function Menu({ seo }: { seo: object }) {
                   <br /> 항상 즐겁고 맛있는 고피자!
                 </p>
               </div>
-              <ul>
+              <ul className="list_tip">
                 {TipArr.map((el, i) => (
                   <li key={i}>
-                    <img key={i} src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/popup/tip${i + 1}x2.webp`} alt={el} />
+                    <img key={i} src={`/images/popup/tip${i + 1}x2.webp`} alt="예시 이미지" />
+                    <div className="box_txt">
+                      <span className="txt1">
+                        {i === 2 ? (
+                          <>
+                            <span className="number">{i + 1}</span>인~{" "}
+                          </>
+                        ) : (
+                          <>
+                            <span className="number">{i + 1}</span>인
+                          </>
+                        )}
+                      </span>
+                      <span className="txt_box">
+                        <span className="txt2">{el.txt1}</span>
+                        <span className="txt3">{el.txt2}</span>
+                      </span>
+                    </div>
                   </li>
                 ))}
               </ul>

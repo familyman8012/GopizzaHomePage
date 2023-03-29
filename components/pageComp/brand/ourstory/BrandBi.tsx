@@ -4,7 +4,7 @@ import { BrandBiWrap } from "./style";
 function BrandBi() {
   return (
     <BrandBiWrap>
-      <h4>BRAND BI</h4>
+      <h4>BRAND IDENTITY</h4>
       <p>
         고피자의 타원형 심볼은 기존 피자의 한계를 넘어 완전히 새로운 피자의 시작을 상징합니다.
         <br />
@@ -26,7 +26,7 @@ function BrandBi() {
         </div>
         <div className="brand_color">
           <img
-            src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/img_brandbi4.webp"
+            src="/images/brand/ourstory/img_brandbi4.webp"
             alt="[BRAND COLOR] PRIMARY ORANGE - 고피자의 열정과 도전 (RGB : 255 70 0, CMYK : 0 80 95 0, PANTONE : 02IC), PRIMARY NAVY - 피자에 임하는 마음가짐 (RGB : 23 28 143, CMYK : 100 92 15 0, PANTONE : 2746C)"
           />
         </div>

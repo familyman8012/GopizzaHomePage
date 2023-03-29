@@ -7,7 +7,7 @@ function BnrOpen() {
   return (
     <BnrOpenWrap>
       <VisibilitySensorSwiper view={1} nav paging>
-        {Array.from({ length: 6 }).map((_, i) => (
+        {Array.from({ length: 8 }).map((_, i) => (
           <SwiperSlide key={i}>
             {i === 0 && (
               <p className="txt">
@@ -16,7 +16,7 @@ function BnrOpen() {
                 컬러와 컨셉의 인테리어
               </p>
             )}
-            <img src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/info/bnr_info${i + 1}.webp`} alt="" />
+            <img src={`/images/start/info/bnr_info${i + 1}x2.webp`} alt="" />
           </SwiperSlide>
         ))}
       </VisibilitySensorSwiper>

@@ -11,7 +11,7 @@ function TabBrand() {
       </li>
       <li>
         <Link href="/brand/howwemake">
-          <span>HOW WE MAKE</span>
+          <span>THE WAY WE MAKE</span>
         </Link>
       </li>
       <li>

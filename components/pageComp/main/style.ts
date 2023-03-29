@@ -39,8 +39,8 @@ export const LinkBannerItem = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  width: 61.3rem;
-  height: 26.4rem;
+  width: 61.4rem;
+  height: 25.9rem;
 
   .txt {
     font-size: 4rem;
@@ -50,17 +50,20 @@ export const LinkBannerItem = styled.div`
 
   &.find {
     margin-right: 6.4rem;
-    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/bnr_link1x2.webp") no-repeat left top / 100%;
+    background: url("/images/main/bnr_link1x2.webp") no-repeat left top / 100%;
 
     .txt {
-      padding: 6.4rem 0 0 25.6rem;
+      padding: 5.9rem 0 0 22.6rem;
     }
   }
   &.inquiry {
-    width: 62.4rem;
-    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/bnr_link2x2.webp") no-repeat left top / 100%;
+    width: 65.6rem;
+    height: 23.5rem;
+    padding-top: 2.4rem;
+    box-sizing: content-box;
+    background: url("/images/main/bnr_link2x2.webp") no-repeat left bottom / 100%;
     .txt {
-      padding: 6.4rem 0 0 9rem;
+      padding: 3.4rem 0 0 9rem;
     }
   }
 `;

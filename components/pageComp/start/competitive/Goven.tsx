@@ -15,19 +15,22 @@ function Operation() {
             <br />
             화덕 피자를 조리할 수 있습니다
           </strong>
-          <p className="txt2">상권과 매장환경에 따라 GOVEN 1.0과 2.0을 선택할 수 있습니다.</p>
+          <p className="txt2">상권과 매장환경에 따라 GOBOT STATION은 선택적으로 이용이 가능합니다.</p>
         </TxtQuotes>
       </div>
       <Bnr>
         <VisibilitySensorSwiper view={1} nav>
           <SwiperSlide>
-            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_goven1.webp" alt="" />
+            <img src="/images/start/competitive/slide_goven1.webp" alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_goven2.webp" alt="" />
+            <img src="/images/start/competitive/slide_goven2.webp" alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_goven3.webp" alt="" />
+            <img src="/images/start/competitive/slide_goven3.webp" alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/images/start/competitive/slide_goven4.webp" alt="" />
           </SwiperSlide>
         </VisibilitySensorSwiper>
       </Bnr>

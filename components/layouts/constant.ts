@@ -16,9 +16,9 @@ export const FooterMenu = [
     depth1: "브랜드",
     url: "/brand",
     depth2: [
-      { menuName: "our story", url: "/brand" },
-      { menuName: "How we make", url: "/brand/howwemake" },
-      { menuName: "Go global", url: "/brand/goglobal" },
+      { menuName: "OUR STORY", url: "/brand" },
+      { menuName: "THE WAY WE MAKE", url: "/brand/howwemake" },
+      { menuName: "GO GLOBAL", url: "/brand/goglobal" },
     ],
   },
   {

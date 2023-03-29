@@ -111,10 +111,10 @@ export const NeedWrap = styled.section`
   ul {
     li {
       &:nth-of-type(1) {
-        height: 32.4rem;
-        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/tech/bg_need1x2.webp") no-repeat left top / 100%;
+        height: 38.7rem;
+        background: url("/images/start/tech/bg_need1x2.webp") no-repeat left top / 100%;
         dl {
-          padding: 6.9rem 0 0 36.8rem;
+          padding: 7rem 0 0 39.5rem;
         }
         dt {
           margin-bottom: 1.9rem;

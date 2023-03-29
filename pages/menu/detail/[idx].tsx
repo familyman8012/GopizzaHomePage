@@ -173,7 +173,7 @@ export const getStaticProps = async (context: any) => {
   const { idx } = context.params;
 
   const menuSeoData = {
-    canonical: `https://gopizzahometest.vercel.app/menu/detail/${idx}`,
+    canonical: `https://gopizza.kr/menu/detail/${idx}`,
     title: `${menuDetail[`${idx}`].name} | 고피자`,
     description: `${menuDetail[`${idx}`].txt}, 고피자의 ${menuDetail[`${idx}`].name}`,
 
@@ -181,7 +181,7 @@ export const getStaticProps = async (context: any) => {
       type: "website",
       title: `${menuDetail[`${idx}`].name} | 고피자`,
       description: `${menuDetail[`${idx}`].txt}, 고피자의 ${menuDetail[`${idx}`].name}`,
-      url: `https://gopizzahometest.vercel.app/menu/detail/${idx}`,
+      url: `https://gopizza.kr/menu/detail/${idx}`,
       images: [
         {
           url: `https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/${menuDetail[`${idx}`]?.category}/${idx}x2.webp`,

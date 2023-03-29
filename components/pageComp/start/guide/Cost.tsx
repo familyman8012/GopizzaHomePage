@@ -52,7 +52,6 @@ function Cost() {
       </h4>
       <p className="notice">
         <span className="txt1">매장 형태 및 상황에 따라 금액이 변동 될 수 있으며, 동일한 평수라도 요구사항에 따라 상이할 수 있습니다.</span>
-        <span className="txt2">15평 기준(vat별도)</span>
       </p>
       <table>
         <caption>개설비용안내표</caption>
@@ -61,25 +60,37 @@ function Cost() {
             <th>
               <span className="hiddenZoneV">비용 항목</span>
             </th>
-            <th>일반매장</th>
-            <th>배달전용매장</th>
+            <th>
+              <span className="txt1">일반매장</span>
+              <span className="txt2">15평 기준(vat별도)</span>
+            </th>
+            <th>
+              <span className="txt1">배달전용매장</span>
+              <span className="txt2">9평 기준 (vat별도)</span>
+            </th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>가맹비</td>
             <td>5,000,000</td>
-            <td>5,000,000</td>
+            <td>
+              <span className="sale">5,000,000</span>
+            </td>
           </tr>
           <tr>
-            <td>본사교육</td>
+            <td>교육비</td>
             <td>3,000,000</td>
-            <td>3,000,000</td>
+            <td>
+              <span className="sale">3,000,000</span>
+            </td>
           </tr>
           <tr>
-            <td>보증금</td>
+            <td>계약이행보증금</td>
             <td>5,000,000</td>
-            <td>5,000,000</td>
+            <td>
+              <span className="sale">5,000,000</span>
+            </td>
           </tr>
           <tr>
             <td>GOVEN 자동화덕</td>

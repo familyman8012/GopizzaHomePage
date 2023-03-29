@@ -27,7 +27,13 @@ export const MenuWrap = styled.section`
     text-align: center;
     line-height: 4.8rem;
     border-radius: 0.8rem;
+    cursor: pointer;
     background-color: #ffece5;
+
+    &:hover {
+      color: #fff;
+      background-color: var(--color-orange);
+    }
   }
 `;
 

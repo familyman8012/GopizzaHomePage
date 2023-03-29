@@ -5,7 +5,7 @@ export const brandTab = [
   },
   {
     link: "/brand/howwemake",
-    menuName: "HOW WE MAKE",
+    menuName: "THE WAY WE MAKE",
   },
   {
     link: "/brand/goglobal",

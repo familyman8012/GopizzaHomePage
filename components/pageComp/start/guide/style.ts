@@ -146,10 +146,6 @@ export const CostWrap = styled.section`
       font-size: 1.8rem;
       opacity: 0.5;
       color: #707070;
-
-      &:last-of-type {
-        margin-left: auto;
-      }
     }
   }
 
@@ -184,9 +180,10 @@ export const CostWrap = styled.section`
     }
     th {
       padding: 3.15rem 0;
-      font-size: 2.4rem;
+
       border-bottom: 0;
       background: rgb(255, 70, 0, 0.1);
+
       &:nth-of-type(1) {
         width: 33.7rem;
       }
@@ -194,9 +191,20 @@ export const CostWrap = styled.section`
       &:nth-of-type(3) {
         width: 47.15rem;
 
-        font-size: 2.4rem;
-        font-weight: bold;
-        color: var(--color-orange);
+        span {
+          display: block;
+          &.txt1 {
+            font-size: 2.4rem;
+            font-weight: bold;
+            line-height: 1.83;
+            color: var(--color-orange);
+          }
+          &.txt2 {
+            font-size: 18px;
+            font-weight: normal;
+            color: #00000080;
+          }
+        }
       }
     }
     td {
@@ -205,6 +213,30 @@ export const CostWrap = styled.section`
       }
       &:not(&:nth-of-type(1)) {
         font-family: "solano";
+        .sale {
+          position: relative;
+          &:before {
+            content: "한시적 할인 / 면제";
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            width: 12.7rem;
+            color: var(--color-orange);
+            font-size: 1.8rem;
+            font-weight: normal;
+            transform: translate(-50%, -50%);
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 18.57rem;
+            height: 0.4rem;
+            background: var(--color-orange);
+          }
+        }
       }
 
       padding: 2.35rem 0;

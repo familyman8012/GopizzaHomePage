@@ -4,6 +4,10 @@ import { TopWrap } from "ComponentsFarm/layouts/style";
 export const BrandWrap = styled.main`
   position: relative;
   padding: 12rem 0 0;
+
+  .list_tab li:nth-child(2) {
+    width: 26.7rem;
+  }
 `;
 
 export const SubMainVisualWrap = styled.div<{ bgimg: string }>`
@@ -14,7 +18,7 @@ export const SubMainVisualWrap = styled.div<{ bgimg: string }>`
   /* width: 100vw; */
   height: 46rem;
   text-align: center;
-  background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/${({ bgimg }) => bgimg}.webp") no-repeat center/cover;
+  background: url("/images/brand/${({ bgimg }) => bgimg}.webp") no-repeat center/cover;
 
   &.brand .txt1,
   &.howwemake .txt1,

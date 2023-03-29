@@ -1,4 +1,7 @@
 import styled from "@emotion/styled";
+import { useMutation } from "@tanstack/react-query";
+import { fetchInfiltration } from "ApiFarm/home";
+import { IInfiltration } from "ApiFarm/interface/homeInterface";
 import { ReactElement } from "react";
 import { useForm } from "react-hook-form";
 
@@ -126,23 +129,20 @@ function Campaign() {
   } = useForm();
 
   // 신청하기
-  // const GropuOrder = useMutation(["groupOrder"], (request: IGroupOrderReq) => fetchGroupOrder(request));
+  const Infiltration = useMutation(["IInfiltration"], (request: IInfiltration) => fetchInfiltration(request));
 
-  const onSubmit = (data: Record<string, string>) => {
-    // GropuOrder.mutate(sendData, {
-    //   onSuccess: (data) => {
-    //     document.body.classList.add("overflowhidden");
-    //     popref.current?.showModal();
-    //     console.log("data", data);
-    //     reset();
-    //     setStartDate(null);
-    //     setAddressDetail({ address: "", buildingName: "" });
-    //   },
-    //   onError: (err) => {
-    //     alert("문제가 발생하였습니다. 잠시 후 다시 신청해주시기 바랍니다.");
-    //     console.log(err);
-    //   },
-    // });
+  const onSubmit = (sendData: any) => {
+    console.log("sendData", sendData);
+    Infiltration.mutate(sendData, {
+      onSuccess: (data) => {
+        alert("사연이 정상적으로 접수되었습니다.");
+        console.log("data", data);
+      },
+      onError: (err) => {
+        alert("문제가 발생하였습니다. 잠시 후 다시 신청해주시기 바랍니다.");
+        console.log(err);
+      },
+    });
   };
 
   return (
@@ -190,24 +190,24 @@ function Campaign() {
           />
         </div>
         <div className="box_inp box_inp3">
-          <label htmlFor="area">방문장소</label>
+          <label htmlFor="place">방문장소</label>
           <input
             type="text"
-            id="area"
+            id="place"
             autoComplete="off"
             className={`inp1 ${errors.area ? "on" : ""}`}
-            {...register("area", {
+            {...register("place", {
               required: true,
             })}
           />
         </div>
         <div className="box_inp box_inp4">
-          <label htmlFor="content">사연</label>
+          <label htmlFor="story">사연</label>
           <textarea
-            id="content"
+            id="story"
             autoComplete="off"
             className={`inp1 ${errors.content ? "on" : ""}`}
-            {...register("content", {
+            {...register("story", {
               required: true,
             })}
           ></textarea>

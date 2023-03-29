@@ -268,22 +268,8 @@ export const SupportWrap = styled.section`
   }
 
   .list_brand li {
-    &:nth-of-type(1) {
-      color: #005dff;
-      background: #ccf5ff;
-    }
-    &:nth-of-type(2) {
-      color: #009c53;
-      background: #ccffe0;
-    }
-    &:nth-of-type(3) {
-      color: #ff3b3b;
-      background: #ffd9d9;
-    }
-    &:nth-of-type(4) {
-      color: #70f;
-      background: #e6ccff;
-    }
+    color: #ff4600;
+    background: #fde8e0;
   }
 
   .wrap_swiper {
@@ -331,18 +317,8 @@ export const SupportWrap = styled.section`
     margin-top: 12rem;
 
     .list_sales li {
-      &:nth-of-type(1) {
-        color: #a27c00;
-        background: #f7ffcc;
-      }
-      &:nth-of-type(2) {
-        color: #40a200;
-        background: #d6ffcc;
-      }
-      &:nth-of-type(3) {
-        color: #3100ff;
-        background: #ccdaff;
-      }
+      color: #ff4600;
+      background: #fde8e0;
     }
   }
 
@@ -502,7 +478,7 @@ export const GovenWrap = styled.section`
         background: var(--color-orange);
       }
 
-      &.line3 {
+      &.line2 {
         &:before {
           width: 40rem;
           margin-left: 41.8rem;

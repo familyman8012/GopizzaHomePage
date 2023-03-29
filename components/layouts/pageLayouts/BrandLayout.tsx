@@ -14,7 +14,7 @@ function BrandLayout({ children, index }: Props) {
     <BrandWrap>
       <h2 className="tit">브랜드 소개</h2>
       <Tab data={brandTab} />
-      <SubMainVisual bgimg={SubMainVisualArr[index].bgimg} txt1={SubMainVisualArr[index].txt1} txt2={SubMainVisualArr[index].txt2} />
+      <SubMainVisual index={index} bgimg={SubMainVisualArr[index].bgimg} txt1={SubMainVisualArr[index].txt1} txt2={SubMainVisualArr[index].txt2} />
       {children}
     </BrandWrap>
   );

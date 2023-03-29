@@ -14,28 +14,16 @@ export const IndexWrap = styled.main`
     position: relative;
     width: 50vw;
     height: 100%;
-    align-items: center;
-    justify-content: center;
-
-    &:before {
-      content: "";
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.47);
-    }
+    padding: 13rem 0 0 12rem;
 
     &:nth-of-type(1) {
-      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/bg_index1x2.webp") no-repeat center / cover;
+      background: url("/images/index/bg_main1x2.webp") no-repeat center bottom / cover;
       a .txt {
         padding-right: 5.7rem;
       }
     }
     &:nth-of-type(2) {
-      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/bg_index2x2.webp") no-repeat center / cover;
+      background: url("/images/index/bg_main2x2.webp") no-repeat center bottom / cover;
       a .txt {
         padding-right: 4.5rem;
       }
@@ -80,6 +68,7 @@ export const IndexWrap = styled.main`
     flex-direction: column;
     .box_goto {
       width: 100vw !important;
+      padding: 3rem 0 0 12rem;
       h1 {
         margin-bottom: 8px;
         font-family: "solano";
@@ -87,9 +76,9 @@ export const IndexWrap = styled.main`
         font-weight: bold;
       }
       p {
-        font-size: 28px;
+        font-size: 27px;
         font-weight: bold;
-        line-height: 1.47;
+        line-height: 1.3;
       }
 
       a {
