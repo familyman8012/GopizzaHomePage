@@ -155,7 +155,7 @@ const CapmpaignWrap = styled.div`
           font-size: 12px;
           color: #b0b0b0;
           line-height: 2;
-          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/dot.png") no-repeat left 8px;
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/dot.png") no-repeat left 12px;
         }
       }
       @media (max-width: 800px) {

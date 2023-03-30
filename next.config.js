@@ -7,19 +7,25 @@ const nextConfig = {
         destination: "/start/inquiry",
         permanent: true,
       },
-      {
-        source: "/html/com_5.html",
-        destination: "/start/inquiry",
-        permanent: true,
-      },
+
       {
         source: "/html/brand.html",
         destination: "/brand",
         permanent: true,
       },
       {
+        source: "/html/com_1.html",
+        destination: "/brand",
+        permanent: true,
+      },
+      {
         source: "/html/com_2.html",
         destination: "/brand",
+        permanent: true,
+      },
+      {
+        source: "/html/com_5.html",
+        destination: "/start/inquiry",
         permanent: true,
       },
       {
