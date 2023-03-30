@@ -33,6 +33,41 @@ const nextConfig = {
         destination: "/start",
         permanent: true,
       },
+      {
+        source: "/html/use.html",
+        destination: "/menu",
+        permanent: true,
+      },
+      {
+        source: "/html/menu.html",
+        destination: "/menu",
+        permanent: true,
+      },
+      {
+        source: "/html/make.html",
+        destination: "/howwemake",
+        permanent: true,
+      },
+      {
+        source: "/html/lab.html",
+        destination: "/start/technology",
+        permanent: true,
+      },
+      {
+        source: "/html/menu_view.html",
+        destination: "/menu",
+        permanent: true,
+      },
+      {
+        source: "/html/global.html",
+        destination: "/brand/goglobal",
+        permanent: true,
+      },
+      {
+        source: "/html/order.html",
+        destination: "/order",
+        permanent: true,
+      },
     ];
   },
   reactStrictMode: true,
