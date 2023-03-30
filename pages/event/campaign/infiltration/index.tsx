@@ -34,6 +34,7 @@ const CapmpaignWrap = styled.div`
     .openPrivacy {
       width: auto;
       height: auto;
+      font-size: 1.8rem;
       margin-left: 15px;
       padding: 0 10px;
       line-height: 1;
@@ -182,6 +183,16 @@ const CapmpaignWrap = styled.div`
     label {
       font-size: 14px !important;
     }
+    .box_aree {
+      label {
+        margin-left: 3px !important;
+      }
+      label,
+      .openPrivacy {
+        font-size: 12px !important;
+      }
+    }
+
     input {
       height: 6.5rem !important;
     }
