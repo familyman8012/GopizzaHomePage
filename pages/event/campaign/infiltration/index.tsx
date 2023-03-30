@@ -2,8 +2,12 @@ import styled from "@emotion/styled";
 import { useMutation } from "@tanstack/react-query";
 import { fetchInfiltration } from "ApiFarm/home";
 import { IInfiltration } from "ApiFarm/interface/homeInterface";
-import { ReactElement } from "react";
+import Modal from "ComponentsFarm/common/Modal";
+import { PrivacyWrap } from "ComponentsFarm/popup/Privacy";
+import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
+import { ReactElement, useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
+import DOMPurify from "isomorphic-dompurify";
 
 const CapmpaignWrap = styled.div`
   .wrap_mobile {
@@ -26,6 +30,16 @@ const CapmpaignWrap = styled.div`
       font-size: 16px;
       line-height: 18px;
       color: #00ff29 !important;
+    }
+    .openPrivacy {
+      width: auto;
+      height: auto;
+      margin-left: 15px;
+      padding: 0 10px;
+      line-height: 1;
+      text-decoration: underline;
+      cursor: pointer;
+      background: transparent;
     }
   }
 
@@ -74,7 +88,7 @@ const CapmpaignWrap = styled.div`
       }
       &.box_inp4 {
         top: calc(59.7% + 4.8rem);
-        button {
+        .btn_apply {
           width: 100%;
           height: 7.2rem;
           margin-top: 2.8rem;
@@ -125,7 +139,7 @@ const CapmpaignWrap = styled.div`
     background: #202020;
     .inner {
       width: fit-content;
-      padding: 5rem 0;
+      padding: 5rem;
       margin: 0 auto;
       h2 {
         margin-bottom: 20px;
@@ -198,26 +212,7 @@ const CapmpaignWrap = styled.div`
       }
     }
   }
-  @media (max-width: 550px) {
-    .box_4 .box_aree {
-      margin-top: 5px !important;
-      input {
-        height: auto !important;
-      }
-      label {
-        margin-bottom: 0 !important;
-      }
-    }
-    .box_4:after {
-      right: -10% !important;
-    }
-  }
 
-  @media (max-width: 400px) {
-    .box_4:after {
-      display: none;
-    }
-  }
   @media (max-width: 670px) {
     .box_4 {
       .wrap_mobile {
@@ -241,14 +236,52 @@ const CapmpaignWrap = styled.div`
       textarea {
         height: 82px !important;
       }
-      button {
+      .btn_apply {
         min-height: 36px;
       }
+    }
+  }
+  @media (max-width: 550px) {
+    .box_4 .box_aree {
+      margin-top: 5px !important;
+      input {
+        height: auto !important;
+      }
+      label {
+        margin-bottom: 0 !important;
+      }
+    }
+    .box_4:after {
+      right: -10% !important;
+    }
+    .box_4 .tit_notice {
+      top: 31px;
+      width: 300px !important;
+      height: 70px;
+      margin-left: -144px !important;
+      transform: none;
+    }
+    .box_agree {
+      margin: 10px 0px !important;
+    }
+  }
+  @media (max-width: 400px) {
+    .box_4:after {
+      display: none;
     }
   }
 `;
 
 function Campaign() {
+  const [agree, setAgree] = useState(false);
+  const [open, setOpen] = useState(false);
+  const openStoreModal = useCallback(() => {
+    setOpen(true);
+  }, []);
+  const close = useCallback(() => {
+    setOpen(false);
+  }, []);
+
   const {
     register,
     handleSubmit,
@@ -260,6 +293,9 @@ function Campaign() {
   const Infiltration = useMutation(["IInfiltration"], (request: IInfiltration) => fetchInfiltration(request));
 
   const onSubmit = (sendData: any) => {
+    if (!agree) {
+      return false;
+    }
     console.log("sendData", sendData);
     Infiltration.mutate(sendData, {
       onSuccess: (data) => {
@@ -379,10 +415,20 @@ function Campaign() {
               })}
             ></textarea>
             <div className="box_aree">
-              <input type="checkbox" id="agree" name="agree" />
+              <input type="checkbox" id="agree" name="agree" onChange={() => setAgree((prev) => !prev)} checked={agree} />
               <label htmlFor="agree">개인 정보 활용에 동의합니다.</label>
+              <button
+                type="button"
+                className="openPrivacy"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  openStoreModal();
+                }}
+              >
+                전문보기
+              </button>
             </div>
-            <button type="submit">
+            <button type="submit" className="btn_apply">
               <div className="hiddenZoneV">신청하기</div>
             </button>
           </div>
@@ -420,6 +466,17 @@ function Campaign() {
           </ul>
         </div>
       </div>
+      <Modal open={open} onClose={close}>
+        <PrivacyWrap>
+          <p className="tit">{PrivacyArr[0].title}</p>
+          <div className="box_info">
+            <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(PrivacyArr[0].txt) }} />
+          </div>
+          <button className="btn_close" onClick={close}>
+            <span className="hiddenZoneV">닫기</span>
+          </button>
+        </PrivacyWrap>
+      </Modal>
     </CapmpaignWrap>
   );
 }
