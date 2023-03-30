@@ -29,6 +29,7 @@ export const GopizzaTechWrap = styled.section`
       ${techImg}
 
       &:hover dl {
+        overflow: visible;
         height: 16.2rem;
         transition: height 0.3s;
         dt:after {
@@ -135,7 +136,7 @@ export const NeedWrap = styled.section`
       dl {
         dt {
           font-size: 2.4rem;
-          font-weight: 900;
+          font-weight: bold;
           line-height: 1.58;
         }
         dd {

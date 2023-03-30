@@ -13,7 +13,7 @@ function Operation() {
           <strong className="txt1">
             누구든지 손쉽게
             <br />
-            화덕 피자를 조리할 수 있습니다
+            피자를 조리할 수 있습니다
           </strong>
           <p className="txt2">상권과 매장환경에 따라 GOBOT STATION은 선택적으로 이용이 가능합니다.</p>
         </TxtQuotes>
