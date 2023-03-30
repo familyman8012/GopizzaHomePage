@@ -294,7 +294,7 @@ function Campaign() {
 
   const onSubmit = (sendData: any) => {
     if (!agree) {
-      return false;
+      return alert("개인정보 활용에 동의하신 후 신청가능합니다.");
     }
     console.log("sendData", sendData);
     Infiltration.mutate(sendData, {
