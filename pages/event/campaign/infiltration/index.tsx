@@ -279,9 +279,25 @@ const CapmpaignWrap = styled.div`
       margin: 20px 0px !important;
     }
   }
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     .box_4:after {
       display: none;
+    }
+    .box_4 .box_inp.box_inp1 {
+      top: 20.2%;
+    }
+    .box_4 .box_inp.box_inp2 {
+      top: calc(31.7% + 1.6rem);
+    }
+    .box_4 .box_inp.box_inp3 {
+      top: calc(43.2% + 3.2rem);
+    }
+    .box_4 .box_inp.box_inp4 {
+      top: calc(54.7% + 4.8rem);
+    }
+    .box_4 .box_inp.box_inp4 .btn_apply {
+      height: 36px;
+      margin: 0;
     }
   }
 `;
