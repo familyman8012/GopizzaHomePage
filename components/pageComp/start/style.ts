@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { VideoWrap } from "./technology/style";
 
 export const StartWrap = styled.div`
   h2.tit {
@@ -50,6 +51,13 @@ export const StartWrap = styled.div`
 export const Content = styled.main`
   width: 128rem;
   margin: 23.3rem auto 0;
+
+  .video_wrap {
+    margin-top: -10.6rem;
+    ${VideoWrap} {
+      margin-top: 0;
+    }
+  }
 `;
 
 export const SubVisualWrap = styled.section`
