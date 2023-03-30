@@ -284,7 +284,7 @@ const CapmpaignWrap = styled.div`
       display: none;
     }
     .box_4 .box_inp.box_inp1 {
-      top: 20.3%;
+      top: 20.2%;
     }
     .box_4 .box_inp.box_inp2 {
       top: calc(31.7% + 1.6rem);
