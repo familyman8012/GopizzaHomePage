@@ -8,6 +8,8 @@ import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
 import { ReactElement, useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
 import DOMPurify from "isomorphic-dompurify";
+import { NextSeo } from "next-seo";
+import { CampSeo } from "ComponentsFarm/Seo";
 
 const CapmpaignWrap = styled.div`
   .wrap_mobile {
@@ -340,174 +342,177 @@ function Campaign() {
   };
 
   return (
-    <CapmpaignWrap>
-      <div className="box_1">
-        <div className="wrap_pc">
-          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/1.webp" alt="" />
-        </div>
-        <div className="wrap_mobile">
-          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/1_mob.webp" alt="" />
-        </div>
-        <div className="hiddenZoneV">
-          <h1>GOPIZZA</h1>
-          <p>2023 전국! 고피자 침투!</p>
-        </div>
-      </div>
-      <div className="box_2">
-        <div className="wrap_pc">
-          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/2.webp" alt="" />
-        </div>
-        <div className="wrap_mobile">
-          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/2_mob.webp" alt="" />
-        </div>
-        <div className="hiddenZoneV">사연 보내고 당첨되면 매주 한 팀씩, 피자 90판 공짜로 쏜다!</div>
-      </div>
-      <div className="box_3">
-        <div className="wrap_pc">
-          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/3.webp" alt="" />
-        </div>
-        <div className="wrap_mobile">
-          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/3_mob.webp" alt="" />
-        </div>
-        <div className="hiddenZoneV">
-          전국 침투작전 소개 :
-          <ol>
-            <li>1. 사연접수 : 하단접수</li>
-            <li>2. 사연선정 : 접수 후 30일 이내 확인</li>
-            <li>3. 선정자 통보 : 문자로 메세지 발송</li>
-            <li>4. 90판 배달 방법 조율 : (트럭 or 배달)</li>
-            <li>5. 침투 D-day!</li>
-          </ol>
-        </div>
-      </div>
-      <form className="box_4" onSubmit={handleSubmit(onSubmit)}>
-        <div className="wrap_pc">
-          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/4_2.webp" alt="" />
-        </div>
-        <div className="wrap_mobile">
-          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/4_2mob.webp" alt="" />
-        </div>
-        <div className="tit_notice">
+    <>
+      <NextSeo {...CampSeo[0]} />
+      <CapmpaignWrap>
+        <div className="box_1">
+          <div className="wrap_pc">
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/1.webp" alt="" />
+          </div>
+          <div className="wrap_mobile">
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/1_mob.webp" alt="" />
+          </div>
           <div className="hiddenZoneV">
-            <h2>사연들을 받습니다!</h2>
-            <p>
-              단 한명을 위한 사연부터 여러명을 위한 단체 사연까지!
-              <br />
-              고피자가 필요한 곳이라면 어디든 찾아갑니다. 지금 사연을 남겨주세요
-            </p>
+            <h1>GOPIZZA</h1>
+            <p>2023 전국! 고피자 침투!</p>
           </div>
         </div>
-        <div className="wrap_form">
-          <div className="box_inp box_inp1">
-            <label htmlFor="name">이름</label>
-            <input
-              type="text"
-              id="name"
-              autoComplete="off"
-              className={`inp1 ${errors.name ? "on" : ""}`}
-              {...register("name", {
-                required: true,
-              })}
-            />
+        <div className="box_2">
+          <div className="wrap_pc">
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/2.webp" alt="" />
           </div>
-          <div className="box_inp box_inp2">
-            <label htmlFor="phone">연락처</label>
-            <input
-              type="tel"
-              id="phone"
-              autoComplete="off"
-              className={`inp1 ${errors.phone ? "on" : ""}`}
-              {...register("phone", {
-                required: true,
-              })}
-            />
+          <div className="wrap_mobile">
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/2_mob.webp" alt="" />
           </div>
-          <div className="box_inp box_inp3">
-            <label htmlFor="place">방문장소</label>
-            <input
-              type="text"
-              id="place"
-              autoComplete="off"
-              className={`inp1 ${errors.area ? "on" : ""}`}
-              {...register("place", {
-                required: true,
-              })}
-            />
+          <div className="hiddenZoneV">사연 보내고 당첨되면 매주 한 팀씩, 피자 90판 공짜로 쏜다!</div>
+        </div>
+        <div className="box_3">
+          <div className="wrap_pc">
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/3.webp" alt="" />
           </div>
-          <div className="box_inp box_inp4">
-            <label htmlFor="story">사연</label>
-            <textarea
-              id="story"
-              autoComplete="off"
-              className={`inp1 ${errors.content ? "on" : ""}`}
-              {...register("story", {
-                required: true,
-              })}
-            ></textarea>
-            <div className="box_aree">
-              <input type="checkbox" id="agree" name="agree" onChange={() => setAgree((prev) => !prev)} checked={agree} />
-              <label htmlFor="agree">개인 정보 활용에 동의합니다.</label>
-              <button
-                type="button"
-                className="openPrivacy"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  openStoreModal();
-                }}
-              >
-                전문보기
+          <div className="wrap_mobile">
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/3_mob.webp" alt="" />
+          </div>
+          <div className="hiddenZoneV">
+            전국 침투작전 소개 :
+            <ol>
+              <li>1. 사연접수 : 하단접수</li>
+              <li>2. 사연선정 : 접수 후 30일 이내 확인</li>
+              <li>3. 선정자 통보 : 문자로 메세지 발송</li>
+              <li>4. 90판 배달 방법 조율 : (트럭 or 배달)</li>
+              <li>5. 침투 D-day!</li>
+            </ol>
+          </div>
+        </div>
+        <form className="box_4" onSubmit={handleSubmit(onSubmit)}>
+          <div className="wrap_pc">
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/4_2.webp" alt="" />
+          </div>
+          <div className="wrap_mobile">
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/4_2mob.webp" alt="" />
+          </div>
+          <div className="tit_notice">
+            <div className="hiddenZoneV">
+              <h2>사연들을 받습니다!</h2>
+              <p>
+                단 한명을 위한 사연부터 여러명을 위한 단체 사연까지!
+                <br />
+                고피자가 필요한 곳이라면 어디든 찾아갑니다. 지금 사연을 남겨주세요
+              </p>
+            </div>
+          </div>
+          <div className="wrap_form">
+            <div className="box_inp box_inp1">
+              <label htmlFor="name">이름</label>
+              <input
+                type="text"
+                id="name"
+                autoComplete="off"
+                className={`inp1 ${errors.name ? "on" : ""}`}
+                {...register("name", {
+                  required: true,
+                })}
+              />
+            </div>
+            <div className="box_inp box_inp2">
+              <label htmlFor="phone">연락처</label>
+              <input
+                type="tel"
+                id="phone"
+                autoComplete="off"
+                className={`inp1 ${errors.phone ? "on" : ""}`}
+                {...register("phone", {
+                  required: true,
+                })}
+              />
+            </div>
+            <div className="box_inp box_inp3">
+              <label htmlFor="place">방문장소</label>
+              <input
+                type="text"
+                id="place"
+                autoComplete="off"
+                className={`inp1 ${errors.area ? "on" : ""}`}
+                {...register("place", {
+                  required: true,
+                })}
+              />
+            </div>
+            <div className="box_inp box_inp4">
+              <label htmlFor="story">사연</label>
+              <textarea
+                id="story"
+                autoComplete="off"
+                className={`inp1 ${errors.content ? "on" : ""}`}
+                {...register("story", {
+                  required: true,
+                })}
+              ></textarea>
+              <div className="box_aree">
+                <input type="checkbox" id="agree" name="agree" onChange={() => setAgree((prev) => !prev)} checked={agree} />
+                <label htmlFor="agree">개인 정보 활용에 동의합니다.</label>
+                <button
+                  type="button"
+                  className="openPrivacy"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    openStoreModal();
+                  }}
+                >
+                  전문보기
+                </button>
+              </div>
+              <button type="submit" className="btn_apply">
+                <div className="hiddenZoneV">신청하기</div>
               </button>
             </div>
-            <button type="submit" className="btn_apply">
-              <div className="hiddenZoneV">신청하기</div>
+          </div>
+        </form>
+        <div className="box_5">
+          <div className="wrap_pc">
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/5.webp" alt="" />
+          </div>
+          <div className="wrap_mobile">
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/5_mob.webp" alt="" />
+          </div>
+          <div className="hiddenZoneV">침투 성공 후기! - 생생한 포토리뷰 확인하라구~</div>
+        </div>
+        <div className="box_notice">
+          <div className="inner">
+            <h2 className="tit_notice">유의사항 꼭 읽어주세요!</h2>
+            <ul className="list_notice">
+              <li>당첨소식은 사연에 남겨주신 연락처를 통해 유선연락 드리며, 연락이 되지 않아 생긴 불이익에 대해 당사는 책임을 지지 않습니다.</li>
+              <li>제공되는 혜택은 고피자 제품 중 ‘페퍼로니 피자’로 제공되며 그 외 제품으로는 변경 불가합니다.</li>
+              <li>최대 1인 1판으로 제공되며 중복수령은 불가합니다.</li>
+              <li>90판 이후 피자는 고피자 매장 기준의 현장가로 판매되나, 취식 수와 행사 환경에 따라 할인 협의가 가능합니다.</li>
+              <li>피자는 푸드트럭 뿐만이 아닌 근처 고피자 매장에서 조리 후 전달될 수 있습니다.</li>
+              <li>날씨에 따라 빨리 상할 수 있으므로 피자를 수령하신 후 가급적 빠른 시간내에 취식하시기를 바랍니다.</li>
+              <li>
+                당첨된 응모사연의 혜택제공 현장은 고피자 현장스케치 영상에 사용될 수 있으며 모든 혜택 수령자는
+                <br />
+                ‘초상권 동의서’와 ‘고피자 카카오톡 플러스 친구’의 친구추가가 완료된 후 수령 가능합니다.
+              </li>
+              <li>응모되는 사연의 경우, 순수 창작물이어야 하며 나중에라도 타 응모에 기사용된 사연임이 밝혀질 시 당첨에서 제외될 수 있습니다.</li>
+              <li>응모되는 사연의 경우 모든 법적인 문제가 없어야 하며 법적인 문제 발생 시 모든 책임은 응모자에게 있습니다.</li>
+              <li>푸드트럭 이동 시, 방문 희망장소 내 푸드트럭 주차장소에 대해 협의를 요청할 수 있습니다.</li>
+              <li>당첨 후 논의 시 푸드트럭 주차 및 조리가 불가피 한 경우, 당첨이 취소될 수 있습니다.</li>
+              <li>보내주신 사연은 내부 논의와 오퍼레이션 가능여부를 검토 후 선정됩니다.</li>
+            </ul>
+          </div>
+        </div>
+        <Modal open={open} onClose={close}>
+          <PrivacyWrap>
+            <p className="tit">{PrivacyArr[0].title}</p>
+            <div className="box_info">
+              <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(PrivacyArr[0].txt) }} />
+            </div>
+            <button className="btn_close" onClick={close}>
+              <span className="hiddenZoneV">닫기</span>
             </button>
-          </div>
-        </div>
-      </form>
-      <div className="box_5">
-        <div className="wrap_pc">
-          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/5.webp" alt="" />
-        </div>
-        <div className="wrap_mobile">
-          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/5_mob.webp" alt="" />
-        </div>
-        <div className="hiddenZoneV">침투 성공 후기! - 생생한 포토리뷰 확인하라구~</div>
-      </div>
-      <div className="box_notice">
-        <div className="inner">
-          <h2 className="tit_notice">유의사항 꼭 읽어주세요!</h2>
-          <ul className="list_notice">
-            <li>당첨소식은 사연에 남겨주신 연락처를 통해 유선연락 드리며, 연락이 되지 않아 생긴 불이익에 대해 당사는 책임을 지지 않습니다.</li>
-            <li>제공되는 혜택은 고피자 제품 중 ‘페퍼로니 피자’로 제공되며 그 외 제품으로는 변경 불가합니다.</li>
-            <li>최대 1인 1판으로 제공되며 중복수령은 불가합니다.</li>
-            <li>90판 이후 피자는 고피자 매장 기준의 현장가로 판매되나, 취식 수와 행사 환경에 따라 할인 협의가 가능합니다.</li>
-            <li>피자는 푸드트럭 뿐만이 아닌 근처 고피자 매장에서 조리 후 전달될 수 있습니다.</li>
-            <li>날씨에 따라 빨리 상할 수 있으므로 피자를 수령하신 후 가급적 빠른 시간내에 취식하시기를 바랍니다.</li>
-            <li>
-              당첨된 응모사연의 혜택제공 현장은 고피자 현장스케치 영상에 사용될 수 있으며 모든 혜택 수령자는
-              <br />
-              ‘초상권 동의서’와 ‘고피자 카카오톡 플러스 친구’의 친구추가가 완료된 후 수령 가능합니다.
-            </li>
-            <li>응모되는 사연의 경우, 순수 창작물이어야 하며 나중에라도 타 응모에 기사용된 사연임이 밝혀질 시 당첨에서 제외될 수 있습니다.</li>
-            <li>응모되는 사연의 경우 모든 법적인 문제가 없어야 하며 법적인 문제 발생 시 모든 책임은 응모자에게 있습니다.</li>
-            <li>푸드트럭 이동 시, 방문 희망장소 내 푸드트럭 주차장소에 대해 협의를 요청할 수 있습니다.</li>
-            <li>당첨 후 논의 시 푸드트럭 주차 및 조리가 불가피 한 경우, 당첨이 취소될 수 있습니다.</li>
-            <li>보내주신 사연은 내부 논의와 오퍼레이션 가능여부를 검토 후 선정됩니다.</li>
-          </ul>
-        </div>
-      </div>
-      <Modal open={open} onClose={close}>
-        <PrivacyWrap>
-          <p className="tit">{PrivacyArr[0].title}</p>
-          <div className="box_info">
-            <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(PrivacyArr[0].txt) }} />
-          </div>
-          <button className="btn_close" onClick={close}>
-            <span className="hiddenZoneV">닫기</span>
-          </button>
-        </PrivacyWrap>
-      </Modal>
-    </CapmpaignWrap>
+          </PrivacyWrap>
+        </Modal>
+      </CapmpaignWrap>
+    </>
   );
 }
 
