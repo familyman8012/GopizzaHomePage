@@ -262,6 +262,9 @@ const CapmpaignWrap = styled.div`
         margin-bottom: 0 !important;
       }
     }
+    .openPrivacy {
+      margin-left: 0 !important;
+    }
     .box_4:after {
       right: -10% !important;
     }
