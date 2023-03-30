@@ -243,7 +243,7 @@ const CapmpaignWrap = styled.div`
   }
   @media (max-width: 550px) {
     .box_4 .box_aree {
-      margin-top: 5px !important;
+      margin: 10px 0 !important;
       input {
         height: auto !important;
       }
@@ -256,13 +256,13 @@ const CapmpaignWrap = styled.div`
     }
     .box_4 .tit_notice {
       top: 31px;
-      width: 300px !important;
+      width: 320px !important;
       height: 70px;
-      margin-left: -144px !important;
+      margin-left: -160px !important;
       transform: none;
     }
     .box_agree {
-      margin: 10px 0px !important;
+      margin: 20px 0px !important;
     }
   }
   @media (max-width: 400px) {
