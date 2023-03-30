@@ -45,7 +45,7 @@ const nextConfig = {
       },
       {
         source: "/html/make.html",
-        destination: "/howwemake",
+        destination: "/brand/howwemake",
         permanent: true,
       },
       {
