@@ -112,7 +112,7 @@ export const NeedWrap = styled.section`
     li {
       &:nth-of-type(1) {
         height: 38.7rem;
-        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/tech/bg_need1x2.webp") no-repeat left top / 100%;
+        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/tech/bg_need1x2.webp?v=2") no-repeat left top / 100%;
         dl {
           padding: 7rem 0 0 39.5rem;
         }
@@ -150,7 +150,7 @@ export const NeedWrap = styled.section`
       &:nth-of-type(2) {
         height: 67.1rem;
         margin-top: 4.1rem;
-        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/tech/bg_need2x2.webp") no-repeat left top / auto 67.1rem;
+        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/tech/bg_need2x2.webp?v=2") no-repeat left top / auto 67.1rem;
       }
     }
   }

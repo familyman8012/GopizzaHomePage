@@ -200,7 +200,7 @@ export const CostWrap = styled.section`
             color: var(--color-orange);
           }
           &.txt2 {
-            font-size: 18px;
+            font-size: 1.8rem;
             font-weight: normal;
             color: #00000080;
           }
@@ -220,7 +220,7 @@ export const CostWrap = styled.section`
             position: absolute;
             top: -5px;
             left: 50%;
-            width: 12.7rem;
+            width: max-content;
             color: var(--color-orange);
             font-size: 1.8rem;
             font-weight: normal;

@@ -18,7 +18,7 @@ export const SubMainVisualWrap = styled.div<{ bgimg: string }>`
   /* width: 100vw; */
   height: 46rem;
   text-align: center;
-  background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/${({ bgimg }) => bgimg}.webp") no-repeat center/cover;
+  background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/${({ bgimg }) => bgimg}.webp?v=2") no-repeat center/cover;
 
   &.brand .txt1,
   &.howwemake .txt1,
