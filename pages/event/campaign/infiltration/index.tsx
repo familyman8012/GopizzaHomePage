@@ -52,7 +52,7 @@ const CapmpaignWrap = styled.div`
       bottom: 0;
       width: 44.2rem;
       height: 68.6rem;
-      background: url("/images/event/campaign/infiltration/bg_person.webp") no-repeat left top / cover;
+      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/bg_person.webp") no-repeat left top / cover;
     }
   }
 
@@ -68,7 +68,7 @@ const CapmpaignWrap = styled.div`
       width: 80.6rem;
       height: 21.5rem;
       margin-left: -40rem;
-      background: url("/images/event/campaign/infiltration/bg_txt.webp") no-repeat left top / cover;
+      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/bg_txt.webp") no-repeat left top / cover;
     }
 
     .box_inp {
@@ -230,7 +230,7 @@ const CapmpaignWrap = styled.div`
         display: none;
       }
       min-height: 572px;
-      background: url("/images/event/campaign/infiltration/4_2mob.webp") no-repeat left top / cover;
+      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/4_2mob.webp") no-repeat left top / cover;
       .tit_notice {
         width: 340px !important;
         margin-left: -170px !important;
@@ -327,10 +327,10 @@ function Campaign() {
     <CapmpaignWrap>
       <div className="box_1">
         <div className="wrap_pc">
-          <img src="/images/event/campaign/infiltration/1.webp" alt="" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/1.webp" alt="" />
         </div>
         <div className="wrap_mobile">
-          <img src="/images/event/campaign/infiltration/1_mob.webp" alt="" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/1_mob.webp" alt="" />
         </div>
         <div className="hiddenZoneV">
           <h1>GOPIZZA</h1>
@@ -339,19 +339,19 @@ function Campaign() {
       </div>
       <div className="box_2">
         <div className="wrap_pc">
-          <img src="/images/event/campaign/infiltration/2.webp" alt="" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/2.webp" alt="" />
         </div>
         <div className="wrap_mobile">
-          <img src="/images/event/campaign/infiltration/2_mob.webp" alt="" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/2_mob.webp" alt="" />
         </div>
         <div className="hiddenZoneV">사연 보내고 당첨되면 매주 한 팀씩, 피자 90판 공짜로 쏜다!</div>
       </div>
       <div className="box_3">
         <div className="wrap_pc">
-          <img src="/images/event/campaign/infiltration/3.webp" alt="" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/3.webp" alt="" />
         </div>
         <div className="wrap_mobile">
-          <img src="/images/event/campaign/infiltration/3_mob.webp" alt="" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/3_mob.webp" alt="" />
         </div>
         <div className="hiddenZoneV">
           전국 침투작전 소개 :
@@ -366,10 +366,10 @@ function Campaign() {
       </div>
       <form className="box_4" onSubmit={handleSubmit(onSubmit)}>
         <div className="wrap_pc">
-          <img src="/images/event/campaign/infiltration/4_2.png" alt="" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/4_2.webp" alt="" />
         </div>
         <div className="wrap_mobile">
-          <img src="/images/event/campaign/infiltration/4_2mob.webp" alt="" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/4_2mob.webp" alt="" />
         </div>
         <div className="tit_notice">
           <div className="hiddenZoneV">
@@ -450,10 +450,10 @@ function Campaign() {
       </form>
       <div className="box_5">
         <div className="wrap_pc">
-          <img src="/images/event/campaign/infiltration/5.webp" alt="" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/5.webp" alt="" />
         </div>
         <div className="wrap_mobile">
-          <img src="/images/event/campaign/infiltration/5_mob.webp" alt="" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/5_mob.webp" alt="" />
         </div>
         <div className="hiddenZoneV">침투 성공 후기! - 생생한 포토리뷰 확인하라구~</div>
       </div>
