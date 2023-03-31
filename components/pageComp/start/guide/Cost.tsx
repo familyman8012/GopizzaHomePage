@@ -125,13 +125,13 @@ function Cost() {
             <td>
               <span className="box_price">
                 <span className="price">95,400,000</span>
-                <span className="sale_price">95,400,000</span>
+                <span className="sale_price">85,400,000</span>
               </span>
             </td>
             <td>
               <span className="box_price">
                 <span className="price">63,400,000</span>
-                <span className="sale_price">63,400,000</span>
+                <span className="sale_price">53,400,000</span>
               </span>
             </td>
           </tr>
