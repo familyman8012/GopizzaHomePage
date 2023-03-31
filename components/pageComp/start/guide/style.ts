@@ -216,7 +216,7 @@ export const CostWrap = styled.section`
         .sale {
           position: relative;
           &:before {
-            content: "한시적 할인 / 면제";
+            content: "한시적 할인";
             position: absolute;
             top: -5px;
             left: 50%;
@@ -237,6 +237,11 @@ export const CostWrap = styled.section`
             background: var(--color-orange);
           }
         }
+        .sale2 {
+          &:before {
+            content: "한시적 면제";
+          }
+        }
       }
 
       padding: 2.35rem 0;
@@ -247,6 +252,28 @@ export const CostWrap = styled.section`
         color: #fff;
         border: 1px solid var(--color-orange);
         background: var(--color-orange) !important;
+
+        .box_price {
+          span {
+            &.price {
+              position: relative;
+              font-size: 3rem;
+              margin-bottom: 0.6rem;
+              &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 12.88rem;
+                height: 0.4rem;
+                transform: translate(-50%, -50%);
+                background: var(--color-bluedark);
+              }
+            }
+            display: block;
+            color: #fff;
+          }
+        }
       }
     }
   }
