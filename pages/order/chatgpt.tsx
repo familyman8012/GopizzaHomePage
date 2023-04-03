@@ -45,7 +45,7 @@ function Chatgpt() {
 
   return (
     <OrderLayout>
-      <h2 className="tit tit2">GPT 테스트</h2>
+      <h2 className="tit tit2">GPT 테스트2</h2>
       <div style={{ marginTop: "5rem", fontSize: "2rem" }}>
         {messages.map((message, index) => (
           <div key={index}>
