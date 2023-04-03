@@ -144,6 +144,10 @@ const reset = css`
     }
   }
 
+  button:disabled {
+    background: #ccc !important;
+  }
+
   body,
   div,
   dl,
