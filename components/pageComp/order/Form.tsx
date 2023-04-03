@@ -59,6 +59,9 @@ const email = [
 function Form({ type }: { type?: string }) {
   const popref = useRef<any>(null);
   const popref2 = useRef<any>(null);
+  //요청 여러번 못하게.
+  const [submitDisabled, setSubmitDisabled] = useState(false);
+
   //배송희망날짜
   const [agree, setAgree] = useState(false);
   const [startDate, setStartDate] = useState(null);
@@ -110,6 +113,8 @@ function Form({ type }: { type?: string }) {
       return alert("배송희망날짜를 지정해주세요.");
     }
 
+    setSubmitDisabled(true); // 요청 시작 시 버튼을 비활성화합니다.
+
     const { name, phone, email1, email2, hope_order_date, hope_order_time1, hope_order_time2, address1, address2, detail_contents } = data;
 
     let sendData;
@@ -129,10 +134,12 @@ function Form({ type }: { type?: string }) {
           reset();
           setStartDate(null);
           setAddressDetail({ address: "", buildingName: "" });
+          setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
         },
         onError: (err) => {
           alert("문제가 발생하였습니다. 잠시 후 다시 신청해주시기 바랍니다.");
           console.log(err);
+          setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
         },
       });
     } else {
@@ -143,10 +150,12 @@ function Form({ type }: { type?: string }) {
           reset();
           setStartDate(null);
           setAddressDetail({ address: "", buildingName: "" });
+          setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
         },
         onError: (err) => {
           alert("문제가 발생하였습니다. 잠시 후 다시 신청해주시기 바랍니다.");
           console.log(err);
+          setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
         },
       });
     }
@@ -359,7 +368,7 @@ function Form({ type }: { type?: string }) {
             전문보기
           </button>
         </div>
-        <button type="submit" className="submit">
+        <button type="submit" className="submit" disabled={submitDisabled}>
           신청하기
         </button>
       </FormWrap>
