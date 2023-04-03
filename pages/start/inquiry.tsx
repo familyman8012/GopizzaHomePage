@@ -6,12 +6,14 @@ import DaumPost from "ComponentsFarm/common/DaumPost";
 import Modal from "ComponentsFarm/common/Modal";
 import StartLayout from "ComponentsFarm/layouts/pageLayouts/StartLayout";
 import { Content, RegionWrap } from "ComponentsFarm/pageComp/start/style";
+import { VideoWrap } from "ComponentsFarm/pageComp/start/technology/style";
 import Application, { ApplicationWrap } from "ComponentsFarm/popup/Application";
 import Privacy, { PrivacyWrap } from "ComponentsFarm/popup/Privacy";
 import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
 import DOMPurify from "isomorphic-dompurify";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
+import ReactPlayer from "react-player/lazy";
 
 const FormWrap = styled.div`
   margin: 11rem 0 0 0;
@@ -88,6 +90,21 @@ function Consulting() {
     reset,
   } = useForm();
 
+  //요청 여러번 못하게.
+  const [submitDisabled, setSubmitDisabled] = useState(false);
+
+  //비디오
+  const [winReady, setwinReady] = useState(false);
+  const [play, setPlay] = useState(false);
+  const handleToggle = (e: any) => {
+    e.stopPropagation();
+    setPlay((prev) => !prev);
+  };
+  useEffect(() => {
+    setwinReady(true);
+  }, []);
+  //비디오
+
   const popref = useRef<any>(null);
   const popref2 = useRef<any>(null);
   const [agree, setAgree] = useState(false);
@@ -130,6 +147,8 @@ function Consulting() {
       return alert("개인정보취급방침에 동의해주세요.");
     }
 
+    setSubmitDisabled(true); // 요청 시작 시 버튼을 비활성화합니다.
+
     const sendData: any = {
       ...data,
       email: data.email1 + "@" + data.email2,
@@ -148,10 +167,12 @@ function Consulting() {
         reset();
         setAddressDetail({ address: "", buildingName: "" });
         setShopAddressDetail({ address: "", buildingName: "" });
+        setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
       },
       onError: (err) => {
         alert("문제가 발생하였습니다. 잠시 후 다시 신청해주시기 바랍니다.");
         console.log(err);
+        setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
       },
     });
   };
@@ -159,6 +180,34 @@ function Consulting() {
   return (
     <StartLayout>
       <Content>
+        <div className="video_wrap">
+          <VideoWrap>
+            <div className="box_img" onClick={handleToggle}>
+              {winReady && (
+                <ReactPlayer
+                  light={<img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/videox2.webp" alt="Thumbnail" />}
+                  url="https://www.youtube.com/watch?v=-CroK4_iox4"
+                  width="100%"
+                  height="100%"
+                  playing={true}
+                  opts={{
+                    playerVars: {
+                      rel: 0,
+                      modestbranding: 1,
+                      loop: 0,
+                    },
+                  }}
+                />
+              )}
+            </div>
+
+            {!play && (
+              <button>
+                <span className="hiddenZoneV">PLAY</span>
+              </button>
+            )}
+          </VideoWrap>
+        </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <FormWrap>
             <h4>상담자 정보</h4>
@@ -427,7 +476,9 @@ function Consulting() {
                 전문보기
               </button>
             </div>
-            <button className="submit">신청하기</button>
+            <button className="submit" disabled={submitDisabled}>
+              신청하기
+            </button>
           </FormWrap>
         </form>
       </Content>

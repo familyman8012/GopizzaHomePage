@@ -59,6 +59,9 @@ const email = [
 function Form({ type }: { type?: string }) {
   const popref = useRef<any>(null);
   const popref2 = useRef<any>(null);
+  //요청 여러번 못하게.
+  const [submitDisabled, setSubmitDisabled] = useState(false);
+
   //배송희망날짜
   const [agree, setAgree] = useState(false);
   const [startDate, setStartDate] = useState(null);
@@ -100,7 +103,7 @@ function Form({ type }: { type?: string }) {
   //단체주문
   const GropuOrder = useMutation(["groupOrder"], (request: IGroupOrderReq) => fetchGroupOrder(request));
 
-  const ContactUs = useMutation(["contactus"], (request: IContactUsReq) => fetchContactUs(request));
+  const ContactUs = useMutation(["groupOrder"], (request: IContactUsReq) => fetchContactUs(request));
 
   const onSubmit = (data: Record<string, string>) => {
     if (!agree) {
@@ -109,6 +112,8 @@ function Form({ type }: { type?: string }) {
     if (type === "group" && !startDate) {
       return alert("배송희망날짜를 지정해주세요.");
     }
+
+    setSubmitDisabled(true); // 요청 시작 시 버튼을 비활성화합니다.
 
     const { name, phone, email1, email2, hope_order_date, hope_order_time1, hope_order_time2, address1, address2, detail_contents } = data;
 
@@ -129,10 +134,12 @@ function Form({ type }: { type?: string }) {
           reset();
           setStartDate(null);
           setAddressDetail({ address: "", buildingName: "" });
+          setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
         },
         onError: (err) => {
           alert("문제가 발생하였습니다. 잠시 후 다시 신청해주시기 바랍니다.");
           console.log(err);
+          setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
         },
       });
     } else {
@@ -143,10 +150,12 @@ function Form({ type }: { type?: string }) {
           reset();
           setStartDate(null);
           setAddressDetail({ address: "", buildingName: "" });
+          setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
         },
         onError: (err) => {
           alert("문제가 발생하였습니다. 잠시 후 다시 신청해주시기 바랍니다.");
           console.log(err);
+          setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
         },
       });
     }
@@ -170,7 +179,7 @@ function Form({ type }: { type?: string }) {
           {errors.name && <div className="txt_error">이름을 입력해주세요.</div>}
         </div>
         <div className="box_inp">
-          <label htmlFor="phone" className={type === "customer" ? "" : "req"}>
+          <label htmlFor="phone" className="req">
             연락처
           </label>
           <input
@@ -178,7 +187,7 @@ function Form({ type }: { type?: string }) {
             id="phone"
             className="s"
             {...register("phone", {
-              required: type === "customer" ? false : true,
+              required: true,
             })}
             onChange={(e) => {
               setValue("phone", e.target.value.replace(/[^0-9]/g, ""));
@@ -187,26 +196,10 @@ function Form({ type }: { type?: string }) {
           {errors.phone && watch("phone") === "" && <div className="txt_error">연락처를 입력해주세요.</div>}
         </div>
         <div className="box_inp">
-          <label htmlFor="email1" className={type === "customer" ? "req s" : "s"}>
-            이메일
-          </label>
-          <input
-            type="text"
-            className="s"
-            id="email1"
-            {...register("email1", {
-              required: type === "customer" ? true : false,
-            })}
-          />
+          <label htmlFor="email1">이메일</label>
+          <input type="text" className="s" id="email1" {...register("email1")} />
           <span className="str">@</span>
-          <input
-            type="text"
-            className="s"
-            id="email2"
-            {...register("email2", {
-              required: type === "customer" ? true : false,
-            })}
-          />
+          <input type="text" className="s" id="email2" {...register("email2")} />
           <select
             onChange={(e) => {
               setValue("email2", e.target.value);
@@ -219,27 +212,7 @@ function Form({ type }: { type?: string }) {
               </option>
             ))}
           </select>
-          {(errors.email1 || errors.email2) && <div className="txt_error">이메일을 입력해주세요.</div>}
         </div>
-        {type === "customer" && (
-          <>
-            <div className="box_inp flex">
-              <label htmlFor="use_store" className="req">
-                이용하신 매장
-              </label>
-              <select
-                id="use_store"
-                className="s"
-                style={{ marginRight: 4 }}
-                {...register("use_store", {
-                  required: true,
-                })}
-              >
-                <option value="">선택</option>
-              </select>
-            </div>
-          </>
-        )}
         {type === "group" && (
           <>
             <div className="box_inp flex">
@@ -395,7 +368,7 @@ function Form({ type }: { type?: string }) {
             전문보기
           </button>
         </div>
-        <button type="submit" className="submit">
+        <button type="submit" className="submit" disabled={submitDisabled}>
           신청하기
         </button>
       </FormWrap>
