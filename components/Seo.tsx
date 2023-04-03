@@ -156,7 +156,7 @@ export const Seo = [
           alt: "고피자가 기술을 개발하는 중요한 이유",
         },
       ],
-      site_name: "GoPizza",
+      site_name: "GOPIZZA",
     },
     twitter: {
       card: "summary_large_image",
@@ -207,7 +207,7 @@ export const Seo = [
       images: [
         {
           url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/img_revenue4.webp",
-          alt: "GoPizza Store",
+          alt: "GOPIZZA Store",
         },
       ],
     },
@@ -219,7 +219,7 @@ export const Seo = [
         "가까운 고피자 매장을 찾아보세요! 자신의 위치를 기반으로 자동으로 찾아드립니다. 혹은 도/시와 구/군을 선택하거나 검색어를 입력하여 가장 가까운 고피자 매장을 찾을 수 있습니다.",
       image: {
         url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/img_revenue4.webp",
-        alt: "GoPizza Store",
+        alt: "GOPIZZA Store",
       },
     },
   },
@@ -280,11 +280,11 @@ export const Seo = [
   {
     canonical: "",
     title: "단체주문 | 고피자",
-    description: "GoPizza에서 단체주문 및 제휴문의를 편리하게 진행하세요. 행사, 기업, 학교 등 다양한 단체행사를 위한 피자 주문과 제휴를 지원합니다.",
+    description: "GOPIZZA에서 단체주문 및 제휴문의를 편리하게 진행하세요. 행사, 기업, 학교 등 다양한 단체행사를 위한 피자 주문과 제휴를 지원합니다.",
     openGraph: {
       type: "website",
       title: "단체주문 | 고피자",
-      description: "GoPizza에서 단체주문 및 제휴문의를 편리하게 진행하세요. 행사, 기업, 학교 등 다양한 단체행사를 위한 피자 주문과 제휴를 지원합니다.",
+      description: "GOPIZZA에서 단체주문 및 제휴문의를 편리하게 진행하세요. 행사, 기업, 학교 등 다양한 단체행사를 위한 피자 주문과 제휴를 지원합니다.",
       url: "https://gopizza.kr/order",
       images: [
         {
@@ -297,7 +297,7 @@ export const Seo = [
       card: "summary_large_image",
       site: "@goPizza",
       title: "단체주문 | 고피자",
-      description: "GoPizza에서 단체주문 및 제휴문의를 편리하게 진행하세요. 행사, 기업, 학교 등 다양한 단체행사를 위한 피자 주문과 제휴를 지원합니다.",
+      description: "GOPIZZA에서 단체주문 및 제휴문의를 편리하게 진행하세요. 행사, 기업, 학교 등 다양한 단체행사를 위한 피자 주문과 제휴를 지원합니다.",
       image: {
         url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/img_group_bnr1.webp",
         alt: "",
@@ -312,11 +312,11 @@ export const Seo = [
       type: "website",
       url: "https://gopizza.kr/order/partner",
       title: "기업제휴 | 고피자",
-      description: "GoPizza에서 기업 제휴 문의를 손쉽게 진행하세요. 필수 입력 항목을 작성하신 후 문의내용을 남겨주시면 빠르게 연락드리겠습니다.",
+      description: "GOPIZZA에서 기업 제휴 문의를 손쉽게 진행하세요. 필수 입력 항목을 작성하신 후 문의내용을 남겨주시면 빠르게 연락드리겠습니다.",
       images: [
         {
           url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/bg_index2x2.webp",
-          alt: "GoPizza logo",
+          alt: "GOPIZZA logo",
         },
       ],
     },
@@ -324,10 +324,10 @@ export const Seo = [
       card: "summary_large_image",
       site: "@gopizza",
       title: "기업제휴 | 고피자",
-      description: "GoPizza에서 기업 제휴 문의를 손쉽게 진행하세요. 필수 입력 항목을 작성하신 후 문의내용을 남겨주시면 빠르게 연락드리겠습니다.",
+      description: "GOPIZZA에서 기업 제휴 문의를 손쉽게 진행하세요. 필수 입력 항목을 작성하신 후 문의내용을 남겨주시면 빠르게 연락드리겠습니다.",
       image: {
         url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/bg_index2x2.webp",
-        alt: "GoPizza logo",
+        alt: "GOPIZZA logo",
       },
     },
   },
@@ -343,7 +343,7 @@ export const Seo = [
       images: [
         {
           url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/bg_index2x2.webp",
-          alt: "GoPizza",
+          alt: "GOPIZZA",
         },
       ],
     },
@@ -354,7 +354,7 @@ export const Seo = [
       description: "고피자 글로벌 본사에 찾아오시는 길을 안내합니다.",
       image: {
         url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/bg_index2x2.webp",
-        alt: "GoPizza",
+        alt: "GOPIZZA",
       },
     },
   },
@@ -490,7 +490,7 @@ export const Seo = [
       images: [
         {
           url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/bg_index2x2.webp",
-          alt: "GoPizza logo",
+          alt: "GOPIZZA logo",
         },
       ],
     },
@@ -501,7 +501,7 @@ export const Seo = [
       description: "가맹 문의 작성. 필수 입력 항목을 작성하신 후 문의내용을 남겨주시면 빠르게 연락드리겠습니다.",
       image: {
         url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/bg_index2x2.webp",
-        alt: "GoPizza logo",
+        alt: "GOPIZZA logo",
       },
     },
   },

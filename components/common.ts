@@ -557,6 +557,10 @@ const reset = css`
     line-height: 8rem;
     border-radius: 4rem;
     background-color: var(--color-orange);
+
+    &:disabled {
+      background-color: #cccccc;
+    }
   }
 
   .swiper {
