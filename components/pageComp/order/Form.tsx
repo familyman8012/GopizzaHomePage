@@ -179,7 +179,7 @@ function Form({ type }: { type?: string }) {
           {errors.name && <div className="txt_error">이름을 입력해주세요.</div>}
         </div>
         <div className="box_inp">
-          <label htmlFor="phone" className="req">
+          <label htmlFor="phone" className={type === "customer" ? "" : "req"}>
             연락처
           </label>
           <input
@@ -187,7 +187,7 @@ function Form({ type }: { type?: string }) {
             id="phone"
             className="s"
             {...register("phone", {
-              required: true,
+              required: type === "customer" ? false : true,
             })}
             onChange={(e) => {
               setValue("phone", e.target.value.replace(/[^0-9]/g, ""));
@@ -196,10 +196,26 @@ function Form({ type }: { type?: string }) {
           {errors.phone && watch("phone") === "" && <div className="txt_error">연락처를 입력해주세요.</div>}
         </div>
         <div className="box_inp">
-          <label htmlFor="email1">이메일</label>
-          <input type="text" className="s" id="email1" {...register("email1")} />
+          <label htmlFor="email1" className={type === "customer" ? "req s" : "s"}>
+            이메일
+          </label>
+          <input
+            type="text"
+            className="s"
+            id="email1"
+            {...register("email1", {
+              required: type === "customer" ? true : false,
+            })}
+          />
           <span className="str">@</span>
-          <input type="text" className="s" id="email2" {...register("email2")} />
+          <input
+            type="text"
+            className="s"
+            id="email2"
+            {...register("email2", {
+              required: type === "customer" ? true : false,
+            })}
+          />
           <select
             onChange={(e) => {
               setValue("email2", e.target.value);
@@ -212,7 +228,27 @@ function Form({ type }: { type?: string }) {
               </option>
             ))}
           </select>
+          {(errors.email1 || errors.email2) && <div className="txt_error">이메일을 입력해주세요.</div>}
         </div>
+        {type === "customer" && (
+          <>
+            <div className="box_inp flex">
+              <label htmlFor="use_store" className="req">
+                이용하신 매장
+              </label>
+              <select
+                id="use_store"
+                className="s"
+                style={{ marginRight: 4 }}
+                {...register("use_store", {
+                  required: true,
+                })}
+              >
+                <option value="">선택</option>
+              </select>
+            </div>
+          </>
+        )}
         {type === "group" && (
           <>
             <div className="box_inp flex">
