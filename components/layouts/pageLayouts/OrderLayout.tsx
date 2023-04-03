@@ -10,7 +10,7 @@ interface Props {
 function OrderLayout({ children }: Props) {
   return (
     <OrderWrap>
-      <h2 className="tit">단체/제휴문의</h2>
+      <h2 className="tit">단체/제휴/문의</h2>
       <Tab data={orderTab} />
       {children}
     </OrderWrap>

@@ -3,7 +3,7 @@ export const HeadMenuUrl = [
   { menuName: "메뉴", url: "/menu" },
   { menuName: "매장찾기", url: "/find" },
   { menuName: "이벤트", url: "/event" },
-  { menuName: "단체/제휴문의", url: "/order" },
+  { menuName: "단체/제휴/문의", url: "/order" },
 ];
 
 export const HeadAsideUrl = [
@@ -40,11 +40,12 @@ export const FooterMenu = [
     ],
   },
   {
-    depth1: "단체/제휴문의",
+    depth1: "단체/제휴/문의",
     url: "/order",
     depth2: [
       { menuName: "단체주문", url: "/order" },
       { menuName: "기업제휴", url: "/order/partner" },
+      { menuName: "고객문의", url: "/order/customer" },
       { menuName: "찾아오시는길", url: "/order/location" },
     ],
   },

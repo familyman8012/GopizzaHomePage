@@ -12,7 +12,7 @@ function Group() {
 
   return (
     <LocationWrap>
-      <h2 className="tit">단체/제휴문의</h2>
+      <h2 className="tit">단체/제휴/문의</h2>
       <Tab data={orderTab} />
       <div className="wrap_location">
         <div className="box_info">

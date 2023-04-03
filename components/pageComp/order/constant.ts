@@ -8,6 +8,10 @@ export const orderTab = [
     menuName: "기업제휴",
   },
   {
+    link: "/order/customer",
+    menuName: "고객문의",
+  },
+  {
     link: "/order/location",
     menuName: "찾아오시는길",
   },
