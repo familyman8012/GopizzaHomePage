@@ -136,6 +136,15 @@ export interface IContactUsRes {
   info: IContactUsReq;
 }
 
+//고객문의
+export interface ICustomerReq extends IContactUsReq {
+  store_id: number;
+}
+
+export interface ICustomerRes {
+  info: ICustomerReq;
+}
+
 //가맹문의
 export interface IInquiryReq {
   name: string;

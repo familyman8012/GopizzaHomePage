@@ -5,6 +5,24 @@ import DOMPurify from "isomorphic-dompurify";
 import { useCallback, useState } from "react";
 import { PrivacyArr } from "./PrivacyContent";
 
+function Privacy({ open, close }: any) {
+  return (
+    <Modal open={open} onClose={close}>
+      <PrivacyWrap>
+        <p className="tit">{PrivacyArr[0].title}</p>
+        <div className="box_info">
+          <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(PrivacyArr[0].txt) }} />
+        </div>
+        <button className="btn_close" onClick={close}>
+          <span className="hiddenZoneV">닫기</span>
+        </button>
+      </PrivacyWrap>
+    </Modal>
+  );
+}
+
+export default Privacy;
+
 export const PrivacyWrap = styled.div`
   position: relative;
   width: 90%;
@@ -22,35 +40,3 @@ export const PrivacyWrap = styled.div`
     font-size: 1.6rem;
   }
 `;
-
-function Privacy({ popref, index }: any) {
-  // store 팝업
-  const [open, setOpen] = useState(false);
-  const openStoreModal = useCallback(() => {
-    setOpen(true);
-  }, []);
-  const close = useCallback(() => {
-    setOpen(false);
-  }, []);
-
-  return (
-    <Modal open={open} onClose={close}>
-      <PrivacyWrap>
-        <p className="tit">{PrivacyArr[index].title}</p>
-        <div className="box_info">
-          <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(PrivacyArr[index].txt) }} />
-        </div>
-        <button
-          className="btn_close"
-          onClick={() => {
-            close();
-          }}
-        >
-          <span className="hiddenZoneV">닫기</span>
-        </button>
-      </PrivacyWrap>
-    </Modal>
-  );
-}
-
-export default Privacy;

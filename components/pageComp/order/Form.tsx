@@ -2,17 +2,15 @@ import styled from "@emotion/styled";
 import DatePick from "ComponentsFarm/common/DatePick";
 import DaumPost from "ComponentsFarm/common/DaumPost";
 import dayjs from "dayjs";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
-import { IContactUsReq, IGroupOrderReq } from "ApiFarm/interface/homeInterface";
+import { IContactUsReq, ICustomerReq, IGroupOrderReq, IStoreSearch } from "ApiFarm/interface/homeInterface";
 import { fetchContactUs, fetchGroupOrder } from "ApiFarm/home";
 import Application from "ComponentsFarm/popup/Application";
 import Privacy from "ComponentsFarm/popup/Privacy";
-
-import Modal from "ComponentsFarm/common/Modal";
-import DOMPurify from "isomorphic-dompurify";
-import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
+import Store from "ComponentsFarm/popup/Store";
+import { ICustomer } from "PagesFarm/order/customer";
 
 const FormWrap = styled.form`
   position: relative;
@@ -37,6 +35,18 @@ const FormWrap = styled.form`
       background: none;
     }
   }
+  .style_radio {
+    width: var(--size-inputS);
+    height: var(--size-inputHeight);
+    line-height: 5.4rem;
+
+    margin-right: 4px;
+    padding: 0 1.6rem;
+    font-size: 1.6rem;
+    border: 1px solid var(--color-inputBorder);
+    border-radius: 2px;
+    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_sel_arrow.svg") no-repeat #fff 95% 50%;
+  }
 `;
 
 const email = [
@@ -55,32 +65,38 @@ const email = [
   "hanmir.com",
   "hotmail.com",
 ];
+interface IFormProps {
+  type?: string;
+  storeInfo?: { city: string; data: IStoreSearch[] }[];
+}
 
-function Form({ type }: { type?: string }) {
-  const popref = useRef<any>(null);
-  const popref2 = useRef<any>(null);
+function Form({ type, storeInfo }: IFormProps) {
   //요청 여러번 못하게.
   const [submitDisabled, setSubmitDisabled] = useState(false);
+
+  //customer - 이용하신 매장
+  const [usedStore, setUsedStore] = useState(0);
 
   //배송희망날짜
   const [agree, setAgree] = useState(false);
   const [startDate, setStartDate] = useState(null);
   const [isOpenPost, setIsOpenPost] = useState(false);
   const [addressDetail, setAddressDetail] = useState({ address: "", buildingName: "" }); // 상세주소 - api에 사용
-  const [open, setOpen] = useState(false);
-  const openStoreModal = useCallback(() => {
-    setOpen(true);
-  }, []);
+  const [open, setOpen] = useState({ modal1: false, modal2: false, modal3: false }); //modal1 -> 개인정보, modal2 는 동의팝업, modal3는 매장검색
+  const openStoreModal = useCallback(
+    (modalIdx: string) => {
+      if (modalIdx === "modal1") {
+        setOpen({ ...open, modal1: true });
+      } else if (modalIdx === "modal2") {
+        setOpen({ ...open, modal2: true });
+      } else if (modalIdx === "modal3") {
+        setOpen({ ...open, modal3: true });
+      }
+    },
+    [open]
+  );
   const close = useCallback(() => {
-    setOpen(false);
-  }, []);
-
-  const [open2, setOpen2] = useState(false);
-  const openStoreModal2 = useCallback(() => {
-    setOpen2(true);
-  }, []);
-  const close2 = useCallback(() => {
-    setOpen2(false);
+    setOpen({ modal1: false, modal2: false, modal3: false });
   }, []);
 
   const {
@@ -100,10 +116,15 @@ function Form({ type }: { type?: string }) {
     }
   }, [addressDetail.address, addressDetail.buildingName, startDate]);
 
+  // 고객문의 - 이용하신 매장
+  const usedStoreName = useMemo(() => storeInfo?.flatMap((region) => region.data).find((store) => store.id === usedStore), [storeInfo, usedStore]);
+
   //단체주문
   const GropuOrder = useMutation(["groupOrder"], (request: IGroupOrderReq) => fetchGroupOrder(request));
+  const ContactUs = useMutation(["contatUs"], (request: IContactUsReq) => fetchContactUs(request));
+  const Cusomer = useMutation(["customer"], (request: ICustomerReq) => fetchContactUs(request));
 
-  const ContactUs = useMutation(["groupOrder"], (request: IContactUsReq) => fetchContactUs(request));
+  console.log("storeInfo", storeInfo);
 
   const onSubmit = (data: Record<string, string>) => {
     if (!agree) {
@@ -130,7 +151,7 @@ function Form({ type }: { type?: string }) {
       };
       GropuOrder.mutate(sendData, {
         onSuccess: (data) => {
-          openStoreModal2();
+          openStoreModal("modal2");
           reset();
           setStartDate(null);
           setAddressDetail({ address: "", buildingName: "" });
@@ -142,14 +163,29 @@ function Form({ type }: { type?: string }) {
           setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
         },
       });
-    } else {
+    } else if (type === "partner") {
       sendData = { name, phone, email: `${email1}@${email2}`, detail_contents };
       ContactUs.mutate(sendData, {
         onSuccess: (data) => {
-          openStoreModal2();
+          openStoreModal("modal2");
           reset();
           setStartDate(null);
           setAddressDetail({ address: "", buildingName: "" });
+          setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
+        },
+        onError: (err) => {
+          alert("문제가 발생하였습니다. 잠시 후 다시 신청해주시기 바랍니다.");
+          console.log(err);
+          setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
+        },
+      });
+    } else if (type === "customer") {
+      sendData = { name, phone, email: `${email1}@${email2}`, detail_contents, store_id: Number(usedStoreName?.id) };
+      console.log("sendData", sendData);
+      Cusomer.mutate(sendData, {
+        onSuccess: (data) => {
+          openStoreModal("modal2");
+          reset();
           setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
         },
         onError: (err) => {
@@ -233,19 +269,16 @@ function Form({ type }: { type?: string }) {
         {type === "customer" && (
           <>
             <div className="box_inp flex">
-              <label htmlFor="use_store" className="req">
-                이용하신 매장
-              </label>
-              <select
-                id="use_store"
-                className="s"
-                style={{ marginRight: 4 }}
-                {...register("use_store", {
-                  required: true,
-                })}
+              <label htmlFor="use_store">이용하신 매장</label>
+              <div
+                className="style_radio"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  openStoreModal("modal3");
+                }}
               >
-                <option value="">선택</option>
-              </select>
+                {usedStoreName?.name}
+              </div>
             </div>
           </>
         )}
@@ -398,7 +431,7 @@ function Form({ type }: { type?: string }) {
             className="openPrivacy"
             onClick={(e) => {
               e.stopPropagation();
-              openStoreModal();
+              openStoreModal("modal1");
             }}
           >
             전문보기
@@ -408,90 +441,11 @@ function Form({ type }: { type?: string }) {
           신청하기
         </button>
       </FormWrap>
-      <Modal open={open} onClose={close}>
-        <PrivacyWrap>
-          <p className="tit">{PrivacyArr[0].title}</p>
-          <div className="box_info">
-            <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(PrivacyArr[0].txt) }} />
-          </div>
-          <button className="btn_close" onClick={close}>
-            <span className="hiddenZoneV">닫기</span>
-          </button>
-        </PrivacyWrap>
-      </Modal>
-      <Modal open={open2} onClose={close2}>
-        <ApplicationWrap>
-          <p className="tit">신청이 완료되었습니다.</p>
-          <p className="txt_success">정상적으로 접수 처리되었습니다. 감사합니다.</p>
-          <p className="txt_notice">
-            추후 본사에서 진행하는 창업 프로모션에 관한 정보를 받아보시는데 동의하십니까?
-            <br />
-            동의 시 다양한 창업 혜택 정보를 기입하신 연락처 및 이메일로 받아보실 수 있습니다.
-          </p>
-          <button className="btn_agree" onClick={close2}>
-            동의하기
-          </button>
-          <button className="btn_close" onClick={close2}>
-            <span className="hiddenZoneV">닫기</span>
-          </button>
-        </ApplicationWrap>
-      </Modal>
+      <Privacy open={open.modal1} close={close} />
+      <Application open={open.modal2} close={close} />
+      {storeInfo && <Store storeInfo={storeInfo} setUseStore={setUsedStore} open={open.modal3} close={close} />}
     </>
   );
 }
 
 export default Form;
-
-export const ApplicationWrap = styled.div`
-  position: relative;
-  width: 72.9rem;
-  padding: 6.4rem 0 6.6rem;
-  text-align: center;
-  border-radius: 3rem;
-  background: #fff;
-
-  .txt_success {
-    margin: 0.8rem 0 5.1rem;
-    font-size: 2.4rem;
-  }
-
-  .txt_notice {
-    font-size: 1.6rem;
-  }
-
-  .btn_agree {
-    margin-top: 3.6rem;
-    width: 36rem;
-    height: 8rem;
-    color: #fff;
-    font-size: 2.4rem;
-    font-weight: 500;
-    border-radius: 4rem;
-    background-color: var(--color-bluedark);
-  }
-  .btn_close {
-    top: auto;
-    bottom: -11.2rem;
-    left: 50%;
-    right: auto;
-    margin-left: -4rem;
-  }
-`;
-
-export const PrivacyWrap = styled.div`
-  position: relative;
-  width: 90%;
-  max-width: 132rem;
-  padding: 6.4rem 0 6.6rem;
-  border-radius: 3rem;
-  background: #fff;
-
-  .box_info {
-    overflow-y: scroll;
-    width: 95%;
-    height: 57.8rem;
-    margin: 5.6rem auto 0;
-    padding-right: 4.5rem;
-    font-size: 1.6rem;
-  }
-`;

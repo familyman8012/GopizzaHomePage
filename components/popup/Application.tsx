@@ -1,7 +1,27 @@
-import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import Dialog from "ComponentsFarm/common/Dialog";
-import React, { useRef } from "react";
+import Modal from "ComponentsFarm/common/Modal";
+
+function Application({ open, close }: any) {
+  return (
+    <Modal open={open} onClose={close}>
+      <ApplicationWrap>
+        <p className="tit">신청이 완료되었습니다.</p>
+        <p className="txt_success">정상적으로 접수 처리되었습니다. 감사합니다.</p>
+        <p className="txt_notice">
+          추후 본사에서 진행하는 창업 프로모션에 관한 정보를 받아보시는데 동의하십니까?
+          <br />
+          동의 시 다양한 창업 혜택 정보를 기입하신 연락처 및 이메일로 받아보실 수 있습니다.
+        </p>
+        <button className="btn_agree" onClick={close}>
+          동의하기
+        </button>
+        <button className="btn_close" onClick={close}>
+          <span className="hiddenZoneV">닫기</span>
+        </button>
+      </ApplicationWrap>
+    </Modal>
+  );
+}
 
 export const ApplicationWrap = styled.div`
   position: relative;
@@ -38,39 +58,5 @@ export const ApplicationWrap = styled.div`
     margin-left: -4rem;
   }
 `;
-
-function Application({ popref }: any) {
-  return (
-    <Dialog ref={popref}>
-      <ApplicationWrap>
-        <p className="tit">신청이 완료되었습니다.</p>
-        <p className="txt_success">정상적으로 접수 처리되었습니다. 감사합니다.</p>
-        <p className="txt_notice">
-          추후 본사에서 진행하는 창업 프로모션에 관한 정보를 받아보시는데 동의하십니까?
-          <br />
-          동의 시 다양한 창업 혜택 정보를 기입하신 연락처 및 이메일로 받아보실 수 있습니다.
-        </p>
-        <button
-          className="btn_agree"
-          onClick={() => {
-            document.body.classList.remove("overflowhidden");
-            popref.current?.close();
-          }}
-        >
-          동의하기
-        </button>
-        <button
-          className="btn_close"
-          onClick={() => {
-            document.body.classList.remove("overflowhidden");
-            popref.current?.close();
-          }}
-        >
-          <span className="hiddenZoneV">닫기</span>
-        </button>
-      </ApplicationWrap>
-    </Dialog>
-  );
-}
 
 export default Application;

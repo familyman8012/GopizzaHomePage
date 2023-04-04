@@ -1,5 +1,5 @@
 import AxiosUtil from "./index";
-import { IContactUsReq, IGroupOrderReq, IInfiltration, IInquiryReq, IPromotionDetailReq, IPromotionReq } from "./interface/homeInterface";
+import { IContactUsReq, ICustomerReq, IGroupOrderReq, IInfiltration, IInquiryReq, IPromotionDetailReq, IPromotionReq } from "./interface/homeInterface";
 
 export const fetchMainVisual = async () => {
   const response = await AxiosUtil.get(`/ho/v1/brand/main/banner`);
@@ -70,6 +70,13 @@ export const fetchGroupOrder = async (params: IGroupOrderReq) => {
 //기업제휴
 export const fetchContactUs = async (params: IContactUsReq) => {
   const response = await AxiosUtil.post(`/ho/v1/corporate/partnership`, params);
+
+  return response.data.data;
+};
+
+//고객문의
+export const fetchCustomer = async (params: ICustomerReq) => {
+  const response = await AxiosUtil.post(`/ho/v1/customer/request`, params);
 
   return response.data.data;
 };
