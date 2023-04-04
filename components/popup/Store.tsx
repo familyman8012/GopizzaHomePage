@@ -3,16 +3,16 @@ import { useState } from "react";
 import Modal from "ComponentsFarm/common/Modal";
 import { IStoreSearch } from "ApiFarm/interface/homeInterface";
 
-interface StoreProps {
-  storeInfo: { city: string; data: IStoreSearch[] }[];
-  setUseStore: (storeId: number) => void;
-  open: boolean;
-  close: () => void;
-}
-
 interface CityGroup {
   city: string;
   data: IStoreSearch[];
+}
+
+interface StoreProps {
+  storeInfo: CityGroup[];
+  setUseStore: (storeId: number) => void;
+  open: boolean;
+  close: () => void;
 }
 
 function Store({ storeInfo, setUseStore, open, close }: StoreProps) {
