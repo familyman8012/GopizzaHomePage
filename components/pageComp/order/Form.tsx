@@ -6,7 +6,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { IContactUsReq, ICustomerReq, IGroupOrderReq, IStoreSearch } from "ApiFarm/interface/homeInterface";
-import { fetchContactUs, fetchGroupOrder } from "ApiFarm/home";
+import { fetchContactUs, fetchCustomer, fetchGroupOrder } from "ApiFarm/home";
 import Application from "ComponentsFarm/popup/Application";
 import Privacy from "ComponentsFarm/popup/Privacy";
 import Store from "ComponentsFarm/popup/Store";
@@ -122,7 +122,7 @@ function Form({ type, storeInfo }: IFormProps) {
   //단체주문
   const GropuOrder = useMutation(["groupOrder"], (request: IGroupOrderReq) => fetchGroupOrder(request));
   const ContactUs = useMutation(["contatUs"], (request: IContactUsReq) => fetchContactUs(request));
-  const Cusomer = useMutation(["customer"], (request: ICustomerReq) => fetchContactUs(request));
+  const Cusomer = useMutation(["customer"], (request: ICustomerReq) => fetchCustomer(request));
 
   console.log("storeInfo", storeInfo);
 
@@ -215,7 +215,7 @@ function Form({ type, storeInfo }: IFormProps) {
           {errors.name && <div className="txt_error">이름을 입력해주세요.</div>}
         </div>
         <div className="box_inp">
-          <label htmlFor="phone" className={type === "customer" ? "" : "req"}>
+          <label htmlFor="phone" className="req">
             연락처
           </label>
           <input
@@ -223,7 +223,7 @@ function Form({ type, storeInfo }: IFormProps) {
             id="phone"
             className="s"
             {...register("phone", {
-              required: type === "customer" ? false : true,
+              required: true,
             })}
             onChange={(e) => {
               setValue("phone", e.target.value.replace(/[^0-9]/g, ""));
@@ -232,7 +232,7 @@ function Form({ type, storeInfo }: IFormProps) {
           {errors.phone && watch("phone") === "" && <div className="txt_error">연락처를 입력해주세요.</div>}
         </div>
         <div className="box_inp">
-          <label htmlFor="email1" className={type === "customer" ? "req s" : "s"}>
+          <label htmlFor="email1" className="s">
             이메일
           </label>
           <input
@@ -240,7 +240,7 @@ function Form({ type, storeInfo }: IFormProps) {
             className="s"
             id="email1"
             {...register("email1", {
-              required: type === "customer" ? true : false,
+              required: false,
             })}
           />
           <span className="str">@</span>
@@ -249,7 +249,7 @@ function Form({ type, storeInfo }: IFormProps) {
             className="s"
             id="email2"
             {...register("email2", {
-              required: type === "customer" ? true : false,
+              required: false,
             })}
           />
           <select
@@ -264,7 +264,6 @@ function Form({ type, storeInfo }: IFormProps) {
               </option>
             ))}
           </select>
-          {(errors.email1 || errors.email2) && <div className="txt_error">이메일을 입력해주세요.</div>}
         </div>
         {type === "customer" && (
           <>
