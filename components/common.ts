@@ -880,13 +880,13 @@ const reset = css`
     }
   }
 
-  @media (min-width: 500px) and (max-width: 670px) {
+  @media (min-width: 501px) and (max-width: 670px) {
     html {
       font-size: 3.7px;
     }
   }
 
-  @media (min-width: 200px) and (max-width: 400px) {
+  @media (min-width: 200px) and (max-width: 500px) {
     html {
       font-size: 2.5px;
     }
