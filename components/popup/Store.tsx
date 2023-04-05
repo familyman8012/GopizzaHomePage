@@ -186,6 +186,7 @@ export const StoreWrap = styled.div`
 
       input {
         height: auto;
+        padding: 0;
       }
 
       label {
