@@ -53,6 +53,7 @@ export const menu = [
   "/event/video",
   "/order",
   "/order/partner",
+  "/order/customer",
   "/order/location",
   "/start",
   "/start/guide",
@@ -325,6 +326,33 @@ export const Seo = [
       site: "@gopizza",
       title: "기업제휴 | 고피자",
       description: "GOPIZZA에서 기업 제휴 문의를 손쉽게 진행하세요. 필수 입력 항목을 작성하신 후 문의내용을 남겨주시면 빠르게 연락드리겠습니다.",
+      image: {
+        url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/bg_index2x2.webp",
+        alt: "GOPIZZA logo",
+      },
+    },
+  },
+  {
+    canonical: "https://gopizza.kr/order/customer",
+    title: "고객문의 | 고피자",
+    description: "고피자 매장을 이용하시다가 불편함을 겪으셨나요? 필수 입력 항목을 작성하신 후 문의내용을 남겨주시면 빠르게 연락드리겠습니다.",
+    openGraph: {
+      type: "website",
+      url: "https://gopizza.kr/order/customer",
+      title: "고객문의 | 고피자",
+      description: "고피자 매장을 이용하시다가 불편함을 겪으셨나요? 필수 입력 항목을 작성하신 후 문의내용을 남겨주시면 빠르게 연락드리겠습니다.",
+      images: [
+        {
+          url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/bg_index2x2.webp",
+          alt: "GOPIZZA logo",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@gopizza",
+      title: "고객문의 | 고피자",
+      description: "고피자 매장을 이용하시다가 불편함을 겪으셨나요? 필수 입력 항목을 작성하신 후 문의내용을 남겨주시면 빠르게 연락드리겠습니다.",
       image: {
         url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/bg_index2x2.webp",
         alt: "GOPIZZA logo",
