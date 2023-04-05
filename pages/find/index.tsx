@@ -226,7 +226,15 @@ const ListItem = ({ distance, store }: { distance: boolean; store: IStoreSearch 
 };
 
 export const getStaticProps = async () => {
-  const storeInfo2 = await fetchStoreSearch();
+  let storeInfo2 = await fetchStoreSearch();
+
+  storeInfo2.forEach((store: any) => {
+    store.address = store.address
+      .replace(/전라남도/g, "전남")
+      .replace(/전라북도/g, "전북")
+      .replace(/경상남도/g, "경남")
+      .replace(/경상북도/g, "경북");
+  });
 
   return {
     props: {
