@@ -71,7 +71,7 @@ function Form({ type }: { type?: string }) {
         </label>
         <input type="tel" className="s" name="tel" />
       </div>
-      <div className="box_inp">
+      <div className="box_inp box_email">
         <label htmlFor="email1" className="req">
           이메일
         </label>

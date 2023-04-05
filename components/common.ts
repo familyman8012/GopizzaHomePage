@@ -328,6 +328,10 @@ const reset = css`
 
   .box_inp {
     margin-bottom: 1.6rem;
+    &.box_email {
+      display: flex;
+      align-items: center;
+    }
 
     &:last-of-type {
       margin-bottom: 0;
@@ -886,7 +890,7 @@ const reset = css`
     }
   }
 
-  @media (min-width: 200px) and (max-width: 400px) {
+  @media (min-width: 200px) and (max-width: 500px) {
     html {
       font-size: 2.5px;
     }

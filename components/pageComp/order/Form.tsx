@@ -35,6 +35,7 @@ const FormWrap = styled.form`
       background: none;
     }
   }
+
   .style_radio {
     width: var(--size-inputS);
     height: var(--size-inputHeight);
@@ -231,7 +232,7 @@ function Form({ type, storeInfo }: IFormProps) {
           />
           {errors.phone && watch("phone") === "" && <div className="txt_error">연락처를 입력해주세요.</div>}
         </div>
-        <div className="box_inp">
+        <div className="box_inp box_email">
           <label htmlFor="email1" className="s">
             이메일
           </label>
