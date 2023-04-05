@@ -15,11 +15,22 @@ export function Modal({ open, onClose, children, center, className = "" }: IModa
   const portalId = useMemo(() => `modalArea_${Math.random().toString(36).substr(2, 16)}`, []);
   const [container, setContainer] = useState<Element | null>(null);
 
+  // 추가된 useEffect
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add("overflowhidden");
+    } else {
+      document.body.classList.remove("overflowhidden");
+    }
+  }, [open]);
+
   useEffect(() => {
     // 자체적으로 container 생성
     const newContainer = document.createElement("div");
     newContainer.setAttribute("id", portalId);
     document.body.appendChild(newContainer);
+    //overflowhidden
+    // document.body.classList.add("overflowhidden");
 
     // trigger rerender
     setContainer(newContainer);

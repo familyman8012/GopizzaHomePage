@@ -12,14 +12,28 @@ function Cusomer({ storeInfo }: ICustomer) {
   return (
     <OrderLayout>
       <h2 className="tit tit2">고객문의</h2>
-      <p className="txt">정보 입력시, 동그라미 표시는 필수입력 항목입니다.</p>
+      <p className="txt">
+        고피자 매장을 이용하시다가 불편함을 겪으셨나요?
+        <br />
+        저희가 다음부터 더 잘할 수 있도록 문의 글을 남겨주세요.
+        <br />
+        C/S 담당자가 내용을 확인하고 최대한 빠르게 연락드리도록 하겠습니다.
+      </p>
       <Form type="customer" storeInfo={storeInfo} />
     </OrderLayout>
   );
 }
 
 export const getStaticProps = async () => {
-  const storeInfoData = await fetchStoreSearch();
+  let storeInfoData = await fetchStoreSearch();
+
+  storeInfoData.forEach((store: any) => {
+    store.address = store.address
+      .replace(/전라남도/g, "전남")
+      .replace(/전라북도/g, "전북")
+      .replace(/경상남도/g, "경남")
+      .replace(/경상북도/g, "경북");
+  });
 
   // 지역별 매장 개수를 계산합니다.
   const regionCountMap = storeInfoData.reduce((acc: any, curr: any) => {

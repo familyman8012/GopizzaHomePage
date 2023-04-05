@@ -181,10 +181,11 @@ export const StoreWrap = styled.div`
       display: flex;
       align-items: center;
       width: 50%;
+      height: 40px;
       padding-left: 2rem;
 
       input {
-        height: 4rem;
+        height: auto;
       }
 
       label {

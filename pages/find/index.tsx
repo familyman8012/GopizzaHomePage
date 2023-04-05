@@ -17,8 +17,6 @@ function Index({ storeInfo2 }: { storeInfo2: IStoreSearch[] }) {
   const [storeData, setStoreData] = useState<IStoreSearch[]>([]);
   const { sido, sigugun } = hangjungdong;
 
-  console.log("storeInfo2", storeInfo2);
-
   //타이머
   useEffect(() => {
     if (3 > timer) {
