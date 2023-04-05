@@ -11,8 +11,42 @@ const strongImg = Array.from({ length: 3 }).map(
     `
 );
 
+export const VideoWrap = styled.div`
+  position: relative;
+  margin: 10.6rem auto 0;
+
+  .box_img {
+    position: relative;
+    width: 128rem;
+    height: 72rem;
+
+    iframe {
+      border-radius: 30px;
+    }
+  }
+
+  .react-player__play-icon {
+    display: none;
+  }
+
+  button {
+    position: absolute;
+    width: 9.3rem;
+    height: 9.3rem;
+    top: 50%;
+    left: 50%;
+    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/tech/ico_play.svg") no-repeat left top / 100%;
+    transform: translate(-50%, -50%);
+  }
+`;
+
 export const Strong3Wrap = styled.section`
-  margin-top: 16rem;
+  margin-top: 23rem;
+
+  .video_wrap {
+    width: 128rem;
+    margin: -10.6rem auto 11rem;
+  }
 
   h4 {
     margin-bottom: 5.6rem;
