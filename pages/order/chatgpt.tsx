@@ -54,11 +54,7 @@ function Chatgpt() {
             ) : (
               <div style={{ display: "flex", alignItems: "center", marginTop: "2rem" }}>
                 <span>
-                  <img
-                    src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/bg_person.webp"
-                    alt=""
-                    style={{ width: "auto", height: "20rem" }}
-                  />{" "}
+                  <img src="/images/main/gpt_samplex2.webp" alt="" style={{ width: "auto", height: "20rem" }} />{" "}
                 </span>{" "}
                 <span> : </span>
                 {message.text}
