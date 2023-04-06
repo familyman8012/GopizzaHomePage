@@ -1,8 +1,5 @@
-import BtnInquiry from "ComponentsFarm/pageComp/start/BtnInquiry";
 import GopizzaTech from "ComponentsFarm/pageComp/start/technology/GopizzaTech";
 import Need from "ComponentsFarm/pageComp/start/technology/Need";
-import Case from "ComponentsFarm/pageComp/start/technology/Case";
-import Everywhere from "ComponentsFarm/pageComp/start/technology/Everywhere";
 import StartLayout from "ComponentsFarm/layouts/pageLayouts/StartLayout";
 import { css } from "@emotion/react";
 

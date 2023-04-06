@@ -94,12 +94,12 @@ function Index({ storeInfo2 }: { storeInfo2: IStoreSearch[] }) {
           : filteredData.filter((item) => item.name.includes(filters.name));
     }
 
-    // filter by age
+    // filter by address1
     if (filters.address1) {
       filteredData = filteredData.filter((item) => item.store_location.district.city.substring(0, 2) === filters.address1.substring(0, 2));
     }
 
-    // filter by city
+    // filter by address2
     if (filters.address2) {
       filteredData = filteredData.filter((item) => item.store_location.district.name.substring(0, 2) === filters.address2.substring(0, 2));
     }
