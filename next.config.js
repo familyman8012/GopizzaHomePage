@@ -1,5 +1,75 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/board/index.php",
+        destination: "/start/inquiry",
+        permanent: true,
+      },
+
+      {
+        source: "/html/brand.html",
+        destination: "/brand",
+        permanent: true,
+      },
+      {
+        source: "/html/com_1.html",
+        destination: "/brand",
+        permanent: true,
+      },
+      {
+        source: "/html/com_2.html",
+        destination: "/brand",
+        permanent: true,
+      },
+      {
+        source: "/html/com_5.html",
+        destination: "/start/inquiry",
+        permanent: true,
+      },
+      {
+        source: "/html/story.html",
+        destination: "/start",
+        permanent: true,
+      },
+      {
+        source: "/html/use.html",
+        destination: "/menu",
+        permanent: true,
+      },
+      {
+        source: "/html/menu.html",
+        destination: "/menu",
+        permanent: true,
+      },
+      {
+        source: "/html/make.html",
+        destination: "/brand/howwemake",
+        permanent: true,
+      },
+      {
+        source: "/html/lab.html",
+        destination: "/start/technology",
+        permanent: true,
+      },
+      {
+        source: "/html/menu_view.html",
+        destination: "/menu",
+        permanent: true,
+      },
+      {
+        source: "/html/global.html",
+        destination: "/brand/goglobal",
+        permanent: true,
+      },
+      {
+        source: "/html/order.html",
+        destination: "/order",
+        permanent: true,
+      },
+    ];
+  },
   reactStrictMode: true,
   images: {
     imageSizes: [64, 128, 384],

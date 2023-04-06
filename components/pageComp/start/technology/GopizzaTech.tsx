@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { GopizzaTechWrap, VideoWrap } from "./style";
+import { GopizzaTechWrap } from "./style";
 import ReactPlayer from "react-player/lazy";
 import BtnInquiry from "../BtnInquiry";
+import { VideoWrap } from "../competitive/style";
 
 function GopizzaTech() {
   const [winReady, setwinReady] = useState(false);

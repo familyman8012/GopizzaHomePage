@@ -35,10 +35,10 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter();
 
   useEffect(() => {
-    if (findStore.latitude === null) {
+    if (findStore.latitude === null && !router.asPath.includes("campaign")) {
       findStore.getPosition();
     }
-  }, []);
+  }, [router.asPath]);
 
   const queryClient = new QueryClient({
     defaultOptions: {

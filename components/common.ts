@@ -565,6 +565,10 @@ const reset = css`
     line-height: 8rem;
     border-radius: 4rem;
     background-color: var(--color-orange);
+
+    &:disabled {
+      background-color: #cccccc;
+    }
   }
 
   .swiper {
@@ -884,7 +888,7 @@ const reset = css`
     }
   }
 
-  @media (min-width: 500px) and (max-width: 670px) {
+  @media (min-width: 501px) and (max-width: 670px) {
     html {
       font-size: 3.7px;
     }

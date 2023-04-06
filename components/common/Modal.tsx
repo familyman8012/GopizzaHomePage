@@ -146,6 +146,15 @@ const ModalWrapper = styled.div<{ center?: boolean }>`
     text-align: center;
   }
 
+  @media (max-width: 550px) {
+    p.tit {
+      font-size: 18px;
+    }
+    .box_info p {
+      font-size: 12px;
+    }
+  }
+
   @keyframes dimmOpacity {
     from {
       opacity: 0;

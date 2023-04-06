@@ -73,21 +73,27 @@ function Cost() {
         <tbody>
           <tr>
             <td>가맹비</td>
-            <td>5,000,000</td>
             <td>
-              <span className="sale">5,000,000</span>
+              <span className="sale sale2">5,000,000</span>
+            </td>
+            <td>
+              <span className="sale sale2">5,000,000</span>
             </td>
           </tr>
           <tr>
             <td>교육비</td>
-            <td>3,000,000</td>
+            <td>
+              <span className="sale">3,000,000</span>
+            </td>
             <td>
               <span className="sale">3,000,000</span>
             </td>
           </tr>
           <tr>
             <td>계약이행보증금</td>
-            <td>5,000,000</td>
+            <td>
+              <span className="sale">5,000,000</span>
+            </td>
             <td>
               <span className="sale">5,000,000</span>
             </td>
@@ -116,8 +122,18 @@ function Cost() {
         <tfoot>
           <tr>
             <td>합계(VAT별도)</td>
-            <td>95,400,000</td>
-            <td>63,400,000</td>
+            <td>
+              <span className="box_price">
+                <span className="price">95,400,000</span>
+                <span className="sale_price">85,400,000</span>
+              </span>
+            </td>
+            <td>
+              <span className="box_price">
+                <span className="price">63,400,000</span>
+                <span className="sale_price">53,400,000</span>
+              </span>
+            </td>
           </tr>
         </tfoot>
       </table>

@@ -13,7 +13,7 @@ function Operation() {
           <strong className="txt1">
             누구든지 손쉽게
             <br />
-            화덕 피자를 조리할 수 있습니다
+            피자를 조리할 수 있습니다
           </strong>
           <p className="txt2">상권과 매장환경에 따라 GOBOT STATION은 선택적으로 이용이 가능합니다.</p>
         </TxtQuotes>
@@ -21,16 +21,16 @@ function Operation() {
       <Bnr>
         <VisibilitySensorSwiper view={1} nav>
           <SwiperSlide>
-            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_goven1.webp" alt="" />
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_goven1.webp?v=2" alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_goven2.webp" alt="" />
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_goven2.webp?v=2" alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_goven3.webp" alt="" />
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_goven3.webp?v=2" alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_goven4.webp" alt="" />
+            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_goven4.webp?v=2" alt="" />
           </SwiperSlide>
         </VisibilitySensorSwiper>
       </Bnr>

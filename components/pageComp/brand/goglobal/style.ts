@@ -59,9 +59,9 @@ const countryImg = Array.from({ length: 5 }).map(
   (_, i) =>
     css`
       &:nth-of-type(${i + 1}) {
-        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/goglobal/img_global${i + 1}x2.webp") no-repeat left top / 100%;
+        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/goglobal/img_global${i + 1}x2.webp?v=4") no-repeat left top / 100%;
         .country {
-          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/goglobal/ico_global${i + 1}.webp") no-repeat left top / 100%;
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/goglobal/ico_global${i + 1}.webp?v=4") no-repeat left top / 100%;
         }
       }
     `
