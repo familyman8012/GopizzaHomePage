@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const EventWrap = styled.div`
+export const EventWrap = styled.main`
   position: relative;
   width: 128rem;
   margin: 0 auto;

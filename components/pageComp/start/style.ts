@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { VideoWrap } from "./competitive/style";
 
-export const StartWrap = styled.div`
+export const StartWrap = styled.main`
   h2.tit {
     margin-top: 12rem;
   }

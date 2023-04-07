@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const OrderWrap = styled.div`
+export const OrderWrap = styled.main`
   position: relative;
   width: 128rem;
   margin: 0 auto;
@@ -101,7 +101,7 @@ export const Location = styled.div`
   }
 `;
 
-export const LocationWrap = styled.div`
+export const LocationWrap = styled.main`
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 12rem - 50.65rem);
