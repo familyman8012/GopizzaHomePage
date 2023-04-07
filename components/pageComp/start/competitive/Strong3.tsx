@@ -76,12 +76,6 @@ function Strong3() {
               />
             )}
           </div>
-
-          {!play && (
-            <button>
-              <span className="hiddenZoneV">PLAY</span>
-            </button>
-          )}
         </VideoWrap>
       </div>
       <h4>
