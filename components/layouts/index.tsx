@@ -11,13 +11,13 @@ interface Props {
 
 function Layout({ children, className }: Props) {
   return (
-    <div>
+    <>
       <Header />
       {children}
       <Top />
       <Footer />
       <Copyright />
-    </div>
+    </>
   );
 }
 
