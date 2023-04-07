@@ -47,6 +47,7 @@ export const EventWrap = styled.main`
 
     li {
       overflow: hidden;
+      position: relative;
       width: 40rem;
 
       .thumb img {

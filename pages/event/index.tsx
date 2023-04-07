@@ -6,6 +6,7 @@ import { fetchPromotion } from "ApiFarm/home";
 import { IPromotionRes, PromotionList } from "ApiFarm/interface/homeInterface";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 function Promotion({ promotion }: { promotion: IPromotionRes }) {
   const [live, setLive] = useState(true);
@@ -30,7 +31,7 @@ function Promotion({ promotion }: { promotion: IPromotionRes }) {
         {promotionData.map((el) => (
           <li key={el.brand_promotion_idx}>
             <Link href={`/event/detail/${el.brand_promotion_idx}`}>
-              <img src={el.image_url} alt={el.subject} />
+              <Image src={el.image_url} fill alt={el.subject} />
             </Link>
           </li>
         ))}
