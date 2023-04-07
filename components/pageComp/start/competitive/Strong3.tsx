@@ -61,7 +61,7 @@ function Strong3() {
           <div className="box_img" onClick={handleToggle}>
             {winReady && (
               <ReactPlayer
-                light={<img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/videox2.webp" alt="Thumbnail" />}
+                light={<img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/videox2.webp" alt="Thumbnail" />}
                 url="https://www.youtube.com/watch?v=-CroK4_iox4"
                 width="100%"
                 height="100%"
