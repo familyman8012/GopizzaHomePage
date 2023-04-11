@@ -139,8 +139,8 @@ function Consulting() {
     const sendData: any = {
       ...data,
       email: data.email1 + "@" + data.email2,
-      address: data.address1 + data.address2,
-      shop_address: data.shop_address1 + data.shop_address2,
+      address: data.address1 + " " + data.address2,
+      shop_address: data.shop_address1 + " " + data.shop_address2,
     };
     for (const key in sendData) {
       if (key === "address1" || key === "address2" || key === "email1" || key === "email2" || key === "shop_address1" || key === "shop_address2") {
