@@ -74,7 +74,7 @@ const nextConfig = {
   images: {
     imageSizes: [64, 128, 384],
     deviceSizes: [1080, 1920, 3840],
-    domains: ["dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com"],
+    domains: ["dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com", "gopizza-homepage.s3.ap-northeast-2.amazonaws.com"],
   },
   compiler: {
     emotion: {

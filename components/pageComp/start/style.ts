@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { VideoWrap } from "./technology/style";
+import { VideoWrap } from "./competitive/style";
 
 export const StartWrap = styled.div`
   h2.tit {
@@ -41,16 +41,12 @@ export const StartWrap = styled.div`
       font-size: 1.8rem;
       text-align: center;
     }
-
-    main {
-      margin-top: 0;
-    }
   }
 `;
 
 export const Content = styled.main`
   width: 128rem;
-  margin: 23.3rem auto 0;
+  margin: 0 auto;
 
   .video_wrap {
     margin-top: -10.6rem;

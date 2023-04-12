@@ -17,7 +17,7 @@ interface IMain {
 
 function Main({ mainVisual, youtube, feed }: IMain) {
   return (
-    <div className="index">
+    <main className="index">
       <MainVisual data={mainVisual} />
       <LinkBanner />
       <BestMenu />
@@ -25,7 +25,7 @@ function Main({ mainVisual, youtube, feed }: IMain) {
       <Order />
       <Instagram feed={feed} />
       <Youtube data={youtube} />
-    </div>
+    </main>
   );
 }
 

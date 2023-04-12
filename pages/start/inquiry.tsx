@@ -2,17 +2,15 @@ import styled from "@emotion/styled";
 import { useMutation } from "@tanstack/react-query";
 import { fetchInquiry } from "ApiFarm/home";
 import { IInquiryReq } from "ApiFarm/interface/homeInterface";
-import DaumPost from "ComponentsFarm/common/DaumPost";
 import Modal from "ComponentsFarm/common/Modal";
 import StartLayout from "ComponentsFarm/layouts/pageLayouts/StartLayout";
 import { Content, RegionWrap } from "ComponentsFarm/pageComp/start/style";
-import Application, { ApplicationWrap } from "ComponentsFarm/popup/Application";
-import Privacy, { PrivacyWrap } from "ComponentsFarm/popup/Privacy";
+import { ApplicationWrap } from "ComponentsFarm/popup/Application";
+import { PrivacyWrap } from "ComponentsFarm/popup/Privacy";
 import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
 import DOMPurify from "isomorphic-dompurify";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
-import ReactPlayer from "react-player/lazy";
 
 const FormWrap = styled.div`
   margin: 11rem 0 0 0;
@@ -92,13 +90,7 @@ function Consulting() {
   //요청 여러번 못하게.
   const [submitDisabled, setSubmitDisabled] = useState(false);
 
-  const popref = useRef<any>(null);
-  const popref2 = useRef<any>(null);
   const [agree, setAgree] = useState(false);
-  const [addressDetail, setAddressDetail] = useState({ address: "", buildingName: "" }); // 주소
-  const [shopAddressDetail, setShopAddressDetail] = useState({ address: "", buildingName: "" }); // 점포주소
-  const [isOpenPost, setIsOpenPost] = useState(false);
-  const [isOpenShopPost, setIsOpenShopPost] = useState(false);
 
   const [open, setOpen] = useState(false);
   const openStoreModal = useCallback(() => {
@@ -116,16 +108,6 @@ function Consulting() {
     setOpen2(false);
   }, []);
 
-  useEffect(() => {
-    setValue("address1", addressDetail.address);
-    setValue("address2", addressDetail.buildingName);
-  }, [addressDetail.address, addressDetail.buildingName]);
-
-  useEffect(() => {
-    setValue("shop_address1", shopAddressDetail.address);
-    setValue("shop_address2", shopAddressDetail.buildingName);
-  }, [shopAddressDetail.address, shopAddressDetail.buildingName]);
-
   //단체주문
   const Inquiry = useMutation(["groupOrder"], (request: IInquiryReq) => fetchInquiry(request));
 
@@ -139,21 +121,12 @@ function Consulting() {
     const sendData: any = {
       ...data,
       email: data.email1 + "@" + data.email2,
-      address: data.address1 + data.address2,
-      shop_address: data.shop_address1 + data.shop_address2,
     };
-    for (const key in sendData) {
-      if (key === "address1" || key === "address2" || key === "email1" || key === "email2" || key === "shop_address1" || key === "shop_address2") {
-        delete sendData[key];
-      }
-    }
 
     Inquiry.mutate(sendData, {
       onSuccess: (data) => {
         openStoreModal2();
         reset();
-        setAddressDetail({ address: "", buildingName: "" });
-        setShopAddressDetail({ address: "", buildingName: "" });
         setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
       },
       onError: (err) => {
@@ -236,54 +209,6 @@ function Consulting() {
               </select>
               {errors.inflow_path && <p className="error">유입경로를 선택해주세요.</p>}
             </div>
-            <div className="box_inp flex baseline" style={{ position: "relative" }}>
-              <DaumPost isOpenPost={isOpenPost} setIsOpenPost={setIsOpenPost} setAddressDetail={setAddressDetail} />
-              <label htmlFor="address1" className="req">
-                주소
-              </label>
-              <div>
-                <div style={{ marginBottom: 4 }}>
-                  <input
-                    type="text"
-                    className="m"
-                    id="address1"
-                    placeholder="기본주소"
-                    style={{ marginRight: 4 }}
-                    defaultValue={addressDetail.address ? `${addressDetail.address}` : ``}
-                    readOnly
-                    onFocus={() => setIsOpenPost(true)}
-                  />
-                  <button
-                    type="button"
-                    onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-                      e.stopPropagation();
-                      setIsOpenPost(true);
-                    }}
-                  >
-                    주소검색
-                  </button>
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="상세주소"
-                    id="address2"
-                    className="m"
-                    {...register("address2", { required: true })}
-                    readOnly={addressDetail.address ? false : true}
-                  />
-                </div>
-              </div>
-            </div>
-            {errors.address2 && <div className="txt_error">주소를 입력해주세요.</div>}
-            <div className="box_inp">
-              <label htmlFor="expected_investment_amount" className="req">
-                예상 투자금액
-              </label>
-              <input type="text" className="s" id="expected_investment_amount" {...register("expected_investment_amount", { required: true, pattern: /^[0-9]+$/ })} />
-              <span className="txt_desc">만원 (숫자만 입력)</span>
-              {errors.expected_investment_amount && <p className="error">예상 투자금액을 숫자로 입력해주세요.</p>}
-            </div>
             <div className="box_inp box_radio flex">
               <label htmlFor="is_experience" className="req">
                 외식사업 경험
@@ -311,63 +236,7 @@ function Consulting() {
               </div>
             </div>
             {errors.is_building_ownership && <div className="txt_error">소유여부를 선택해주세요.</div>}
-            <div className="box_inp flex baseline" style={{ position: "relative" }}>
-              <DaumPost isOpenPost={isOpenShopPost} setIsOpenPost={setIsOpenShopPost} setAddressDetail={setShopAddressDetail} />
-              <label htmlFor="shop_address1" className="req">
-                점포주소
-              </label>
-              <div>
-                <div style={{ marginBottom: 4 }}>
-                  <input
-                    type="text"
-                    className="m"
-                    id="shop_address1"
-                    placeholder="기본주소"
-                    style={{ marginRight: 4 }}
-                    readOnly
-                    defaultValue={shopAddressDetail.address ? `${shopAddressDetail.address}` : ``}
-                    onFocus={() => setIsOpenShopPost(true)}
-                  />
-                  <button
-                    type="button"
-                    onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-                      e.stopPropagation();
-                      setIsOpenShopPost(true);
-                    }}
-                  >
-                    주소검색
-                  </button>
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="상세주소"
-                    id="shop_address2"
-                    className="m"
-                    {...register("shop_address2", {
-                      required: true,
-                    })}
-                    readOnly={shopAddressDetail.address ? false : true}
-                  />
-                </div>
-              </div>
-            </div>
-            {errors.shop_address2 && <div className="txt_error">주소를 입력해주세요.</div>}
-            <div className="box_inp">
-              <label htmlFor="building_area" className="req">
-                평형
-              </label>
-              <input type="text" className="s" id="building_area" {...register("building_area", { required: true })} />
-              <span className="txt_desc">평형</span>
-              {errors.building_area && <p className="error">평형을 입력해주세요.</p>}
-            </div>
-            <div className="box_inp">
-              <label htmlFor="shop_name" className="req">
-                현상호
-              </label>
-              <input type="text" className="s" id="shop_name" {...register("shop_name", { required: true })} />
-            </div>
-            {errors.shop_name && <div className="txt_error">현상호를 입력해주세요.</div>}
+
             <div className="box_inp box_radio flex">
               <label htmlFor="hope_area" className="req">
                 희망지역

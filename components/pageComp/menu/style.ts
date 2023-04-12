@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
-export const MenuWrap = styled.section`
+export const MenuWrap = styled.main`
   padding: 12rem 0 0;
   min-height: calc(100vh - 12rem - 50.65rem);
 

@@ -399,7 +399,7 @@ export const Seo = [
       url: "https://gopizza.kr/start",
       images: [
         {
-          url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/img_marketing9.webp",
+          url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/videox2.webp",
           alt: "",
         },
       ],

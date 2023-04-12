@@ -76,7 +76,7 @@ function GopizzaTech() {
         <div className="box_img" onClick={handleToggle}>
           {winReady && (
             <ReactPlayer
-              light={<img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/tech/videox2.webp" alt="Thumbnail" />}
+              light={<img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/tech/videox2.webp?v=2" alt="Thumbnail" />}
               url="https://www.youtube.com/watch?v=A-awWOnYf6I?t=50"
               width="100%"
               height="100%"
@@ -91,12 +91,6 @@ function GopizzaTech() {
             />
           )}
         </div>
-
-        {!play && (
-          <button>
-            <span className="hiddenZoneV">PLAY</span>
-          </button>
-        )}
       </VideoWrap>
       <BtnInquiry />
     </GopizzaTechWrap>

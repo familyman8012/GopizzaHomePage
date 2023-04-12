@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const FindWrap = styled.section`
+export const FindWrap = styled.main`
   width: 128rem;
   margin: 9rem auto 17.4rem;
 

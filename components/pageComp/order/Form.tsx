@@ -147,7 +147,7 @@ function Form({ type, storeInfo }: IFormProps) {
         email: `${email1}@${email2}`,
         hope_order_date,
         hope_order_time: `${hope_order_time1}${hope_order_time2}`,
-        address: `${address1} ${address2}`,
+        address: `${address1}${" "}${address2}`,
         detail_contents,
       };
       GropuOrder.mutate(sendData, {
