@@ -224,65 +224,7 @@ function Consulting() {
           </FormWrap>
           <FormWrap>
             <h4>후보지 정보</h4>
-            <div className="box_inp box_radio flex">
-              <label htmlFor="is_building_ownership" className="req">
-                소유여부
-              </label>
-              <div className="box_custom_radio two">
-                <input type="radio" id="is_building_ownership1" defaultValue="1" defaultChecked {...register("is_building_ownership", { required: true })} />
-                <label htmlFor="is_building_ownership1">예</label>
-                <input type="radio" id="is_building_ownership2" defaultValue="0" {...register("is_building_ownership", { required: true })} />
-                <label htmlFor="is_building_ownership2">아니오</label>
-              </div>
-            </div>
-            {errors.is_building_ownership && <div className="txt_error">소유여부를 선택해주세요.</div>}
 
-            <div className="box_inp box_radio flex">
-              <label htmlFor="hope_area" className="req">
-                희망지역
-              </label>
-              <RegionWrap className="box_custom_radio">
-                <input type="radio" id="hope_area1" defaultValue="1" defaultChecked {...register("hope_area", { required: true })} />
-                <label htmlFor="hope_area1">
-                  수도권
-                  <br />
-                  (서울, 경기, 인천)
-                </label>
-                <input type="radio" id="hope_area2" defaultValue="2" {...register("hope_area", { required: true })} />
-                <label htmlFor="hope_area2">
-                  영남권
-                  <br />
-                  (부산.대구.울산.포항 외)
-                </label>
-                <input type="radio" id="hope_area3" defaultValue="3" {...register("hope_area", { required: true })} />
-                <label htmlFor="hope_area3">
-                  호남권
-                  <br />
-                  (여수.목포.전주 외)
-                </label>
-                <input type="radio" id="hope_area4" defaultValue="4" {...register("hope_area", { required: true })} />
-                <label htmlFor="hope_area4">
-                  중부.강원권
-                  <br />
-                  (대전.충남.충북.강릉 외)
-                </label>
-                <input type="radio" id="hope_area5" defaultValue="9" {...register("hope_area", { required: true })} />
-                <label htmlFor="hope_area5">
-                  그 외
-                  <br />
-                  (글로벌)
-                </label>
-              </RegionWrap>
-            </div>
-            {errors.hope_area && <div className="txt_error">희망지역을 선택해주세요.</div>}
-            <div className="box_inp">
-              <label htmlFor="detail_area" className="req">
-                세부지역
-              </label>
-              <input type="text" className="s" id="detail_area" {...register("detail_area", { required: true })} />
-              <span className="txt_desc"> (시/군, 구/동)</span>
-              {errors.detail_area && <p className="error">세부지역을 입력해주세요.</p>}
-            </div>
             <div className="box_inp flex baseline">
               <label htmlFor="detail_contents" className="req">
                 문의내용
