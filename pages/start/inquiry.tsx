@@ -235,10 +235,8 @@ function Consulting() {
               상담 전화를 드리기전에 고피자 창업에 대해 궁금하신 점 혹은 <br /> 창업 하려고 하시는 지역/상가의 정보를 알려주세요
             </p>
             <div className="box_inp flex baseline">
-              <label htmlFor="detail_contents" className="req">
-                문의내용
-              </label>
-              <textarea id="detail_contents" className="l" {...register("detail_contents", { required: true })} />
+              <label htmlFor="detail_contents">문의내용</label>
+              <textarea id="detail_contents" className="l" {...register("detail_contents")} />
             </div>
             {errors.detail_contents && <div className="txt_error">문의내용을 입력해주세요.</div>}
             <div className="box_custom_chk">
