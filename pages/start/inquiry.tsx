@@ -63,6 +63,28 @@ const FormWrap = styled.div`
     padding-top: 0;
     padding-bottom: 1.6rem;
   }
+
+  .box_detail_contents {
+    align-items: start;
+    label {
+      margin-top: 10px;
+    }
+  }
+  .box_textarea {
+    position: relative;
+    .fake-placeholder {
+      position: absolute;
+      top: 2.4rem;
+      left: 2.4rem;
+      pointer-events: none;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      color: #aaa;
+    }
+    #detail_contents {
+      line-height: 1.5;
+    }
+  }
 `;
 
 const email = [
@@ -94,6 +116,9 @@ function Consulting() {
     reset,
   } = useForm();
 
+  //textarea fake placeholder
+  const [showPlaceholder, setShowPlaceholder] = useState(true);
+
   //요청 여러번 못하게.
   const [submitDisabled, setSubmitDisabled] = useState(false);
 
@@ -119,6 +144,7 @@ function Consulting() {
   const Inquiry = useMutation(["groupOrder"], (request: IInquiryReq) => fetchInquiry(request));
 
   const onSubmit = (data: Record<string, string>) => {
+    console.log(data, data.email1 + "@" + data.email2);
     if (!agree) {
       return alert("개인정보취급방침에 동의해주세요.");
     }
@@ -228,15 +254,22 @@ function Consulting() {
               </div>
             </div>
             {errors.is_experience && <div className="txt_error">외식사업 경험을 선택해주세요.</div>}
-          </FormWrap>
-          <FormWrap>
-            <h4 className="tit2">상담 신청 내용</h4>
-            <p className="txt_notice" style={{ textAlign: "center" }}>
-              상담 전화를 드리기전에 고피자 창업에 대해 궁금하신 점 혹은 <br /> 창업 하려고 하시는 지역/상가의 정보를 알려주세요
-            </p>
-            <div className="box_inp flex baseline">
+            <div className="box_inp flex box_detail_contents">
               <label htmlFor="detail_contents">문의내용</label>
-              <textarea id="detail_contents" className="l" {...register("detail_contents")} />
+              <div className="box_textarea">
+                {showPlaceholder && (
+                  <span className="fake-placeholder">
+                    상담 전화를 드리기 전에 고피자 창업에 대해 궁금하신 점<br /> 혹은 창업 하려고 하시는 지역/상가의 정보를 알려주세요
+                  </span>
+                )}
+                <textarea
+                  id="detail_contents"
+                  className="l"
+                  {...register("detail_contents")}
+                  onFocus={() => setShowPlaceholder(false)}
+                  onBlur={(e) => setShowPlaceholder(e.target.value === "")}
+                />
+              </div>
             </div>
             {errors.detail_contents && <div className="txt_error">문의내용을 입력해주세요.</div>}
             <div className="box_custom_chk">
