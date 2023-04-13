@@ -25,6 +25,13 @@ const FormWrap = styled.div`
     margin-bottom: 5.6rem;
     font-size: 4.8rem;
     color: #000;
+
+    &.tit2 {
+      margin-bottom: 3.2rem;
+    }
+  }
+  .txt_notice {
+    margin-bottom: 5.6rem;
   }
   p.form_txt {
     margin-bottom: 8rem;
@@ -223,8 +230,10 @@ function Consulting() {
             {errors.is_experience && <div className="txt_error">외식사업 경험을 선택해주세요.</div>}
           </FormWrap>
           <FormWrap>
-            <h4>후보지 정보</h4>
-
+            <h4 className="tit2">상담 신청 내용</h4>
+            <p className="txt_notice" style={{ textAlign: "center" }}>
+              상담 전화를 드리기전에 고피자 창업에 대해 궁금하신 점 혹은 <br /> 창업 하려고 하시는 지역/상가의 정보를 알려주세요
+            </p>
             <div className="box_inp flex baseline">
               <label htmlFor="detail_contents" className="req">
                 문의내용
