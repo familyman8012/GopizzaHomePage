@@ -907,6 +907,5 @@ const reset = css`
 
 export default reset;
 
-export const breakpoints = [200, 400, 670, 800, 1000];
-
-export const mq = breakpoints.map((i) => `${`@media (min-width:${breakpoints[i]}px) and (max-width: ${breakpoints[i + 1]}px)`}`);
+export const breakpoints = [200, 500, 800, 1200, 1600];
+export const mq = breakpoints.map((bp, i) => `@media (min-width:${breakpoints[i]}px) and (max-width: ${breakpoints[i + 1]}px)`);

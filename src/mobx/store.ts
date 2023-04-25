@@ -15,3 +15,7 @@ export const findStore = observable({
     );
   },
 });
+
+export const mobileHeader = observable({
+  open: false,
+});

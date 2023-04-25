@@ -1,8 +1,11 @@
 import styled from "@emotion/styled";
+import { runInAction } from "mobx";
+import { observer } from "mobx-react";
+import { mobileHeader } from "MobxFarm/store";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useCallback, useState } from "react";
-import { HeadMenuUrl, HeadAsideUrl } from "./constant";
+import { HeadMenuUrl, HeadAsideUrl, FooterMenu } from "./constant";
 import { HeaderWrap } from "./style";
 
 export const TopBanner = styled.div`
@@ -67,10 +70,32 @@ function Header() {
               </Link>
             ))}
           </aside>
+          <button className={`btn_mobile_menu ${mobileHeader.open ? "on" : ""}`} onClick={() => runInAction(() => (mobileHeader.open = !mobileHeader.open))}>
+            <span className="hiddenZoneV">open</span>
+          </button>
+        </div>
+        <div className={`layer_mobile_menu ${mobileHeader.open ? "on" : ""}`}>
+          <Link href="/start" className="link_start">
+            <span className="txt">가맹문의 바로가기</span>
+          </Link>
+          <div className="wrap_menuBox">
+            {FooterMenu.map((el, i) => (
+              <dl className="menuBox" key={i}>
+                <dt>
+                  <Link href={el.url}>{el.depth1}</Link>
+                </dt>
+                {el.depth2?.map((item, j) => (
+                  <dd key={j}>
+                    <Link href={item.url}>{item.menuName}</Link>
+                  </dd>
+                ))}
+              </dl>
+            ))}
+          </div>
         </div>
       </HeaderWrap>
     </>
   );
 }
 
-export default Header;
+export default observer(Header);

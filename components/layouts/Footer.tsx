@@ -119,6 +119,27 @@ function Footer() {
             ))}
           </ul>
         </div>
+        <div className="mobile_bottom">
+          <ul className="menuArea">
+            {FooterMenu.map((el, i) => (
+              <li key={i}>
+                <Link href={el.url}>{el.depth1}</Link>
+              </li>
+            ))}
+            <li>
+              <Link href="/start">가맹문의</Link>
+            </li>
+          </ul>
+          <ul className="list_sns">
+            {Sns.map((el) => (
+              <li key={el.linkName} className={el.linkName}>
+                <a target="_blank" href={el.url} rel="noreferrer">
+                  <span className="hiddenZoneV">{el.linkName}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       <Modal open={open} onClose={close}>
         <PrivacyWrap>

@@ -2,6 +2,8 @@ import React, { useEffect, useMemo, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import styled from "@emotion/styled";
 import { Portal } from "./Portal";
+import { mq } from "ComponentsFarm/common";
+import { ApplicationWrap } from "ComponentsFarm/popup/Application";
 
 interface IModal {
   open: boolean;
@@ -194,6 +196,37 @@ const ModalWrapper = styled.div<{ center?: boolean }>`
 
   .modal-dialog {
     margin: 1.75rem auto;
+
+    ${mq[0]} {
+      ${ApplicationWrap} {
+        width: 320px;
+        padding: 5.8rem 0 5.3rem;
+
+        .tit {
+          font-size: 24px;
+        }
+        .txt_success {
+          font-size: 13px;
+          margin: 10px 0;
+        }
+        .txt_notice {
+          font-size: 11px;
+          margin-bottom: 25px;
+        }
+        .btn_agree {
+          width: 300px;
+          height: 40px;
+          font-size: 13px;
+          border-radius: 40px;
+        }
+        .btn_close {
+          top: auto;
+          bottom: -55px;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
 
     ${({ center }) =>
       center &&

@@ -51,6 +51,13 @@ export const HeaderWrap = styled.header`
         }
       }
     }
+
+    .btn_mobile_menu {
+      display: none;
+    }
+  }
+  .layer_mobile_menu {
+    display: none;
   }
 
   @media (max-width: 400px) {
@@ -134,6 +141,10 @@ export const HeaderWrap = styled.header`
 
 export const FooterWrap = styled.footer`
   background: #ff4600;
+
+  .mobile_bottom {
+    display: none;
+  }
 
   .inner {
     width: 128rem;
@@ -227,46 +238,45 @@ export const FooterWrap = styled.footer`
           margin-top: 0;
         }
       }
+    }
+    .list_sns {
+      display: flex;
+      position: relative;
+      top: 25px;
+      align-items: center;
+      align-self: self-end;
+      margin-left: 16.3rem;
 
-      .list_sns {
-        display: flex;
-        position: relative;
-        top: 25px;
-        align-items: center;
-        align-self: self-end;
-        margin-left: 16.3rem;
-
-        a {
-          display: block;
+      a {
+        display: block;
+      }
+      li {
+        margin-right: 1.6rem;
+        &:last-of-type {
+          margin-right: 0;
         }
-        li {
-          margin-right: 1.6rem;
-          &:last-of-type {
-            margin-right: 0;
+        &:not(.youtube) {
+          a {
+            width: 3.2rem;
+            height: 3.2rem;
           }
-          &:not(.youtube) {
-            a {
-              width: 3.2rem;
-              height: 3.2rem;
-            }
-          }
+        }
 
-          &.instagram {
-            background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_instagram.svg") no-repeat left top / 100%;
+        &.instagram {
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_instagram.svg") no-repeat left top / 100%;
+        }
+        &.youtube {
+          a {
+            width: 3.4rem;
+            height: 2.6rem;
           }
-          &.youtube {
-            a {
-              width: 3.4rem;
-              height: 2.6rem;
-            }
-            background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_youtube.svg") no-repeat left top / 100%;
-          }
-          &.kakao {
-            background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_kakao.svg") no-repeat left top / 100%;
-          }
-          &.facebook {
-            background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_facebook.svg") no-repeat left top / 100%;
-          }
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_youtube.svg") no-repeat left top / 100%;
+        }
+        &.kakao {
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_kakao.svg") no-repeat left top / 100%;
+        }
+        &.facebook {
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_facebook.svg") no-repeat left top / 100%;
         }
       }
     }

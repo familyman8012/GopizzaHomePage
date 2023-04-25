@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { mq } from "ComponentsFarm/common";
 import Dialog from "ComponentsFarm/common/Dialog";
 import Modal from "ComponentsFarm/common/Modal";
 import DOMPurify from "isomorphic-dompurify";
@@ -38,5 +39,19 @@ export const PrivacyWrap = styled.div`
     margin: 5.6rem auto 0;
     padding-right: 4.5rem;
     font-size: 1.6rem;
+  }
+
+  ${mq[0]} {
+    width: 320px;
+    .btn_close {
+      top: auto;
+      bottom: -55px;
+      left: 50%;
+      right: auto;
+      width: 40px;
+      height: 40px;
+      font-size: 12px;
+      transform: translateX(-50%);
+    }
   }
 `;

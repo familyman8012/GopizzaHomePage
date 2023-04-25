@@ -2,14 +2,22 @@ import styled from "@emotion/styled";
 import { useMutation } from "@tanstack/react-query";
 import { fetchInquiry } from "ApiFarm/home";
 import { IInquiryReq } from "ApiFarm/interface/homeInterface";
+import { mq } from "ComponentsFarm/common";
 import Modal from "ComponentsFarm/common/Modal";
+import Copyright from "ComponentsFarm/layouts/Copyright";
+import Footer from "ComponentsFarm/layouts/Footer";
+import Header, { TopBanner } from "ComponentsFarm/layouts/Header";
 import StartLayout from "ComponentsFarm/layouts/pageLayouts/StartLayout";
+import { CopyrightWrap, FooterWrap, HeaderWrap, TopWrap } from "ComponentsFarm/layouts/style";
+import Top from "ComponentsFarm/layouts/Top";
 import { Content, RegionWrap } from "ComponentsFarm/pageComp/start/style";
 import { ApplicationWrap } from "ComponentsFarm/popup/Application";
 import { PrivacyWrap } from "ComponentsFarm/popup/Privacy";
 import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
 import DOMPurify from "isomorphic-dompurify";
-import { useCallback, useState } from "react";
+import { observer } from "mobx-react";
+import { mobileHeader } from "MobxFarm/store";
+import { ReactElement, useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
 
 const FormWrap = styled.div`
@@ -37,6 +45,9 @@ const FormWrap = styled.div`
     margin-bottom: 8rem;
     font-size: 2.4rem;
     text-align: center;
+  }
+  input::placeholder {
+    color: #ddd;
   }
   .box_custom_chk {
     display: flex;
@@ -87,6 +98,306 @@ const FormWrap = styled.div`
   }
 `;
 
+const PageInquiry = styled.div`
+  ${mq[0]} {
+    ${TopBanner} {
+      display: none;
+    }
+    ${HeaderWrap} {
+      height: 60px;
+
+      .inner {
+        width: 100vw;
+        padding: 0 30px 0 30px;
+
+        h1 {
+          width: 63.3px;
+          height: 35.25px;
+        }
+        nav,
+        aside {
+          display: none !important;
+        }
+      }
+
+      .btn_mobile_menu {
+        display: block !important;
+        width: 28px;
+        height: 22px;
+        margin-left: auto;
+        background: url("/images/start/inquiry/btn_head_menu.svg") no-repeat left top / 100%;
+
+        &.on {
+          width: 23px;
+          background: url("/images/start/inquiry/btn_head_close.svg") no-repeat left top;
+          background-size: contain;
+        }
+      }
+    }
+    .layer_mobile_menu.on {
+      display: block !important;
+      position: absolute;
+      z-index: 10;
+      top: 60px;
+      left: 0;
+      width: 100vw;
+      height: calc(100vh - 60px);
+      background: #2c2c2c;
+
+      .link_start {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 59px;
+        background: #fff;
+
+        .txt {
+          font-size: 16px;
+          font-weight: bold;
+          color: var(--color-orange);
+
+          &:after {
+            content: "";
+            display: inline-block;
+            width: 10.5px;
+            height: 13.5px;
+            margin-left: 12px;
+            vertical-align: middle;
+            background: url("/images/start/inquiry/arrow_go_start.svg") no-repeat left top / 100%;
+          }
+        }
+      }
+      .menuBox {
+        padding: 30px 0;
+        text-align: center;
+        border-bottom: 1px solid #6a6a6a;
+        background: #2c2c2c;
+
+        dt a,
+        dd a {
+          color: #fff;
+        }
+
+        dt {
+          margin-bottom: 14.5px;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        dd {
+          font-size: 13px;
+          &:not(:last-of-type) {
+            margin-bottom: 11px;
+          }
+        }
+      }
+    }
+
+    .list_tab,
+    h2 {
+      display: none;
+    }
+
+    ${Content} {
+      width: 100vw;
+      padding: 0 30px;
+
+      &.on {
+        display: none;
+      }
+    }
+
+    ${FormWrap} {
+      margin-top: 36.5px;
+      h4 {
+        margin-bottom: 28px;
+        font-size: 24px;
+      }
+      .form_txt {
+        margin-bottom: 50px;
+        font-size: 12px;
+        color: var(--color-orange);
+      }
+      .box_inp {
+        margin-bottom: 20px;
+        .req::before {
+          width: 5.5px;
+          height: 5.5px;
+        }
+        input,
+        select {
+          height: 35px;
+          padding: 0 9px;
+          font-size: 13px;
+          vertical-align: middle;
+        }
+        label:not(.req) {
+          padding-left: 0;
+        }
+        &:not(.box_radio) {
+          label {
+            display: block;
+            width: 100%;
+            font-size: 13px;
+            margin-bottom: 8px;
+            line-height: 1;
+          }
+        }
+        &:not(.box_email_area) {
+          input,
+          select,
+          textarea {
+            width: 100%;
+
+            border-radius: 2px;
+          }
+        }
+        &.box_email_area {
+          * {
+            margin: 0;
+          }
+          .str {
+            display: inline-block;
+            width: 7%;
+            font-size: 13px;
+            text-align: center;
+          }
+          input,
+          select {
+            width: 30%;
+            box-sizing: border-box;
+          }
+          input:nth-of-type(1) {
+            width: 33%;
+          }
+        }
+      }
+      .box_inp.box_radio,
+      .box_detail_contents {
+        display: block;
+        label.req {
+          display: block;
+          width: 100%;
+          margin-bottom: 8px;
+          font-size: 13px;
+          line-height: 1;
+        }
+      }
+      .box_detail_contents {
+        .fake-placeholder {
+          top: 12px;
+          left: 12.5px;
+          font-size: 12px;
+          color: #bababa;
+        }
+        textarea {
+          height: 180px;
+          font-size: 12px;
+        }
+      }
+      .box_custom_radio {
+        position: relative;
+        height: 40px;
+        input,
+        label {
+          width: 50% !important;
+          height: 40px;
+          margin: 0;
+          padding: 0;
+          font-size: 12px;
+        }
+      }
+      .box_custom_chk {
+        label,
+        input[type="checkbox"]:checked + label {
+          height: 20px;
+          padding-left: 30px;
+          font-size: 11px;
+          line-height: 20px;
+          background-size: 20px;
+          letter-spacing: -1px;
+        }
+        .openPrivacy {
+          margin-left: 10px;
+          font-size: 11px;
+          line-height: 20px;
+        }
+      }
+      .submit {
+        width: 100%;
+        height: 50px;
+        margin: 53px 0 75px;
+        font-size: 16px;
+        border-radius: 25px;
+      }
+    }
+    ${TopWrap} {
+      display: none;
+    }
+    ${FooterWrap} {
+      .inner {
+        width: 100vw;
+        padding: 0 30px;
+        .top {
+          padding-top: 22px;
+          border-bottom: none;
+          h1 {
+            width: 63.3px;
+            height: 35.25px;
+            margin: 0 auto 32px;
+          }
+          .menuArea {
+            display: none;
+          }
+        }
+        .bottom {
+          display: none;
+        }
+      }
+      .mobile_bottom {
+        display: block;
+
+        .menuArea {
+          font-size: 16px;
+          text-align: center;
+          font-weight: bold;
+
+          li {
+            padding: 15px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.29);
+
+            &:last-of-type {
+              border-bottom: 1px solid rgba(255, 255, 255, 0.29);
+            }
+          }
+        }
+      }
+      .inner .list_sns {
+        position: static;
+        margin-left: auto;
+        padding: 47px 0 50px;
+        justify-content: center;
+
+        li:not(:last-of-type) {
+          margin-right: 15px;
+        }
+
+        li:not(.youtube) a {
+          width: 26.5px;
+          height: 26.5px;
+        }
+        li.youtube a {
+          width: 28.25px;
+          height: 22px;
+        }
+      }
+    }
+    ${CopyrightWrap} {
+      height: 30px;
+      font-size: 11px;
+    }
+  }
+`;
+
 const email = [
   "naver.com",
   "gmail.com",
@@ -106,7 +417,7 @@ const email = [
 
 const inflowArr = ["방송/기사", "온라인 광고", "앱 광고", "유튜브", "매장이용", "검색엔진", "지인/주변인", "기타"];
 
-function Consulting() {
+const Consulting = observer(function Consulting() {
   const {
     register,
     handleSubmit,
@@ -171,8 +482,8 @@ function Consulting() {
   };
 
   return (
-    <StartLayout>
-      <Content>
+    <StartLayout className="wrap_inquiry">
+      <Content className={mobileHeader.open ? "on" : ""}>
         <form onSubmit={handleSubmit(onSubmit)}>
           <FormWrap>
             <h4>상담자 정보</h4>
@@ -199,7 +510,7 @@ function Consulting() {
               />
               {errors.phone && watch("phone") === "" && <p className="error">연락처를 입력해주세요.</p>}
             </div>
-            <div className="box_inp">
+            <div className="box_inp box_email_area">
               <label htmlFor="email1" className="req">
                 이메일
               </label>
@@ -224,8 +535,8 @@ function Consulting() {
               <label htmlFor="hope_call_time" className="req">
                 연락 가능 시간
               </label>
-              <input type="text" className="s" id="hope_call_time" {...register("hope_call_time", { required: true })} />
-              <span className="txt_desc">ex. 오전 10시 ~ 오후 4시</span>
+              <input type="text" className="s" id="hope_call_time" {...register("hope_call_time", { required: true })} placeholder="ex. 오전 10시 ~ 오후 4시" />
+
               {errors.hope_call_time && <p className="error">연락 가능 시간을 입력해주세요.</p>}
             </div>
             <div className="box_inp">
@@ -305,12 +616,12 @@ function Consulting() {
       </Modal>
       <Modal open={open2} onClose={close2}>
         <ApplicationWrap>
-          <p className="tit">신청이 완료되었습니다.</p>
-          <p className="txt_success">정상적으로 접수 처리되었습니다. 감사합니다.</p>
+          <p className="tit">신청 완료</p>
+          <p className="txt_success">정상적으로 접수 처리되었습니다.</p>
           <p className="txt_notice">
-            추후 본사에서 진행하는 창업 프로모션에 관한 정보를 받아보시는데 동의하십니까?
+            추후 창업 프로모션에 관한 정보를 받아보시는데 동의하십니까?
             <br />
-            동의 시 다양한 창업 혜택 정보를 기입하신 연락처 및 이메일로 받아보실 수 있습니다.
+            다양한 창업 혜택 정보를 연락처 및 이메일로 받아보실 수 있습니다.
           </p>
           <button className="btn_agree" onClick={close2}>
             동의하기
@@ -322,6 +633,19 @@ function Consulting() {
       </Modal>
     </StartLayout>
   );
-}
+});
 
 export default Consulting;
+
+//@ts-ignore
+Consulting.getLayout = function getLayout(children: ReactElement) {
+  return (
+    <PageInquiry>
+      <Header />
+      {children}
+      <Top />
+      <Footer />
+      <Copyright />
+    </PageInquiry>
+  );
+};

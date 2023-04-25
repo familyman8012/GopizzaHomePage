@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { mobileHeader } from "MobxFarm/store";
 import { VideoWrap } from "./competitive/style";
 
 export const StartWrap = styled.div`
@@ -47,6 +48,8 @@ export const StartWrap = styled.div`
 export const Content = styled.main`
   width: 128rem;
   margin: 0 auto;
+
+  display: ${mobileHeader.open ? `none` : `block`};
 
   .video_wrap {
     margin-top: -10.6rem;
