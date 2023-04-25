@@ -333,7 +333,7 @@ export const TopWrap = styled.div`
       display: block;
       width: 2.1rem;
       height: 1.4rem;
-      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/arrow_up.svg") no-repeat left top;
+      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/arrow_up.svg") no-repeat left top / 100%;
     }
   }
 `;
