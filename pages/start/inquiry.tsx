@@ -570,7 +570,7 @@ const Consulting = observer(function Consulting() {
               <div className="box_textarea">
                 {showPlaceholder && (
                   <span className="fake-placeholder">
-                    상담 전화를 드리기 전에 고피자 창업에 대해 궁금하신 점<br /> 혹은 창업 하려고 하시는 지역/상가의 정보를 알려주세요
+                    상담 전화를 드리기 전에 고피자 창업에 대해 궁금하신 점<br /> 혹은 창업 하려고 하시는 지역/상가의 정보를 알려주세요.
                   </span>
                 )}
                 <textarea
