@@ -44,6 +44,8 @@
     "react-cookie": "^4.1.1",
     "react-datepicker": "^4.8.0",
     "react-daum-postcode": "^3.1.1",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.2",
     "react-ig-feed": "^1.7.0",

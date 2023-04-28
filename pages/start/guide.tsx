@@ -5,6 +5,7 @@ import RequireTime from "ComponentsFarm/pageComp/start/guide/RequireTime";
 import { Content } from "ComponentsFarm/pageComp/start/style";
 import StartLayout from "ComponentsFarm/layouts/pageLayouts/StartLayout";
 import BtnInquiry from "ComponentsFarm/pageComp/start/BtnInquiry";
+import TodayPopup from "ComponentsFarm/popup/TodayPopup";
 
 function Info() {
   return (
@@ -16,6 +17,7 @@ function Info() {
         <RequireTime />
         <BtnInquiry />
       </Content>
+      <TodayPopup />
     </StartLayout>
   );
 }
