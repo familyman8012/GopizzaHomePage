@@ -58,7 +58,7 @@ const BtnBox = styled.div`
   }
 `;
 
-const TodayPopup = () => {
+const TodayPopup = ({ href, src, alt }: { href: string; src: string; alt: string }) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -87,8 +87,8 @@ const TodayPopup = () => {
     <PopWrap>
       <div css={popupStyle}>
         <div css={contentStyle}>
-          <a target="_blank" href="https://youtu.be/Dwa4zg-tC0s" rel="noreferrer">
-            <Image src="/images/start/info/pop_guide.png" fill alt="국내최초 창업비 네고!!! 1500만원 네고! 선착순 프로모션 혜택 보러가기" />
+          <a target="_blank" href={href} rel="noreferrer">
+            <Image src={src} fill alt={alt} />
           </a>
         </div>
         <BtnBox>
