@@ -10,7 +10,6 @@ const PopWrap = styled.div`
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 10;
     background: rgba(0, 0, 0, 0.5);
   }
 `;
@@ -24,11 +23,6 @@ const popupStyle = css`
 `;
 
 const contentStyle = css`
-  width: 108.4rem;
-  height: 70.4rem;
-  background: #000;
-  border-radius: 3rem;
-
   img {
     display: block;
     width: 108.4rem;
