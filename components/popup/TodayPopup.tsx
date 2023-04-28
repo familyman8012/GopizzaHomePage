@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import Image from "next/image";
 
 const PopWrap = styled.div`
   &:after {
@@ -23,6 +24,11 @@ const popupStyle = css`
 `;
 
 const contentStyle = css`
+  position: relative;
+  width: 108.4rem;
+  height: 70.4rem;
+  background: #ddd;
+  border-radius: 3rem 3rem 0 0;
   img {
     display: block;
     width: 108.4rem;
@@ -82,7 +88,7 @@ const TodayPopup = () => {
       <div css={popupStyle}>
         <div css={contentStyle}>
           <a target="_blank" href="https://youtu.be/Dwa4zg-tC0s" rel="noreferrer">
-            <img src="/images/start/info/pop_guide.png" alt="국내최초 창업비 네고!!! 1500만원 네고! 선착순 프로모션 혜택 보러가기" />
+            <Image src="/images/start/info/pop_guide.png" fill alt="국내최초 창업비 네고!!! 1500만원 네고! 선착순 프로모션 혜택 보러가기" />
           </a>
         </div>
         <BtnBox>
