@@ -5,17 +5,67 @@ import { IInfiltration } from "ApiFarm/interface/homeInterface";
 import Modal from "ComponentsFarm/common/Modal";
 import { PrivacyWrap } from "ComponentsFarm/popup/Privacy";
 import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
-import { ReactElement, useCallback, useState } from "react";
+import { ReactElement, useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import DOMPurify from "isomorphic-dompurify";
 import { NextSeo } from "next-seo";
 import { CampSeo } from "ComponentsFarm/Seo";
+import { SwiperSlide } from "swiper/react";
+import VisibilitySensorSwiper from "ComponentsFarm/pageComp/event/campaign/VisibilitySensorSwiper";
+import { mq } from "ComponentsFarm/common";
 
 const CapmpaignWrap = styled.div`
   .wrap_mobile {
     display: none;
   }
 
+  .box_5 {
+    position: relative;
+    .wrap_swiper {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      width: 80%;
+      margin: 0 auto;
+      transform: translate(-50%, -70%);
+    }
+
+    .swiper-slide {
+      overflow: hidden;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: var(--swiper-navigation-size);
+      height: var(--swiper-navigation-size);
+      margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+      &:after {
+        font-size: 0;
+      }
+    }
+
+    .swiper_btns {
+      position: absolute;
+      top: 63%;
+      width: 100%;
+      transform: translateY(-63%);
+
+      @media (max-width: 900px) {
+        top: 65%;
+        transform: translateY(-65%);
+      }
+
+      .swiper-button-prev {
+        left: 3%;
+        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/arrow_slide_left.svg") center / 100%;
+      }
+
+      .swiper-button-next {
+        left: auto !important;
+        right: 3%;
+        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/arrow_slide_right.svg") center / 100%;
+      }
+    }
+  }
   .box_aree {
     display: flex;
     align-items: center;
@@ -314,6 +364,45 @@ function Campaign() {
     setOpen(false);
   }, []);
 
+  const [windowWidth, setWindowWidth] = useState<number>(typeof window !== "undefined" ? window.innerWidth : 0);
+  function getSpaceBetween(width: number): number {
+    if (width <= 1000) {
+      return 10;
+    } else if (width > 1000 && width <= 1400) {
+      return 20;
+    } else {
+      return 40;
+    }
+  }
+
+  const [spaceBetween, setSpaceBetween] = useState<number>(getSpaceBetween(windowWidth));
+
+  const debounce = (func: (...args: any[]) => void, wait: number) => {
+    let timeout: NodeJS.Timeout | null;
+    return (...args: any[]) => {
+      if (timeout) clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), wait);
+    };
+  };
+
+  const handleResize = useCallback(
+    debounce(() => {
+      setWindowWidth(window.innerWidth);
+      setSpaceBetween(getSpaceBetween(window.innerWidth));
+    }, 200),
+    []
+  );
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, [handleResize]);
+
   const {
     register,
     handleSubmit,
@@ -470,32 +559,45 @@ function Campaign() {
         </form>
         <div className="box_5">
           <div className="wrap_pc">
-            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/5.webp" alt="" />
+            <img src="/images/event/campaign/infiltration/5.webp" alt="" />
           </div>
           <div className="wrap_mobile">
-            <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/5_mob.webp" alt="" />
+            <img src="/images/event/campaign/infiltration/5_mob.webp" alt="" />
           </div>
           <div className="hiddenZoneV">침투 성공 후기! - 생생한 포토리뷰 확인하라구~</div>
+          <VisibilitySensorSwiper view={4} viewBetween={spaceBetween}>
+            {Array.from({ length: 7 }).map((el, i) => (
+              <SwiperSlide key={i}>
+                <img src={`/images/event/campaign/infiltration/review_${i + 1}.webp`} alt="리뷰사진" />
+              </SwiperSlide>
+            ))}
+            {Array.from({ length: 7 }).map((el, i) => (
+              <SwiperSlide key={i}>
+                <img src={`/images/event/campaign/infiltration/review_${i + 1}.webp`} alt="리뷰사진" />
+              </SwiperSlide>
+            ))}
+          </VisibilitySensorSwiper>
         </div>
         <div className="box_notice">
           <div className="inner">
             <h2 className="tit_notice">유의사항 꼭 읽어주세요!</h2>
             <ul className="list_notice">
-              <li>당첨소식은 사연에 남겨주신 연락처를 통해 유선연락 드리며, 연락이 되지 않아 생긴 불이익에 대해 당사는 책임을 지지 않습니다.</li>
-              <li>제공되는 혜택은 고피자 제품 중 ‘페퍼로니 피자’로 제공되며 그 외 제품으로는 변경 불가합니다.</li>
-              <li>최대 1인 1판으로 제공되며 중복수령은 불가합니다.</li>
-              <li>90판 이후 피자는 고피자 매장 기준의 현장가로 판매되나, 취식 수와 행사 환경에 따라 할인 협의가 가능합니다.</li>
-              <li>피자는 푸드트럭 뿐만이 아닌 근처 고피자 매장에서 조리 후 전달될 수 있습니다.</li>
-              <li>날씨에 따라 빨리 상할 수 있으므로 피자를 수령하신 후 가급적 빠른 시간내에 취식하시기를 바랍니다.</li>
+              <li>당첨소식은 사연에 남겨주신 연락처를 통해 유선연락 드리며, 연락이 닿지 않아 생긴 불이익에 대해 당사는 책임을 지지 않습니다.</li>
+              <li>제공되는 혜택은 고피자 제품 중 ‘페퍼로니 피자‘ 단일품목으로 제공되며 그 외 제품으로는 변경 불가합니다.</li>
+              <li>피자는 1인 1판으로 제공되며 중복수령은 불가합니다.</li>
+              <li>각 사연당 피자는 90판 무료제공이 기준이나, 사연당첨자와의 논의를 통해 변경될 수 있습니다.</li>
+              <li>90판 이후의 피자는, 취식 수와 행사 환경에 따라 할인협의가 가능합니다.</li>
+              <li>피자는 푸드트럭의 타 일정으로 인해 푸드트럭 뿐만이 아닌 근처 고피자 매장에서 조리 후 전달될 수 있습니다.</li>
+              <li>날씨에 따라 빨리 상할 수 있으므로 피자를 수령하신 후엔 가급적 빠른 시간 내 취식하시기를 바랍니다.</li>
               <li>
-                당첨된 응모사연의 혜택제공 현장은 고피자 현장스케치 영상에 사용될 수 있으며 모든 혜택 수령자는
+                당첨된 응모사연의 혜택제공 현장은 고피자 현장스케치 영상 혹은 사진에 사용될 수 있으며 모든 혜택 수령자는
                 <br />
-                ‘초상권 동의서’와 ‘고피자 카카오톡 플러스 친구’의 친구추가가 완료된 후 수령 가능합니다.
+                ‘고피자 카카오톡 채널‘의 친구추가를 완료한 후에 수령 가능합니다.
               </li>
               <li>응모되는 사연의 경우, 순수 창작물이어야 하며 나중에라도 타 응모에 기사용된 사연임이 밝혀질 시 당첨에서 제외될 수 있습니다.</li>
               <li>응모되는 사연의 경우 모든 법적인 문제가 없어야 하며 법적인 문제 발생 시 모든 책임은 응모자에게 있습니다.</li>
-              <li>푸드트럭 이동 시, 방문 희망장소 내 푸드트럭 주차장소에 대해 협의를 요청할 수 있습니다.</li>
-              <li>당첨 후 논의 시 푸드트럭 주차 및 조리가 불가피 한 경우, 당첨이 취소될 수 있습니다.</li>
+              <li>푸드트럭 이동 시, 방문 희망장소 내 푸드트럭 주차장소에 대한 협의를 요청할 수 있습니다.</li>
+              <li>당첨 후 당첨자와 논의 시 ‘푸드트럭 주차 및 조리‘ or ‘인근 매장 조리 불가‘의 경우 당첨이 취소될 수 있습니다.</li>
               <li>보내주신 사연은 내부 논의와 오퍼레이션 가능여부를 검토 후 선정됩니다.</li>
             </ul>
           </div>
