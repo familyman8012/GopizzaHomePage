@@ -49,11 +49,6 @@ const CapmpaignWrap = styled.div`
       width: 100%;
       transform: translateY(-63%);
 
-      @media (max-width: 900px) {
-        top: 65%;
-        transform: translateY(-65%);
-      }
-
       .swiper-button-prev {
         left: 3%;
         background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/arrow_slide_left.svg") center / 100%;
