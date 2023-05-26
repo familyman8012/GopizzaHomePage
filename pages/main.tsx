@@ -28,7 +28,7 @@ function Main({ mainVisual, youtube, feed }: IMain) {
         <Instagram feed={feed} />
         <Youtube data={youtube} />
       </main>
-      <TodayPopup href="https://youtu.be/Dwa4zg-tC0s" src="/images/start/info/pop_guide.png" alt="국내최초 창업비 네고!!! 1500만원 네고! 선착순 프로모션 혜택 보러가기" />
+      {/* <TodayPopup href="https://youtu.be/Dwa4zg-tC0s" src="/images/start/info/pop_guide.png" alt="국내최초 창업비 네고!!! 1500만원 네고! 선착순 프로모션 혜택 보러가기" /> */}
     </>
   );
 }
