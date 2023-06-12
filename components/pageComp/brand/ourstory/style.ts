@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import { mq } from "ComponentsFarm/common";
 
 const wantImg = Array.from({ length: 3 }).map(
   (_, i) =>
@@ -31,6 +32,10 @@ export const YouWantPizzaWrap = styled.section`
     font-size: 7rem;
     font-weight: bold;
     line-height: 0.63;
+  }
+
+  .wrap_list {
+    margin-right: 20px;
   }
 
   .list {
@@ -77,6 +82,51 @@ export const YouWantPizzaWrap = styled.section`
       }
     }
   }
+
+  ${mq[0]} {
+    width: auto;
+    margin: 42px auto 70px;
+    padding: 0;
+
+    h4 {
+      margin-bottom: 9px;
+      font-size: 16px;
+      font-weight: normal;
+    }
+    .txt_want {
+      margin-bottom: 43px;
+      font-size: 24px;
+      line-height: normal;
+    }
+    .list {
+      display: flex;
+      width: 100vw;
+      overflow: auto hidden;
+      scroll-snap-type: x mandatory;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      li {
+        display: block;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+        width: 240px;
+        height: 280px;
+        margin: 0 0 0 20px !important;
+        background-size: 240px 280px !important;
+
+        .txt {
+          height: 59px;
+          font-size: 14px;
+          &:before {
+            border-radius: 0 0 12px 12px;
+          }
+        }
+      }
+    }
+  }
 `;
 
 const valueImg = Array.from({ length: 3 }).map(
@@ -95,10 +145,44 @@ const valueImg = Array.from({ length: 3 }).map(
     `
 );
 
+export const ValuesMobileWrap = styled.section`
+  display: none;
+  padding: 30px 0 70px;
+  text-align: center;
+  background-color: #f0f0f0;
+
+  ${mq[0]} {
+    display: block;
+  }
+
+  h4 {
+    margin-bottom: 40px;
+  }
+
+  .react-3d-carousel {
+    height: 380px !important;
+  }
+
+  .slider-single-content {
+    box-shadow: none !important;
+  }
+
+  .slider-left,
+  .slider-right {
+    div {
+      border: none !important;
+    }
+  }
+`;
+
 export const ValuesWrap = styled.section`
   padding-top: 11rem;
   text-align: center;
   background-color: #f0f0f0;
+
+  ${mq[0]} {
+    display: none;
+  }
 
   h4 {
     margin-bottom: 10.1rem;
@@ -388,6 +472,108 @@ export const KeepGoingWrap = styled.section`
       margin-right: 4rem;
     }
   }
+
+  .progress_bar {
+    display: none;
+    position: relative;
+    width: 95rem;
+    height: 1.2rem;
+    margin-top: 2rem;
+    background-color: #dddddd;
+    border-radius: 0.6rem;
+
+    .inner {
+      position: absolute;
+      height: 1.2rem;
+      background-color: #ff4600;
+      border-radius: 0.6rem;
+    }
+  }
+
+  ${mq[0]} {
+    padding: 0;
+    h4 {
+      margin: 70px 0 36px;
+    }
+    .wrap_history {
+      margin: 0;
+
+      .list_nav {
+        display: grid;
+        flex-wrap: wrap;
+        position: static;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 11px 12px;
+        margin-bottom: 54px;
+        padding: 0 20px;
+
+        li,
+        li.on {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 71px;
+          height: 37px;
+          margin: 0;
+          padding: 0;
+          font-size: 21px;
+          text-align: center;
+          border-radius: 18.5px;
+        }
+
+        li {
+          background-color: #efefef;
+        }
+
+        li.on {
+          color: #fff;
+          border-bottom: 0;
+          background: var(--color-orange);
+        }
+      }
+
+      .box_history {
+        margin: 0px 20px 0 0;
+        padding-left: 20px;
+
+        .wrap_swiper {
+          height: auto;
+        }
+
+        .swiper-slide {
+          width: 289px;
+        }
+
+        .progress_bar {
+          display: none;
+        }
+
+        .thumb {
+          position: relative;
+          width: 289px;
+          height: 283px;
+        }
+        .badge {
+          display: none;
+        }
+
+        .box_txt {
+          margin-top: 13px;
+          .number {
+            line-height: 1;
+            font-size: 48px;
+          }
+          .txt_area {
+            .tit,
+            .desc {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const BrandBiWrap = styled.section`
@@ -399,6 +585,10 @@ export const BrandBiWrap = styled.section`
   p {
     margin: 4rem 0 7.4rem;
     line-height: 1.58;
+
+    &.mobile {
+      display: none;
+    }
   }
 
   .banner_2area {
@@ -416,5 +606,45 @@ export const BrandBiWrap = styled.section`
   .brand_color {
     width: 128rem;
     margin: 5.2rem auto 0;
+  }
+
+  ${mq[0]} {
+    margin-top: 70px;
+
+    p {
+      margin: 18px 0 38px;
+      font-size: 14px;
+      line-height: 30px;
+
+      &.pc {
+        display: none;
+      }
+      &.mobile {
+        display: block;
+      }
+    }
+
+    .banner_2area {
+      display: block;
+
+      picture {
+        display: block;
+        width: 100%;
+        margin: 0;
+        &:nth-of-type(2) {
+          margin-top: 24px;
+        }
+      }
+    }
+
+    .brand_slogan {
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    .brand_color {
+      width: 100%;
+      margin-top: 24px;
+    }
   }
 `;

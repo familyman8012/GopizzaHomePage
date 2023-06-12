@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { IInstarItem } from "ApiFarm/interface/homeInterface";
 import styled from "@emotion/styled";
+import { mq } from "ComponentsFarm/common";
 
 function InstaFeed({ feed }: { feed: IInstarItem }) {
   const processCaption = useMemo(
@@ -54,6 +55,10 @@ export const InstarWrap = styled.ul`
     height: 40rem;
     border-radius: 3rem;
 
+    .txt {
+      display: none;
+    }
+
     &:hover {
       &:before {
         position: absolute;
@@ -74,6 +79,20 @@ export const InstarWrap = styled.ul`
         line-height: 1.56;
         text-align: center;
         color: var(--color-white);
+      }
+    }
+  }
+
+  ${mq[0]} {
+    li {
+      &:nth-of-type(3) {
+        display: none;
+      }
+
+      &:hover {
+        .txt {
+          font-size: 9px;
+        }
       }
     }
   }

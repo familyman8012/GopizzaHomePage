@@ -24,15 +24,16 @@ const popupStyle = css`
   z-index: 999;
 `;
 
-const contentStyle = css`
+export const Content = styled.div<{ width: string; height: string }>`
   position: relative;
-  width: 108.4rem;
-  height: 70.4rem;
+  overflow: hidden;
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
   background: #ddd;
   border-radius: 3rem 3rem 0 0;
   img {
     display: block;
-    width: 108.4rem;
+    width: ${({ width }) => width};
   }
 `;
 
@@ -59,7 +60,7 @@ const BtnBox = styled.div`
   }
 `;
 
-const TodayPopup = ({ href, src, alt }: { href: string; src: string; alt: string }) => {
+const TodayPopup = ({ href, src, alt, width, height }: { href: string; src: string; alt: string; width: string; height: string }) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -87,11 +88,11 @@ const TodayPopup = ({ href, src, alt }: { href: string; src: string; alt: string
   return (
     <PopWrap>
       <div css={popupStyle}>
-        <div css={contentStyle}>
+        <Content width={width} height={height}>
           <a target="_blank" href={href} rel="noreferrer">
             <Image src={src} fill alt={alt} />
           </a>
-        </div>
+        </Content>
         <BtnBox>
           <button onClick={dontShowToday}>오늘 하루 동안 열지 않기</button>
           <button onClick={closePopup}>닫기</button>

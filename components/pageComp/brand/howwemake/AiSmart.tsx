@@ -5,7 +5,7 @@ function AiSmart() {
   return (
     <AiSmartWrap>
       <div className="inner">
-        <h4>
+        <h4 className="pc">
           <span className="titleNo">04</span>
           <span className="tit">
             AI SMART
@@ -18,6 +18,14 @@ function AiSmart() {
             {/* <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/howwemake/img_make4_1.webp" alt="AI SMART - TOPPING TABLE" /> */}
             <VisibilitySensorVideo src="img_make4_1" />
           </div>
+          <h4 className="mobile">
+            <span className="titleNo">04</span>
+            <span className="tit">
+              AI SMART
+              <br />
+              <span className="txt_topping">TOPPING TABLE</span>
+            </span>
+          </h4>
           <div className="thum2_txt">
             <div className="thumb2">
               <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/howwemake/img_make4_2.webp" alt="AI SMART - TOPPING TABLE" />

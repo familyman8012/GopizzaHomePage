@@ -100,8 +100,8 @@ function KeepGoing() {
                 slidesPerView={"auto"}
                 spaceBetween={30}
                 breakpoints={{
-                  320: {
-                    spaceBetween: 10,
+                  600: {
+                    spaceBetween: 23,
                   },
                   800: {
                     spaceBetween: 30,
@@ -134,8 +134,8 @@ function KeepGoing() {
               </Swiper>
             </div>
             {/* progress bar */}
-            <div style={{ position: "relative", width: "95rem", height: "1.2rem", backgroundColor: "#dddddd", borderRadius: ".6rem" }}>
-              <div style={{ position: "absolute", width: `${progress * 100}%`, height: "1.2rem", backgroundColor: "#ff4600", borderRadius: ".6rem" }}></div>
+            <div className="progress_bar">
+              <div className="inner" style={{ width: `${progress * 100}%` }}></div>
             </div>
           </div>
         </div>

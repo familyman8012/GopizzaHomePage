@@ -3,20 +3,11 @@ import Link from "next/link";
 import { ReactElement, useCallback, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { TopBanner } from "ComponentsFarm/layouts/Header";
 
 function Index() {
-  const router = useRouter();
-  const [hiddenPopMobile, setHiddenPopMobile] = useState(false);
-  const handlerShowPopMobile = useCallback(() => {
-    document.body.classList.add("webShow");
-  }, []);
   return (
     <>
-      <TopBanner>
-        <span className="txt">모바일 최적화 준비 중에 있습니다.</span>
-      </TopBanner>
-      <IndexWrap className={hiddenPopMobile ? `off` : ""}>
+      <IndexWrap>
         <div className="box_goto">
           <div className="inner">
             <h1>BRAND</h1>
@@ -28,6 +19,19 @@ function Index() {
             <Link href="/main">
               <span className="txt">홈페이지</span>
             </Link>
+          </div>
+          <div className="inner_mobile">
+            <h1>
+              <span className="hiddenZoneV">GOPIZZA</span>
+            </h1>
+            <div className="btn_box">
+              <Link href="/main">
+                <span className="txt">홈페이지 바로가기</span>
+              </Link>
+              <Link href="/start">
+                <span className="txt">가맹안내 바로가기</span>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="box_goto">

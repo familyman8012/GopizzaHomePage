@@ -1,46 +1,71 @@
-import styled from "@emotion/styled";
 import { runInAction } from "mobx";
 import { observer } from "mobx-react";
 import { mobileHeader } from "MobxFarm/store";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import { HeadMenuUrl, HeadAsideUrl, FooterMenu } from "./constant";
 import { HeaderWrap } from "./style";
 
-export const TopBanner = styled.div`
-  display: none;
-  @media (max-width: 400px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 31px;
-    padding: 0 13.5px;
-    background-color: #171c8f;
-
-    span {
-      color: #ffce00;
-      font-size: 14px;
-      line-height: 13px;
-
-      padding-left: 22.5px;
-      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_mobile_not.svg") no-repeat left top / 14.5px 13px;
-    }
-  }
-`;
-
 function Header() {
-  const router = useRouter();
-  const [hiddenPopMobile, setHiddenPopMobile] = useState(false);
-  const handlerShowPopMobile = useCallback(() => {
-    document.body.classList.add("webShow");
-  }, []);
+  const [isActiveMenu, setIsActiveMenu] = useState("");
+
+  const brandSubmenus = [
+    { name: "브랜드 소개", url: "" },
+    { name: "메뉴", url: "" },
+    { name: "이벤트", url: "" },
+    { name: "단체/제휴문의", url: "" },
+  ];
+  const franchiseSubmenus = [
+    { name: "창업경쟁력", url: "" },
+    { name: "창업안내", url: "" },
+    { name: "혁신기술력", url: "" },
+    { name: "CEO&언론보도", url: "" },
+    { name: "가맹문의", url: "" },
+  ];
+
+  const handlerMenu = (menu: string) => {
+    if (isActiveMenu === menu) {
+      setIsActiveMenu("");
+    } else {
+      setIsActiveMenu(menu);
+    }
+  };
+
   return (
     <>
-      <TopBanner>
-        <span className="txt">모바일 최적화 준비 중에 있습니다.</span>
-      </TopBanner>
-      <HeaderWrap className={hiddenPopMobile ? `off` : ""}>
+      <HeaderWrap>
+        <div className="wrap_mobile">
+          <div className="inner_mobile">
+            <Link href="/main">
+              <h1>
+                <span className="hiddenZoneV">GOPIZZA</span>
+              </h1>
+            </Link>
+            <div className="right">
+              <Link href="/find" className="link_find">
+                <span className="hiddenZoneV">매장찾기</span>
+              </Link>
+              <button type="button" className="btn_menu">
+                <span className="hiddenZoneV">메뉴</span>
+              </button>
+            </div>
+          </div>
+          <div className="layer_menu">
+            <button onClick={() => handlerMenu("brand")}>브랜드</button>
+            <ul className={isActiveMenu === "brand" ? "active" : ""}>
+              {brandSubmenus.map((submenu) => (
+                <li key={submenu.name}>{submenu.name}</li>
+              ))}
+            </ul>
+
+            <button onClick={() => handlerMenu("franchise")}>가맹안내</button>
+            <ul className={isActiveMenu === "franchise" ? "active" : ""}>
+              {franchiseSubmenus.map((submenu) => (
+                <li key={submenu.name}>{submenu.name}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
         <div className="inner">
           <Link href="/main">
             <h1>
@@ -70,28 +95,6 @@ function Header() {
               </Link>
             ))}
           </aside>
-          <button className={`btn_mobile_menu ${mobileHeader.open ? "on" : ""}`} onClick={() => runInAction(() => (mobileHeader.open = !mobileHeader.open))}>
-            <span className="hiddenZoneV">open</span>
-          </button>
-        </div>
-        <div className={`layer_mobile_menu ${mobileHeader.open ? "on" : ""}`}>
-          <Link href="/start" className="link_start">
-            <span className="txt">가맹문의 바로가기</span>
-          </Link>
-          <div className="wrap_menuBox">
-            {FooterMenu.map((el, i) => (
-              <dl className="menuBox" key={i}>
-                <dt>
-                  <Link href={el.url}>{el.depth1}</Link>
-                </dt>
-                {el.depth2?.map((item, j) => (
-                  <dd key={j}>
-                    <Link href={item.url}>{item.menuName}</Link>
-                  </dd>
-                ))}
-              </dl>
-            ))}
-          </div>
         </div>
       </HeaderWrap>
     </>

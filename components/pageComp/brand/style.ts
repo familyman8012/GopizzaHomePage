@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { mq } from "ComponentsFarm/common";
 import { TopWrap } from "ComponentsFarm/layouts/style";
 
 export const BrandWrap = styled.main`
@@ -7,6 +8,10 @@ export const BrandWrap = styled.main`
 
   .list_tab li:nth-child(2) {
     width: 26.7rem;
+  }
+
+  ${mq[0]} {
+    padding-top: 0;
   }
 `;
 
@@ -35,6 +40,17 @@ export const SubMainVisualWrap = styled.div<{ bgimg: string }>`
     font-style: normal;
     line-height: 1.38;
     color: var(--color-white);
+  }
+
+  ${mq[0]} {
+    height: 230px;
+    background: url("/images/brand/${({ bgimg }) => bgimg}_mob.webp?v=2") no-repeat center/cover;
+
+    &.brand .txt1,
+    &.howwemake .txt1,
+    &.goglobal .txt2 {
+      font-size: 36px;
+    }
   }
 `;
 

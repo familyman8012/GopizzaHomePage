@@ -1,5 +1,8 @@
 import { css } from "@emotion/react";
 
+export const breakpoints = [200, 599, 800, 1200, 1600];
+export const mq = breakpoints.map((bp, i) => `@media (min-width:${breakpoints[i]}px) and (max-width: ${breakpoints[i + 1]}px)`);
+
 const enFontTypes = [100, 200, 300, "regular", 500, 600, 700, 800, 900];
 const krFontTypes = [100, 300, "regular", 500, 700, 900];
 const solanoTypes = [300, 400, 500, 600, 700];
@@ -239,6 +242,10 @@ const reset = css`
     &.tit {
       text-align: center;
     }
+
+    ${mq[0]} {
+      display: none;
+    }
   }
   .index h3,
   h4 {
@@ -313,6 +320,30 @@ const reset = css`
         span,
         h3 {
           color: var(--color-orange);
+        }
+      }
+    }
+
+    ${mq[0]} {
+      overflow: auto hidden;
+      justify-content: flex-start;
+      margin: 9px 0 0;
+      padding: 0 10px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      li {
+        width: auto !important;
+        height: auto;
+        margin-left: 0;
+        margin-right: 5px;
+        padding: 9px 11px;
+        flex-shrink: 0;
+        span,
+        h3 {
+          font-size: 14px;
         }
       }
     }
@@ -603,6 +634,11 @@ const reset = css`
         opacity: 1;
         background: var(--color-orange);
       }
+
+      ${mq[0]} {
+        width: 8px;
+        height: 8px;
+      }
     }
   }
 
@@ -862,6 +898,27 @@ const reset = css`
     }
   }
 
+  ${mq[0]} {
+    section {
+      padding: 0 20px;
+    }
+
+    .index h3,
+    h4 {
+      font-size: 36px;
+    }
+
+    .subTitle {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .desc {
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+
   @media (min-width: 1400px) and (max-width: 1530px) {
     html {
       font-size: 9px;
@@ -888,15 +945,9 @@ const reset = css`
     }
   }
 
-  @media (min-width: 501px) and (max-width: 670px) {
+  @media (min-width: 601px) and (max-width: 670px) {
     html {
       font-size: 3.7px;
-    }
-  }
-
-  @media (min-width: 200px) and (max-width: 500px) {
-    html {
-      font-size: 2.5px;
     }
   }
 
@@ -906,6 +957,3 @@ const reset = css`
 `;
 
 export default reset;
-
-export const breakpoints = [200, 500, 800, 1200, 1600];
-export const mq = breakpoints.map((bp, i) => `@media (min-width:${breakpoints[i]}px) and (max-width: ${breakpoints[i + 1]}px)`);

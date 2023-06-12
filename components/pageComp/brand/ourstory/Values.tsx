@@ -4,11 +4,9 @@ import { ValuesWrap } from "./style";
 
 function Values() {
   const [txtAni, setTxtAni] = useState(false);
-
   return (
     <ValuesWrap>
       <h4>VALUES</h4>
-
       <ul className={`list ${txtAni ? "on" : ""}`}>
         <li>
           <div className="box_txt">

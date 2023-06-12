@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { mq } from "ComponentsFarm/common";
 
 export const IndexWrap = styled.main`
   display: flex;
@@ -8,6 +9,9 @@ export const IndexWrap = styled.main`
 
   * {
     color: var(--color-white);
+  }
+  .inner_mobile {
+    display: none;
   }
   .box_goto {
     display: flex;
@@ -32,153 +36,98 @@ export const IndexWrap = styled.main`
     .inner {
       position: relative;
       z-index: 2;
-    }
 
-    h1 {
-      margin-bottom: 0.8rem;
-      font-family: "solano";
-      font-size: 4.8rem;
-      font-weight: bold;
-    }
-    p {
-      font-size: 6.4rem;
-      font-weight: bold;
-      line-height: 1.47;
-    }
-
-    a {
-      display: block;
-      width: 20.9rem;
-      height: 6.4rem;
-      margin-top: 4rem;
-      padding-left: 3rem;
-      color: var(--color-white);
-      font-size: 2.5rem;
-      line-height: 6.4rem;
-      border-radius: 3.2rem;
-      background-color: var(--color-orange);
-
-      .txt {
-        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/arrow_right.svg") no-repeat right center / 1rem 1.6rem;
-      }
-    }
-  }
-
-  @media (max-width: 400px) {
-    flex-direction: column;
-    .box_goto {
-      width: 100vw !important;
-      padding: 3rem 0 0 12rem;
       h1 {
-        margin-bottom: 8px;
+        margin-bottom: 0.8rem;
         font-family: "solano";
-        font-size: 20px;
+        font-size: 4.8rem;
         font-weight: bold;
       }
       p {
-        font-size: 27px;
+        font-size: 6.4rem;
         font-weight: bold;
-        line-height: 1.3;
+        line-height: 1.47;
       }
 
       a {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        width: 105px;
-        height: 32px;
-        margin-top: 12px;
-        padding-left: 3px;
         display: block;
-        font-size: 12px;
-        border-radius: 16px;
+        width: 20.9rem;
+        height: 6.4rem;
+        margin-top: 4rem;
+        padding-left: 3rem;
+        color: var(--color-white);
+        font-size: 2.5rem;
+        line-height: 6.4rem;
+        border-radius: 3.2rem;
+        background-color: var(--color-orange);
+
         .txt {
-          position: relative;
-          top: -1px;
-          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/arrow_right.svg") no-repeat right 5px / 5px 8px;
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/arrow_right.svg") no-repeat right center / 1rem 1.6rem;
         }
       }
     }
   }
 
-  @media (max-width: 400px) {
-    &.off .pop_mobile_not {
-      display: none;
-    }
-  }
+  ${mq[0]} {
+    .box_goto {
+      position: relative;
+      width: 100%;
+      padding: 0;
 
-  .pop_mobile_not {
-    display: none;
+      &:nth-of-type(1) {
+        background: url("images/index/mobile/bg_index2.webp") no-repeat center bottom / cover;
 
-    @media (max-width: 400px) {
-      display: block;
-    }
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
+        .inner {
+          display: none;
+        }
+        .inner_mobile {
+          display: block;
+          width: 100vw;
 
-    .inner_content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 84%;
-      height: 363px;
-      padding: 38.5px 35px 0;
-      text-align: center;
-      transform: translate(-50%, -50%);
-      border-radius: 10px;
-      background: #fff;
+          h1 {
+            width: 120.7px;
+            height: 67.3px;
+            margin: 103px auto 0;
+            background: url("images/index/mobile/logo.svg") no-repeat center / 100%;
+          }
 
-      &:before {
-        content: "";
-        display: block;
-        width: 82.5px;
-        height: 75.5px;
-        margin: 0 auto 28px;
-        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_mobile_not.svg") no-repeat left top / 100%;
+          .btn_box {
+            position: absolute;
+            width: 100%;
+            bottom: 38px;
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: calc(100vw - 40px);
+              height: 60px;
+              margin: 0 auto;
+              border-radius: 10px;
+
+              &:nth-of-type(1) {
+                color: #fff;
+                background-color: #ff4600;
+              }
+
+              &:nth-of-type(2) {
+                margin-top: 10px;
+                .txt {
+                  color: #ff4600;
+                }
+                background-color: #fff;
+              }
+
+              .txt {
+                padding: 0;
+                font-size: 19px;
+                font-weight: 500;
+              }
+            }
+          }
+        }
       }
-
-      .box_txt {
-        * {
-          color: #000;
-        }
-        h2 {
-          margin-bottom: 6px;
-          font-size: 18px;
-          line-height: 1.06;
-        }
-        p {
-          margin-bottom: 53px;
-          font-size: 12px;
-          line-height: 1.5;
-        }
-      }
-
-      button {
-        display: block;
-        color: #000;
-
-        &.btn_back {
-          width: 230px;
-          height: 42px;
-          color: #fff;
-          text-align: center;
-          line-height: 42px;
-          color: #fff;
-          border-radius: 4px;
-          background: var(--color-orange);
-        }
-
-        &.show_page {
-          width: 100%;
-          margin-top: 16px;
-          text-align: center;
-          background: none;
-        }
+      &:nth-of-type(2) {
+        display: none;
       }
     }
   }

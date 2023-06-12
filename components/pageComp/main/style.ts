@@ -1,10 +1,12 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import { mq } from "ComponentsFarm/common";
 
 export const MainVisualWrap = styled.section`
   position: relative;
   overflow: hidden;
   height: 64rem;
+  padding: 0;
 
   .swiper-pagination {
     bottom: 5.5rem;
@@ -15,6 +17,13 @@ export const MainVisualWrap = styled.section`
     height: 64rem;
     object-fit: cover;
     object-position: center;
+  }
+
+  ${mq[0]} {
+    height: auto;
+    img {
+      height: auto;
+    }
   }
 `;
 
@@ -72,6 +81,10 @@ export const LinkBannerWrap = styled.section`
   display: flex;
   margin: 2rem 0 20.6rem;
   justify-content: center;
+
+  ${mq[0]} {
+    display: none;
+  }
 `;
 
 export const BestMenuWrap = styled.section`
@@ -91,6 +104,22 @@ export const BestMenuWrap = styled.section`
 
     .box_swiper {
       width: 84rem;
+
+      .progress_bar {
+        position: relative;
+        width: 100%;
+        height: 1.2rem;
+        margin-top: 2rem;
+        background-color: #dddddd;
+        border-radius: 0.6rem;
+
+        .inner {
+          position: absolute;
+          height: 1.2rem;
+          background-color: #ff4600;
+          border-radius: 0.6rem;
+        }
+      }
     }
 
     .box_txt {
@@ -197,6 +226,78 @@ export const BestMenuWrap = styled.section`
       }
     }
   }
+
+  @media (hover: hover) and (pointer: fine) {
+    .box_thumb {
+      &:hover {
+        &::before,
+        .txt {
+          display: block;
+        }
+      }
+    }
+  }
+
+  ${mq[0]} {
+    width: 100%;
+    margin: 0 auto 70px;
+    h3 {
+      margin-top: 32px;
+    }
+    article {
+      margin-top: 8px;
+
+      .box_txt,
+      .box_swiper {
+        float: none;
+      }
+
+      .box_txt {
+        .desc {
+          margin: 17px 0 32px;
+        }
+        a {
+          width: 156px;
+          height: 48px;
+          font-size: 16px;
+
+          border-radius: 24px;
+        }
+      }
+      .box_swiper {
+        margin: 38px 0 0;
+
+        .progress_bar {
+          display: none;
+        }
+
+        .swiper-slide {
+          width: 230px;
+        }
+        .box_thumb {
+          width: 230px;
+          height: 230px;
+
+          .txt {
+            top: auto;
+            left: 10px;
+            bottom: 10px;
+            .en {
+              font-size: 20px;
+            }
+            .priceWrap {
+              .price {
+                font-size: 48px;
+              }
+              .won {
+                font-size: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const CompetitivenessWrap = styled.section`
@@ -210,6 +311,18 @@ export const CompetitivenessWrap = styled.section`
 
   .swiper-pagination {
     bottom: 6rem;
+  }
+
+  ${mq[0]} {
+    width: 100%;
+    margin: 0 auto 70px;
+    a {
+      display: block;
+    }
+
+    .swiper-pagination {
+      bottom: 16px;
+    }
   }
 `;
 
@@ -273,11 +386,57 @@ export const OrderItem = styled.li`
   &.group {
     background-color: var(--color-bluedark);
   }
+
+  ${mq[0]} {
+    width: 100%;
+    height: 185px;
+    padding: 24px 62px 0;
+    border-radius: 10px;
+    text-align: center;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 20px;
+    }
+
+    .list_order {
+      justify-content: center;
+      margin: 17px 0 12px;
+
+      li {
+        width: 42px;
+        height: 42px;
+        margin-right: 10px !important;
+      }
+    }
+    .go_txt {
+      padding-right: 0;
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    .tel {
+      width: auto;
+      height: 64px;
+      margin: 6px 0 4px;
+      font-size: 54px;
+      font-weight: bold;
+    }
+
+    .go_link {
+      padding-right: 9.6px;
+      background-size: 5.1px 8.5px;
+    }
+  }
 `;
 
 export const OrderWrap = styled.ul`
   display: flex;
   justify-content: center;
+
+  ${mq[0]} {
+    display: block;
+    padding: 0 20px;
+  }
 `;
 
 export const InstagramWrap = styled.section`
@@ -309,10 +468,36 @@ export const InstagramWrap = styled.section`
       }
     }
   }
+
+  ${mq[0]} {
+    margin: 70px 0 0;
+    padding: 40px 20px 70px;
+
+    ul {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+
+      li {
+        width: auto;
+        height: auto;
+        border-radius: 10px;
+
+        &:nth-of-type(2) {
+          margin: 0;
+        }
+      }
+    }
+  }
 `;
 
 export const YoutubeWrap = styled.section`
   padding-bottom: 20rem;
+
+  ${mq[0]} {
+    display: none;
+  }
+
   h3 {
     margin-bottom: 6rem;
   }

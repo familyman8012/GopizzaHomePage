@@ -1,8 +1,13 @@
 import styled from "@emotion/styled";
+import { mq } from "ComponentsFarm/common";
 
 export const HeaderWrap = styled.header`
   height: 12rem;
   background: #ff4600;
+
+  .inner_mobile {
+    display: none;
+  }
 
   .inner {
     display: flex;
@@ -56,83 +61,97 @@ export const HeaderWrap = styled.header`
       display: none;
     }
   }
-  .layer_mobile_menu {
+  .layer_menu {
     display: none;
   }
 
-  @media (max-width: 400px) {
-    &.off .pop_mobile_not {
+  ${mq[0]} {
+    height: 60px;
+
+    .inner {
       display: none;
     }
-  }
 
-  .pop_mobile_not {
-    display: none;
+    .inner_mobile {
+      display: flex;
+      align-items: center;
+      height: 60px;
 
-    @media (max-width: 400px) {
-      display: block;
-    }
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
-
-    .inner_content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 84%;
-      height: 363px;
-      padding: 38.5px 35px 0;
-      text-align: center;
-      transform: translate(-50%, -50%);
-      border-radius: 10px;
-      background: #fff;
-
-      &:before {
-        content: "";
-        display: block;
-        width: 82.5px;
-        height: 75.5px;
-        margin: 0 auto 28px;
-        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_mobile_not.svg") no-repeat left top / 100%;
+      h1 {
+        width: 67px;
+        height: 37.7px;
+        margin-left: 20px;
+        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/h1_logo.svg") no-repeat left center / 100%;
       }
 
-      .box_txt {
-        h2 {
-          margin-bottom: 6px;
-          font-size: 18px;
-          line-height: 1.06;
+      .right {
+        display: flex;
+        align-items: center;
+        margin: 0 20px 0 auto;
+
+        .link_find {
+          display: block;
+          width: 22px;
+          height: 27px;
+          margin-right: 24px;
+          background: url("/images/main/mobile/ico_find.svg") no-repeat left center / 100%;
         }
-        p {
-          margin-bottom: 53px;
-          font-size: 12px;
-          line-height: 1.5;
+
+        .btn_menu {
+          width: 26px;
+          height: 20px;
+          background: url("/images/main/mobile/btn_menu.svg") no-repeat left center / 100%;
+        }
+      }
+    }
+
+    .layer_menu {
+      &.on {
+        display: block;
+      }
+
+      position: fixed;
+      z-index: 10;
+      top: 60px;
+      width: 100%;
+      height: calc(100vh - 60px);
+      background: var(--color-orange);
+
+      button,
+      li {
+        display: block;
+        width: 100%;
+        height: 56px;
+        padding: 0 20px;
+        text-align: left;
+        font-size: 16px;
+        color: #fff;
+        border-bottom: 1px solid #fe7c4b;
+        background: none;
+
+        &:nth-of-type(1) {
+          border-top: 1px solid #fe7c4b;
         }
       }
 
       button {
-        display: block;
+        font-weight: bold;
+      }
 
-        &.btn_back {
-          width: 230px;
-          height: 42px;
-          color: #fff;
-          text-align: center;
-          line-height: 42px;
-          color: #fff;
-          border-radius: 4px;
-          background: var(--color-orange);
-        }
+      li {
+        display: flex;
+        align-items: center;
+        background: #ff682f;
+      }
 
-        &.show_page {
-          width: 100%;
-          margin-top: 16px;
-          text-align: center;
-          background: none;
+      /* CSS */
+      ul {
+        overflow: hidden;
+        transition: max-height 0.2s ease-in-out;
+        max-height: 0;
+
+        &.active {
+          max-height: 300px; /* 이 값은 실제 필요한 값에 따라 조정해야 합니다. */
         }
       }
     }
@@ -141,6 +160,10 @@ export const HeaderWrap = styled.header`
 
 export const FooterWrap = styled.footer`
   background: #ff4600;
+
+  ${mq[0]} {
+    display: none;
+  }
 
   .mobile_bottom {
     display: none;
@@ -292,6 +315,10 @@ export const CopyrightWrap = styled.div`
   font-size: 2rem;
   font-family: "Montserrat";
   background: #2c2c2c;
+
+  ${mq[0]} {
+    display: none;
+  }
 `;
 
 export const TopWrap = styled.div`
@@ -301,6 +328,10 @@ export const TopWrap = styled.div`
   bottom: 2.4rem;
   width: 100%;
   padding: 0 3.2rem;
+
+  ${mq[0]} {
+    display: none;
+  }
 
   .floating_bnr {
     position: absolute;

@@ -51,6 +51,42 @@ const data = [
     enName: "Tteokbokki",
     price: "6,500",
   },
+  {
+    imgSrc: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/img_bestmenu1.webp",
+    menuName: "달콤 고구마 피자",
+    enName: "Sweet Potato Pizza",
+    price: "10,400",
+  },
+  {
+    imgSrc: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/img_bestmenu2.webp",
+    menuName: "베이컨 포테이토 피자",
+    enName: "Bacon Potato Pizza",
+    price: "10,700",
+  },
+  {
+    imgSrc: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/img_bestmenu3.webp",
+    menuName: "매니악 페퍼로니 피자",
+    enName: "Maniac Pepperoni Pizza",
+    price: "10,700",
+  },
+  {
+    imgSrc: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/img_bestmenu4.webp",
+    menuName: "치킨앤콘 반반 피자",
+    enName: "Half & half Pizza",
+    price: "11,800",
+  },
+  {
+    imgSrc: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/img_bestmenu5.webp",
+    menuName: "미트 치즈 파스타",
+    enName: "Meat Cheese Pasta",
+    price: "8,500",
+  },
+  {
+    imgSrc: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/img_bestmenu6.webp",
+    menuName: "화덕 떡볶이",
+    enName: "Tteokbokki",
+    price: "6,500",
+  },
 ];
 
 function BestMenu() {
@@ -105,7 +141,7 @@ function BestMenu() {
               spaceBetween={30}
               breakpoints={{
                 320: {
-                  spaceBetween: 10,
+                  spaceBetween: 20,
                 },
                 800: {
                   spaceBetween: 30,
@@ -116,6 +152,7 @@ function BestMenu() {
               }}
               onProgress={handleProgress}
               autoplay={{ delay: 2000, disableOnInteraction: false }}
+              loop
             >
               {data.map((el, i) => (
                 <SwiperSlide key={i}>
@@ -123,9 +160,9 @@ function BestMenu() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div style={{ position: "relative", width: "100%", height: "1.2rem", marginTop: "2rem", backgroundColor: "#dddddd", borderRadius: ".6rem" }}>
-              <div style={{ position: "absolute", width: `${progress * 100}%`, height: "1.2rem", backgroundColor: "#ff4600", borderRadius: ".6rem" }}></div>
-            </div>
+            {/* <div className="progress_bar">
+              <div className="inner" style={{ width: `${progress * 100}%` }}></div>
+            </div> */}
           </div>
         </article>
       </Waypoint>

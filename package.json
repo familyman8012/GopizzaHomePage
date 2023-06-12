@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "3d-react-carousal": "^5.0.0",
     "@brainhubeu/react-carousel": "^2.0.4",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
