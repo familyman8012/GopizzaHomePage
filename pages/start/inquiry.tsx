@@ -6,7 +6,7 @@ import { mq } from "ComponentsFarm/common";
 import Modal from "ComponentsFarm/common/Modal";
 import Copyright from "ComponentsFarm/layouts/Copyright";
 import Footer from "ComponentsFarm/layouts/Footer";
-import Header, { TopBanner } from "ComponentsFarm/layouts/Header";
+import Header from "ComponentsFarm/layouts/Header";
 import StartLayout from "ComponentsFarm/layouts/pageLayouts/StartLayout";
 import { CopyrightWrap, FooterWrap, HeaderWrap, TopWrap } from "ComponentsFarm/layouts/style";
 import Top from "ComponentsFarm/layouts/Top";
@@ -100,9 +100,6 @@ const FormWrap = styled.div`
 
 const PageInquiry = styled.div`
   ${mq[0]} {
-    ${TopBanner} {
-      display: none;
-    }
     ${HeaderWrap} {
       height: 60px;
 
