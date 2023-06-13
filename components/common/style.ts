@@ -8,6 +8,10 @@ export const VideoPlayWrap = styled.div`
   height: 100%;
   border-radius: 2rem;
 
+  &.mobile_view {
+    display: none;
+  }
+
   > div {
     width: 100%;
     height: 100%;
@@ -64,5 +68,12 @@ export const VideoPlayWrap = styled.div`
   }
   ${mq[0]} {
     border-radius: 10px;
+
+    &.mobile_view {
+      display: block;
+    }
+    &.pc_view {
+      display: none;
+    }
   }
 `;
