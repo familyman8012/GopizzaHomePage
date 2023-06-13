@@ -172,7 +172,16 @@ function Menu({ seo }: { seo: object }) {
                     alt="메뉴배경이미지"
                   />
                 </div>
-                <div className="ko_name">{el.name}</div>
+                <div className="ko_name">
+                  {el.name === "페퍼로니 앤 포테이토 반반 피자" ? (
+                    <>
+                      페페로니 앤 포테이토 <br />
+                      반반 피자
+                    </>
+                  ) : (
+                    el.name
+                  )}
+                </div>
                 <div className={el.enName.length >= 25 ? "en_name long" : "en_name"}>{el.enName}</div>
               </Link>
             </li>

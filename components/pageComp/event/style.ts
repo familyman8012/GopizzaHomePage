@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { mq } from "ComponentsFarm/common";
 
 export const EventWrap = styled.main`
   position: relative;
@@ -80,6 +81,57 @@ export const EventWrap = styled.main`
     border-radius: 3.6rem;
     background: var(--color-bluedark);
   }
+
+  ${mq[0]} {
+    width: 100%;
+    padding: 0 0 48px 0;
+
+    .list_tab {
+      box-shadow: 0 -1px 24px 0 rgba(0, 0, 0, 0.16);
+    }
+
+    .filter {
+      justify-content: center;
+      margin: 36px 0;
+
+      li {
+        margin-right: 20px;
+        font-size: 14px;
+      }
+    }
+
+    .list_event {
+      padding: 0 20px;
+      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+
+      &.promotion li {
+        width: auto;
+        height: 150px;
+        border-radius: 10px;
+      }
+
+      li {
+        width: 100%;
+        .thumb img {
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .mainvideo {
+      width: calc(100vw - 40px);
+      height: auto;
+      margin: 24px auto;
+    }
+    .btn_go_list {
+      width: 280px;
+      height: 60px;
+      margin: 25px auto 0;
+      font-size: 18px;
+      border-radius: 3.6rem;
+    }
+  }
 `;
 
 export const Board = styled.div`
@@ -123,6 +175,46 @@ export const Board = styled.div`
     div {
       font-size: 1.8rem;
       text-align: center;
+    }
+  }
+
+  ${mq[0]} {
+    width: 100%;
+    padding: 40px 20px;
+
+    .box_tit {
+      margin-bottom: 19.5px;
+      border-bottom: 1px solid var(--color-gray);
+
+      .txt {
+        h4 {
+          font-size: 24px;
+        }
+        .date {
+          margin: 8px 0 19.5px 0;
+          padding: 0;
+          font-size: 16px;
+        }
+      }
+
+      button {
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-bottom: 19.5px;
+        align-self: end;
+        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/promotion/icon-share.svg") no-repeat left top / 100%;
+      }
+    }
+
+    .contents {
+      p,
+      span,
+      a,
+      div {
+        font-size: 14px;
+        text-align: center;
+      }
     }
   }
 `;

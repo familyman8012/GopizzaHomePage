@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { mq } from "ComponentsFarm/common";
 
 export const VideoPlayWrap = styled.div`
   position: relative;
@@ -60,5 +61,8 @@ export const VideoPlayWrap = styled.div`
       height: 2rem;
       background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/icons/blog_icon_play.png");
     }
+  }
+  ${mq[0]} {
+    border-radius: 10px;
   }
 `;

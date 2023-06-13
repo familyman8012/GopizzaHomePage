@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import { mq } from "ComponentsFarm/common";
 
 export const GlobalWrap = styled.div`
   background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/goglobal/bg_globalx2.webp") no-repeat center bottom / 100%;
@@ -9,6 +10,11 @@ export const GoGlobalListSection = styled.div`
   position: relative;
   width: 128rem;
   margin: 0 auto;
+
+  ${mq[0]} {
+    width: 100%;
+    padding: 0 20px;
+  }
 `;
 
 export const Airplane = styled.div`
@@ -35,6 +41,19 @@ export const Airplane = styled.div`
       transform: translateX(0px) translateY(0px) rotate(45deg);
     }
   }
+
+  ${mq[0]} {
+    top: -200px;
+    left: -180px;
+    width: 400px;
+    height: 400px;
+    transform: translateX(-360px) translateY(-360px) rotate(45deg);
+
+    &.on {
+      animation: moveObject 0.5s;
+      animation-fill-mode: forwards;
+    }
+  }
 `;
 
 export const GoglobalTxtWrap = styled.section`
@@ -53,6 +72,32 @@ export const GoglobalTxtWrap = styled.section`
     font-size: 2.4rem;
     line-height: 1.58;
   }
+
+  .mobile_line {
+    display: none;
+  }
+
+  ${mq[0]} {
+    margin-top: 59px;
+
+    strong {
+      margin-bottom: 22px;
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    .mobile_line {
+      display: block;
+    }
+
+    .pc_line {
+      display: none;
+    }
+  }
 `;
 
 const countryImg = Array.from({ length: 5 }).map(
@@ -70,6 +115,11 @@ const countryImg = Array.from({ length: 5 }).map(
 export const GlobalListWrap = styled.ul`
   width: 128rem;
   margin: 18.1rem auto 0;
+
+  ${mq[0]} {
+    width: 100%;
+    margin-top: 61px;
+  }
 `;
 
 export const GlobalListItemWrap = styled.li`
@@ -170,6 +220,63 @@ export const GlobalListItemWrap = styled.li`
       }
     }
   }
+
+  ${mq[0]} {
+    flex-direction: column;
+    width: 100%;
+    height: 160px;
+    margin-bottom: 24px;
+    background-size: auto 100% !important;
+    background-position: center !important;
+
+    .wrap_item {
+      order: 2;
+      align-items: center;
+
+      .country {
+        width: auto;
+        margin-right: 32px;
+        padding: 9px 0 9px 50px;
+        font-size: 16px;
+        background-size: 37.6px;
+      }
+
+      .storeNumber {
+        display: flex;
+        align-items: center;
+        .number {
+          display: block;
+          width: auto;
+          height: auto;
+          margin-right: 11.4px;
+          font-size: 39px;
+        }
+        .txt {
+          margin-top: 0;
+          font-size: 14px;
+        }
+      }
+    }
+    .txt_box {
+      order: 1;
+
+      &:before {
+        display: none;
+      }
+
+      dl {
+        dt {
+          margin-bottom: 16.5px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        dd {
+          display: none;
+        }
+      }
+    }
+  }
 `;
 
 export const NextDestinationWrap = styled.div`
@@ -217,5 +324,46 @@ export const NextDestinationWrap = styled.div`
     color: #fff;
     border-radius: 20rem;
     background: var(--color-bluedark);
+  }
+
+  .moblie_line {
+    display: none;
+  }
+
+  ${mq[0]} {
+    padding-bottom: 0px;
+
+    .moblie_line {
+      display: block;
+    }
+
+    h4 {
+      position: relative;
+      top: 30px;
+      margin-top: 50px;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .box_txt {
+      margin-top: 50px;
+
+      em {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    a {
+      width: 280px;
+      height: 60px;
+      margin: 30px 0;
+      font-size: 18px;
+      line-height: 60px;
+      border-radius: 200px;
+    }
   }
 `;

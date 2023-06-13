@@ -97,14 +97,6 @@ function DetailView({ seo }: any) {
             <h4>{currentMenu?.name}</h4>
           </Nav>
           <Info>
-            <Link className="prev" href={PrevHandler()} scroll={false}>
-              <span className="hiddenZoneV">이전</span>
-            </Link>
-
-            <Link className="next" href={NextHandler()} scroll={false}>
-              <span className="hiddenZoneV">다음</span>
-            </Link>
-
             <div className={`thumb ${currentMenu?.badge === "best" ? "badge best" : currentMenu?.badge === "new" ? "badge new" : ""}`}>
               <img
                 src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/${currentMenu?.category}/${idx}x2.webp?v=2`}
@@ -125,6 +117,17 @@ function DetailView({ seo }: any) {
                     </React.Fragment>
                   );
                 })}
+              </dd>
+              <dd>
+                <div className="box_btn">
+                  <Link className="prev" href={PrevHandler()} scroll={false}>
+                    <span className="hiddenZoneV">이전</span>
+                  </Link>
+
+                  <Link className="next" href={NextHandler()} scroll={false}>
+                    <span className="hiddenZoneV">다음</span>
+                  </Link>
+                </div>
               </dd>
               <dd>
                 <ul className="list">

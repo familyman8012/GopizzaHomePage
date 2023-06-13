@@ -1,9 +1,14 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import { mq } from "ComponentsFarm/common";
 
 export const MenuWrap = styled.main`
   padding: 12rem 0 0;
   min-height: calc(100vh - 12rem - 50.65rem);
+
+  .list_tab li {
+    padding: 9px;
+  }
 
   .menu_visual {
     overflow: hidden;
@@ -35,12 +40,34 @@ export const MenuWrap = styled.main`
       background-color: var(--color-orange);
     }
   }
+
+  ${mq[0]} {
+    padding-top: 0;
+
+    .wrp_tip {
+      width: 100%;
+      padding: 0 20px;
+
+      .tip {
+        width: 100%;
+        height: 48px;
+        margin: 24px 0;
+        font-size: 18px;
+        line-height: 1.67;
+        border-radius: 10px;
+      }
+    }
+  }
 `;
 
 export const MenuVisual = styled.figure<{ bgimg: number }>`
   position: relative;
   height: 46rem;
   background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/img_menu_visual${({ bgimg }) => bgimg}x2.webp") no-repeat center/cover;
+
+  ${mq[0]} {
+    height: 160px;
+  }
 `;
 
 export const MenuList = styled.ul`
@@ -97,11 +124,56 @@ export const MenuList = styled.ul`
       line-height: 2.2rem;
     }
   }
+
+  ${mq[0]} {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 43px 15px;
+    grid-template-columns: repeat(2, 1fr);
+
+    li {
+      width: 100%;
+    }
+
+    .thumb {
+      width: 100%;
+      height: auto;
+
+      &.badge {
+        &:after {
+          top: 12px;
+          left: 12px;
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+
+    .ko_name {
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    .en_name {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
 `;
 
 export const Detail = styled.div`
   width: 106rem;
   margin: 0 auto 18rem;
+
+  ${mq[0]} {
+    width: 100%;
+    margin: 0;
+
+    .list_tab {
+      box-shadow: 0 -1px 24px 0 rgba(0, 0, 0, 0.16);
+    }
+  }
 `;
 
 export const Nav = styled.div`
@@ -122,27 +194,27 @@ export const Nav = styled.div`
   .bar {
     margin: 0 0.5rem;
   }
+
+  ${mq[0]} {
+    width: 100%;
+    margin: 36px 0 24px;
+    padding: 0 20px;
+
+    h2,
+    h3,
+    h4 {
+      display: block;
+      font-size: 14px;
+    }
+    .bar {
+      margin: 0 5px;
+    }
+  }
 `;
 
 export const Info = styled.section`
   display: flex;
   position: relative;
-
-  a {
-    position: absolute;
-    width: 8rem;
-    height: 8rem;
-    top: 23.5rem;
-
-    &.prev {
-      left: -11rem;
-      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/btn_prev.svg") no-repeat left top / 100%;
-    }
-    &.next {
-      right: -11rem;
-      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/btn_next.svg") no-repeat left top / 100%;
-    }
-  }
 
   .thumb {
     position: relative;
@@ -223,6 +295,87 @@ export const Info = styled.section`
         }
         .desc {
           font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  a {
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    top: 23.5rem;
+
+    &.prev {
+      left: -11rem;
+      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/btn_prev.svg") no-repeat left top / 100%;
+    }
+    &.next {
+      right: -11rem;
+      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/btn_next.svg") no-repeat left top / 100%;
+    }
+  }
+
+  ${mq[0]} {
+    display: block;
+
+    .thumb {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+
+      &.badge {
+        &:after {
+          top: 12px;
+          left: 12px;
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }
+
+    .box_ingredients {
+      margin-top: 16px;
+      dt {
+        .ko {
+          margin-bottom: 8px;
+          font-size: 24px;
+          line-height: 44px;
+        }
+        .en {
+          font-size: 16px;
+        }
+      }
+      dd {
+        &.txt {
+          margin: 8px 0 16px;
+          font-size: 14px;
+          line-height: 26px;
+        }
+
+        .box_btn {
+          display: flex;
+          margin-bottom: 16px;
+          a {
+            display: block;
+            position: static;
+            width: 48px;
+            height: 48px;
+
+            &:nth-of-type(1) {
+              margin-right: 16px;
+            }
+          }
+        }
+
+        .list {
+          width: 100%;
+
+          li {
+            .desc {
+              font-size: 14px;
+            }
+          }
         }
       }
     }

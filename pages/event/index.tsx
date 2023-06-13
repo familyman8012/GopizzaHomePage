@@ -1,10 +1,8 @@
 import { GetStaticProps } from "next";
 import EventLayout from "ComponentsFarm/layouts/pageLayouts/EventLayout";
-import { promotionList } from "ComponentsFarm/pageComp/event/constant";
 import Link from "next/link";
 import { fetchPromotion } from "ApiFarm/home";
 import { IPromotionRes, PromotionList } from "ApiFarm/interface/homeInterface";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 

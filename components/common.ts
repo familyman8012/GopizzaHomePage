@@ -271,6 +271,10 @@ const reset = css`
     span {
       color: var(--color-white);
     }
+
+    ${mq[0]} {
+      font-size: 24px;
+    }
   }
 
   .desc {
@@ -327,8 +331,8 @@ const reset = css`
     ${mq[0]} {
       overflow: auto hidden;
       justify-content: flex-start;
-      margin: 9px 0 0;
-      padding: 0 10px;
+      margin: 0;
+      padding: 9px 10px 0;
 
       &::-webkit-scrollbar {
         display: none;
