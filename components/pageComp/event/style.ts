@@ -122,7 +122,7 @@ export const EventWrap = styled.main`
     .mainvideo {
       width: calc(100vw - 40px);
       height: auto;
-      margin: 24px auto;
+      margin: 30px auto;
     }
     .btn_go_list {
       width: 280px;
