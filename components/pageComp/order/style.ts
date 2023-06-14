@@ -123,40 +123,24 @@ export const Bnr = styled.div`
   .div_img2,
   .div_img3 {
     width: 128.2rem;
+
+    img {
+      display: block;
+    }
   }
 
-  .div_img1 {
-    height: 198.5rem;
-    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/img_group_bnr1.webp") no-repeat left top / auto 100%;
-  }
   .div_img2 {
-    height: 48.7rem;
-    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/bg_group_bnr2.webp") no-repeat left top / auto 100%;
-  }
-  .div_img3 {
-    height: 178.3rem;
-    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/img_group_bnr3.webp") no-repeat left top / auto 100%;
+    background: #171c8e;
   }
 
   ${mq[0]} {
-    width: 360px;
-    margin: 24px auto 0;
-    padding: 0 20px;
+    width: 100vw;
+    margin: 0 auto 0;
 
     .div_img1,
     .div_img2,
     .div_img3 {
       width: 100%;
-    }
-
-    .div_img1 {
-      height: 527px;
-    }
-    .div_img2 {
-      height: 129px;
-    }
-    .div_img3 {
-      height: 473px;
     }
   }
 `;
@@ -449,6 +433,7 @@ export const LocationWrap = styled.main`
         display: block;
         h4 {
           margin-bottom: 0;
+          text-align: center;
           font-size: 24px;
         }
         .list {
