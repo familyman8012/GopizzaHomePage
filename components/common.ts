@@ -672,8 +672,12 @@ const reset = css`
           width: 100%;
           font-size: 13px;
           margin-bottom: 8px;
-          padding-left: 9px;
+          padding-left: 0;
           line-height: 1;
+
+          &.req {
+            padding-left: 9px;
+          }
         }
       }
       &:not(.box_email_area) {
@@ -748,14 +752,14 @@ const reset = css`
       input[type="checkbox"]:checked + label {
         height: 20px;
         padding-left: 30px;
-        font-size: 11px;
+        font-size: 12px;
         line-height: 20px;
         background-size: 20px;
         letter-spacing: -1px;
       }
       .openPrivacy {
         margin-left: 10px !important;
-        font-size: 11px !important;
+        font-size: 12px !important;
         line-height: 20px;
       }
     }

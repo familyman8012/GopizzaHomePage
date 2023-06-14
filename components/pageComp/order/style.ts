@@ -292,7 +292,7 @@ export const StoreWrap = styled.div`
         }
 
         li {
-          padding-left: 10px;
+          padding-left: 3px;
           label {
             padding-left: 5px;
             font-size: 13px;
