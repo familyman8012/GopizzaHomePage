@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import { mq } from "ComponentsFarm/common";
 import { Dispatch, SetStateAction, useState } from "react";
 import DaumPostcode from "react-daum-postcode";
 
@@ -130,5 +131,9 @@ const DaumPostPopWrap = styled.div`
       width: 300px;
       height: 468px !important;
     }
+  }
+
+  ${mq[0]} {
+    margin: 0;
   }
 `;
