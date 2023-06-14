@@ -17,7 +17,8 @@ function Cusomer({ storeInfo }: ICustomer) {
         <br />
         저희가 다음부터 더 잘할 수 있도록 문의 글을 남겨주세요.
         <br />
-        C/S 담당자가 내용을 확인하고 최대한 빠르게 연락드리도록 하겠습니다.
+        C/S 담당자가 내용을 확인하고
+        <br className="mobile_line" /> 최대한 빠르게 연락드리도록 하겠습니다.
       </p>
       <Form type="customer" storeInfo={storeInfo} />
     </OrderLayout>

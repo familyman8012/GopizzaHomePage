@@ -11,6 +11,7 @@ import Application from "ComponentsFarm/popup/Application";
 import Privacy from "ComponentsFarm/popup/Privacy";
 import Store from "ComponentsFarm/popup/Store";
 import { ICustomer } from "PagesFarm/order/customer";
+import { mq } from "ComponentsFarm/common";
 
 const FormWrap = styled.form`
   position: relative;
@@ -20,6 +21,11 @@ const FormWrap = styled.form`
     padding: 1rem 0 0 22.5rem;
     font-size: 14px;
     color: var(--color-orange);
+
+    ${mq[0]} {
+      padding: 5px 0 0;
+      font-size: 12px;
+    }
   }
   .box_custom_chk {
     display: flex;
@@ -47,6 +53,19 @@ const FormWrap = styled.form`
     border: 1px solid var(--color-inputBorder);
     border-radius: 2px;
     background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_sel_arrow.svg") no-repeat #fff 95% 50%;
+  }
+
+  ${mq[0]} {
+    margin: 36px 20px;
+
+    .style_radio {
+      width: 100%;
+      height: 35px;
+      margin-right: 0;
+      padding: 0 9px;
+      font-size: 13px;
+      line-height: 35px;
+    }
   }
 `;
 
@@ -232,7 +251,7 @@ function Form({ type, storeInfo }: IFormProps) {
           />
           {errors.phone && watch("phone") === "" && <div className="txt_error">연락처를 입력해주세요.</div>}
         </div>
-        <div className="box_inp box_email">
+        <div className="box_inp box_email_area">
           <label htmlFor="email1" className="s">
             이메일
           </label>
@@ -343,7 +362,7 @@ function Form({ type, storeInfo }: IFormProps) {
                 상세주소
               </label>
               <div>
-                <div style={{ marginBottom: 4 }}>
+                <div className="box_address1">
                   <input
                     type="text"
                     className="m"
@@ -408,17 +427,33 @@ function Form({ type, storeInfo }: IFormProps) {
             <dl>
               <dt> &lt;이용 방법 및 유의사항&gt; </dt>
               <dd>
-                ・ 단체 주문은 희망 배달일로부터 최대 30일 ~ 최소 3일(영업일 기준) 전까지 접수 가능합니다.
+                ・ 단체 주문은 희망 배달일로부터 최대 30일 ~ 최소 3일
+                <br className="mobile_line" />
+                (영업일 기준) 전까지 접수 가능합니다.
                 <br />
                 ・ 단체 주문이 불가한 지역이 있을 수 있습니다.
                 <br />
                 ・ 단체 주문은 피자 최소 20판부터 가능합니다.
-                <br />・ 고객의 사유로 배달되지 못한 제품은 회수 후 폐기되며, 재배달/취소는 불가합니다.
+                <br />・ 고객의 사유로 배달되지 못한 제품은 회수 후 폐기되며,
+                <br className="mobile_line" />{" "}
+                <span className="mobile_span" style={{ opacity: 0 }}>
+                  ・
+                </span>{" "}
+                재배달/취소는 불가합니다.
                 <br />
                 <span style={{ opacity: 0 }}>・</span> (예시 : 배송 주소 및 연락처 등 정보 오입력, 수령자 부재 등)
                 <br />
-                ・ 접수된 주문 내역은 상담을 통해 최종 확정되며, 진행 단계에서 상황에 따라 주문이 불가할 수 있습니다.
-                <br />・ 단체 주문 접수 시 기입하신 이메일 또는 전화번호로 상담을 진행합니다.
+                ・ 접수된 주문 내역은 상담을 통해 최종 확정되며,
+                <br className="mobile_line" />
+                <span className="mobile_span" style={{ opacity: 0 }}>
+                  ・
+                </span>{" "}
+                진행 단계에서 상황에 따라 주문이 불가할 수 있습니다.
+                <br />・ 단체 주문 접수 시 기입하신 이메일 또는 전화번호로 <br className="mobile_line" />{" "}
+                <span className="mobile_span" style={{ opacity: 0 }}>
+                  ・
+                </span>{" "}
+                상담을 진행합니다.
               </dd>
             </dl>
           </div>

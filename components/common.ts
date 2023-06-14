@@ -363,10 +363,6 @@ const reset = css`
 
   .box_inp {
     margin-bottom: 1.6rem;
-    &.box_email {
-      display: flex;
-      align-items: center;
-    }
 
     &:last-of-type {
       margin-bottom: 0;
@@ -378,6 +374,10 @@ const reset = css`
       &.baseline {
         align-items: baseline;
       }
+    }
+
+    .box_address1 {
+      margin-bottom: 4px;
     }
 
     button {
@@ -603,6 +603,181 @@ const reset = css`
 
     &:disabled {
       background-color: #cccccc;
+    }
+  }
+
+  ${mq[0]} {
+    h4 {
+      margin-bottom: 28px;
+      font-size: 24px;
+    }
+    .form_txt {
+      margin-bottom: 50px;
+      font-size: 12px;
+      color: var(--color-orange);
+    }
+    .box_inp {
+      margin-bottom: 20px;
+
+      &.flex {
+        display: block;
+      }
+
+      .req::before {
+        width: 5.5px;
+        height: 5.5px;
+      }
+
+      .txt_desc {
+        display: block;
+        margin: 5px 0 0 0;
+        font-size: 12px;
+      }
+
+      input,
+      select {
+        height: 35px;
+        padding: 0 9px;
+        font-size: 13px;
+        vertical-align: middle;
+      }
+
+      #hope_order_time1,
+      #hope_order_time2 {
+        width: calc(50% - 2px);
+      }
+
+      .box_address1 {
+        display: flex;
+        align-items: center;
+
+        #address1 {
+          width: calc(100% - 64px);
+
+          + button {
+            width: 60px;
+            height: 35px;
+            font-size: 13px;
+            line-height: 35px;
+          }
+        }
+      }
+
+      label:not(.req) {
+        padding-left: 0;
+      }
+      &:not(.box_radio) {
+        label {
+          display: block;
+          width: 100%;
+          font-size: 13px;
+          margin-bottom: 8px;
+          padding-left: 9px;
+          line-height: 1;
+        }
+      }
+      &:not(.box_email_area) {
+        input,
+        select,
+        textarea {
+          width: 100%;
+
+          border-radius: 2px;
+        }
+      }
+      &.box_email_area {
+        * {
+          margin: 0;
+        }
+        .str {
+          display: inline-block;
+          width: 7%;
+          font-size: 13px;
+          text-align: center;
+        }
+        input,
+        select {
+          width: 30%;
+          box-sizing: border-box;
+        }
+        input:nth-of-type(1) {
+          width: 33%;
+        }
+      }
+    }
+    .box_inp.box_radio,
+    .box_detail_contents {
+      display: block;
+      label.req {
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
+        font-size: 13px;
+        line-height: 1;
+      }
+    }
+    .box_detail_contents {
+      .fake-placeholder {
+        top: 12px;
+        left: 12.5px;
+        font-size: 12px;
+        color: #bababa;
+      }
+      textarea {
+        height: 180px;
+        font-size: 12px;
+      }
+    }
+    .box_custom_radio {
+      position: relative;
+      height: 40px;
+      input,
+      label {
+        width: 50% !important;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+      }
+    }
+    .box_custom_chk {
+      margin-top: 16px !important;
+      padding-left: 12.5px;
+
+      label,
+      input[type="checkbox"]:checked + label {
+        height: 20px;
+        padding-left: 30px;
+        font-size: 11px;
+        line-height: 20px;
+        background-size: 20px;
+        letter-spacing: -1px;
+      }
+      .openPrivacy {
+        margin-left: 10px !important;
+        font-size: 11px !important;
+        line-height: 20px;
+      }
+    }
+    button.submit {
+      width: 100%;
+      height: 50px;
+      margin: 53px 0 75px;
+      font-size: 16px;
+      line-height: 50px;
+      border-radius: 25px;
+    }
+
+    .list_form_notice {
+      margin-top: 24px;
+      padding-left: 20px;
+
+      dt,
+      dd {
+        font-size: 12px;
+        line-height: 2;
+        color: #7b7b7b;
+      }
     }
   }
 

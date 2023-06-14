@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { mq } from "ComponentsFarm/common";
 
 export const DatePickerWrap = styled.div`
   .react-datepicker-popper {
@@ -7,7 +8,6 @@ export const DatePickerWrap = styled.div`
 
   .react-datepicker-wrapper {
     display: inline-flex;
-
     position: relative;
 
     background: #fff;
@@ -36,6 +36,14 @@ export const DatePickerWrap = styled.div`
     color: #333;
     background: #fff;
     font: inherit;
+  }
+
+  ${mq[0]} {
+    .react-datepicker-wrapper,
+    .react-datepicker__input-container,
+    .react-datepicker__input-container input {
+      width: 100%;
+    }
   }
 
   .react-datepicker__navigation {

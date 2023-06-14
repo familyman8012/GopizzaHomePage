@@ -63,6 +63,10 @@ export const HeaderWrap = styled.header`
   }
   .layer_menu {
     display: none;
+
+    &.on {
+      display: block;
+    }
   }
 
   ${mq[0]} {

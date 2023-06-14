@@ -2,18 +2,21 @@ import { runInAction } from "mobx";
 import { observer } from "mobx-react";
 import { mobileHeader } from "MobxFarm/store";
 import Link from "next/link";
+import { Router, useRouter } from "next/router";
 import { useState } from "react";
 import { HeadMenuUrl, HeadAsideUrl, FooterMenu } from "./constant";
 import { HeaderWrap } from "./style";
 
 function Header() {
+  const [showMobileLayer, setshowMobileLayer] = useState(false);
   const [isActiveMenu, setIsActiveMenu] = useState("");
+  const router = useRouter();
 
   const brandSubmenus = [
-    { name: "브랜드 소개", url: "" },
-    { name: "메뉴", url: "" },
-    { name: "이벤트", url: "" },
-    { name: "단체/제휴문의", url: "" },
+    { name: "브랜드 소개", url: "/brand" },
+    { name: "메뉴", url: "/menu" },
+    { name: "이벤트", url: "/event" },
+    { name: "단체/제휴문의", url: "/order" },
   ];
   const franchiseSubmenus = [
     { name: "창업경쟁력", url: "" },
@@ -45,16 +48,25 @@ function Header() {
               <Link href="/find" className="link_find">
                 <span className="hiddenZoneV">매장찾기</span>
               </Link>
-              <button type="button" className="btn_menu">
+              <button type="button" className="btn_menu" onClick={() => setshowMobileLayer((prev) => !prev)}>
                 <span className="hiddenZoneV">메뉴</span>
               </button>
             </div>
           </div>
-          <div className="layer_menu">
+          <div className={`layer_menu ${showMobileLayer ? "on" : ""}`}>
             <button onClick={() => handlerMenu("brand")}>브랜드</button>
             <ul className={isActiveMenu === "brand" ? "active" : ""}>
               {brandSubmenus.map((submenu) => (
-                <li key={submenu.name}>{submenu.name}</li>
+                <li key={submenu.name}>
+                  <span
+                    onClick={() => {
+                      router.push(submenu.url);
+                      setshowMobileLayer(false);
+                    }}
+                  >
+                    {submenu.name}
+                  </span>
+                </li>
               ))}
             </ul>
 

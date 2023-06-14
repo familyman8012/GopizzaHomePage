@@ -2,7 +2,7 @@ import Form from "ComponentsFarm/pageComp/order/Form";
 import Tab from "ComponentsFarm/layouts/Tab";
 import { orderTab } from "ComponentsFarm/pageComp/order/constant";
 import Banner from "ComponentsFarm/pageComp/order/group/Banner";
-import { OrderWrap } from "ComponentsFarm/pageComp/order/style";
+import { Bnr, OrderWrap } from "ComponentsFarm/pageComp/order/style";
 import React from "react";
 import OrderLayout from "ComponentsFarm/layouts/pageLayouts/OrderLayout";
 import styled from "@emotion/styled";
@@ -24,26 +24,11 @@ const company = [
   "대한예수교 장로회- 청운교회",
 ];
 
-const Bnr = styled.div`
-  overflow: hidden;
-  width: 128rem;
-
-  .div_img1 {
-    width: 128.2rem;
-    height: 198.5rem;
-    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/img_group_bnr1.webp") no-repeat left top / auto 100%;
-  }
-  .div_img2 {
-    width: 128.2rem;
-    height: 48.7rem;
-    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/bg_group_bnr2.webp") no-repeat left top / auto 100%;
-  }
-  .div_img3 {
-    width: 128.2rem;
-    height: 178.3rem;
-    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/img_group_bnr3.webp") no-repeat left top / auto 100%;
-  }
-`;
+const BannerRollingItem = [
+  "오리지널 페퍼로니 피자 - 고소하고 짭조름한 페퍼로니가 듬뿍 들어간 정통 페퍼로니 피자의 맛을 느껴보세요.",
+  "슈퍼 콤비네이션 피자 - 남녀노소 모두가 좋아하는 피자로, 다양하고 풍부한 토핑의 조합을 맛볼 수 있습니다.",
+  "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/bnr_pizza3x2.webp",
+];
 
 function Group() {
   return (
@@ -57,24 +42,11 @@ function Group() {
         </div>
         <div className="div_img2">
           <VisibilitySensorSwiper view={1} delay={2000}>
-            <SwiperSlide>
-              <img
-                src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/bnr_pizza1x2.webp"
-                alt="오리지널 페퍼로니 피자 - 고소하고 짭조름한 페퍼로니가 듬뿍 들어간 정통 페퍼로니 피자의 맛을 느껴보세요."
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/bnr_pizza2x2.webp"
-                alt="슈퍼 콤비네이션 피자 - 남녀노소 모두가 좋아하는 피자로, 다양하고 풍부한 토핑의 조합을 맛볼 수 있습니다."
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/bnr_pizza3x2.webp"
-                alt="베이컨 포테이토 피자 - 담백한 감자와 바삭한 베이컨이 입안 가득! 기분 좋은 든든함을 느껴보세요."
-              />
-            </SwiperSlide>
+            {BannerRollingItem.map((el, i) => (
+              <SwiperSlide key={i}>
+                <img src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/bnr_pizza${i + 1}x2.webp`} alt={el} />
+              </SwiperSlide>
+            ))}
           </VisibilitySensorSwiper>
         </div>
         <div className="div_img3">
