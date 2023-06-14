@@ -424,7 +424,7 @@ export const LocationWrap = styled.main`
         height: 66rem;
         margin-left: auto;
       }
-    }c
+    }
   }
 
   ${mq[0]} {
