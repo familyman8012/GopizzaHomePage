@@ -112,6 +112,7 @@ export const YouWantPizzaWrap = styled.section`
         display: block;
         flex-shrink: 0;
         scroll-snap-align: center;
+        scroll-snap-stop: always;
         width: 240px;
         height: 280px;
         margin: 0 0 0 20px !important;
