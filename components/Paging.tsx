@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Pagination from "react-js-pagination";
 import styled from "@emotion/styled";
+import { mq } from "./common";
 
 const PaginationWrap = styled.div`
   .pagination {
@@ -58,6 +59,23 @@ const PaginationWrap = styled.div`
   .arrow-left,
   .long-arrow-left {
     transform: rotate(-45deg);
+  }
+
+  ${mq[0]} {
+    ul.pagination {
+      margin-top: 30px;
+
+      li {
+        font-size: 20px;
+      }
+    }
+    .arrow-right,
+    .arrow-left,
+    .long-arrow-right,
+    .long-arrow-left {
+      width: 10px;
+      height: 10px;
+    }
   }
 `;
 

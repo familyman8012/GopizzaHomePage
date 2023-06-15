@@ -188,16 +188,31 @@ function Index({ storeInfo2 }: { storeInfo2: IStoreSearch[] }) {
 const ListItem = ({ distance, store }: { distance: boolean; store: IStoreSearch }) => {
   const [show, setShow] = useState(false);
 
+  const handleAClick = (e: any) => {
+    e.stopPropagation(); // a 태그 클릭시 이벤트 버블링 방지
+    setShow(true); // show 상태를 무조건 true로 변경
+  };
+
   return (
     <li className={show ? "on" : ""}>
-      <dl onClick={() => setShow(!show)}>
+      <dl
+        onClick={(e) => {
+          e.stopPropagation();
+          setShow(!show);
+        }}
+      >
         <dt className="storeName">
           {store.name}
           {distance && <span className="distance">{Number(store.distance).toFixed(2)}km</span>}
         </dt>
         <dd className="address">{store.address}</dd>
         <dd className="info">
-          <span className="tel">{store.store_phone_number}</span>
+          <span className="tel">
+            <span className="pc">{store.store_phone_number}</span>
+            <a href={`tel:${store.store_phone_number}`} className="mobile" onClick={handleAClick}>
+              {store.store_phone_number}
+            </a>
+          </span>
           <span className="time">{store.business_time}</span>
         </dd>
       </dl>
