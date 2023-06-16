@@ -19,11 +19,11 @@ function Header() {
     { name: "단체/제휴문의", url: "/order" },
   ];
   const franchiseSubmenus = [
-    { name: "창업경쟁력", url: "" },
-    { name: "창업안내", url: "" },
-    { name: "혁신기술력", url: "" },
-    { name: "CEO&언론보도", url: "" },
-    { name: "가맹문의", url: "" },
+    { name: "창업경쟁력", url: "/start" },
+    { name: "창업안내", url: "/start/guide" },
+    { name: "혁신기술력", url: "/start/technology" },
+    { name: "CEO&언론보도", url: "/start/media" },
+    { name: "가맹문의", url: "/start/inquiry" },
   ];
 
   const handlerMenu = (menu: string) => {
@@ -73,7 +73,16 @@ function Header() {
             <button onClick={() => handlerMenu("franchise")}>가맹안내</button>
             <ul className={isActiveMenu === "franchise" ? "active" : ""}>
               {franchiseSubmenus.map((submenu) => (
-                <li key={submenu.name}>{submenu.name}</li>
+                <li key={submenu.name}>
+                  <span
+                    onClick={() => {
+                      router.push(submenu.url);
+                      setshowMobileLayer(false);
+                    }}
+                  >
+                    {submenu.name}
+                  </span>
+                </li>
               ))}
             </ul>
           </div>

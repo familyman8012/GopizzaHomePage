@@ -67,6 +67,10 @@ export const HeaderWrap = styled.header`
     &.on {
       display: block;
     }
+
+    span {
+      color: #fff;
+    }
   }
 
   ${mq[0]} {
