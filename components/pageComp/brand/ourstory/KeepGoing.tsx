@@ -98,18 +98,18 @@ function KeepGoing() {
                 onInit={onInit}
                 key={selHistory}
                 slidesPerView={"auto"}
-                spaceBetween={30}
-                breakpoints={{
-                  600: {
-                    spaceBetween: 23,
-                  },
-                  800: {
-                    spaceBetween: 30,
-                  },
-                  1200: {
-                    spaceBetween: 40,
-                  },
-                }}
+                spaceBetween={20}
+                // breakpoints={{
+                //   600: {
+                //     spaceBetween: 23,
+                //   },
+                //   800: {
+                //     spaceBetween: 30,
+                //   },
+                //   1200: {
+                //     spaceBetween: 40,
+                //   },
+                // }}
                 onProgress={handleProgress}
                 autoplay={{ delay: 2000, disableOnInteraction: false }}
               >

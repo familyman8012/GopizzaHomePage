@@ -9,7 +9,7 @@ SwiperCore.use([Pagination, Autoplay, Navigation, FreeMode]);
 
 interface ISwiper {
   children: any;
-  view?: number;
+  view?: number | "auto";
   viewBetween?: number;
   paging?: boolean;
   nav?: boolean;

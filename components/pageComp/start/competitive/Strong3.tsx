@@ -87,10 +87,31 @@ function Strong3() {
             <p className="txt">{el.tit}</p>
             <dl>
               <dt>{el.tit}</dt>
-              <dd>
-                <p className="txt1">{el.txt1}</p>
-                <p className="txt2">{el.txt2}</p>
-              </dd>
+              {el.id !== 2 ? (
+                <dd>
+                  <p className="txt1">{el.txt1}</p>
+                  <p className="txt2">{el.txt2}</p>
+                </dd>
+              ) : (
+                <>
+                  <dd className="mobile">
+                    <p className="txt1">
+                      세상에서 가장 쉬운
+                      <br />
+                      방법으로 피자를 만듭니다.
+                    </p>
+                    <p className="txt2">
+                      피자 만드는 방법을 처음부터
+                      <br />
+                      끝까지 완전히 새롭게 혁신했습니다. 점주의 수익성뿐만 아니라 워라밸까지 챙길 수 있는 고피자 오퍼레이션을 경험해보세요.
+                    </p>
+                  </dd>
+                  <dd className="pc">
+                    <p className="txt1">{el.txt1}</p>
+                    <p className="txt2">{el.txt2}</p>
+                  </dd>
+                </>
+              )}
             </dl>
           </li>
         ))}

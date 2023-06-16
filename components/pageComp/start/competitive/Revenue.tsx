@@ -54,46 +54,13 @@ function StoreItem({ el }: { el: any }) {
   );
 }
 
-function Revenue() {
-  const [windowWidth, setWindowWidth] = useState<number>(typeof window !== "undefined" ? window.innerWidth : 0);
-  function getSpaceBetween(width: number): number {
-    if (width <= 1000) {
-      return 10;
-    } else if (width > 1000 && width <= 1400) {
-      return 20;
-    } else {
-      return 40;
-    }
-  }
+interface IRevenue {
+  windowWidth: number;
+  spaceBetween: number;
+}
 
-  const [spaceBetween, setSpaceBetween] = useState<number>(getSpaceBetween(windowWidth));
-
-  const debounce = (func: (...args: any[]) => void, wait: number) => {
-    let timeout: NodeJS.Timeout | null;
-    return (...args: any[]) => {
-      if (timeout) clearTimeout(timeout);
-      timeout = setTimeout(() => func(...args), wait);
-    };
-  };
-
-  const handleResize = useCallback(
-    debounce(() => {
-      setWindowWidth(window.innerWidth);
-      setSpaceBetween(getSpaceBetween(window.innerWidth));
-    }, 200),
-    []
-  );
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("resize", handleResize);
-
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
-  }, [handleResize]);
-
+function Revenue({ windowWidth, spaceBetween }: IRevenue) {
+  console.log("spaceBetween", spaceBetween);
   return (
     <RevenueWrap>
       <h4>
@@ -103,25 +70,29 @@ function Revenue() {
           수익으로 만족스러운 고피자
         </span>
       </h4>
-      <div className="list_revenue line1">
-        <VisibilitySensorSwiper view={3} viewBetween={spaceBetween}>
-          {storeInfo.map((el) => (
-            <SwiperSlide key={el.id}>
-              <StoreItem el={el} />
-            </SwiperSlide>
-          ))}{" "}
-        </VisibilitySensorSwiper>
-      </div>
+      {spaceBetween && (
+        <>
+          <div className="list_revenue line1">
+            <VisibilitySensorSwiper view={600 > windowWidth ? "auto" : 3} viewBetween={spaceBetween} center={600 > windowWidth ? true : false}>
+              {(600 > windowWidth ? [...storeInfo, ...storeInfo2] : storeInfo).map((el) => (
+                <SwiperSlide key={el.id}>
+                  <StoreItem el={el} />
+                </SwiperSlide>
+              ))}{" "}
+            </VisibilitySensorSwiper>
+          </div>
 
-      <div className="list_revenue line2">
-        <VisibilitySensorSwiper view={3} viewBetween={spaceBetween} delay={3000}>
-          {storeInfo2.map((el) => (
-            <SwiperSlide key={el.id}>
-              <StoreItem el={el} />
-            </SwiperSlide>
-          ))}{" "}
-        </VisibilitySensorSwiper>
-      </div>
+          <div className="list_revenue line2">
+            <VisibilitySensorSwiper view={3} viewBetween={spaceBetween} delay={3000}>
+              {storeInfo2.map((el) => (
+                <SwiperSlide key={el.id}>
+                  <StoreItem el={el} />
+                </SwiperSlide>
+              ))}{" "}
+            </VisibilitySensorSwiper>
+          </div>
+        </>
+      )}
     </RevenueWrap>
   );
 }

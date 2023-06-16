@@ -61,7 +61,7 @@ const Slide = [
   },
 ];
 
-function Support() {
+function Support({ windowWidth }: { windowWidth: number }) {
   return (
     <SupportWrap>
       <div className="brand">
@@ -81,7 +81,7 @@ function Support() {
           <li>광고 모델 기용</li>
         </ul>
       </div>
-      <VisibilitySensorSwiper view={3}>
+      <VisibilitySensorSwiper view={600 > windowWidth ? "auto" : 3} center={600 > windowWidth ? true : false} viewBetween={600 > windowWidth ? 14 : 40}>
         {Slide.map((el) => (
           <SwiperSlide key={el.idx}>
             <a target="_blank" href={el.linkUrl} rel="noreferrer">

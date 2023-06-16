@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { mq } from "ComponentsFarm/common";
 import { mobileHeader } from "MobxFarm/store";
 import { VideoWrap } from "./competitive/style";
 
@@ -41,6 +42,17 @@ export const StartWrap = styled.div`
       margin: 6.2rem 0 3.2rem;
       font-size: 1.8rem;
       text-align: center;
+    }
+  }
+
+  ${mq[0]} {
+    padding-bottom: 50px;
+    .list_tab {
+      box-shadow: 0 -1px 24px 0 rgba(0, 0, 0, 0.16);
+    }
+    h4 {
+      margin-bottom: 24px !important;
+      font-size: 24px;
     }
   }
 `;
@@ -151,6 +163,17 @@ export const BtnInquiryWrap = styled.span`
 
   &:hover {
     color: var(--color-white);
+  }
+
+  ${mq[0]} {
+    width: 280px;
+    height: 60px;
+    margin: 46px auto 51px;
+    font-size: 18px;
+
+    line-height: 60px;
+
+    border-radius: 60px;
   }
 `;
 
