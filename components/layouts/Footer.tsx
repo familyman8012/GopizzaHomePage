@@ -81,7 +81,7 @@ function Footer() {
                     openStoreModal();
                   }}
                 >
-                  {item.menuName}
+                  {item}
                 </span>
               </dd>
             ))}

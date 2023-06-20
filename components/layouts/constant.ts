@@ -53,11 +53,7 @@ export const FooterMenu = [
 
 export const FooterPrivacy = {
   depth1: "개인정보처리방침",
-  url: "#",
-  depth2: [
-    { menuName: "이메일무단수집거부", url: "#" },
-    { menuName: "외부감사인선임공고", url: "#" },
-  ],
+  depth2: ["이메일무단수집거부", "외부감사인선임공고"],
 };
 
 export const Global = [

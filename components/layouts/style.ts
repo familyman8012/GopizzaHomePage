@@ -314,6 +314,124 @@ export const FooterWrap = styled.footer`
   }
 `;
 
+export const FooterMobileWrap = styled.footer`
+  display: none;
+
+  ${mq[0]} {
+    display: block;
+    padding: 27px 0 0;
+    background: #2c2c2c;
+
+    .list_sns {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      align-self: self-end;
+
+      a {
+        display: block;
+      }
+      li {
+        margin-right: 24px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        &:not(.youtube) {
+          a {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        &.instagram {
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_instagram.svg") no-repeat left top / 100%;
+        }
+        &.youtube {
+          a {
+            width: 30px;
+            height: 24px;
+          }
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_youtube.svg") no-repeat left top / 100%;
+        }
+        &.kakao {
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_kakao.svg") no-repeat left top / 100%;
+        }
+        &.facebook {
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/ico_facebook.svg") no-repeat left top / 100%;
+        }
+      }
+    }
+
+    .box_privacy {
+      display: flex;
+
+      li:nth-of-type(3) span {
+        border-right: none;
+      }
+    }
+
+    .box_global,
+    .box_privacy {
+      width: 292px;
+      margin: 24px auto 11px;
+      h2,
+      li * {
+        display: block;
+        font-family: "Montserrat";
+        font-size: 10px;
+
+        color: #fff;
+        opacity: 0.7;
+        text-align: center;
+      }
+      h2 {
+        font-weight: bold;
+      }
+      li * {
+        padding: 0 12px;
+        border-right: 1px solid;
+      }
+      li span {
+        width: max-content;
+      }
+      ul {
+        display: flex;
+        margin: 10px 0 0;
+        padding-bottom: 15.5px;
+        border-bottom: 1px solid #707070;
+        li {
+          width: fit-content;
+          text-align: center;
+
+          &:nth-of-type(1) * {
+            padding-left: 0;
+          }
+
+          &:nth-of-type(2) * {
+            width: max-content;
+          }
+
+          &:last-of-type * {
+            border: none;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+    address {
+      display: block;
+      font-family: "Montserrat";
+      font-size: 10px;
+      font-style: normal;
+      color: #fff;
+      opacity: 0.7;
+      text-align: center;
+      line-height: 19px;
+    }
+  }
+`;
+
 export const CopyrightWrap = styled.div`
   display: flex;
   justify-content: center;
@@ -325,7 +443,13 @@ export const CopyrightWrap = styled.div`
   background: #2c2c2c;
 
   ${mq[0]} {
-    display: none;
+    height: auto;
+    padding: 16px 0;
+    font-family: "Montserrat";
+    font-size: 10px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    background: #2c2c2c;
   }
 `;
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Copyright from "./Copyright";
 import Footer from "./Footer";
+import FooterMobile from "./FooterMobile";
 import Header from "./Header";
 import Top from "./Top";
 
@@ -16,6 +17,7 @@ function Layout({ children, className }: Props) {
       {children}
       <Top />
       <Footer />
+      <FooterMobile />
       <Copyright />
     </>
   );
