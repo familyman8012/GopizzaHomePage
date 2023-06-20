@@ -15,6 +15,8 @@ import VisibilitySensorSwiper from "ComponentsFarm/pageComp/event/campaign/Visib
 import { mq } from "ComponentsFarm/common";
 
 const CapmpaignWrap = styled.div`
+  overflow-x: hidden;
+
   .wrap_mobile {
     display: none;
   }
@@ -134,14 +136,18 @@ const CapmpaignWrap = styled.div`
       &.box_inp3 {
         top: calc(48.2% + 3.2rem);
       }
-      &.box_inp4 {
+      &.box_inp5 {
         top: calc(59.7% + 4.8rem);
         .btn_apply {
           width: 100%;
           height: 7.2rem;
           margin-top: 2.8rem;
           cursor: pointer;
-          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/btn_apply.png") no-repeat center / cover;
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/btn_apply.png") no-repeat center / cover !important;
+
+          &:disabled {
+            opacity: 0.5;
+          }
         }
       }
 
@@ -182,9 +188,19 @@ const CapmpaignWrap = styled.div`
       }
     }
   }
+  .box_inp.box_inp5 {
+    .notice {
+      display: block;
+      width: 100vw;
+      font-size: 12px;
+      color: #fff;
+      margin: 10px 0;
+    }
+  }
   .box_notice {
     width: 100%;
     background: #202020;
+
     .inner {
       width: fit-content;
       padding: 5rem;
@@ -220,10 +236,57 @@ const CapmpaignWrap = styled.div`
     }
   }
 
+  @media (min-width: 1001px) and (max-width: 1600px) {
+    .box_4 {
+      min-height: 1200px !important;
+      .wrap_pc {
+        img {
+          height: 1200px !important;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .box_4 .box_inp {
+      position: static !important;
+    }
+
+    .wrap_form {
+      position: absolute;
+      left: 50% !important;
+    }
+
+    .box_inp.box_inp5 {
+      top: calc(54.7% + 4.8rem);
+
+      .notice {
+        display: block;
+        width: 100vw;
+        font-size: 12px;
+        color: #fff;
+        margin: 10px 0;
+      }
+    }
+  }
+
   @media (max-width: 1000px) {
     .wrap_mobile {
       display: block;
     }
+    .wrap_form {
+      top: 170px !important;
+    }
+
+    .box_4 {
+      min-height: 800px !important;
+      .wrap_mobile {
+        img {
+          height: 800px !important;
+        }
+      }
+    }
+
     .wrap_pc {
       display: none;
     }
@@ -272,10 +335,26 @@ const CapmpaignWrap = styled.div`
   }
 
   @media (max-width: 670px) {
+    .swiper_btns .swiper-button-prev,
+    .swiper_btns .swiper-button-next {
+      display: none;
+    }
     .box_4 {
+      min-height: 700px !important;
+      .wrap_mobile {
+        img {
+          height: 700px !important;
+        }
+      }
+
       .wrap_mobile {
         display: none;
       }
+
+      .wrap_form {
+        top: 120px !important;
+      }
+
       min-height: 572px;
       background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/infiltration/4_2mob.webp") no-repeat left top / cover;
       .tit_notice {
@@ -289,7 +368,7 @@ const CapmpaignWrap = styled.div`
         height: 32px !important;
       }
       .box_inp {
-        width: 250px !important;
+        width: 300px !important;
       }
       textarea {
         height: 82px !important;
@@ -339,11 +418,9 @@ const CapmpaignWrap = styled.div`
     .box_4 .box_inp.box_inp3 {
       top: calc(43.2% + 3.2rem);
     }
-    .box_4 .box_inp.box_inp4 {
-      top: calc(54.7% + 4.8rem);
-    }
-    .box_4 .box_inp.box_inp4 .btn_apply {
-      height: 36px;
+
+    .box_inp.box_inp5 .btn_apply {
+      height: 36px !important;
       margin: 0;
     }
   }
@@ -352,6 +429,8 @@ const CapmpaignWrap = styled.div`
 function Campaign() {
   const [agree, setAgree] = useState(false);
   const [open, setOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
   const openStoreModal = useCallback(() => {
     setOpen(true);
   }, []);
@@ -413,6 +492,10 @@ function Campaign() {
       return alert("개인정보 활용에 동의하신 후 신청가능합니다.");
     }
     console.log("sendData", sendData);
+
+    setIsLoading(true); // Set loading state to true
+    reset();
+
     Infiltration.mutate(sendData, {
       onSuccess: (data) => {
         alert("사연이 정상적으로 접수되었습니다.");
@@ -421,6 +504,9 @@ function Campaign() {
       onError: (err) => {
         alert("문제가 발생하였습니다. 잠시 후 다시 신청해주시기 바랍니다.");
         console.log(err);
+      },
+      onSettled: () => {
+        setIsLoading(false); // Set loading state to false after request is completed
       },
     });
   };
@@ -487,7 +573,7 @@ function Campaign() {
           </div>
           <div className="wrap_form">
             <div className="box_inp box_inp1">
-              <label htmlFor="name">이름</label>
+              <label htmlFor="name">이름*</label>
               <input
                 type="text"
                 id="name"
@@ -499,7 +585,7 @@ function Campaign() {
               />
             </div>
             <div className="box_inp box_inp2">
-              <label htmlFor="phone">연락처</label>
+              <label htmlFor="phone">연락처*</label>
               <input
                 type="tel"
                 id="phone"
@@ -511,7 +597,7 @@ function Campaign() {
               />
             </div>
             <div className="box_inp box_inp3">
-              <label htmlFor="place">방문장소</label>
+              <label htmlFor="place">방문장소*</label>
               <input
                 type="text"
                 id="place"
@@ -523,7 +609,7 @@ function Campaign() {
               />
             </div>
             <div className="box_inp box_inp4">
-              <label htmlFor="story">사연</label>
+              <label htmlFor="story">사연*</label>
               <textarea
                 id="story"
                 autoComplete="off"
@@ -532,6 +618,14 @@ function Campaign() {
                   required: true,
                 })}
               ></textarea>
+            </div>
+            <div className="box_inp box_inp5">
+              <label htmlFor="coupon_code">
+                쿠폰번호 입력
+                <br />
+                <span className="notice">(국방부 프로모션 참여하시는 분들만 작성 부탁드립니다)</span>
+              </label>
+              <input type="text" id="coupon_code" autoComplete="off" className={`inp1 ${errors.area ? "on" : ""}`} {...register("coupon_code")} />
               <div className="box_aree">
                 <input type="checkbox" id="agree" name="agree" onChange={() => setAgree((prev) => !prev)} checked={agree} />
                 <label htmlFor="agree">개인 정보 활용에 동의합니다.</label>
@@ -546,7 +640,7 @@ function Campaign() {
                   전문보기
                 </button>
               </div>
-              <button type="submit" className="btn_apply">
+              <button type="submit" className="btn_apply" disabled={isLoading}>
                 <div className="hiddenZoneV">신청하기</div>
               </button>
             </div>

@@ -1100,6 +1100,24 @@ const reset = css`
       font-size: 14px;
       line-height: 30px;
     }
+    .swiper-button-prev {
+      left: 10px !important;
+    }
+
+    .swiper-button-next {
+      right: 10px !important;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 48px !important;
+      height: 48px !important;
+      margin-top: calc(0px - (48px / 2)) !important;
+    }
+
+    .swiper-pagination {
+      bottom: 10px !important;
+    }
   }
 
   @media (min-width: 1400px) and (max-width: 1530px) {
@@ -1129,6 +1147,12 @@ const reset = css`
   }
 
   @media (min-width: 601px) and (max-width: 670px) {
+    html {
+      font-size: 3.7px;
+    }
+  }
+
+  @media (min-width: 501px) and (max-width: 670px) {
     html {
       font-size: 3.7px;
     }

@@ -162,31 +162,6 @@ export const Strong3Wrap = styled.section`
     }
   }
 
-  @media (hover: hover) and (pointer: fine) {
-    .list_strong {
-      li {
-        &:hover {
-          cursor: pointer;
-          &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(to top, rgba(255, 70, 0, 0) -38%, rgba(255, 70, 0, 0.4) -38%, #ff4600 89%);
-          }
-          .txt {
-            display: none;
-          }
-          dl {
-            display: block;
-          }
-        }
-      }
-    }
-  }
-
   ${mq[0]} {
     margin-top: 0;
     padding: 0;
@@ -856,21 +831,6 @@ export const Bnr = styled.div`
     .swiper-slide {
       width: 100%;
       height: 358px;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      width: 48px;
-      height: 48px;
-      margin-top: calc(0px - (48px / 2));
-    }
-
-    .swiper-button-prev {
-      left: 10px;
-    }
-
-    .swiper-button-next {
-      right: 10px;
     }
 
     .txt_box {

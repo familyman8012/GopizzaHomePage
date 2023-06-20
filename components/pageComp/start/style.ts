@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { mq } from "ComponentsFarm/common";
-import { mobileHeader } from "MobxFarm/store";
 import { VideoWrap } from "./competitive/style";
 
 export const StartWrap = styled.div`
@@ -46,7 +45,6 @@ export const StartWrap = styled.div`
   }
 
   ${mq[0]} {
-    padding-bottom: 50px;
     .list_tab {
       box-shadow: 0 -1px 24px 0 rgba(0, 0, 0, 0.16);
     }
@@ -61,13 +59,17 @@ export const Content = styled.main`
   width: 128rem;
   margin: 0 auto;
 
-  display: ${mobileHeader.open ? `none` : `block`};
+  display: block;
 
   .video_wrap {
     margin-top: -10.6rem;
     ${VideoWrap} {
       margin-top: 0;
     }
+  }
+
+  ${mq[0]} {
+    width: 100%;
   }
 `;
 
@@ -178,6 +180,10 @@ export const BtnInquiryWrap = styled.span`
 `;
 
 export const CeoMessageWrap = styled.section`
+  .mobileline {
+    display: none;
+  }
+
   .wrap_message {
     width: 100%;
     height: 70rem;
@@ -211,6 +217,71 @@ export const CeoMessageWrap = styled.section`
       }
     }
   }
+  ${mq[0]} {
+    padding: 36px 0 0;
+
+    h4 {
+      font-size: 36px;
+    }
+
+    .pcline {
+      display: none;
+    }
+
+    .mobileline {
+      display: block;
+    }
+
+    .wrap_message {
+      position: relative;
+      height: 1128px;
+      padding: 434px 20px 0;
+      background: url("/images/start/media/mobile/bg_messagex2.webp") no-repeat left top / 100%;
+
+      .inner {
+        width: fit-content;
+        margin: 0 auto;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 55px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 250px;
+        height: 365px;
+        background: url("/images/start/media/mobile/bg_personx2.webp") no-repeat left top / 100%;
+      }
+
+      strong {
+        margin-bottom: 16px;
+        font-size: 24px;
+        line-height: 36px;
+      }
+
+      p {
+        margin-bottom: 26px;
+        font-size: 16px;
+        line-height: 30px;
+      }
+      .sign {
+        display: flex;
+        align-items: center;
+
+        .txt {
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        .img {
+          width: 116px;
+          height: 78px;
+          margin: -12px 0 0 32px;
+        }
+      }
+    }
+  }
 `;
 
 export const InterviewWrap = styled.section`
@@ -221,6 +292,21 @@ export const InterviewWrap = styled.section`
     gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
+  }
+
+  ${mq[0]} {
+    margin: 70px 0;
+
+    h4 {
+      font-size: 36px;
+    }
+
+    .list_interview {
+      display: block;
+      li {
+        margin-bottom: 20px;
+      }
+    }
   }
 `;
 
@@ -248,6 +334,32 @@ export const MediaWrap = styled.section`
           font-size: 1.6rem;
           line-height: 2.75;
           color: #7b7b7b;
+        }
+      }
+    }
+  }
+  ${mq[0]} {
+    h4 {
+      font-size: 24px;
+    }
+    .list {
+      li {
+        padding: 25px 0;
+        border-bottom: 1px solid #ddd;
+
+        dt {
+          font-size: 16px;
+          line-height: 30px;
+        }
+        dd {
+          display: flex;
+          align-items: color-interpolation-filters;
+          span {
+            display: block;
+            font-size: 1.6rem;
+            line-height: 2.75;
+            color: #7b7b7b;
+          }
         }
       }
     }

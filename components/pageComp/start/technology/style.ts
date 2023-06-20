@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import { mq } from "ComponentsFarm/common";
 
 const techImg = Array.from({ length: 4 }).map(
   (_, i) =>
@@ -9,6 +10,23 @@ const techImg = Array.from({ length: 4 }).map(
       }
     `
 );
+
+export const TechWrap = styled.div`
+  padding-bottom: 22.4rem;
+  background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/tech/bg_techx2.webp") no-repeat center bottom / 267.3rem 146.1rem;
+  .btn_inquiry {
+    margin: 16rem auto 0;
+  }
+
+  ${mq[0]} {
+    padding-bottom: 105px;
+    background-position: center bottom;
+    background-size: 100% auto;
+    .btn_inquiry {
+      margin: 46px auto 0;
+    }
+  }
+`;
 
 export const GopizzaTechWrap = styled.section`
   position: relative;
@@ -59,7 +77,7 @@ export const GopizzaTechWrap = styled.section`
           width: 1.1rem;
           height: 1rem;
           margin: 1.8rem 0 0 0.8rem;
-          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/tech/arrow_tech.svg") no-repeat left top;
+          background: url("/images/start/tech/arrow_tech.svg") no-repeat left top;
         }
       }
       dd {
@@ -69,12 +87,79 @@ export const GopizzaTechWrap = styled.section`
       }
     }
   }
+  ${mq[0]} {
+    width: 100vw;
+    margin: 66px auto 0;
+    padding: 0;
+
+    ul {
+      display: flex;
+      overflow: auto hidden;
+      scroll-snap-type: x mandatory;
+      justify-content: start;
+      margin-bottom: 76px;
+      padding: 0 20px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      li {
+        display: flex;
+        flex-shrink: 0;
+        width: 224px;
+        height: 336px;
+        padding: 0 0 10px 16px;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        cursor: pointer;
+
+        ${techImg}
+
+        &:hover dl {
+          height: 155px;
+          transition: none;
+        }
+      }
+
+      dl {
+        height: 3.2rem;
+
+        dt {
+          margin-bottom: 0.65rem;
+          font-size: 20px;
+          line-height: 26px;
+
+          &:after {
+            width: 11px;
+            height: 10px;
+            margin: 10px 0 0 8px;
+          }
+        }
+        dd {
+          height: 15.7rem;
+          font-size: 15px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  .box_img {
+    width: 100% !important;
+    padding: 0 20px !important;
+    height: auto !important;
+  }
 `;
 
 export const NeedWrap = styled.section`
   position: relative;
   width: 128rem;
   margin: 16rem auto 0;
+
+  .mobileline {
+    display: none;
+  }
 
   h4 {
     margin-bottom: 8rem;
@@ -123,6 +208,73 @@ export const NeedWrap = styled.section`
         height: 67.1rem;
         margin-top: 4.1rem;
         background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/tech/bg_need2x2.webp?v=2") no-repeat left top / auto 67.1rem;
+      }
+    }
+  }
+
+  ${mq[0]} {
+    width: 100vw;
+    margin: 36px auto 0;
+    padding: 0;
+
+    .pcline {
+      display: none;
+    }
+    .mobileline {
+      display: block;
+    }
+
+    h4 {
+      margin-bottom: 72px !important;
+    }
+
+    ul {
+      li {
+        &:nth-of-type(1) {
+          height: auto;
+          background: url("/images/start/tech/mobile/bg_need1x2.webp?v=2") no-repeat center top / 360px auto;
+
+          dl {
+            width: fit-content;
+            margin: 0 auto;
+            padding: 335px 20px 0;
+          }
+          dt {
+            margin-bottom: 12px;
+          }
+        }
+        &:nth-of-type(2) {
+          dl {
+            padding: 421px 20px 0;
+          }
+          dt {
+            margin-bottom: 12px;
+            &:not(&:nth-of-type(1)) {
+              margin-top: 30px;
+            }
+          }
+        }
+
+        dl {
+          dt {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 38px;
+          }
+          dd {
+            font-size: 14px;
+
+            line-height: 30px;
+            strong {
+              font-weight: bold;
+            }
+          }
+        }
+        &:nth-of-type(2) {
+          height: auto;
+          margin-top: 71px;
+          background: url("/images/start/tech/mobile/bg_need2x2.webp?v=2") no-repeat center top / 258px auto;
+        }
       }
     }
   }

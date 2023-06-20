@@ -8,6 +8,7 @@ function RequireTime() {
         <span className="txt">오픈 절차 및 소요기간</span>
       </h4>
       <div className="box_time">
+        <img src="/images/start/info/mobile/img_time.svg" className="mobile_time" alt="오픈 절차 및 소요기간" />
         <div className="hiddenZoneV">
           1일차 : 가맹상담 <br />
           2일차 ~ 3일: 상권 분석 및 입지 선정 <br />
