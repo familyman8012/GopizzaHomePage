@@ -5,7 +5,7 @@ export const HeaderWrap = styled.header`
   height: 12rem;
   background: #ff4600;
 
-  .inner_mobile {
+  .header {
     display: none;
   }
 
@@ -71,15 +71,33 @@ export const HeaderWrap = styled.header`
 
   ${mq[0]} {
     height: 60px;
+    background: transparent;
+
+    &.on {
+      /* .header {
+        display: none;
+      } */
+      .layer_menu {
+        display: block;
+      }
+      .header .right {
+        .btn_menu {
+          width: 26px;
+          height: 24px;
+          background: url("/images/common/mobile/btn_close.svg") no-repeat left center / 24px 24px;
+        }
+      }
+    }
 
     .inner {
       display: none;
     }
 
-    .inner_mobile {
+    .header {
       display: flex;
       align-items: center;
       height: 60px;
+      background: #ff4600;
 
       h1 {
         width: 67px;
@@ -105,32 +123,20 @@ export const HeaderWrap = styled.header`
           width: 26px;
           height: 20px;
           background: url("/images/common/mobile/btn_menu.svg") no-repeat left center / 100%;
-
-          &.on {
-            width: 26px;
-            height: 24px;
-            background: url("/images/common/mobile/btn_close.svg") no-repeat left center / 24px 24px;
-          }
         }
-      }
-    }
-
-    &.on {
-      .layer_menu {
-        display: block;
       }
     }
 
     .layer_menu {
       position: fixed;
       z-index: 10;
-      top: 60px;
+      top: 0;
       width: 100%;
-      height: calc(100vh - 60px);
+      height: 100vh;
       background: var(--color-orange);
 
-      button,
-      li {
+      li,
+      .box_menu button {
         display: block;
         width: 100%;
         height: 56px;
@@ -146,7 +152,7 @@ export const HeaderWrap = styled.header`
         }
       }
 
-      button {
+      .box_menu button {
         position: relative;
         font-weight: bold;
 
@@ -177,7 +183,7 @@ export const HeaderWrap = styled.header`
 
       .active {
         ul {
-          max-height: 300px; /* 이 값은 실제 필요한 값에 따라 조정해야 합니다. */
+          max-height: 300px;
         }
         button:after {
           transform: rotate(180deg) translateY(-50%);

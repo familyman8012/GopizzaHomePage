@@ -9,6 +9,26 @@ import { HeaderWrap } from "./style";
 
 const mobileMenu = ["브랜드", "가맹안내"];
 
+const MobileHeader = ({ handlerMobileMenu }: { handlerMobileMenu: () => void }) => {
+  return (
+    <div className="header">
+      <Link href="/main">
+        <h1>
+          <span className="hiddenZoneV">GOPIZZA</span>
+        </h1>
+      </Link>
+      <div className="right">
+        <Link href="/find" className="link_find">
+          <span className="hiddenZoneV">매장찾기</span>
+        </Link>
+        <button type="button" className="btn_menu" onClick={handlerMobileMenu}>
+          <span className="hiddenZoneV">메뉴</span>
+        </button>
+      </div>
+    </div>
+  );
+};
+
 function Header() {
   const [showMobileLayer, setshowMobileLayer] = useState(false);
   const [isActiveMenu, setIsActiveMenu] = useState("");
@@ -41,7 +61,6 @@ function Header() {
   );
 
   const handlerMobileMenu = useCallback(() => {
-    window.scrollTo(0, 0);
     setshowMobileLayer((prev) => !prev);
     showMobileLayer ? document.body.classList.remove("overflowhidden") : document.body.classList.add("overflowhidden");
   }, [showMobileLayer]);
@@ -56,40 +75,33 @@ function Header() {
     <>
       <HeaderWrap className={showMobileLayer ? "on" : ""}>
         <div className="wrap_mobile">
-          <div className="inner_mobile">
-            <Link href="/main">
-              <h1>
-                <span className="hiddenZoneV">GOPIZZA</span>
-              </h1>
-            </Link>
-            <div className="right">
-              <Link href="/find" className="link_find">
-                <span className="hiddenZoneV">매장찾기</span>
-              </Link>
-              <button type="button" className={`btn_menu ${showMobileLayer ? "on" : ""}`} onClick={handlerMobileMenu}>
-                <span className="hiddenZoneV">메뉴</span>
-              </button>
+          {showMobileLayer ? (
+            <div className="layer_menu">
+              <MobileHeader handlerMobileMenu={handlerMobileMenu} />
+              {mobileMenu.map((el) => (
+                <div
+                  key={el}
+                  className={el === "브랜드" ? (isActiveMenu === "brand" ? "active box_menu" : "box_menu") : isActiveMenu === "franchise" ? "active" : "box_menu"}
+                >
+                  <button onClick={() => handlerMenu(el === "브랜드" ? "brand" : "franchise")}>{el}</button>
+                  <ul>
+                    {(el === "브랜드" ? brandSubmenus : franchiseSubmenus).map((submenu) => (
+                      <li
+                        key={submenu.name}
+                        onClick={() => {
+                          handlerMobileMoveMenu(submenu.url);
+                        }}
+                      >
+                        {submenu.name}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
-          </div>
-          <div className="layer_menu">
-            {mobileMenu.map((el) => (
-              <div key={el} className={el === "브랜드" ? (isActiveMenu === "brand" ? "active" : "") : isActiveMenu === "franchise" ? "active" : ""}>
-                <button onClick={() => handlerMenu(el === "브랜드" ? "brand" : "franchise")}>{el}</button>
-                <ul>
-                  {(el === "브랜드" ? brandSubmenus : franchiseSubmenus).map((submenu) => (
-                    <li
-                      key={submenu.name}
-                      onClick={() => {
-                        handlerMobileMoveMenu(submenu.url);
-                      }}
-                    >
-                      {submenu.name}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          ) : (
+            <MobileHeader handlerMobileMenu={handlerMobileMenu} />
+          )}
         </div>
         <div className="inner">
           <Link href="/main">
