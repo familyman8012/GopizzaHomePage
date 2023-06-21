@@ -64,10 +64,6 @@ export const HeaderWrap = styled.header`
   .layer_menu {
     display: none;
 
-    &.on {
-      display: block;
-    }
-
     span {
       color: #fff;
     }
@@ -75,6 +71,17 @@ export const HeaderWrap = styled.header`
 
   ${mq[0]} {
     height: 60px;
+
+    &.on {
+      .inner_mobile {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      .layer_menu {
+        display: block;
+      }
+    }
 
     .inner {
       display: none;
@@ -120,10 +127,6 @@ export const HeaderWrap = styled.header`
     }
 
     .layer_menu {
-      &.on {
-        display: block;
-      }
-
       position: fixed;
       z-index: 10;
       top: 60px;

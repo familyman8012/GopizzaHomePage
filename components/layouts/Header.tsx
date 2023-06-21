@@ -53,7 +53,7 @@ function Header() {
 
   return (
     <>
-      <HeaderWrap>
+      <HeaderWrap className={showMobileLayer ? "on" : ""}>
         <div className="wrap_mobile">
           <div className="inner_mobile">
             <Link href="/main">
@@ -70,7 +70,7 @@ function Header() {
               </button>
             </div>
           </div>
-          <div className={`layer_menu ${showMobileLayer ? "on" : ""}`}>
+          <div className="layer_menu">
             {mobileMenu.map((el) => (
               <div key={el} className={el === "브랜드" ? (isActiveMenu === "brand" ? "active" : "") : isActiveMenu === "franchise" ? "active" : ""}>
                 <button onClick={() => handlerMenu(el === "브랜드" ? "brand" : "franchise")}>{el}</button>
