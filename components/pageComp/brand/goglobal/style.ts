@@ -86,6 +86,7 @@ export const GoglobalTxtWrap = styled.section`
     }
 
     p {
+      width: max-content;
       font-size: 16px;
       line-height: 30px;
     }

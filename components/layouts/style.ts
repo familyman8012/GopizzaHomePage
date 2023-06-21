@@ -108,7 +108,13 @@ export const HeaderWrap = styled.header`
         .btn_menu {
           width: 26px;
           height: 20px;
-          background: url("/images/main/mobile/btn_menu.svg") no-repeat left center / 100%;
+          background: url("/images/common/mobile/btn_menu.svg") no-repeat left center / 100%;
+
+          &.on {
+            width: 26px;
+            height: 24px;
+            background: url("/images/common/mobile/btn_close.svg") no-repeat left center / 24px 24px;
+          }
         }
       }
     }
@@ -143,7 +149,19 @@ export const HeaderWrap = styled.header`
       }
 
       button {
+        position: relative;
         font-weight: bold;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+          width: 24px;
+          height: 24px;
+          background: url("/images/common/mobile/arrow_menu.svg") no-repeat left center / 100%;
+        }
       }
 
       li {
@@ -157,9 +175,15 @@ export const HeaderWrap = styled.header`
         overflow: hidden;
         transition: max-height 0.2s ease-in-out;
         max-height: 0;
+      }
 
-        &.active {
+      .active {
+        ul {
           max-height: 300px; /* 이 값은 실제 필요한 값에 따라 조정해야 합니다. */
+        }
+        button:after {
+          transform: rotate(180deg) translateY(-50%);
+          transform-origin: 50% 0;
         }
       }
     }
@@ -371,6 +395,10 @@ export const FooterMobileWrap = styled.footer`
       }
     }
 
+    .box_global ul {
+      border-bottom: 1px solid rgba(112, 112, 112, 0.2);
+    }
+
     .box_global,
     .box_privacy {
       width: 292px;
@@ -399,7 +427,6 @@ export const FooterMobileWrap = styled.footer`
         display: flex;
         margin: 10px 0 0;
         padding-bottom: 15.5px;
-        border-bottom: 1px solid #707070;
         li {
           width: fit-content;
           text-align: center;

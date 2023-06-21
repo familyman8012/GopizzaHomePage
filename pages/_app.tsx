@@ -34,6 +34,14 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => <Layout>{page}</Layout>);
   const router = useRouter();
 
+  // function setScreenSize() {
+  //   let vh = window.innerHeight * 0.01;
+  //   document.documentElement.style.setProperty("--vh", `${vh}px`);
+  // }
+  // useEffect(() => {
+  //   setScreenSize();
+  // }, []);
+
   useEffect(() => {
     if (findStore.latitude === null && !router.asPath.includes("campaign")) {
       findStore.getPosition();

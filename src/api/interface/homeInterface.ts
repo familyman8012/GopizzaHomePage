@@ -5,6 +5,11 @@ interface BasicList {
   landing_url: string;
   subject: string;
 }
+
+interface MainVisualList extends BasicList {
+  mobile_image_url: string;
+}
+
 interface YoutubeList extends Omit<BasicList, "brand_main_banner_idx"> {
   brand_main_youtube_idx: number;
 }
@@ -31,7 +36,7 @@ export interface PromotionList extends Omit<BasicList, "brand_main_banner_idx" |
 
 export interface IMainVisual {
   total_count: number;
-  list: BasicList[];
+  list: MainVisualList[];
 }
 
 export interface IYoutube extends Omit<IMainVisual, "list"> {

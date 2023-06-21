@@ -344,6 +344,7 @@ export const OrderItem = styled.li`
   text-align: center;
 
   h2 {
+    display: block;
     color: #fff;
   }
 

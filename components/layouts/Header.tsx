@@ -3,9 +3,11 @@ import { observer } from "mobx-react";
 import { mobileHeader } from "MobxFarm/store";
 import Link from "next/link";
 import { Router, useRouter } from "next/router";
-import { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { HeadMenuUrl, HeadAsideUrl, FooterMenu } from "./constant";
 import { HeaderWrap } from "./style";
+
+const mobileMenu = ["브랜드", "가맹안내"];
 
 function Header() {
   const [showMobileLayer, setshowMobileLayer] = useState(false);
@@ -15,6 +17,7 @@ function Header() {
   const brandSubmenus = [
     { name: "브랜드 소개", url: "/brand" },
     { name: "메뉴", url: "/menu" },
+    { name: "매장찾기", url: "/find" },
     { name: "이벤트", url: "/event" },
     { name: "단체/제휴문의", url: "/order" },
   ];
@@ -26,13 +29,27 @@ function Header() {
     { name: "가맹문의", url: "/start/inquiry" },
   ];
 
-  const handlerMenu = (menu: string) => {
-    if (isActiveMenu === menu) {
-      setIsActiveMenu("");
-    } else {
-      setIsActiveMenu(menu);
-    }
-  };
+  const handlerMenu = useCallback(
+    (menu: string) => {
+      if (isActiveMenu === menu) {
+        setIsActiveMenu("");
+      } else {
+        setIsActiveMenu(menu);
+      }
+    },
+    [isActiveMenu]
+  );
+
+  const handlerMobileMenu = useCallback(() => {
+    setshowMobileLayer((prev) => !prev);
+    showMobileLayer ? document.body.classList.remove("overflowhidden") : document.body.classList.add("overflowhidden");
+  }, [showMobileLayer]);
+
+  const handlerMobileMoveMenu = useCallback((url: string) => {
+    document.body.classList.remove("overflowhidden");
+    router.push(url);
+    setshowMobileLayer(false);
+  }, []);
 
   return (
     <>
@@ -48,43 +65,29 @@ function Header() {
               <Link href="/find" className="link_find">
                 <span className="hiddenZoneV">매장찾기</span>
               </Link>
-              <button type="button" className="btn_menu" onClick={() => setshowMobileLayer((prev) => !prev)}>
+              <button type="button" className={`btn_menu ${showMobileLayer ? "on" : ""}`} onClick={handlerMobileMenu}>
                 <span className="hiddenZoneV">메뉴</span>
               </button>
             </div>
           </div>
           <div className={`layer_menu ${showMobileLayer ? "on" : ""}`}>
-            <button onClick={() => handlerMenu("brand")}>브랜드</button>
-            <ul className={isActiveMenu === "brand" ? "active" : ""}>
-              {brandSubmenus.map((submenu) => (
-                <li key={submenu.name}>
-                  <span
-                    onClick={() => {
-                      router.push(submenu.url);
-                      setshowMobileLayer(false);
-                    }}
-                  >
-                    {submenu.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <button onClick={() => handlerMenu("franchise")}>가맹안내</button>
-            <ul className={isActiveMenu === "franchise" ? "active" : ""}>
-              {franchiseSubmenus.map((submenu) => (
-                <li key={submenu.name}>
-                  <span
-                    onClick={() => {
-                      router.push(submenu.url);
-                      setshowMobileLayer(false);
-                    }}
-                  >
-                    {submenu.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            {mobileMenu.map((el) => (
+              <div key={el} className={el === "브랜드" ? (isActiveMenu === "brand" ? "active" : "") : isActiveMenu === "franchise" ? "active" : ""}>
+                <button onClick={() => handlerMenu(el === "브랜드" ? "brand" : "franchise")}>{el}</button>
+                <ul>
+                  {(el === "브랜드" ? brandSubmenus : franchiseSubmenus).map((submenu) => (
+                    <li
+                      key={submenu.name}
+                      onClick={() => {
+                        handlerMobileMoveMenu(submenu.url);
+                      }}
+                    >
+                      {submenu.name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
         <div className="inner">

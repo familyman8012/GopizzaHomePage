@@ -1,10 +1,17 @@
 import { IndexWrap } from "ComponentsFarm/pageComp/index/style";
 import Link from "next/link";
-import { ReactElement, useCallback, useState } from "react";
+import { ReactElement, useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
 function Index() {
+  function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }
+  useEffect(() => {
+    setScreenSize();
+  }, []);
   return (
     <>
       <IndexWrap>
