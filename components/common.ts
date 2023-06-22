@@ -363,6 +363,12 @@ const reset = css`
     font-family: "solano";
   }
 
+  .form_txt {
+    margin-bottom: 8rem;
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
   .box_inp {
     margin-bottom: 1.6rem;
 
@@ -453,6 +459,10 @@ const reset = css`
       width: 22.1rem;
 
       border-radius: 2px 0 0 2px;
+    }
+
+    &::placeholder {
+      color: #ddd;
     }
   }
 
@@ -594,6 +604,20 @@ const reset = css`
     }
   }
 
+  .box_textarea {
+    position: relative;
+
+    .fake-placeholder {
+      position: absolute;
+      top: 2.4rem;
+      left: 2.4rem;
+      pointer-events: none;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      color: #aaa;
+    }
+  }
+
   button.submit {
     display: block;
     width: 36rem;
@@ -621,6 +645,7 @@ const reset = css`
       margin-bottom: 50px;
       font-size: 12px;
       color: var(--color-orange);
+      text-align: center;
     }
     .box_inp {
       margin-bottom: 20px;
@@ -686,6 +711,11 @@ const reset = css`
           }
         }
       }
+
+      &.box_radio > label {
+        padding-left: 9px;
+      }
+
       &:not(.box_email_area) {
         input,
         select,
@@ -726,7 +756,7 @@ const reset = css`
         line-height: 1;
       }
     }
-    .box_detail_contents {
+    .box_textarea {
       .fake-placeholder {
         top: 12px;
         left: 12.5px;

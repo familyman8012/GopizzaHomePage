@@ -13,9 +13,13 @@ import Store from "ComponentsFarm/popup/Store";
 import { ICustomer } from "PagesFarm/order/customer";
 import { mq } from "ComponentsFarm/common";
 
-const FormWrap = styled.form`
+export const FormWrap = styled.form`
   position: relative;
   margin: 11rem 0 0 11rem;
+
+  h4 {
+    color: var(--color-black);
+  }
 
   .txt_error {
     padding: 1rem 0 0 22.5rem;
@@ -56,7 +60,7 @@ const FormWrap = styled.form`
   }
 
   ${mq[0]} {
-    margin: 36px 20px 0;
+    margin: 36px 20px 0 !important;
 
     .style_radio {
       width: 100%;

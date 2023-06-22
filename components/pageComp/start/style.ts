@@ -44,6 +44,18 @@ export const StartWrap = styled.div`
     }
   }
 
+  &.wrap_inquiry {
+    padding-bottom: 11.95rem;
+
+    form {
+      margin-left: 0;
+    }
+
+    ${mq[0]} {
+      padding-bottom: 0;
+    }
+  }
+
   ${mq[0]} {
     padding-bottom: 90px !important;
 

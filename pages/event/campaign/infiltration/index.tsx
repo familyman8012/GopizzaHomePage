@@ -12,7 +12,6 @@ import { NextSeo } from "next-seo";
 import { CampSeo } from "ComponentsFarm/Seo";
 import { SwiperSlide } from "swiper/react";
 import VisibilitySensorSwiper from "ComponentsFarm/pageComp/event/campaign/VisibilitySensorSwiper";
-import { mq } from "ComponentsFarm/common";
 
 const CapmpaignWrap = styled.div`
   overflow-x: hidden;
@@ -265,7 +264,7 @@ const CapmpaignWrap = styled.div`
         width: 100vw;
         font-size: 12px;
         color: #fff;
-        margin: 10px 0;
+        margin: 5px 0;
       }
     }
   }
@@ -335,6 +334,9 @@ const CapmpaignWrap = styled.div`
   }
 
   @media (max-width: 670px) {
+    .box_inp {
+      margin-bottom: 16px;
+    }
     .swiper_btns .swiper-button-prev,
     .swiper_btns .swiper-button-next {
       display: none;
@@ -417,6 +419,9 @@ const CapmpaignWrap = styled.div`
     }
     .box_4 .box_inp.box_inp3 {
       top: calc(43.2% + 3.2rem);
+    }
+    .box_4 label {
+      width: auto;
     }
 
     .box_inp.box_inp5 .btn_apply {
