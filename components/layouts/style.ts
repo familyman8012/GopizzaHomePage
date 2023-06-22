@@ -2,12 +2,10 @@ import styled from "@emotion/styled";
 import { mq } from "ComponentsFarm/common";
 
 export const HeaderWrap = styled.header`
+  position: relative;
+  z-index: 100;
   height: 12rem;
   background: #ff4600;
-
-  .inner_mobile {
-    display: none;
-  }
 
   .inner {
     display: flex;
@@ -56,17 +54,6 @@ export const HeaderWrap = styled.header`
         }
       }
     }
-
-    .btn_mobile_menu {
-      display: none;
-    }
-  }
-  .layer_menu {
-    display: none;
-
-    span {
-      color: #fff;
-    }
   }
 
   ${mq[0]} {
@@ -75,8 +62,32 @@ export const HeaderWrap = styled.header`
     .inner {
       display: none;
     }
+  }
+`;
 
-    .inner_mobile {
+export const MobileHeaderWrap = styled.div`
+  display: none;
+  .header {
+    display: none;
+  }
+  .layer_menu {
+    display: none;
+
+    span {
+      color: #fff;
+    }
+  }
+  &.on {
+    .header {
+    }
+    .layer_menu {
+      display: block;
+    }
+  }
+
+  ${mq[0]} {
+    display: block;
+    .header {
       display: flex;
       align-items: center;
       height: 60px;
@@ -115,15 +126,9 @@ export const HeaderWrap = styled.header`
       }
     }
 
-    &.on {
-      .layer_menu {
-        display: block;
-      }
-    }
-
     .layer_menu {
       position: fixed;
-      z-index: 10;
+      z-index: 100;
       top: 60px;
       width: 100%;
       height: calc(100vh - 60px);

@@ -39,6 +39,10 @@ export const OrderWrap = styled.main`
     display: flex;
     justify-content: center;
 
+    &.mobile_list {
+      display: none;
+    }
+
     li {
       width: 23rem;
       height: 8rem;
@@ -66,19 +70,19 @@ export const OrderWrap = styled.main`
 
   ${mq[0]} {
     width: 100%;
-    padding: 0 0 100px;
+    padding: 0 0 90px;
 
     .list_tab {
       box-shadow: 0 -1px 24px 0 rgba(0, 0, 0, 0.16);
     }
     .tit2 {
       display: block;
-      margin-top: 24px;
+      margin-top: 36px;
       font-size: 24px;
     }
 
     .txt {
-      margin-top: 16px;
+      margin: 24px 0 50px;
       font-size: 14px;
 
       &.mobile_line {
@@ -87,16 +91,27 @@ export const OrderWrap = styled.main`
     }
 
     .list_company {
-      padding: 0 20px;
+      &.pc_list {
+        display: none;
+      }
+      &.mobile_list {
+        display: grid;
+        margin-top: 35px;
+      }
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px 0;
+      justify-items: center;
+      margin: 0 auto;
+      padding: 0 10px;
       li {
-        width: auto;
+        width: 100px;
         height: auto;
         &:last-of-type {
           margin-right: 0;
         }
       }
       &.company1 {
-        margin-top: 0;
+        margin-top: 35px;
         li {
           margin-right: 10px;
         }
@@ -412,11 +427,11 @@ export const LocationWrap = styled.main`
   }
 
   ${mq[0]} {
-    padding: 0 0 100px;
+    padding: 0 0 90px;
 
     .list_tab {
       position: static;
-      margin-bottom: 24px;
+      margin-bottom: 36px;
       box-shadow: 0 -1px 24px 0 rgba(0, 0, 0, 0.16);
     }
 

@@ -56,7 +56,7 @@ const FormWrap = styled.form`
   }
 
   ${mq[0]} {
-    margin: 36px 20px;
+    margin: 36px 20px 0;
 
     .style_radio {
       width: 100%;

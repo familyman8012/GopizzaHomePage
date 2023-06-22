@@ -42,7 +42,7 @@ export const MenuWrap = styled.main`
   }
 
   ${mq[0]} {
-    padding-top: 0;
+    padding: 0 0 90px;
 
     .wrp_tip {
       width: 100%;
@@ -205,6 +205,9 @@ export const Nav = styled.div`
     h4 {
       display: block;
       font-size: 14px;
+    }
+    h4 {
+      margin-bottom: 0;
     }
     .bar {
       margin: 0 5px;

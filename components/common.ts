@@ -329,6 +329,8 @@ const reset = css`
     }
 
     ${mq[0]} {
+      position: relative;
+      z-index: 1;
       overflow: auto hidden;
       justify-content: flex-start;
       margin: 0;
@@ -766,7 +768,7 @@ const reset = css`
     button.submit {
       width: 100%;
       height: 50px;
-      margin: 53px 0 75px;
+      margin: 53px 0 0;
       font-size: 16px;
       line-height: 50px;
       border-radius: 25px;

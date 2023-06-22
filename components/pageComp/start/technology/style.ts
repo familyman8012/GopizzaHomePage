@@ -19,7 +19,7 @@ export const TechWrap = styled.div`
   }
 
   ${mq[0]} {
-    padding-bottom: 105px;
+    padding-bottom: 0;
     background-position: center bottom;
     background-size: 100% auto;
     .btn_inquiry {

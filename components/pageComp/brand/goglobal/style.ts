@@ -4,6 +4,11 @@ import { mq } from "ComponentsFarm/common";
 
 export const GlobalWrap = styled.div`
   background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/goglobal/bg_globalx2.webp") no-repeat center bottom / 100%;
+
+  ${mq[0]} {
+    padding-bottom: 60px;
+    background-size: auto 650px;
+  }
 `;
 
 export const GoGlobalListSection = styled.div`
@@ -339,15 +344,14 @@ export const NextDestinationWrap = styled.div`
     }
 
     h4 {
-      position: relative;
-      top: 30px;
-      margin-top: 50px;
+      margin: 35px 0 0;
       font-size: 36px;
+      line-height: 1;
       font-weight: bold;
     }
 
     .box_txt {
-      margin-top: 50px;
+      margin-top: 24px;
 
       em {
         font-size: 24px;

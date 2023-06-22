@@ -163,8 +163,14 @@ export const FindWrap = styled.main`
   }
   ${mq[0]} {
     width: 100%;
-    margin: 35px auto 0;
-    padding-bottom: 70px;
+    margin: 0 auto;
+    padding-bottom: 90px;
+
+    h2 {
+      display: block;
+      margin: 36px 0 30 px;
+      font-size: 24px;
+    }
 
     .wrp_filter {
       display: block;

@@ -45,6 +45,8 @@ export const StartWrap = styled.div`
   }
 
   ${mq[0]} {
+    padding-bottom: 90px !important;
+
     .list_tab {
       box-shadow: 0 -1px 24px 0 rgba(0, 0, 0, 0.16);
     }
@@ -170,7 +172,7 @@ export const BtnInquiryWrap = styled.span`
   ${mq[0]} {
     width: 280px;
     height: 60px;
-    margin: 46px auto 51px;
+    margin: 46px auto 0;
     font-size: 18px;
 
     line-height: 60px;

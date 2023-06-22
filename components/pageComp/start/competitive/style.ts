@@ -169,12 +169,12 @@ export const Strong3Wrap = styled.section`
     .video_wrap {
       overflow: hidden;
       width: calc(100vw - 40px);
-      margin: 40px auto 48px !important;
+      margin: 36px auto 48px !important;
       border-radius: 10px;
 
       .box_img {
         width: 100%;
-        height: auto;
+        height: 180px;
       }
     }
 

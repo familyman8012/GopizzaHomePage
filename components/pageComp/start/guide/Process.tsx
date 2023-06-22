@@ -1,3 +1,4 @@
+import useDebounce from "HookFarm/useDebounce";
 import { useState, useEffect, FC } from "react";
 import { ProcessWrap } from "./style";
 
@@ -7,8 +8,6 @@ interface ProcessItem {
 }
 
 function Process() {
-  const [windowWidth, setWindowWidth] = useState(0);
-
   const processArr = [
     { num: "01", txt: `창업문의\n가맹상담` },
     { num: "02", txt: `상권분석\n입지선정` },
@@ -18,32 +17,7 @@ function Process() {
     { num: "06", txt: `사후\n관리` },
   ];
 
-  const debounce = (func: (...args: any[]) => void, wait: number) => {
-    let timeout: NodeJS.Timeout;
-    return function executedFunction(...args: any[]) {
-      const later = () => {
-        clearTimeout(timeout);
-        func(...args);
-      };
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
-  };
-
-  useEffect(() => {
-    // Initial width set
-    setWindowWidth(window.innerWidth);
-    // Listen for window resize
-    const handleResize = debounce(() => {
-      setWindowWidth(window.innerWidth);
-    }, 100);
-    window.addEventListener("resize", handleResize);
-    // Cleanup
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
+  const { windowWidth } = useDebounce();
   const endIndex = windowWidth > 599 ? 3 : 6;
 
   return (

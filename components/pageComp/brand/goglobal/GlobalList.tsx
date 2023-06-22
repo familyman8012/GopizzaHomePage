@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { GlobalListWrap, GlobalListItemWrap, Airplane, GoGlobalListSection } from "./style";
 import { Waypoint } from "react-waypoint";
 import NextDestination from "./NextDestination";
+import useDebounce from "HookFarm/useDebounce";
 
 const GlobalListArr = [
   {
@@ -54,8 +55,10 @@ const GlobalListArr = [
 function GlobalListItem({ data }: any) {
   const [show, setShow] = useState(false);
 
+  const { windowWidth } = useDebounce();
+
   return (
-    <Waypoint onEnter={() => setShow(true)} onLeave={() => setShow(false)} bottomOffset="700px">
+    <Waypoint onEnter={() => setShow(true)} onLeave={() => setShow(false)} bottomOffset={windowWidth <= 599 ? "430px" : "700px"}>
       <GlobalListItemWrap className={show ? "on" : ""}>
         <div className="wrap_item">
           <div className="country">{data.country}</div>
@@ -99,7 +102,6 @@ function GlobalList() {
   return (
     <GoGlobalListSection>
       <Airplane className={showAirplane ? "on" : ""} />
-
       <Waypoint onEnter={() => setShowAirplane(true)} onLeave={() => setShowAirplane(false)} bottomOffset="400px">
         <GlobalListWrap>
           {GlobalListArr.map((el, i) => (

@@ -227,22 +227,14 @@ export const BestMenuWrap = styled.section`
     }
   }
 
-  @media (hover: hover) and (pointer: fine) {
-    .box_thumb {
-      &:hover {
-        &::before,
-        .txt {
-          display: block;
-        }
-      }
-    }
-  }
-
   ${mq[0]} {
     width: 100%;
     margin: 0 auto 70px;
+    padding: 0;
+
     h3 {
       margin-top: 32px;
+      padding: 0 20px;
     }
     article {
       margin-top: 8px;
@@ -253,6 +245,7 @@ export const BestMenuWrap = styled.section`
       }
 
       .box_txt {
+        padding: 0 20px;
         .desc {
           margin: 17px 0 32px;
         }
@@ -266,6 +259,7 @@ export const BestMenuWrap = styled.section`
       }
       .box_swiper {
         margin: 38px 0 0;
+        padding-left: 20px;
 
         .progress_bar {
           display: none;

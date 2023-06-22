@@ -204,7 +204,7 @@ const PageInquiry = styled.div`
     }
 
     ${FormWrap} {
-      margin-top: 36.5px;
+      margin-top: 36px;
       h4 {
         margin-bottom: 28px;
         font-size: 24px;

@@ -84,7 +84,7 @@ export const EventWrap = styled.main`
 
   ${mq[0]} {
     width: 100%;
-    padding: 0 0 48px 0;
+    padding: 0 0 90px 0;
 
     .list_tab {
       box-shadow: 0 -1px 24px 0 rgba(0, 0, 0, 0.16);
@@ -180,7 +180,7 @@ export const Board = styled.div`
 
   ${mq[0]} {
     width: 100%;
-    padding: 40px 20px;
+    padding: 36px 20px;
 
     .box_tit {
       margin-bottom: 19.5px;

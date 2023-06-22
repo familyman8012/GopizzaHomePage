@@ -98,10 +98,14 @@ export const YouWantPizzaWrap = styled.section`
       font-size: 24px;
       line-height: normal;
     }
+    .wrap_list {
+      margin-right: 0;
+    }
     .list {
+      overflow: auto hidden;
       display: flex;
       width: 100vw;
-      overflow: auto hidden;
+      padding-right: 20px;
       scroll-snap-type: x mandatory;
 
       &::-webkit-scrollbar {
@@ -475,7 +479,6 @@ export const KeepGoingWrap = styled.section`
   }
 
   .progress_bar {
-    display: none;
     position: relative;
     width: 95rem;
     height: 1.2rem;
@@ -535,11 +538,14 @@ export const KeepGoingWrap = styled.section`
       }
 
       .box_history {
-        margin: 0px 20px 0 0;
-        padding-left: 20px;
+        margin: 0;
 
         .wrap_swiper {
           height: auto;
+
+          .swiper {
+            padding: 0 20px;
+          }
         }
 
         .swiper-slide {
@@ -547,7 +553,9 @@ export const KeepGoingWrap = styled.section`
         }
 
         .progress_bar {
-          display: none;
+          display: block;
+          width: 90vw;
+          margin: 20px;
         }
 
         .thumb {
@@ -610,7 +618,7 @@ export const BrandBiWrap = styled.section`
   }
 
   ${mq[0]} {
-    margin-top: 70px;
+    margin: 70px 0 90px;
 
     p {
       margin: 18px 0 38px;
