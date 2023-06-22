@@ -196,25 +196,34 @@ const ModalWrapper = styled.div<{ center?: boolean }>`
 
   .modal-dialog {
     margin: 1.75rem auto;
+    .mobileline {
+      display: none;
+    }
 
     ${mq[0]} {
       ${ApplicationWrap} {
-        width: 320px;
-        padding: 5.8rem 0 5.3rem;
+        width: calc(100vw - 40px);
+        padding: 30px;
+        border-radius: 10px;
+
+        .mobileline {
+          display: block;
+        }
 
         .tit {
-          font-size: 24px;
+          margin-bottom: 20px;
+          font-size: 27px;
         }
         .txt_success {
-          font-size: 13px;
+          font-size: 16px;
           margin: 10px 0;
         }
         .txt_notice {
-          font-size: 11px;
-          margin-bottom: 25px;
+          margin: 20px 0 0;
+          font-size: 12px;
         }
         .btn_agree {
-          width: 300px;
+          width: 100%;
           height: 40px;
           font-size: 13px;
           border-radius: 40px;
@@ -353,6 +362,17 @@ const ModalWrapper = styled.div<{ center?: boolean }>`
       .modal-dialog {
         transform: translateY(-50px);
       }
+    }
+  }
+  ${mq[0]} {
+    .btn_close {
+      top: auto;
+      left: 50%;
+      right: auto;
+      bottom: -62px;
+      margin-left: -23px;
+      width: 46px;
+      height: 46px;
     }
   }
 `;

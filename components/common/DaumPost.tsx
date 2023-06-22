@@ -67,7 +67,7 @@ const DaumPost = ({ isOpenPost, setIsOpenPost, setAddress, setAddressDetail }: I
 export default DaumPost;
 
 const DaumPostPopWrap = styled.div`
-  position: absolute;
+  position: fixed;
   z-index: 3;
   top: 50%;
   left: 50%;

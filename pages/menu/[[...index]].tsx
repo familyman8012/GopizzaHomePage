@@ -15,6 +15,7 @@ import { NextSeo } from "next-seo";
 import Modal from "ComponentsFarm/common/Modal";
 import DOMPurify from "isomorphic-dompurify";
 import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
+import { mq } from "ComponentsFarm/common";
 
 export const TipWrap = styled.div`
   position: relative;
@@ -70,6 +71,34 @@ export const TipWrap = styled.div`
     .txt_box span {
       display: block;
       white-space: pre-wrap;
+    }
+  }
+  ${mq[0]} {
+    width: calc(100vw - 40px);
+    height: 438px;
+    padding: 20px;
+    border-radius: 10px;
+
+    p.tit {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      overflow-y: auto;
+      display: block;
+      max-height: calc(100% - 110px);
+
+      li {
+        margin-bottom: 30px;
+        img {
+          max-width: 200px;
+          margin: 0 auto;
+        }
+
+        .box_txt {
+          margin-top: 10px;
+        }
+      }
     }
   }
 `;

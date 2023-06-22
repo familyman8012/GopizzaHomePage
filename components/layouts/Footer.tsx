@@ -8,6 +8,7 @@ import styled from "@emotion/styled";
 import Modal from "ComponentsFarm/common/Modal";
 import DOMPurify from "isomorphic-dompurify";
 import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
+import { mq } from "ComponentsFarm/common";
 
 export const PrivacyWrap = styled.div`
   position: relative;
@@ -24,6 +25,27 @@ export const PrivacyWrap = styled.div`
     margin: 5.6rem auto 0;
     padding-right: 4.5rem;
     font-size: 1.6rem;
+  }
+
+  ${mq[0]} {
+    width: calc(100vw - 40px);
+    height: 438px;
+    padding: 30px 0;
+    border-radius: 10px;
+
+    .tit {
+      margin: 0 0 21px !important;
+      font-size: 27px !important;
+    }
+    .box_info {
+      overflow-y: auto;
+      width: 100%;
+      max-height: calc(100% - 60px);
+      height: auto;
+      margin: 0 auto;
+      padding: 0 30px;
+      font-size: 12px;
+    }
   }
 `;
 

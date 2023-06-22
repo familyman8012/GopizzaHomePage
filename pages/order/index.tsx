@@ -61,15 +61,7 @@ function Group() {
       <h2 className="tit tit2">단체주문 예약 / 문의</h2>
       <p className="txt">정보 입력시, 동그라미 표시는 필수입력 항목입니다.</p>
       <Form type={"group"} />
-      {Array.from({ length: 3 }).map((_, i) => (
-        <ul className={`list_company pc_list company${i + 1}`} key={`ul_${i}`}>
-          {Array.from({ length: 4 }).map((_, j) => (
-            <li key={`li_${i}_${j}`}>
-              <img src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/img_comp${i * 4 + j + 1}x2.webp`} alt={company[i * 4 + j]} />
-            </li>
-          ))}
-        </ul>
-      ))}
+
       <ul className="list_company mobile_list">
         {Array.from({ length: 12 }).map((_, i) => (
           <li key={`li_${i}`}>

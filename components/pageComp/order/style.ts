@@ -23,10 +23,6 @@ export const OrderWrap = styled.main`
     margin-top: 1.6rem;
     font-size: 1.6rem;
     text-align: center;
-
-    &.mobile_line {
-      display: none;
-    }
   }
 
   .bnr {
@@ -36,35 +32,14 @@ export const OrderWrap = styled.main`
   }
 
   .list_company {
-    display: flex;
-    justify-content: center;
-
-    &.mobile_list {
-      display: none;
-    }
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8.3rem 0;
+    justify-items: center;
+    margin: 12rem auto 0;
     li {
       width: 23rem;
       height: 8rem;
-      &:last-of-type {
-        margin-right: 0;
-      }
-    }
-    &.company1 {
-      margin-top: 12rem;
-      li {
-        margin-right: 4.4rem;
-      }
-    }
-
-    &.company2 {
-      margin: 8.3rem 0 9rem;
-      li {
-        margin-right: 6.6rem;
-      }
-    }
-    &.company3 li {
-      margin-right: 4.4rem;
     }
   }
 
@@ -84,24 +59,13 @@ export const OrderWrap = styled.main`
     .txt {
       margin: 24px 0 50px;
       font-size: 14px;
-
-      &.mobile_line {
-        display: block;
-      }
     }
 
     .list_company {
-      &.pc_list {
-        display: none;
-      }
-      &.mobile_list {
-        display: grid;
-        margin-top: 35px;
-      }
       grid-template-columns: repeat(3, 1fr);
       gap: 10px 0;
       justify-items: center;
-      margin: 0 auto;
+      margin: 35px auto 0;
       padding: 0 10px;
       li {
         width: 100px;
@@ -109,22 +73,6 @@ export const OrderWrap = styled.main`
         &:last-of-type {
           margin-right: 0;
         }
-      }
-      &.company1 {
-        margin-top: 35px;
-        li {
-          margin-right: 10px;
-        }
-      }
-
-      &.company2 {
-        margin: 20px 0;
-        li {
-          margin-right: 10px;
-        }
-      }
-      &.company3 li {
-        margin-right: 10px;
       }
     }
   }

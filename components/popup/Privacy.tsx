@@ -42,16 +42,23 @@ export const PrivacyWrap = styled.div`
   }
 
   ${mq[0]} {
-    width: 320px;
-    .btn_close {
-      top: auto;
-      bottom: -55px;
-      left: 50%;
-      right: auto;
-      width: 40px;
-      height: 40px;
+    width: calc(100vw - 40px);
+    height: 438px;
+    padding: 30px 0;
+    border-radius: 10px;
+
+    .tit {
+      margin: 0 0 21px !important;
+      font-size: 27px !important;
+    }
+    .box_info {
+      overflow-y: auto;
+      width: 100%;
+      max-height: calc(100% - 60px);
+      height: auto;
+      margin: 0 auto;
+      padding: 0 30px;
       font-size: 12px;
-      transform: translateX(-50%);
     }
   }
 `;

@@ -470,6 +470,10 @@ const reset = css`
 
   textarea {
     height: 20rem;
+    ${mq[0]} {
+      padding: 9px !important;
+      font-size: 13px;
+    }
   }
 
   dialog {
