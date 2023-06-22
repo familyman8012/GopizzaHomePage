@@ -41,6 +41,11 @@ export const VideoWrap = styled.div`
 
   ${mq[0]} {
     margin-top: 0;
+
+    .box_img iframe {
+      height: 180px;
+      border-radius: 10px;
+    }
   }
 `;
 
@@ -969,6 +974,7 @@ export const GovenWrap = styled.section`
       .tit1 {
         font-size: 16px;
       }
+
       .tit2 {
         margin-bottom: 10px;
         font-size: 60px;
@@ -977,11 +983,27 @@ export const GovenWrap = styled.section`
           margin-left: 90px;
         }
 
+        &.line2 {
+          &:before {
+            display: none;
+          }
+        }
+
         &:before {
           top: 30px;
           left: 135px;
           width: 58.8px;
           height: 5px;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          z-index: 10;
+          top: 0;
+          left: 0;
+          width: calc(100% - 40px);
+          height: 100%;
         }
 
         .swiper {
@@ -1006,7 +1028,18 @@ export const GovenWrap = styled.section`
       }
 
       .box_thumb {
+        position: relative;
         height: 216px;
+
+        &:after {
+          content: "";
+          position: absolute;
+          z-index: 10;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
       }
       ${TxtQuotes} {
         .txt1 {

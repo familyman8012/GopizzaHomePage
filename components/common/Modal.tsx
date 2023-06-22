@@ -210,6 +210,12 @@ const ModalWrapper = styled.div<{ center?: boolean }>`
           display: block;
         }
 
+        &.pop_success {
+          .tit {
+            width: max-content;
+          }
+        }
+
         .tit {
           margin-bottom: 20px;
           font-size: 27px;

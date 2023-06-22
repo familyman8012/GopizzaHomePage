@@ -4,8 +4,8 @@ import Modal from "ComponentsFarm/common/Modal";
 function Application({ open, close }: any) {
   return (
     <Modal open={open} onClose={close}>
-      <ApplicationWrap>
-        <p className="tit">신청 완료</p>
+      <ApplicationWrap className="pop_success">
+        <p className="tit">신청이 완료되었습니다.</p>
         <p className="txt_success">정상적으로 접수 처리되었습니다.</p>
         <p className="txt_notice">
           추후 창업 프로모션에 관한 정보를 <br className="mobileline" /> 받아보시는데 동의하십니까? <br className="mobileline" />
