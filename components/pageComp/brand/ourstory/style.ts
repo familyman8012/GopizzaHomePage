@@ -603,7 +603,7 @@ export const BrandBiWrap = styled.section`
   .banner_2area {
     display: flex;
     justify-content: center;
-    span {
+    picture {
       width: 62rem;
       &:nth-of-type(1) {
         margin-right: 4rem;

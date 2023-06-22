@@ -533,8 +533,8 @@ export const SupportWrap = styled.section`
     &:before {
       position: absolute;
       z-index: -1;
-      top: -256px;
-      left: -34px;
+      top: -32rem;
+      left: -3.4rem;
       content: "";
       width: 36.2rem;
       height: 33.3rem;

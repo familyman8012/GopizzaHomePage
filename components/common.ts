@@ -1188,7 +1188,7 @@ const reset = css`
     }
   }
 
-  @media (min-width: 501px) and (max-width: 670px) {
+  @media (min-width: 600px) and (max-width: 670px) {
     html {
       font-size: 3.7px;
     }

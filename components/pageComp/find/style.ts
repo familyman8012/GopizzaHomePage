@@ -191,6 +191,7 @@ export const FindWrap = styled.main`
       }
 
       .box_search_keyword {
+        width: 100%;
         margin-top: 15px;
         height: 40px;
 
@@ -202,6 +203,9 @@ export const FindWrap = styled.main`
         input {
           padding: 0 16px;
           font-size: 14px;
+        }
+        button {
+          margin-left: auto;
         }
       }
     }
@@ -219,7 +223,7 @@ export const FindWrap = styled.main`
       li {
         padding: 19.5px 0;
         height: auto !important;
-        background-position: 288px 18.5px !important;
+        background-position: 100% 18.5px !important;
         background-size: 32px !important;
 
         &.on {
