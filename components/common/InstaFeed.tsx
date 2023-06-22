@@ -54,6 +54,14 @@ export const InstarWrap = styled.ul`
     height: 40rem;
     border-radius: 3rem;
 
+    img {
+      height: 100%;
+    }
+
+    .txt {
+      display: none;
+    }
+
     &:hover {
       &:before {
         position: absolute;
