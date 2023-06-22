@@ -265,7 +265,7 @@ const CapmpaignWrap = styled.div`
         width: 100vw;
         font-size: 12px;
         color: #fff;
-        margin: 10px 0;
+        margin: 5px 0;
       }
     }
   }
@@ -335,6 +335,9 @@ const CapmpaignWrap = styled.div`
   }
 
   @media (max-width: 670px) {
+    .box_inp {
+      margin-bottom: 16px;
+    }
     .swiper_btns .swiper-button-prev,
     .swiper_btns .swiper-button-next {
       display: none;
