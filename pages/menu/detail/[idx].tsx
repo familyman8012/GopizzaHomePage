@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Ingredients, menuDetail, menuItem, menuTab } from "ComponentsFarm/pageComp/menu/constant";
 import { BtnConfirm, Detail, Info, MenuWrap, Nav } from "ComponentsFarm/pageComp/menu/style";
 import { useRouter } from "next/router";
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useMemo } from "react";
 import Nutrient from "ComponentsFarm/popup/Nutrient";
@@ -17,6 +17,8 @@ function DetailView({ seo }: any) {
   const { idx } = router.query;
 
   const [open, setOpen] = useState(false);
+  const [slide, setSlide] = useState(false);
+
   const openStoreModal = useCallback(() => {
     setOpen(true);
   }, []);
@@ -25,9 +27,21 @@ function DetailView({ seo }: any) {
   }, []);
 
   const handlers = useSwipeable({
-    onSwipedLeft: () => router.push(NextHandler()),
-    onSwipedRight: () => router.push(PrevHandler()),
+    onSwipedLeft: () => {
+      setSlide(true);
+      router.push(PrevHandler());
+    },
+    onSwipedRight: () => {
+      setSlide(true);
+      router.push(NextHandler());
+    },
   });
+
+  useEffect(() => {
+    if (slide) {
+      setSlide(false);
+    }
+  }, [idx]);
 
   const currentMenu = useMemo(() => menuDetail[`${idx}`], [idx]);
   const category = ["pizza", "pasta", "tteokbokki", "sides", "set", "powertime"];
@@ -95,6 +109,7 @@ function DetailView({ seo }: any) {
               </li>
             ))}
           </ul>
+
           <Nav>
             <h2>메뉴</h2>
             <span className="bar">/</span>
@@ -102,56 +117,58 @@ function DetailView({ seo }: any) {
             <span className="bar">/</span>
             <h4>{currentMenu?.name}</h4>
           </Nav>
-          <Info>
-            <div className={`thumb ${currentMenu?.badge === "best" ? "badge best" : currentMenu?.badge === "new" ? "badge new" : ""}`}>
-              <img
-                src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/${currentMenu?.category}/${idx}x2.webp?v=2`}
-                alt={currentMenu?.name}
-              />
-            </div>
-            <dl className="box_ingredients">
-              <dt>
-                <span className="ko">{currentMenu?.name}</span>
-                <span className="en">{currentMenu?.enName.toUpperCase()}</span>
-              </dt>
-              <dd className="txt">
-                {currentMenu?.txt?.split("\n").map((txt: string, i: number) => {
-                  return (
-                    <React.Fragment key={`line${i}`}>
-                      {txt}
-                      <br />
-                    </React.Fragment>
-                  );
-                })}
-              </dd>
-              <dd>
-                <div className="box_btn">
-                  <Link className="prev" href={PrevHandler()} scroll={false}>
-                    <span className="hiddenZoneV">이전</span>
-                  </Link>
+          <Slide style={{ opacity: slide ? "0" : "1" }}>
+            <Info>
+              <div className={`thumb ${currentMenu?.badge === "best" ? "badge best" : currentMenu?.badge === "new" ? "badge new" : ""}`}>
+                <img
+                  src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/${currentMenu?.category}/${idx}x2.webp?v=2`}
+                  alt={currentMenu?.name}
+                />
+              </div>
+              <dl className="box_ingredients">
+                <dt>
+                  <span className="ko">{currentMenu?.name}</span>
+                  <span className="en">{currentMenu?.enName.toUpperCase()}</span>
+                </dt>
+                <dd className="txt">
+                  {currentMenu?.txt?.split("\n").map((txt: string, i: number) => {
+                    return (
+                      <React.Fragment key={`line${i}`}>
+                        {txt}
+                        <br />
+                      </React.Fragment>
+                    );
+                  })}
+                </dd>
+                <dd>
+                  <div className="box_btn">
+                    <Link className="prev" href={PrevHandler()} scroll={false}>
+                      <span className="hiddenZoneV">이전</span>
+                    </Link>
 
-                  <Link className="next" href={NextHandler()} scroll={false}>
-                    <span className="hiddenZoneV">다음</span>
-                  </Link>
-                </div>
-              </dd>
-              <dd>
-                <ul className="list">
-                  {currentMenu?.ingredients.map((el: string, i: number) => (
-                    <li key={i}>
-                      <span className="img">
-                        <img
-                          src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/img_ingredients${Ingredients.indexOf(el)}x2.webp`}
-                          alt={currentMenu?.name}
-                        />
-                      </span>
-                      <span className="desc">{el}</span>
-                    </li>
-                  ))}
-                </ul>
-              </dd>
-            </dl>
-          </Info>
+                    <Link className="next" href={NextHandler()} scroll={false}>
+                      <span className="hiddenZoneV">다음</span>
+                    </Link>
+                  </div>
+                </dd>
+                <dd>
+                  <ul className="list">
+                    {currentMenu?.ingredients.map((el: string, i: number) => (
+                      <li key={i}>
+                        <span className="img">
+                          <img
+                            src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/img_ingredients${Ingredients.indexOf(el)}x2.webp`}
+                            alt={currentMenu?.name}
+                          />
+                        </span>
+                        <span className="desc">{el}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </dd>
+              </dl>
+            </Info>
+          </Slide>
           <Modal open={open} onClose={close}>
             <NutrientWrap>
               <p className="tit">영양성분 / 알레르기 / 원산지</p>
@@ -227,6 +244,10 @@ export const getStaticPaths = async () => {
     fallback: false, // 이 페이지에 대해 존재하지 않는 경로는 404 페이지를 표시합니다.
   };
 };
+
+const Slide = styled.div`
+  transition: opacity 0.5s ease-in-out;
+`;
 
 export const NutrientWrap = styled.div`
   position: relative;
