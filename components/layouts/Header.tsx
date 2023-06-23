@@ -3,8 +3,9 @@ import { observer } from "mobx-react";
 import { mobileHeader } from "MobxFarm/store";
 import Link from "next/link";
 import { Router, useRouter } from "next/router";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { HeadMenuUrl, HeadAsideUrl, FooterMenu } from "./constant";
+import FooterMobile from "./FooterMobile";
 import { HeaderWrap, MobileHeaderWrap } from "./style";
 
 const mobileMenu = ["브랜드", "가맹안내"];
@@ -28,6 +29,10 @@ const MobileHeader = () => {
     { name: "CEO&언론보도", url: "/start/media" },
     { name: "가맹문의", url: "/start/inquiry" },
   ];
+
+  useEffect(() => {
+    router.asPath.includes("/start") ? setIsActiveMenu("franchise") : setIsActiveMenu("brand");
+  }, [router.asPath]);
 
   const handlerMenu = useCallback(
     (menu: string) => {
@@ -80,7 +85,7 @@ const MobileHeader = () => {
         {mobileMenu.map((el) => (
           <div key={el} className={el === "브랜드" ? (isActiveMenu === "brand" ? "active" : "") : isActiveMenu === "franchise" ? "active" : ""}>
             <button onClick={() => handlerMenu(el === "브랜드" ? "brand" : "franchise")}>{el}</button>
-            <ul>
+            <ul className="list_submenu">
               {(el === "브랜드" ? brandSubmenus : franchiseSubmenus).map((submenu) => (
                 <li
                   key={submenu.name}
@@ -94,6 +99,14 @@ const MobileHeader = () => {
             </ul>
           </div>
         ))}
+        <div className="bnr">
+          <div className="txt">
+            가맹문의 전화
+            <br />
+            070-7121-1092
+          </div>
+        </div>
+        <FooterMobile />
       </div>
     </MobileHeaderWrap>
   );

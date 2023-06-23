@@ -48,6 +48,14 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
     }
   }, [router.asPath]);
 
+  function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }
+  useEffect(() => {
+    setScreenSize();
+  }, []);
+
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
