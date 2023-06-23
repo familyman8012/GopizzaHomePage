@@ -48,7 +48,7 @@ function DetailView({ seo }: any) {
     if (isMobile && fade) {
       setFade(false);
     }
-  }, [idx, isMobile, fade]);
+  }, [idx, isMobile]);
 
   const currentMenu = useMemo(() => menuDetail[`${idx}`], [idx]);
   const category = ["pizza", "pasta", "tteokbokki", "sides", "set", "powertime"];
@@ -101,7 +101,7 @@ function DetailView({ seo }: any) {
   return (
     <>
       <NextSeo {...seo} />
-      <MenuWrap {...handlers}>
+      <MenuWrap>
         <Detail>
           <h2 className="tit">메뉴</h2>
           <ul className="list_tab en">
@@ -126,7 +126,7 @@ function DetailView({ seo }: any) {
           </Nav>
           <Fade style={{ opacity: fade ? "0" : "1" }}>
             <Info>
-              <div className={`thumb ${currentMenu?.badge === "best" ? "badge best" : currentMenu?.badge === "new" ? "badge new" : ""}`}>
+              <div {...handlers} className={`thumb ${currentMenu?.badge === "best" ? "badge best" : currentMenu?.badge === "new" ? "badge new" : ""}`}>
                 <img
                   src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/${currentMenu?.category}/${idx}x2.webp?v=2`}
                   alt={currentMenu?.name}
