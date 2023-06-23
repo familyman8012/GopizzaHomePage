@@ -509,6 +509,7 @@ export const KeepGoingWrap = styled.section`
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-gap: 11px 12px;
+        max-width: 360px;
         margin-bottom: 54px;
         padding: 0 20px;
 

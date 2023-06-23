@@ -124,6 +124,17 @@ export const EventWrap = styled.main`
       height: auto;
       margin: 30px auto;
     }
+    .video_wrap {
+      overflow: hidden;
+      width: calc(100vw - 40px);
+      margin: 36px auto 48px !important;
+      border-radius: 10px;
+
+      .box_img {
+        width: 100%;
+        height: 180px;
+      }
+    }
     .btn_go_list {
       width: 280px;
       height: 60px;

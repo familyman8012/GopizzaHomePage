@@ -360,6 +360,10 @@ export const OrderItem = styled.li`
     font-weight: bold;
     font-family: "solano";
     color: #fff;
+
+    &.mobile {
+      display: none;
+    }
   }
 
   .go_txt {
@@ -415,6 +419,13 @@ export const OrderItem = styled.li`
       margin: 6px 0 4px;
       font-size: 54px;
       font-weight: bold;
+
+      &.pc {
+        display: none;
+      }
+      &.mobile {
+        display: block;
+      }
     }
 
     .go_link {

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { OrderItem, OrderWrap } from "./style";
 
 const orderChannerl = [
@@ -9,6 +10,8 @@ const orderChannerl = [
 ];
 
 function Order() {
+  const router = useRouter();
+
   return (
     <OrderWrap>
       <OrderItem className="order">
@@ -22,13 +25,22 @@ function Order() {
         </ul>
         <span className="go_txt">가까운 고피자 매장을 찾아보세요</span>
       </OrderItem>
-      <Link href="/order">
+      <span
+        onClick={(e: any) => {
+          e.stopPropagation();
+          router.push("/order");
+        }}
+        style={{ cursor: "pointer" }}
+      >
         <OrderItem className="group">
           <h2 className="subTitle">단체주문상담</h2>
-          <p className="tel">1800-8972</p>
+          <p className="tel pc"> 1800-8972</p>
+          <a href={`tel:1800-8972`} className="tel mobile" onClick={(e) => e.stopPropagation()}>
+            1800-8972
+          </a>
           <span className="go_txt go_link">상담신청 바로가기</span>
         </OrderItem>
-      </Link>
+      </span>
     </OrderWrap>
   );
 }
