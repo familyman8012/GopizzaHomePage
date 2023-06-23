@@ -71,6 +71,7 @@ export const Strong3Wrap = styled.section`
   .txt2 {
     white-space: pre-line;
   }
+
   .list_strong {
     display: flex;
     justify-content: center;
@@ -100,26 +101,6 @@ export const Strong3Wrap = styled.section`
         height: 100%;
         background-image: linear-gradient(to top, rgba(255, 70, 0, 0) 27%, rgba(255, 70, 0, 0.02) 27%, #ff4600 89%);
       }
-
-      &:hover {
-        cursor: pointer;
-        &:before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-image: linear-gradient(to top, rgba(255, 70, 0, 0) -38%, rgba(255, 70, 0, 0.4) -38%, #ff4600 89%);
-        }
-        .txt {
-          display: none;
-        }
-        dl {
-          display: block;
-        }
-      }
-
       ${strongImg}
 
       .txt {
@@ -130,6 +111,20 @@ export const Strong3Wrap = styled.section`
         font-weight: bold;
         line-height: 1.38;
         padding: 4rem 0 0 4rem;
+      }
+
+      .txt,
+      dt {
+        &:after {
+          content: "";
+          display: inline-block;
+          position: relative;
+          top: -0.5rem;
+          left: 1rem;
+          width: 1.1rem;
+          height: 1rem;
+          background: url("/images/start/tech/arrow_tech.svg") no-repeat left top / 100%;
+        }
       }
 
       dl {
@@ -164,6 +159,31 @@ export const Strong3Wrap = styled.section`
           }
         }
       }
+
+      &:hover {
+        cursor: pointer;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: linear-gradient(to top, rgba(255, 70, 0, 0) -38%, rgba(255, 70, 0, 0.4) -38%, #ff4600 89%);
+        }
+        .txt {
+          display: none;
+        }
+        dl {
+          display: block;
+        }
+        .txt,
+        dt {
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+      }
     }
   }
 
@@ -180,6 +200,10 @@ export const Strong3Wrap = styled.section`
       .box_img {
         width: 100%;
         height: 180px;
+
+        img {
+          height: inherit;
+        }
       }
     }
 
@@ -238,6 +262,17 @@ export const Strong3Wrap = styled.section`
             .txt2 {
               font-size: 13px;
             }
+          }
+        }
+
+        .txt,
+        dt {
+          &:after {
+            top: -3px;
+            left: 5px;
+            width: 7px;
+            height: 7px;
+            background-size: 7px;
           }
         }
       }

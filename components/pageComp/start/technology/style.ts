@@ -230,15 +230,18 @@ export const NeedWrap = styled.section`
 
     ul {
       li {
-        &:nth-of-type(1) {
-          height: auto;
-          background: url("/images/start/tech/mobile/bg_need1x2.webp?v=2") no-repeat center top / 360px auto;
-
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
           dl {
             width: fit-content;
             margin: 0 auto;
             padding: 335px 20px 0;
           }
+        }
+        &:nth-of-type(1) {
+          height: auto;
+          background: url("/images/start/tech/mobile/bg_need1x2.webp?v=2") no-repeat center top / 360px auto;
+
           dt {
             margin-bottom: 12px;
           }

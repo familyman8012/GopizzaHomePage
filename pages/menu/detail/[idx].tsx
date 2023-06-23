@@ -8,6 +8,7 @@ import { useMemo } from "react";
 import Nutrient from "ComponentsFarm/popup/Nutrient";
 import { NextSeo } from "next-seo";
 import Modal from "ComponentsFarm/common/Modal";
+import { useSwipeable } from "react-swipeable";
 import styled from "@emotion/styled";
 
 function DetailView({ seo }: any) {
@@ -22,6 +23,11 @@ function DetailView({ seo }: any) {
   const close = useCallback(() => {
     setOpen(false);
   }, []);
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => router.push(NextHandler()),
+    onSwipedRight: () => router.push(PrevHandler()),
+  });
 
   const currentMenu = useMemo(() => menuDetail[`${idx}`], [idx]);
   const category = ["pizza", "pasta", "tteokbokki", "sides", "set", "powertime"];
@@ -74,7 +80,7 @@ function DetailView({ seo }: any) {
   return (
     <>
       <NextSeo {...seo} />
-      <MenuWrap>
+      <MenuWrap {...handlers}>
         <Detail>
           <h2 className="tit">메뉴</h2>
           <ul className="list_tab en">

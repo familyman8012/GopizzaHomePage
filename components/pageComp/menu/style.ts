@@ -3,8 +3,17 @@ import styled from "@emotion/styled";
 import { mq } from "ComponentsFarm/common";
 
 export const MenuWrap = styled.main`
+  position: relative;
   padding: 12rem 0 0;
   min-height: calc(100vh - 12rem - 50.65rem);
+
+  .swipeLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px; /* 선의 높이 */
+    background-color: #000; /* 선의 색상 */
+  }
 
   .list_tab li {
     padding: 9px;

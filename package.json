@@ -54,6 +54,7 @@
     "react-js-pagination": "^3.0.3",
     "react-kakao-maps-sdk": "^1.1.6",
     "react-player": "^2.11.2",
+    "react-swipeable": "^7.0.1",
     "react-toastify": "^9.1.1",
     "react-transition-group": "^4.4.5",
     "react-waypoint": "^10.3.0",
