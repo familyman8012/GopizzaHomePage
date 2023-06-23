@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 export const GlobalWrap = styled.div`
   background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/goglobal/bg_globalx2.webp") no-repeat center bottom / 100%;
@@ -19,6 +19,9 @@ export const GoGlobalListSection = styled.div`
   ${mq[0]} {
     width: 100%;
     padding: 0 20px;
+  }
+  ${folder} {
+    padding: 0 10px;
   }
 `;
 
@@ -102,6 +105,15 @@ export const GoglobalTxtWrap = styled.section`
 
     .pc_line {
       display: none;
+    }
+  }
+  ${folder} {
+    strong {
+      font-size: 20px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 2;
     }
   }
 `;
@@ -369,6 +381,20 @@ export const NextDestinationWrap = styled.div`
       font-size: 18px;
       line-height: 60px;
       border-radius: 200px;
+    }
+  }
+  ${folder} {
+    .box_txt {
+      em {
+        font-size: 20px;
+      }
+      p {
+        font-size: 12px;
+        line-height: 1.5;
+      }
+    }
+    a {
+      width: 200px;
     }
   }
 `;

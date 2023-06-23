@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 export const DatePickerWrap = styled.div`
   .react-datepicker-popper {
@@ -187,5 +187,11 @@ export const DatePickerWrap = styled.div`
   }
   .react-datepicker__navigation-icon--next {
     transform: rotate(135deg);
+  }
+  ${folder} {
+    .react-datepicker-popper {
+      left: 10px;
+      width: 260px !important;
+    }
   }
 `;

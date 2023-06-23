@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 const wantImg = Array.from({ length: 3 }).map(
   (_, i) =>
@@ -132,6 +132,17 @@ export const YouWantPizzaWrap = styled.section`
       }
     }
   }
+
+  ${folder} {
+    .txt_want {
+      font-size: 19px;
+    }
+    .list li {
+      width: 200px;
+      height: 233px;
+      background-size: 200px 233px !important;
+    }
+  }
 `;
 
 const valueImg = Array.from({ length: 3 }).map(
@@ -177,6 +188,10 @@ export const ValuesMobileWrap = styled.section`
     div {
       border: none !important;
     }
+  }
+
+  ${folder} {
+    height: auto !important;
   }
 `;
 
@@ -584,6 +599,29 @@ export const KeepGoingWrap = styled.section`
       }
     }
   }
+
+  ${folder} {
+    .wrap_history {
+      .list_nav {
+        li,
+        li.on {
+          width: 48px;
+          height: 30px;
+          font-size: 17px;
+        }
+      }
+      .box_history {
+        .swiper-slide {
+          width: 220px;
+
+          .thumb {
+            width: 220px;
+            height: 215px;
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const BrandBiWrap = styled.section`
@@ -655,6 +693,11 @@ export const BrandBiWrap = styled.section`
     .brand_color {
       width: 100%;
       margin-top: 24px;
+    }
+  }
+  ${folder} {
+    p.mobile {
+      font-size: 12px;
     }
   }
 `;

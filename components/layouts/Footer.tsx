@@ -8,7 +8,7 @@ import styled from "@emotion/styled";
 import Modal from "ComponentsFarm/common/Modal";
 import DOMPurify from "isomorphic-dompurify";
 import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 export const PrivacyWrap = styled.div`
   position: relative;
@@ -45,6 +45,14 @@ export const PrivacyWrap = styled.div`
       margin: 0 auto;
       padding: 0 30px;
       font-size: 12px;
+    }
+  }
+  ${folder} {
+    .tit {
+      font-size: 22px !important;
+    }
+    .box_info {
+      padding: 0 10px;
     }
   }
 `;

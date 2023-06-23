@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 export const CostWrap = styled.section`
   margin: 16rem 0;
@@ -395,6 +395,16 @@ export const ProcessWrap = styled.ol`
     .txt {
       font-size: 15px;
       line-height: 24px;
+    }
+  }
+  ${folder} {
+    width: 280px;
+    .num {
+      font-size: 30px;
+    }
+
+    .txt {
+      font-size: 12px;
     }
   }
 `;

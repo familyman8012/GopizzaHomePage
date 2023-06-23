@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 const strongImg = Array.from({ length: 3 }).map(
   (_, i) =>
@@ -679,6 +679,25 @@ export const SupportWrap = styled.section`
       }
     }
   }
+  ${folder} {
+    .wrap_swiper:before {
+      right: -50px;
+    }
+    .list_sales {
+      margin-right: 20px;
+    }
+    .wrap_promotion {
+      width: 260px;
+
+      ul {
+        gap: 10px;
+        li {
+          width: 125px;
+          height: 125px;
+        }
+      }
+    }
+  }
 `;
 
 export const TxtQuotes = styled.div`
@@ -848,6 +867,24 @@ export const ParbakedWrap = styled.section`
       margin-top: 216px;
     }
   }
+  ${folder} {
+    .wrap_parbake {
+      width: 280px;
+
+      .txt1 {
+        font-size: 20px;
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+      .txt2 {
+        padding: 0 10px;
+        font-size: 12px;
+        line-height: 2;
+      }
+    }
+  }
 `;
 
 export const Bnr = styled.div`
@@ -878,6 +915,12 @@ export const Bnr = styled.div`
       left: 36px;
       font-size: 24px;
       line-height: 32px;
+    }
+  }
+  ${folder} {
+    .txt_box {
+      left: 10px;
+      font-size: 20px;
     }
   }
 `;
@@ -1100,6 +1143,43 @@ export const GovenWrap = styled.section`
 
         &:after {
           display: none;
+        }
+      }
+    }
+  }
+  ${mq[0]} {
+    .wrap_inner {
+      margin-top: 20px;
+      .box_thumb {
+        height: 160px;
+      }
+      .tit2 {
+        font-size: 50px;
+        &:before {
+          top: 25px;
+          left: 110px;
+          width: 30px;
+        }
+
+        span.txt2 {
+          margin-left: 50px;
+        }
+      }
+
+      ${TxtQuotes} {
+        margin-top: 0px;
+        .txt1 {
+          font-size: 20px;
+
+          &:before,
+          &:after {
+            display: none;
+          }
+        }
+        .txt2 {
+          margin: 0;
+          padding: 0 10px;
+          font-size: 12px;
         }
       }
     }

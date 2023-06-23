@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 import { VideoWrap } from "./competitive/style";
 
 export const StartWrap = styled.div`
@@ -65,6 +65,11 @@ export const StartWrap = styled.div`
     h4 {
       margin-bottom: 24px !important;
       font-size: 24px;
+    }
+  }
+  ${folder} {
+    h4 {
+      font-size: 20px;
     }
   }
 `;
@@ -191,6 +196,9 @@ export const BtnInquiryWrap = styled.span`
 
     border-radius: 60px;
   }
+  ${folder} {
+    width: 200px;
+  }
 `;
 
 export const CeoMessageWrap = styled.section`
@@ -294,6 +302,26 @@ export const CeoMessageWrap = styled.section`
           margin: -12px 0 0 32px;
         }
       }
+    }
+  }
+  ${folder} {
+    .wrap_message {
+      height: auto;
+      padding-top: 385px;
+      &:before {
+        top: 20px;
+      }
+      strong {
+        font-size: 20px;
+      }
+      p {
+        margin-bottom: 14px;
+        font-size: 12px;
+        line-height: 1.8;
+      }
+    }
+    .sign .img {
+      margin-left: 3px !important;
     }
   }
 `;

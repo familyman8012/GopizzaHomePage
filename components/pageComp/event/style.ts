@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 export const EventWrap = styled.main`
   position: relative;
@@ -141,6 +141,11 @@ export const EventWrap = styled.main`
       margin: 25px auto 0;
       font-size: 18px;
       border-radius: 3.6rem;
+    }
+  }
+  ${folder} {
+    .btn_go_list {
+      width: 200px;
     }
   }
 `;

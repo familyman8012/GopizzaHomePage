@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 export const HowWeMakeWrap = styled.section`
   position: relative;
@@ -162,6 +162,12 @@ export const HowWeMakeWrap = styled.section`
           margin: 0;
         }
       }
+    }
+  }
+  ${folder} {
+    p {
+      font-size: 12px;
+      line-height: 2;
     }
   }
 `;
@@ -332,6 +338,15 @@ export const RedBox = styled.div`
       }
     }
   }
+  ${folder} {
+    .inner {
+      p,
+      strong {
+        font-size: 12px;
+        line-height: 2;
+      }
+    }
+  }
 `;
 
 export const Goven2Wrap = styled.div`
@@ -384,6 +399,15 @@ export const Goven2Wrap = styled.div`
     }
     .pc_line {
       display: none;
+    }
+  }
+  ${folder} {
+    .inner {
+      p,
+      strong {
+        font-size: 12px;
+        line-height: 2;
+      }
     }
   }
 `;
@@ -606,6 +630,13 @@ export const EasyBannerWrap = styled.section`
     }
     .txt1 {
       font-weight: bold;
+    }
+  }
+  ${folder} {
+    .txt1,
+    .txt2 {
+      font-size: 13px;
+      line-height: 2;
     }
   }
 `;

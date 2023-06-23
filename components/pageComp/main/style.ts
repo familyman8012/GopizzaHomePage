@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 export const MainVisualWrap = styled.section`
   position: relative;
@@ -431,6 +431,17 @@ export const OrderItem = styled.li`
     .go_link {
       padding-right: 9.6px;
       background-size: 5.1px 8.5px;
+    }
+  }
+
+  ${folder} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0;
+    .tel {
+      font-size: 45px;
     }
   }
 `;

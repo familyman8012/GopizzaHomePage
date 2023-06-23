@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 export const FindWrap = styled.main`
   width: 128rem;
@@ -265,6 +265,11 @@ export const FindWrap = styled.main`
           }
         }
       }
+    }
+  }
+  ${folder} {
+    .list_store li {
+      background: none;
     }
   }
 `;

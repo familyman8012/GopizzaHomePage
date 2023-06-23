@@ -392,6 +392,11 @@ export const Info = styled.section`
       }
     }
   }
+  ${mq[0]} {
+    .box_ingredients dd .list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 `;
 
 export const BtnConfirm = styled.button`

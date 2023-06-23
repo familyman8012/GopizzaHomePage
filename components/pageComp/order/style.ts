@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 export const OrderWrap = styled.main`
   position: relative;
@@ -74,6 +74,17 @@ export const OrderWrap = styled.main`
           margin-right: 0;
         }
       }
+    }
+  }
+  ${folder} {
+    .tit2 {
+      font-size: 20px;
+    }
+    .txt {
+      font-size: 12px;
+    }
+    .list_company {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 `;

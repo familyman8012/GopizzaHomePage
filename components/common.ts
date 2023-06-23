@@ -2,6 +2,7 @@ import { css } from "@emotion/react";
 
 export const breakpoints = [200, 599, 800, 1200, 1600];
 export const mq = breakpoints.map((bp, i) => `@media (min-width:${breakpoints[i]}px) and (max-width: ${breakpoints[i + 1]}px)`);
+export const folder = `@media (max-width: 359px)`;
 
 const enFontTypes = [100, 200, 300, "regular", 500, 600, 700, 800, 900];
 const krFontTypes = [100, 300, "regular", 500, 700, 900];
@@ -350,6 +351,15 @@ const reset = css`
         span,
         h3 {
           font-size: 14px;
+        }
+      }
+    }
+
+    ${folder} {
+      li {
+        span,
+        h3 {
+          font-size: 12px;
         }
       }
     }
@@ -1153,6 +1163,32 @@ const reset = css`
 
     .swiper-pagination {
       bottom: 10px !important;
+    }
+  }
+
+  ${folder} {
+    section {
+      padding: 0 10px;
+    }
+    .index h3,
+    h4 {
+      font-size: 30px;
+    }
+
+    .subTitle {
+      font-size: 20px;
+    }
+
+    .desc {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .list_form_notice {
+      padding-left: 0;
+      dd {
+        font-size: 11px;
+      }
     }
   }
 

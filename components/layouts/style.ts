@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 export const HeaderWrap = styled.header`
   position: relative;
@@ -498,6 +498,18 @@ export const FooterMobileWrap = styled.footer`
       opacity: 0.7;
       text-align: center;
       line-height: 19px;
+    }
+  }
+
+  ${folder} {
+    .box_global,
+    .box_privacy {
+      ul {
+        justify-content: center;
+      }
+      li * {
+        padding: 0 7px;
+      }
     }
   }
 `;

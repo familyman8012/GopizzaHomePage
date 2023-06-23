@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 const techImg = Array.from({ length: 4 }).map(
   (_, i) =>
@@ -279,6 +279,17 @@ export const NeedWrap = styled.section`
           background: url("/images/start/tech/mobile/bg_need2x2.webp?v=2") no-repeat center top / 258px auto;
         }
       }
+    }
+  }
+  ${folder} {
+    dl {
+      padding: 335px 5px 0 !important;
+      dd {
+        font-size: 12px !important;
+      }
+    }
+    li:nth-of-type(2) dl {
+      padding-top: 421px !important;
     }
   }
 `;

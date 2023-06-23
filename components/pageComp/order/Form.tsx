@@ -11,7 +11,7 @@ import Application from "ComponentsFarm/popup/Application";
 import Privacy from "ComponentsFarm/popup/Privacy";
 import Store from "ComponentsFarm/popup/Store";
 import { ICustomer } from "PagesFarm/order/customer";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 export const FormWrap = styled.form`
   position: relative;
@@ -69,6 +69,23 @@ export const FormWrap = styled.form`
       padding: 0 9px;
       font-size: 13px;
       line-height: 35px;
+    }
+  }
+  ${folder} {
+    margin: 36px 10px 0 !important;
+
+    .box_custom_chk {
+      padding-left: 0;
+      label {
+        padding-left: 20px;
+        font-size: 11px;
+        background-size: 14px 14px;
+        background-position: 0 5px;
+      }
+      button {
+        margin-left: 5px;
+        font-size: 11px !important;
+      }
     }
   }
 `;
