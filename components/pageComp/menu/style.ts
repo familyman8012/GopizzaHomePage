@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 export const MenuWrap = styled.main`
   position: relative;
@@ -392,7 +392,7 @@ export const Info = styled.section`
       }
     }
   }
-  ${mq[0]} {
+  ${folder} {
     .box_ingredients dd .list {
       grid-template-columns: repeat(2, 1fr);
     }

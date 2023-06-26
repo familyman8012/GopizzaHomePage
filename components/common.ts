@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 
-export const breakpoints = [200, 599, 800, 1200, 1600];
+export const breakpoints = [200, 767, 800, 1200, 1600];
 export const mq = breakpoints.map((bp, i) => `@media (min-width:${breakpoints[i]}px) and (max-width: ${breakpoints[i + 1]}px)`);
 export const folder = `@media (max-width: 359px)`;
 
@@ -1212,21 +1212,9 @@ const reset = css`
       font-size: 6px;
     }
   }
-  @media (min-width: 670px) and (max-width: 800px) {
+  @media (min-width: 768px) and (max-width: 800px) {
     html {
       font-size: 5px;
-    }
-  }
-
-  @media (min-width: 601px) and (max-width: 670px) {
-    html {
-      font-size: 3.7px;
-    }
-  }
-
-  @media (min-width: 600px) and (max-width: 670px) {
-    html {
-      font-size: 3.7px;
     }
   }
 

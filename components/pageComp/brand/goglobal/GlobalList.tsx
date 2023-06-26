@@ -58,7 +58,7 @@ function GlobalListItem({ data }: any) {
   const { windowWidth } = useDebounce();
 
   return (
-    <Waypoint onEnter={() => setShow(true)} onLeave={() => setShow(false)} bottomOffset={windowWidth <= 599 ? "430px" : "700px"}>
+    <Waypoint onEnter={() => setShow(true)} onLeave={() => setShow(false)} bottomOffset={windowWidth <= 767 ? "430px" : "700px"}>
       <GlobalListItemWrap className={show ? "on" : ""}>
         <div className="wrap_item">
           <div className="country">{data.country}</div>

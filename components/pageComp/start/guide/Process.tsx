@@ -18,7 +18,7 @@ function Process() {
   ];
 
   const { windowWidth } = useDebounce();
-  const endIndex = windowWidth > 599 ? 3 : 6;
+  const endIndex = windowWidth > 767 ? 3 : 6;
 
   return (
     <>

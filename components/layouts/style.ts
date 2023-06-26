@@ -3,7 +3,7 @@ import { folder, mq } from "ComponentsFarm/common";
 
 export const HeaderWrap = styled.header`
   position: relative;
-  z-index: 100;
+  z-index: 110;
   height: 12rem;
   background: #ff4600;
 

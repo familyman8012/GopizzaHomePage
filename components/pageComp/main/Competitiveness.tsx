@@ -38,8 +38,8 @@ function Competitiveness() {
               {/* <Image src={el.imgUrl} width={1279} height={740} alt={el.alt} /> */}
 
               <picture>
-                <source media="(max-width: 599px)" srcSet={el.mobile_imgUrl} />
-                <source media="(min-width: 600px)" srcSet={el.imgUrl} />
+                <source media="(max-width: 767px)" srcSet={el.mobile_imgUrl} />
+                <source media="(min-width: 768px)" srcSet={el.imgUrl} />
                 <img src={el.imgUrl} alt={el.alt} />
               </picture>
             </Link>

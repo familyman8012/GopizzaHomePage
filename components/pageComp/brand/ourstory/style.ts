@@ -176,7 +176,7 @@ export const ValuesMobileWrap = styled.section`
   }
 
   .react-3d-carousel {
-    height: 380px !important;
+    min-height: 380px !important;
   }
 
   .slider-single-content {

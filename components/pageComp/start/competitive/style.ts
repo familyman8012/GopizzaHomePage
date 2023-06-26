@@ -652,7 +652,7 @@ export const SupportWrap = styled.section`
     }
 
     .list_sales {
-      margin: 0 81px 52px auto;
+      margin: 0 22.5% 52px auto;
       li {
         margin-right: 0;
       }

@@ -9,6 +9,9 @@ export const GlobalWrap = styled.div`
     padding-bottom: 60px;
     background-size: auto 650px;
   }
+  @media (min-width: 550px) and (max-width: 767px) {
+    background-size: cover !important;
+  }
 `;
 
 export const GoGlobalListSection = styled.div`
@@ -17,7 +20,7 @@ export const GoGlobalListSection = styled.div`
   margin: 0 auto;
 
   ${mq[0]} {
-    width: 100%;
+    width: 360px;
     padding: 0 20px;
   }
   ${folder} {
@@ -95,6 +98,7 @@ export const GoglobalTxtWrap = styled.section`
 
     p {
       width: max-content;
+      margin: 0 auto;
       font-size: 16px;
       line-height: 30px;
     }

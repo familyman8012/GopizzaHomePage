@@ -75,7 +75,7 @@ export const TipWrap = styled.div`
   }
   ${mq[0]} {
     width: calc(100vw - 40px);
-    height: 438px;
+    height: 475px;
     padding: 20px;
     border-radius: 10px;
 

@@ -258,6 +258,7 @@ export const BestMenuWrap = styled.section`
         }
       }
       .box_swiper {
+        width: 100%;
         margin: 38px 0 0;
         padding-left: 20px;
 

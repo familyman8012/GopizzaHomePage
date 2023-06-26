@@ -44,8 +44,8 @@ function Operation() {
         <VisibilitySensorSwiper view={1} nav>
           <SwiperSlide>
             <picture>
-              <source media="(max-width: 599px)" srcSet="/images/start/competitive/mobile/slide_dough1x2.webp" />
-              <source media="(min-width: 600px)" srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_dough1.webp" />
+              <source media="(max-width: 767px)" srcSet="/images/start/competitive/mobile/slide_dough1x2.webp" />
+              <source media="(min-width: 768px)" srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_dough1.webp" />
               <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_dough1.webp" alt="고피자 파베이크 음성공장" />
             </picture>
             <p className="txt_box">
@@ -56,8 +56,8 @@ function Operation() {
           </SwiperSlide>
           <SwiperSlide>
             <picture>
-              <source media="(max-width: 599px)" srcSet="/images/start/competitive/mobile/slide_dough2x2.webp" />
-              <source media="(min-width: 600px)" srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_dough2.webp" />
+              <source media="(max-width: 767px)" srcSet="/images/start/competitive/mobile/slide_dough2x2.webp" />
+              <source media="(min-width: 768px)" srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_dough2.webp" />
               <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/slide_dough2.webp" alt="고피자 파베이크" />
             </picture>
             <p className="txt_box">

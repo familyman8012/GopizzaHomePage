@@ -45,8 +45,8 @@ function Operation() {
       </div>
       <div>
         <picture>
-          <source media="(max-width: 599px)" srcSet="/images/start/competitive/mobile/img_reviewx2.webp" />
-          <source media="(min-width: 600px)" srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/img_reviewx2.webp" />
+          <source media="(max-width: 767px)" srcSet="/images/start/competitive/mobile/img_reviewx2.webp" />
+          <source media="(min-width: 768px)" srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/img_reviewx2.webp" />
           <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/img_reviewx2.webp" alt="리뷰이미지" />
         </picture>
       </div>

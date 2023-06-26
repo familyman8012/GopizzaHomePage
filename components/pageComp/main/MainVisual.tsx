@@ -18,16 +18,16 @@ function MainVisual({ data }: { data: IMainVisual }) {
                   {(el.landing_url.indexOf("http") !== -1 || el.landing_url.indexOf("www")) !== -1 && el.landing_url.indexOf("gopizza.kr") === -1 ? (
                     <a target="_blank" href={el.landing_url} rel="noreferrer">
                       <picture>
-                        <source media="(max-width: 599px)" srcSet={el.mobile_image_url} />
-                        <source media="(min-width: 600px)" srcSet={el.image_url} />
+                        <source media="(max-width: 767px)" srcSet={el.mobile_image_url} />
+                        <source media="(min-width: 768px)" srcSet={el.image_url} />
                         <img src={el.image_url} alt={el.subject} />
                       </picture>
                     </a>
                   ) : (
                     <Link href={el.landing_url}>
                       <picture>
-                        <source media="(max-width: 599px)" srcSet={el.mobile_image_url} />
-                        <source media="(min-width: 600px)" srcSet={el.image_url} />
+                        <source media="(max-width: 767px)" srcSet={el.mobile_image_url} />
+                        <source media="(min-width: 768px)" srcSet={el.image_url} />
                         <img src={el.image_url} alt={el.subject} />
                       </picture>
                     </Link>
