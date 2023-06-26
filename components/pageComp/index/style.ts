@@ -101,15 +101,15 @@ export const IndexWrap = styled.main`
               z-index: 10;
             }
 
-            &:after {
+            /* &:after {
               content: "";
               position: absolute;
               left: 20px;
               bottom: 0;
-              width: calc(var(--vw, 1vw) * 90);
-              height: calc(var(--vh, 1vh) * 57);
+              width: 90vw;
+              height: 57vh;
               background: url("/images/index/mobile/personx2.webp") no-repeat center / auto 100%;
-            }
+            } */
             a {
               display: flex;
               align-items: center;
@@ -146,7 +146,7 @@ export const IndexWrap = styled.main`
       }
     }
   }
-  @media (max-height: 670px) {
+  /* @media (max-height: 670px) {
     .btn_box a {
       height: 50px !important;
     }
@@ -155,5 +155,5 @@ export const IndexWrap = styled.main`
     .btn_box a {
       height: 45px !important;
     }
-  }
+  } */
 `;
