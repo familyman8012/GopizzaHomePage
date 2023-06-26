@@ -240,7 +240,8 @@ export const NeedWrap = styled.section`
         }
         &:nth-of-type(1) {
           height: auto;
-          background: url("/images/start/tech/mobile/bg_need1x2.webp?v=2") no-repeat center top / 360px auto;
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/tech/mobile/bg_need1x2.webp?v=2") no-repeat center top / 360px
+            auto;
 
           dt {
             margin-bottom: 12px;
@@ -276,7 +277,8 @@ export const NeedWrap = styled.section`
         &:nth-of-type(2) {
           height: auto;
           margin-top: 71px;
-          background: url("/images/start/tech/mobile/bg_need2x2.webp?v=2") no-repeat center top / 258px auto;
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/tech/mobile/bg_need2x2.webp?v=2") no-repeat center top / 258px
+            auto;
         }
       }
     }

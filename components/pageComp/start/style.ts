@@ -258,7 +258,7 @@ export const CeoMessageWrap = styled.section`
       position: relative;
       height: 1128px;
       padding: 434px 20px 0;
-      background: url("/images/start/media/mobile/bg_messagex2.webp") no-repeat left top / 100%;
+      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/media/mobile/bg_messagex2.webp") no-repeat left top / 100%;
 
       .inner {
         width: fit-content;
@@ -273,7 +273,7 @@ export const CeoMessageWrap = styled.section`
         transform: translateX(-50%);
         width: 250px;
         height: 365px;
-        background: url("/images/start/media/mobile/bg_personx2.webp") no-repeat left top / 100%;
+        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/media/mobile/bg_personx2.webp") no-repeat left top / 100%;
       }
 
       strong {

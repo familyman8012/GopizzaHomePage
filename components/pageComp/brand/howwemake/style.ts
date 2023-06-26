@@ -618,7 +618,7 @@ export const EasyBannerWrap = styled.section`
     width: 100%;
     height: 490px;
     justify-content: center;
-    background: url("/images/brand/howwemake/mobile/bnr_easy.webp") no-repeat left top / cover;
+    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/howwemake/mobile/bnr_easy.webp") no-repeat left top / cover;
 
     .mobile_line {
       display: block;

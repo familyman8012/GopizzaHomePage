@@ -29,7 +29,7 @@ function Fresh() {
       </div>
       <div className="box_desc_img">
         <picture>
-          <source media="(max-width: 767px)" srcSet="/images/brand/howwemake/mobile/img_make2.webp" />
+          <source media="(max-width: 767px)" srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/howwemake/mobile/img_make2.webp" />
           <source media="(min-width: 768px)" srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/howwemake/img_make2.webp" />
           <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/howwemake/img_make2.webp" alt="FRESH INGREDIENTS" />
         </picture>

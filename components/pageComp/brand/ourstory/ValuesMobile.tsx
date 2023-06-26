@@ -7,9 +7,9 @@ const Carousel = dynamic(
 
 function ValuesMobile() {
   let slides = [
-    <img key="1" src="/images/brand/ourstory/mobile/img_values1x2.webp" alt="1" />,
-    <img key="2" src="/images/brand/ourstory/mobile/img_values2x2.webp" alt="2" />,
-    <img key="3" src="/images/brand/ourstory/mobile/img_values3x2.webp" alt="1" />,
+    <img key="1" src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/mobile/img_values1x2.webp" alt="1" />,
+    <img key="2" src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/mobile/img_values2x2.webp" alt="2" />,
+    <img key="3" src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/mobile/img_values3x2.webp" alt="1" />,
   ];
   return (
     <ValuesMobileWrap>

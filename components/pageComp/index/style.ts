@@ -75,7 +75,7 @@ export const IndexWrap = styled.main`
       padding: 0;
 
       &:nth-of-type(1) {
-        background: url("images/index/mobile/bg_index2.webp") no-repeat center bottom / cover;
+        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/mobile/bg_index2.webp") no-repeat center bottom / cover;
 
         .inner {
           display: none;
@@ -88,7 +88,7 @@ export const IndexWrap = styled.main`
             width: 120.7px;
             height: 67.3px;
             margin: 103px auto 0;
-            background: url("images/index/mobile/logo.svg") no-repeat center / 100%;
+            background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/mobile/logo.svg") no-repeat center / 100%;
           }
 
           .btn_box {

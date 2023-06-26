@@ -109,18 +109,18 @@ export const MobileHeaderWrap = styled.div`
           width: 22px;
           height: 27px;
           margin-right: 24px;
-          background: url("/images/main/mobile/ico_find.svg") no-repeat left center / 100%;
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/mobile/ico_find.svg") no-repeat left center / 100%;
         }
 
         .btn_menu {
           width: 26px;
           height: 20px;
-          background: url("/images/common/mobile/btn_menu.svg") no-repeat left center / 100%;
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/mobile/btn_menu.svg") no-repeat left center / 100%;
 
           &.on {
             width: 26px;
             height: 24px;
-            background: url("/images/common/mobile/btn_close.svg") no-repeat left center / 24px 24px;
+            background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/mobile/btn_close.svg") no-repeat left center / 24px 24px;
           }
         }
       }
@@ -163,7 +163,7 @@ export const MobileHeaderWrap = styled.div`
           transform: translateY(-50%);
           width: 24px;
           height: 24px;
-          background: url("/images/common/mobile/arrow_menu.svg") no-repeat left center / 100%;
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/mobile/arrow_menu.svg") no-repeat left center / 100%;
         }
       }
 
@@ -205,7 +205,7 @@ export const MobileHeaderWrap = styled.div`
           font-size: 16px;
           font-weight: bold;
           color: #fff;
-          background: url("/images/common/mobile/ico_phone.svg") no-repeat left center / 33px;
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/mobile/ico_phone.svg") no-repeat left center / 33px;
         }
       }
 
