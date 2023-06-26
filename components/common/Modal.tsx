@@ -148,8 +148,9 @@ const ModalWrapper = styled.div<{ center?: boolean }>`
     text-align: center;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 767px) {
     p.tit {
+      margin-bottom: 10px;
       font-size: 18px;
     }
     .box_info p {

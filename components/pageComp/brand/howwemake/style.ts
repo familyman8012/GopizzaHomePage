@@ -45,6 +45,7 @@ export const HowWeMakeWrap = styled.section`
 
   .box_how_make1_2 {
     display: flex;
+    position: relative;
     margin-top: -16.6rem;
 
     h4 {
@@ -480,6 +481,7 @@ export const AiSmartWrap = styled.div`
         }
         &.mobile {
           display: block;
+          position: relative;
           margin-top: -55px;
 
           .tit {

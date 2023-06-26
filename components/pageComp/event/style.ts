@@ -84,6 +84,7 @@ export const EventWrap = styled.main`
 
   ${mq[0]} {
     width: 100%;
+    height: calc(100vh - 343px) !important;
     padding: 0 0 90px 0;
 
     .list_tab {

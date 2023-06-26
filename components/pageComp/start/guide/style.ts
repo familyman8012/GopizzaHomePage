@@ -22,6 +22,7 @@ export const CostWrap = styled.section`
 
   table {
     width: 100%;
+    table-layout: auto !important;
     th,
     td {
       text-align: center;
