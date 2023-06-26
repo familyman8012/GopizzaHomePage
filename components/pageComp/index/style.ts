@@ -108,8 +108,7 @@ export const IndexWrap = styled.main`
               bottom: 0;
               width: 90vw;
               height: 57vh;
-              background: red;
-              background: url("/images/index/mobile/personx2.webp") no-repeat center / 100%;
+              background: url("/images/index/mobile/personx2.webp") no-repeat center / auto 100%;
             }
             a {
               display: flex;
