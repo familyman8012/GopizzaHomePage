@@ -84,7 +84,6 @@ export const EventWrap = styled.main`
 
   ${mq[0]} {
     width: 100%;
-    height: calc(100vh - 343px) !important;
     padding: 0 0 90px 0;
 
     .list_tab {
@@ -178,7 +177,7 @@ export const Board = styled.div`
     }
 
     button {
-      display: block;
+      display: none;
       width: 4.8rem;
       height: 4.8rem;
       background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/promotion/icon-share.svg") no-repeat left top / 100%;
