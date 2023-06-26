@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import Image from "next/image";
+import { mq } from "ComponentsFarm/common";
 
 const PopWrap = styled.div`
   &:after {
@@ -27,13 +28,19 @@ const popupStyle = css`
 export const Content = styled.div<{ width: string; height: string }>`
   position: relative;
   overflow: hidden;
-  width: ${({ width }) => width};
-  height: ${({ height }) => height};
+  width: 74rem;
+  height: 74rem;
   background: #ddd;
   border-radius: 3rem 3rem 0 0;
   img {
     display: block;
-    width: ${({ width }) => width};
+    width: 100%;
+  }
+
+  ${mq[0]} {
+    width: calc(100vw - 40px);
+    height: calc(100vw - 40px);
+    border-radius: 10px 10px 0 0;
   }
 `;
 
@@ -56,6 +63,20 @@ const BtnBox = styled.div`
       color: #fff;
       background: var(--color-orange);
       border-radius: 0 0 3rem 0;
+    }
+  }
+  ${mq[0]} {
+    button {
+      width: 100%;
+      height: 60px;
+      font-size: 14px;
+      line-height: 1;
+      &:first-of-type {
+        border-radius: 0 0 0px 10px !important;
+      }
+      &:last-of-type {
+        border-radius: 0 0 10px 0px !important;
+      }
     }
   }
 `;
