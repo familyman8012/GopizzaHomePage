@@ -25,12 +25,14 @@ function Index() {
               <span className="hiddenZoneV">GOPIZZA</span>
             </h1>
             <div className="btn_box">
-              <Link href="/main">
-                <span className="txt">홈페이지 바로가기</span>
-              </Link>
-              <Link href="/start">
-                <span className="txt">가맹안내 바로가기</span>
-              </Link>
+              <div className="inner_btn">
+                <Link href="/main">
+                  <span className="txt">홈페이지 바로가기</span>
+                </Link>
+                <Link href="/start">
+                  <span className="txt">가맹안내 바로가기</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

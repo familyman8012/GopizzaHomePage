@@ -95,6 +95,22 @@ export const IndexWrap = styled.main`
             position: absolute;
             width: 100%;
             bottom: 38px;
+
+            .inner_btn {
+              position: relative;
+              z-index: 10;
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              left: 20px;
+              bottom: 0;
+              width: 90vw;
+              height: 57vh;
+              background: red;
+              background: url("/images/index/mobile/personx2.webp") no-repeat center / 100%;
+            }
             a {
               display: flex;
               align-items: center;
@@ -129,6 +145,16 @@ export const IndexWrap = styled.main`
       &:nth-of-type(2) {
         display: none;
       }
+    }
+  }
+  @media (max-height: 670px) {
+    .btn_box a {
+      height: 50px !important;
+    }
+  }
+  @media (max-height: 599px) {
+    .btn_box a {
+      height: 45px !important;
     }
   }
 `;
