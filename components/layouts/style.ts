@@ -129,25 +129,25 @@ export const MobileHeaderWrap = styled.div`
       .right {
         display: flex;
         align-items: center;
-        margin: 0 20px 0 auto;
+        margin: 0 10px 0 auto;
 
         .link_find {
           display: block;
-          width: 22px;
-          height: 27px;
-          margin-right: 24px;
-          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/mobile/ico_find.svg") no-repeat left center / 100%;
+          width: 42px;
+          height: 47px;
+          margin-right: 4px;
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/mobile/ico_find.svg") no-repeat center center / 22px 27px;
         }
 
         .btn_menu {
-          width: 26px;
-          height: 20px;
-          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/mobile/btn_menu.svg") no-repeat left center / 100%;
+          width: 46px;
+          height: 40px;
+          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/mobile/btn_menu.svg") no-repeat center center / 26px 20px;
 
           &.on {
-            width: 26px;
-            height: 24px;
-            background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/mobile/btn_close.svg") no-repeat left center / 24px 24px;
+            width: 46px;
+            height: 44px;
+            background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/mobile/btn_close.svg") no-repeat center center / 24px 24px;
           }
         }
       }

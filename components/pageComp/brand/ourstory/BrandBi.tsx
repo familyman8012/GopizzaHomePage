@@ -22,12 +22,18 @@ function BrandBi() {
       <div className="type_img_sample">
         <div className="banner_2area">
           <picture>
-            <source media="(max-width: 767px)" srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/mobile/img_brandbi1.svg" />
+            <source
+              media="(max-width: 767px)"
+              srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/mobile/img_brandbi1x2.webp"
+            />
             <source media="(min-width: 768px)" srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/img_brandbi1.svg" />
             <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/img_brandbi1.svg" alt="BRAND LOGO_SYMBOL VER." />
           </picture>
           <picture>
-            <source media="(max-width: 767px)" srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/mobile/img_brandbi2.svg" />
+            <source
+              media="(max-width: 767px)"
+              srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/mobile/img_brandbi2x2.webp"
+            />
             <source media="(min-width: 768px)" srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/img_brandbi2.svg" />
             <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/img_brandbi2.svg" alt="BRAND LOGO_SYMBOL VER." />
           </picture>
@@ -44,7 +50,10 @@ function BrandBi() {
         </div>
         <div className="brand_color">
           <picture>
-            <source media="(max-width: 767px)" srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/mobile/img_brandbi4.svg" />
+            <source
+              media="(max-width: 767px)"
+              srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/mobile/img_brandbi4x2.webp"
+            />
             <source media="(min-width: 768px)" srcSet="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/img_brandbi4.webp?v=3" />
             <img
               src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/img_brandbi4.webp?v=3"

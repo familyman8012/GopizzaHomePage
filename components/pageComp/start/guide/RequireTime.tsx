@@ -9,7 +9,7 @@ function RequireTime() {
       </h4>
       <div className="box_time">
         <img
-          src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/info/mobile/img_time.svg"
+          src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/info/mobile/img_timex2.webp"
           className="mobile_time"
           alt="오픈 절차 및 소요기간"
         />
