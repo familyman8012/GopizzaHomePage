@@ -57,7 +57,7 @@ export const HeaderWrap = styled.header`
   }
 
   ${mq[0]} {
-    height: 60px;
+    height: auto;
 
     .inner {
       display: none;
@@ -77,11 +77,38 @@ export const MobileHeaderWrap = styled.div`
       color: #fff;
     }
   }
+  .bnr {
+    display: none;
+  }
   &.on {
+    height: 100%;
+    background: var(--color-orange);
+    position: fixed;
+    width: 100%;
     .header {
     }
+
     .layer_menu {
       display: block;
+    }
+
+    .bnr {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 62px;
+      bottom: 0;
+      background: #171c8f;
+      .txt {
+        width: fit-content;
+        margin-left: 27px;
+        padding-left: 55px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/mobile/ico_phone.svg") no-repeat left center / 33px;
+      }
     }
   }
 
@@ -127,19 +154,10 @@ export const MobileHeaderWrap = styled.div`
     }
 
     .layer_menu {
-      position: fixed;
-      z-index: 100;
-      top: 60px;
+      overflow: auto;
       width: 100%;
-      height: calc(var(--vh, 1vh) * 100 - 60px);
-      padding-bottom: 62px;
+      height: calc(100% - 122px);
       background: var(--color-orange);
-
-      .menu_area {
-        overflow: auto;
-        height: calc(var(--vh, 1vh) * 100 - 122px);
-        padding-bottom: 62px;
-      }
 
       button,
       .list_submenu li {
@@ -194,46 +212,6 @@ export const MobileHeaderWrap = styled.div`
         button:after {
           transform: rotate(180deg) translateY(-50%);
           transform-origin: 50% 0;
-        }
-      }
-
-      .bnr {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        height: 62px;
-        bottom: 0;
-        background: #171c8f;
-        .txt {
-          width: fit-content;
-          margin-left: 27px;
-          padding-left: 55px;
-          font-size: 16px;
-          font-weight: bold;
-          color: #fff;
-          background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/mobile/ico_phone.svg") no-repeat left center / 33px;
-        }
-      }
-
-      footer {
-        display: none;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 124px;
-        padding-top: 20px;
-
-        .box_privacy,
-        address {
-          display: none;
-        }
-
-        .box_global {
-          margin-bottom: 0;
-          ul {
-            border-bottom: none;
-          }
         }
       }
     }

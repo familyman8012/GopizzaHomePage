@@ -101,15 +101,14 @@ const MobileHeader = () => {
             </div>
           ))}
         </div>
-        <div className="bnr">
-          <div className="txt">
-            가맹문의 전화
-            <br />
-            070-7121-1092
-          </div>
-        </div>
-        <FooterMobile />
       </div>
+      <a className="bnr" href="tel:1800-8972">
+        <span className="txt">
+          가맹문의 전화
+          <br />
+          1800-8972
+        </span>
+      </a>
     </MobileHeaderWrap>
   );
 };
