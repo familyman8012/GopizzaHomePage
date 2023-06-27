@@ -134,6 +134,7 @@ const DaumPostPopWrap = styled.div`
     }
   }
   ${folder} {
+    overflow: hidden;
     width: 280px;
 
     .body > div {

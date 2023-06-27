@@ -108,7 +108,7 @@ export const Bnr = styled.div`
   }
 
   ${mq[0]} {
-    width: 100vw;
+    width: 100%;
     margin: 0 auto 0;
 
     .div_img1,
