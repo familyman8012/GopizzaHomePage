@@ -268,6 +268,9 @@ export const FindWrap = styled.main`
     }
   }
   ${folder} {
+    .wrp_filter select {
+      font-size: 12px;
+    }
     .list_store li {
       background: none;
     }

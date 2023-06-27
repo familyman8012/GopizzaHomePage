@@ -132,7 +132,14 @@ export const MobileHeaderWrap = styled.div`
       top: 60px;
       width: 100%;
       height: calc(var(--vh, 1vh) * 100 - 60px);
+      padding-bottom: 62px;
       background: var(--color-orange);
+
+      .menu_area {
+        overflow: auto;
+        height: calc(var(--vh, 1vh) * 100 - 122px);
+        padding-bottom: 62px;
+      }
 
       button,
       .list_submenu li {

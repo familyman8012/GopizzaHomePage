@@ -24,6 +24,7 @@ export const GoGlobalListSection = styled.div`
     padding: 0 20px;
   }
   ${folder} {
+    width: 320px;
     padding: 0 10px;
   }
 `;

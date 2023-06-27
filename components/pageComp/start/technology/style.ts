@@ -286,6 +286,9 @@ export const NeedWrap = styled.section`
   ${folder} {
     dl {
       padding: 335px 5px 0 !important;
+      dt {
+        font-size: 14px !important;
+      }
       dd {
         font-size: 12px !important;
       }

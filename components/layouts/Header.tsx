@@ -82,23 +82,25 @@ const MobileHeader = () => {
         </div>
       </div>
       <div className="layer_menu">
-        {mobileMenu.map((el) => (
-          <div key={el} className={el === "브랜드" ? (isActiveMenu === "brand" ? "active" : "") : isActiveMenu === "franchise" ? "active" : ""}>
-            <button onClick={() => handlerMenu(el === "브랜드" ? "brand" : "franchise")}>{el}</button>
-            <ul className="list_submenu">
-              {(el === "브랜드" ? brandSubmenus : franchiseSubmenus).map((submenu) => (
-                <li
-                  key={submenu.name}
-                  onClick={() => {
-                    handlerMobileMoveMenu(submenu.url);
-                  }}
-                >
-                  {submenu.name}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <div className="menu_area">
+          {mobileMenu.map((el) => (
+            <div key={el} className={el === "브랜드" ? (isActiveMenu === "brand" ? "active" : "") : isActiveMenu === "franchise" ? "active" : ""}>
+              <button onClick={() => handlerMenu(el === "브랜드" ? "brand" : "franchise")}>{el}</button>
+              <ul className="list_submenu">
+                {(el === "브랜드" ? brandSubmenus : franchiseSubmenus).map((submenu) => (
+                  <li
+                    key={submenu.name}
+                    onClick={() => {
+                      handlerMobileMoveMenu(submenu.url);
+                    }}
+                  >
+                    {submenu.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
         <div className="bnr">
           <div className="txt">
             가맹문의 전화

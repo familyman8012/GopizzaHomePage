@@ -400,6 +400,7 @@ export const ProcessWrap = styled.ol`
   }
   ${folder} {
     width: 280px;
+    margin: 0 auto;
     .num {
       font-size: 30px;
     }

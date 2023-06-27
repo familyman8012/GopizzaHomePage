@@ -395,6 +395,11 @@ export const Info = styled.section`
   ${folder} {
     .box_ingredients dd .list {
       grid-template-columns: repeat(2, 1fr);
+
+      li,
+      li .img {
+        width: auto;
+      }
     }
   }
 `;

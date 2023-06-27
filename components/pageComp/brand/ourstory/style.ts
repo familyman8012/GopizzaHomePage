@@ -605,8 +605,8 @@ export const KeepGoingWrap = styled.section`
       .list_nav {
         li,
         li.on {
-          width: 48px;
-          height: 30px;
+          width: 60px;
+          height: 33px;
           font-size: 17px;
         }
       }

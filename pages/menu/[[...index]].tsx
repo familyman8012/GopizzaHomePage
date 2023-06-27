@@ -15,7 +15,7 @@ import { NextSeo } from "next-seo";
 import Modal from "ComponentsFarm/common/Modal";
 import DOMPurify from "isomorphic-dompurify";
 import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 export const TipWrap = styled.div`
   position: relative;
@@ -97,6 +97,25 @@ export const TipWrap = styled.div`
 
         .box_txt {
           margin-top: 10px;
+        }
+      }
+    }
+  }
+  ${folder} {
+    ul {
+      .box_txt {
+        .txt1 {
+          font-size: 28px;
+
+          .number {
+            font-size: 28px;
+          }
+        }
+        .txt2 {
+          font-size: 12px;
+        }
+        .txt3 {
+          font-size: 11px;
         }
       }
     }

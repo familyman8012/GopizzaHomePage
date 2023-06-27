@@ -1190,6 +1190,9 @@ const reset = css`
         font-size: 11px;
       }
     }
+    .fake-placeholder {
+      font-size: 11px !important;
+    }
   }
 
   @media (min-width: 1400px) and (max-width: 1530px) {
