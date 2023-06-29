@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import Image from "next/image";
-import { mq } from "ComponentsFarm/common";
+import { folder, mq } from "ComponentsFarm/common";
 
 const PopWrap = styled.div`
   &:after {
@@ -77,6 +77,11 @@ const BtnBox = styled.div`
       &:last-of-type {
         border-radius: 0 0 10px 0px !important;
       }
+    }
+  }
+  ${folder} {
+    button {
+      font-size: 13px;
     }
   }
 `;
