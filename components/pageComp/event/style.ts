@@ -177,7 +177,7 @@ export const Board = styled.div`
     }
 
     button {
-      display: none;
+      display: none !important;
       width: 4.8rem;
       height: 4.8rem;
       background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/promotion/icon-share.svg") no-repeat left top / 100%;
