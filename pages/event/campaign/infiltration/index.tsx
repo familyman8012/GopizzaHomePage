@@ -496,7 +496,6 @@ function Campaign() {
     if (!agree) {
       return alert("개인정보 활용에 동의하신 후 신청가능합니다.");
     }
-    console.log("sendData", sendData);
 
     setIsLoading(true); // Set loading state to true
     reset();

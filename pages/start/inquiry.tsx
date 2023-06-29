@@ -71,7 +71,6 @@ const Consulting = observer(function Consulting() {
   const Inquiry = useMutation(["groupOrder"], (request: IInquiryReq) => fetchInquiry(request));
 
   const onSubmit = (data: Record<string, string>) => {
-    console.log(data, data.email1 + "@" + data.email2);
     if (!agree) {
       return alert("개인정보취급방침에 동의해주세요.");
     }

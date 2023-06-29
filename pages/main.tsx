@@ -28,13 +28,13 @@ function Main({ mainVisual, youtube, feed }: IMain) {
         <Instagram feed={feed} />
         <Youtube data={youtube} />
       </main>
-      {/* <TodayPopup
+      <TodayPopup
         href="https://gopizza.kr/event/campaign/infiltration"
         src="/images/event/campaign/infiltration/pop_531.png"
         alt="GOPIZZA 2023 전국! 고피자 침투!"
         width="74rem"
         height="74rem"
-      /> */}
+      />
     </>
   );
 }

@@ -45,7 +45,6 @@ function Index({ storeInfo2 }: { storeInfo2: IStoreSearch[] }) {
           return 0;
         });
       setStoreData(newStoreInfo);
-      console.log("newStoreInfo", newStoreInfo);
       setLoad(true);
     }
   }, [findStore.latitude]);

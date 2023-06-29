@@ -165,8 +165,6 @@ function Form({ type, storeInfo }: IFormProps) {
   const ContactUs = useMutation(["contatUs"], (request: IContactUsReq) => fetchContactUs(request));
   const Cusomer = useMutation(["customer"], (request: ICustomerReq) => fetchCustomer(request));
 
-  console.log("storeInfo", storeInfo);
-
   const onSubmit = (data: Record<string, string>) => {
     if (!agree) {
       return alert("개인정보취급방침에 동의해주세요.");
@@ -222,7 +220,6 @@ function Form({ type, storeInfo }: IFormProps) {
       });
     } else if (type === "customer") {
       sendData = { name, phone, email: `${email1}@${email2}`, detail_contents, store_id: Number(usedStoreName?.id) };
-      console.log("sendData", sendData);
       Cusomer.mutate(sendData, {
         onSuccess: (data) => {
           openStoreModal("modal2");

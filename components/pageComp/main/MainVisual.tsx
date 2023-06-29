@@ -12,7 +12,6 @@ function MainVisual({ data }: { data: IMainVisual }) {
         <VisibilitySensorSwiper view={1} paging>
           {data &&
             data.list.map((el) => {
-              console.log(el);
               return (
                 <SwiperSlide key={el.brand_main_banner_idx}>
                   {(el.landing_url.indexOf("http") !== -1 || el.landing_url.indexOf("www")) !== -1 && el.landing_url.indexOf("gopizza.kr") === -1 ? (

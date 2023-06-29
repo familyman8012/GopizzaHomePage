@@ -60,7 +60,6 @@ interface IRevenue {
 }
 
 function Revenue({ windowWidth, spaceBetween }: IRevenue) {
-  console.log("spaceBetween", spaceBetween);
   return (
     <RevenueWrap>
       <h4>

@@ -19,8 +19,6 @@ function FooterMobile() {
     setOpen(false);
   }, []);
 
-  console.log([FooterPrivacy.depth1, ...FooterPrivacy.depth2]);
-
   return (
     <FooterMobileWrap>
       <ul className="list_sns">

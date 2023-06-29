@@ -92,7 +92,5 @@ export const fetchInquiry = async (params: IInquiryReq) => {
 export const fetchInfiltration = async (params: IInfiltration) => {
   const response = await AxiosUtil.post(`/ho/v1/letsgo/gopizza`, params);
 
-  console.log("response", response);
-
   return response.data;
 };

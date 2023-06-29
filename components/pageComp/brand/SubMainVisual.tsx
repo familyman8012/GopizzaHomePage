@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 
 function SubMainVisual({ index, bgimg, txt1, txt2, subTxt }: { index: number; bgimg: string; txt1: string; txt2?: string; subTxt?: string }) {
   const router = useRouter();
-  console.log("index", index);
   return (
     <SubMainVisualWrap bgimg={bgimg} className={`subMainVisual ${router.asPath.split("/")[2] === undefined ? "brand" : router.asPath.split("/")[2]}`}>
       {index === 0 ? (

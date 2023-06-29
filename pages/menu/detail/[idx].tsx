@@ -96,8 +96,6 @@ function DetailView({ seo }: any) {
     }
   }, [currentMenu?.category, currentMenu?.id]);
 
-  console.log("seo", seo);
-
   return (
     <>
       <NextSeo {...seo} />
