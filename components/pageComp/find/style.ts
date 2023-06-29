@@ -168,7 +168,8 @@ export const FindWrap = styled.main`
 
     h2 {
       display: block;
-      margin: 36px 0 30px;
+      margin: 0;
+      padding: 36px 0 30px;
       font-size: 24px;
     }
 
