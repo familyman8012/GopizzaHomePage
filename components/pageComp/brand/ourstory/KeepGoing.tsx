@@ -126,7 +126,9 @@ function KeepGoing() {
                   <SwiperSlide key={i}>
                     <div className={`thumb badge${el.id}`}>
                       <img
-                        src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/history/${YEAR[selHistory]}/history${i + 1}x2.webp`}
+                        src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/brand/ourstory/history/${YEAR[selHistory]}/history${
+                          i + 1
+                        }x2.webp?v=2`}
                         alt={`${el.title} 이미지`}
                       />
                       <span className="badge"></span>
