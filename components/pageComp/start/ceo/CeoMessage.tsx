@@ -36,8 +36,7 @@ function CeoMessage() {
             <br />
             <br />
             전 세계 고객들에게 편리하고, 저렴하게 소비할
-            <br className="mobileline" /> 수 있는 1인 피자가
-            <br className="pcline" />
+            <br className="mobileline" /> 수 있는 1인 피자가 <br className="pcline" />
             피자의 표준이 될 때까지 착하
             <br className="mobileline" />
             고, 성실하게 고피자만 열심히 하겠습니다.
