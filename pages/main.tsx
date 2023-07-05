@@ -42,6 +42,8 @@ function Main({ mainVisual, youtube, feed }: IMain) {
 export const getStaticProps = async () => {
   const [mainVisual, youtube, feed] = await Promise.all([fetchMainVisual(), fetchYoutubeVisual(), fetchInstaFeed()]);
 
+  console.log("mainVisual", mainVisual);
+
   return {
     props: {
       mainVisual,
