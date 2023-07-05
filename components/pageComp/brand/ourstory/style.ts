@@ -451,10 +451,11 @@ export const KeepGoingWrap = styled.section`
       }
       .box_txt {
         display: flex;
-        align-items: center;
+        /* align-items: center; */
         margin-top: 2.1rem;
 
         .number {
+          margin-top: 8px;
           margin-right: 1.6rem;
           font-family: "solano";
           font-size: 6.2rem;
