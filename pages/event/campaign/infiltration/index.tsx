@@ -493,6 +493,7 @@ function Campaign() {
   const Infiltration = useMutation(["IInfiltration"], (request: IInfiltration) => fetchInfiltration(request));
 
   const onSubmit = (sendData: any) => {
+    if (isLoading) return;
     if (!agree) {
       return alert("개인정보 활용에 동의하신 후 신청가능합니다.");
     }
