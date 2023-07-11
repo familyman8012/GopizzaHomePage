@@ -21,6 +21,7 @@ import { CommonSeo, menu, Seo } from "ComponentsFarm/Seo";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 import { Analytics } from "@vercel/analytics/react";
+import Head from "next/head";
 
 export type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -41,6 +42,22 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   // useEffect(() => {
   //   setScreenSize();
   // }, []);
+
+  useEffect(() => {
+    //@ts-ignore
+    if (!wcs_add) var wcs_add = {};
+    //@ts-ignore
+    wcs_add["wa"] = "s_dc8a2375cf2";
+    //@ts-ignore
+    if (!_nasa) var _nasa = {};
+    //@ts-ignore
+    if (window.wcs) {
+      //@ts-ignore
+      wcs.inflow("gopizza.kr");
+      //@ts-ignore
+      wcs_do(_nasa);
+    }
+  }, []);
 
   useEffect(() => {
     if (findStore.latitude === null && !router.asPath.includes("campaign")) {
@@ -80,6 +97,9 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       <CommonSeo />
       <NextSeo {...Seo[menu.indexOf(router.asPath)]} />
       <GoogleAnalytics trackPageViews />
+      <Head>
+        <script async type="text/javascript" src="//wcs.naver.net/wcslog.js" />
+      </Head>
       <CookiesProvider>{getLayout(<Component {...pageProps} />)}</CookiesProvider>
       <ReactQueryDevtools />
       <Analytics />

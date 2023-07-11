@@ -25,18 +25,7 @@ export default function Document() {
         `}
         </Script>
         <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11121440258" strategy="afterInteractive" />
-        <Script id="naver-wcs" strategy="afterInteractive" src="//wcs.naver.net/wcslog.js" />
-        <Script id="naver-wcs-config" strategy="afterInteractive">
-          {`
-          if (!wcs_add) var wcs_add={};
-          wcs_add["wa"] = "s_dc8a2375cf2";
-          if (!_nasa) var _nasa={};
-          if(window.wcs){
-            wcs.inflow();
-            wcs_do(_nasa);
-          }
-        `}
-        </Script>
+        <Script type="text/javascript" src="//wcs.naver.net/wcslog.js"></Script>
       </Head>
       <body>
         <Main />
