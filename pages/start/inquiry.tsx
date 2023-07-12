@@ -73,6 +73,8 @@ const Consulting = observer(function Consulting() {
   const Inquiry = useMutation(["groupOrder"], (request: IInquiryReq) => fetchInquiry(request));
 
   const onSubmit = (data: Record<string, string>) => {
+    // 버튼 비활성화시 더이상 submit 되지 않도록
+    if (submitDisabled) true;
     if (!agree) {
       return alert("개인정보취급방침에 동의해주세요.");
     }
