@@ -26,6 +26,10 @@ export default function Document() {
         </Script>
         <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11121440258" strategy="afterInteractive" />
         <Script id="naver-wcs" strategy="beforeInteractive" src="//wcs.naver.net/wcslog.js" />
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
         <Script id="naver-common" strategy="lazyOnload">
           {`
           if (!wcs_add) var wcs_add={};
@@ -37,10 +41,6 @@ export default function Document() {
           }
         `}
         </Script>
-      </Head>
-      <body>
-        <Main />
-        <NextScript />
       </body>
     </Html>
   );
