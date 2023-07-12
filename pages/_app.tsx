@@ -44,22 +44,6 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   // }, []);
 
   useEffect(() => {
-    //@ts-ignore
-    if (!wcs_add) var wcs_add = {};
-    //@ts-ignore
-    wcs_add["wa"] = "s_dc8a2375cf2";
-    //@ts-ignore
-    if (!_nasa) var _nasa = {};
-    //@ts-ignore
-    if (window.wcs) {
-      //@ts-ignore
-      wcs.inflow("gopizza.kr");
-      //@ts-ignore
-      wcs_do(_nasa);
-    }
-  }, []);
-
-  useEffect(() => {
     if (findStore.latitude === null && !router.asPath.includes("campaign")) {
       findStore.getPosition();
     }

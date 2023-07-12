@@ -100,7 +100,7 @@ const Consulting = observer(function Consulting() {
 
   return (
     <>
-      <Script id="naver-common" type="text/javascript">
+      <Script id="naver-return-value" type="text/javascript">
         {`
             if (window.wcs) {
               var _nasa = window._nasa || {};
