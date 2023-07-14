@@ -107,6 +107,7 @@ const Consulting = observer(function Consulting() {
             if (window.wcs) {
               var _nasa = window._nasa || {};
               _nasa["cnv"] = wcs.cnv("5","0");
+              wcs_do(_nasa);
             }
           `}
       </Script>
