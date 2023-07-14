@@ -30,17 +30,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Script id="naver-common" strategy="lazyOnload">
-          {`
-          if (!wcs_add) var wcs_add={};
-          wcs_add["wa"] = "s_dc8a2375cf2";
-          if (!_nasa) var _nasa={};
-          if(window.wcs){
-            wcs.inflow("gopizza.kr");
-            wcs_do(_nasa);
-          }
-        `}
-        </Script>
       </body>
     </Html>
   );

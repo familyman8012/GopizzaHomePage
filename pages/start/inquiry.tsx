@@ -2,7 +2,12 @@ import { useMutation } from "@tanstack/react-query";
 import { fetchInquiry } from "ApiFarm/home";
 import { IInquiryReq } from "ApiFarm/interface/homeInterface";
 import Modal from "ComponentsFarm/common/Modal";
+import Copyright from "ComponentsFarm/layouts/Copyright";
+import Footer from "ComponentsFarm/layouts/Footer";
+import FooterMobile from "ComponentsFarm/layouts/FooterMobile";
+import Header from "ComponentsFarm/layouts/Header";
 import StartLayout from "ComponentsFarm/layouts/pageLayouts/StartLayout";
+import Top from "ComponentsFarm/layouts/Top";
 import { FormWrap } from "ComponentsFarm/pageComp/order/Form";
 import { Content } from "ComponentsFarm/pageComp/start/style";
 import { ApplicationWrap } from "ComponentsFarm/popup/Application";
@@ -13,7 +18,7 @@ import { observer } from "mobx-react";
 import { mobileHeader } from "MobxFarm/store";
 import Head from "next/head";
 import Script from "next/script";
-import { useCallback, useState } from "react";
+import { ReactElement, useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
 
 const email = [
@@ -35,7 +40,7 @@ const email = [
 
 const inflowArr = ["방송/기사", "온라인 광고", "앱 광고", "유튜브", "매장이용", "검색엔진", "지인/주변인", "기타"];
 
-const Consulting = observer(function Consulting() {
+function Consulting() {
   const {
     register,
     handleSubmit,
@@ -102,15 +107,6 @@ const Consulting = observer(function Consulting() {
 
   return (
     <>
-      <Script id="naver-return-value" type="text/javascript">
-        {`
-            if (window.wcs) {
-              var _nasa = window._nasa || {};
-              _nasa["cnv"] = wcs.cnv("5","0");
-              wcs_do(_nasa);
-            }
-          `}
-      </Script>
       <StartLayout className="wrap_inquiry">
         <Content className={mobileHeader.open ? "on" : ""}>
           <FormWrap onSubmit={handleSubmit(onSubmit)}>
@@ -261,6 +257,38 @@ const Consulting = observer(function Consulting() {
       </StartLayout>
     </>
   );
-});
+}
 
 export default Consulting;
+
+Consulting.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <>
+      <Header />
+      {page}
+      <Top />
+      <Footer />
+      <FooterMobile />
+      <Copyright />
+      <Script id="naver-return-value" type="text/javascript">
+        {`
+            if (window.wcs) {
+              var _nasa = window._nasa || {};
+              _nasa["cnv"] = wcs.cnv("5","0");
+            }
+          `}
+      </Script>
+      <Script id="naver-common">
+        {`
+        if (!wcs_add) var wcs_add={};
+        wcs_add["wa"] = "s_dc8a2375cf2";
+        if (!_nasa) var _nasa={};
+        if(window.wcs){
+          wcs.inflow("gopizza.kr");
+          wcs_do(_nasa);
+        }
+      `}
+      </Script>
+    </>
+  );
+};

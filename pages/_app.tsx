@@ -81,9 +81,6 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       <CommonSeo />
       <NextSeo {...Seo[menu.indexOf(router.asPath)]} />
       <GoogleAnalytics trackPageViews />
-      <Head>
-        <script async type="text/javascript" src="//wcs.naver.net/wcslog.js" />
-      </Head>
       <CookiesProvider>{getLayout(<Component {...pageProps} />)}</CookiesProvider>
       <ReactQueryDevtools />
       <Analytics />
