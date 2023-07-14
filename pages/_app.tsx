@@ -1,3 +1,4 @@
+//@ts-nocheck
 import type { AppProps } from "next/app";
 import { Global } from "@emotion/react";
 import reset from "ComponentsFarm/common";
@@ -42,6 +43,32 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   // useEffect(() => {
   //   setScreenSize();
   // }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (router.asPath === "/start/inquiry") {
+        if (window.wcs) {
+          var _nasa = window._nasa || {};
+          _nasa["cnv"] = wcs.cnv("5", "0");
+        }
+        if (!wcs_add) var wcs_add = {};
+        wcs_add["wa"] = "s_dc8a2375cf2";
+        if (!_nasa) var _nasa = {};
+        if (window.wcs) {
+          wcs.inflow("gopizza.kr");
+          wcs_do(_nasa);
+        }
+      } else {
+        if (!wcs_add) var wcs_add = {};
+        wcs_add["wa"] = "s_dc8a2375cf2";
+        if (!_nasa) var _nasa = {};
+        if (window.wcs) {
+          wcs.inflow("gopizza.kr");
+          wcs_do(_nasa);
+        }
+      }
+    }
+  }, [router.asPath]);
 
   useEffect(() => {
     if (findStore.latitude === null && !router.asPath.includes("campaign")) {

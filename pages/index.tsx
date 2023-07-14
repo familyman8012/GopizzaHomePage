@@ -57,20 +57,5 @@ function Index() {
 export default Index;
 
 Index.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <>
-      {page}
-      <Script id="naver-common">
-        {`
-    if (!wcs_add) var wcs_add={};
-    wcs_add["wa"] = "s_dc8a2375cf2";
-    if (!_nasa) var _nasa={};
-    if(window.wcs){
-      wcs.inflow("gopizza.kr");
-      wcs_do(_nasa);
-    }
-  `}
-      </Script>
-    </>
-  );
+  return <>{page}</>;
 };
