@@ -26,6 +26,19 @@ export default function Document() {
         </Script>
         <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11121440258" strategy="afterInteractive" />
         <Script id="naver-wcs" strategy="beforeInteractive" src="//wcs.naver.net/wcslog.js" />
+        {/* <Script id="naver-common" strategy="lazyOnload">
+          {`
+          var _nasa={};
+          if (window.wcs) _nasa["cnv"] = wcs.cnv("5","0");
+          if (!wcs_add) var wcs_add = {};
+          wcs_add["wa"] = "s_dc8a2375cf2";
+          if (!_nasa) var _nasa = {};
+          if (window.wcs) {
+            wcs.inflow("localhost:3000");
+            wcs_do(_nasa);
+          }
+        `}
+        </Script> */}
       </Head>
       <body>
         <Main />
