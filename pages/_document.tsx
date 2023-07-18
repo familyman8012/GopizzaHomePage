@@ -25,7 +25,7 @@ export default function Document() {
         `}
         </Script>
         <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11121440258" strategy="afterInteractive" />
-        <Script id="naver-wcs" strategy="beforeInteractive" src="//wcs.naver.net/wcslog.js" />
+        <Script id="naver-wcs" strategy="afterInteractive" src="//wcs.naver.net/wcslog.js" />
         {/* <Script id="naver-common" strategy="lazyOnload">
           {`
           var _nasa={};
