@@ -517,7 +517,7 @@ export const SupportWrap = styled.section`
     padding-bottom: 5.2rem;
     margin: 0 auto;
 
-    &:before {
+    /* &:before {
       position: absolute;
       top: -33.3rem;
       right: -6.5rem;
@@ -525,7 +525,7 @@ export const SupportWrap = styled.section`
       width: 36.2rem;
       height: 33.3rem;
       background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/img_personx2.webp") no-repeat left top / 100%;
-    }
+    } */
   }
 
   .swiper {
@@ -565,7 +565,7 @@ export const SupportWrap = styled.section`
     width: 128rem;
     margin: 0 auto;
 
-    &:before {
+    /* &:before {
       position: absolute;
       z-index: -1;
       top: -32rem;
@@ -574,7 +574,7 @@ export const SupportWrap = styled.section`
       width: 36.2rem;
       height: 33.3rem;
       background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/start/competitive/img_person2x2.webp") no-repeat left top / 100%;
-    }
+    } */
 
     ul {
       display: grid;

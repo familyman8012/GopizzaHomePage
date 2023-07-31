@@ -101,7 +101,7 @@ export const Seo = [
       url: "https://gopizza.kr/main",
       images: [
         {
-          url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/brand_main_banner/202303/1678679118-31.webp",
+          url: "https://gopizza-homepage.s3.ap-northeast-2.amazonaws.com/brand_main_banner/202307/1689643752-55.webp",
           alt: "엣지까지 즐기는 빠-삭 도우!",
         },
       ],
@@ -113,7 +113,7 @@ export const Seo = [
       title: "FAST, BUT DELICIOUS | 고피자",
       description: "고피자는 혁신적인 1인 피자 브랜드로, 빠르고 맛있는 피자를 제공합니다. 다양한 취향을 반영한 맛있는 피자와 함께 즐거운 외식 경험을 선사해드립니다.",
       image: {
-        url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/brand_main_banner/202303/1678679118-31.webp",
+        url: "https://gopizza-homepage.s3.ap-northeast-2.amazonaws.com/brand_main_banner/202307/1689643752-55.webp",
       },
     },
   },

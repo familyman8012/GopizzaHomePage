@@ -9,7 +9,7 @@ export interface AxiosUtilResponse<T> {
 const getBaseUrl = () => {
   let reVal;
   if (process.env.DEVMODE === "development") {
-    reVal = "https://dev.api.gopizza.kr";
+    reVal = "https://api.gopizza.kr";
   } else {
     reVal = "https://api.gopizza.kr";
   }

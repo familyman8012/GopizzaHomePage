@@ -21,13 +21,13 @@ export const IndexWrap = styled.main`
     padding: 13rem 0 0 12rem;
 
     &:nth-of-type(1) {
-      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/bg_main1x2.webp?v=2") no-repeat center bottom / cover;
+      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/bg_main1x2.webp?v=3") no-repeat center bottom / cover;
       a .txt {
         padding-right: 5.7rem;
       }
     }
     &:nth-of-type(2) {
-      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/bg_main2x2.webp?v=2") no-repeat center bottom / cover;
+      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/index/bg_main2x2.webp?v=3") no-repeat center bottom / cover;
       a .txt {
         padding-right: 4.5rem;
       }

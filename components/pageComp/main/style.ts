@@ -45,41 +45,35 @@ export const YoutubeComponent = styled.section`
 
 export const LinkBannerItem = styled.div`
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  border-radius: 10px;
 
-  width: 61.4rem;
-  height: 25.9rem;
+  width: 51rem;
+  height: 18rem;
 
   .txt {
+    width: fit-content;
+    /* padding-right: 3rem; */
     font-size: 4rem;
     font-weight: bold;
     color: #fff;
+    /* background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/arrow_right.svg") no-repeat right 19px / 18px; */
   }
 
   &.find {
     margin-right: 6.4rem;
-    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/bnr_link1x2.webp?v=2") no-repeat left top / 100%;
-
-    .txt {
-      padding: 5.9rem 0 0 22.6rem;
-    }
+    background: var(--color-bluedark);
   }
   &.inquiry {
-    width: 65.6rem;
-    height: 23.5rem;
-    padding-top: 2.4rem;
     box-sizing: content-box;
-    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/bnr_link2x2.webp?v=2") no-repeat left bottom / 100%;
-    .txt {
-      padding: 3.4rem 0 0 9rem;
-    }
+    background: var(--color-bluedark);
   }
 `;
 
 export const LinkBannerWrap = styled.section`
   display: flex;
-  margin: 2rem 0 20.6rem;
+  margin: 8.4rem 0 20.6rem;
   justify-content: center;
 
   ${mq[0]} {
