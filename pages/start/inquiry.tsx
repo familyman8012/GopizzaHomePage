@@ -73,6 +73,7 @@ const Consulting = observer(function Consulting() {
   const Inquiry = useMutation(["groupOrder"], (request: IInquiryReq) => fetchInquiry(request));
 
   const onSubmit = (data: Record<string, string>) => {
+    handleClick();
     // 버튼 비활성화시 더이상 submit 되지 않도록
     if (submitDisabled) true;
     if (!agree) {
@@ -221,7 +222,7 @@ const Consulting = observer(function Consulting() {
                 전문보기
               </button>
             </div>
-            <button className="submit" disabled={submitDisabled} onClick={handleClick}>
+            <button className="submit" disabled={submitDisabled}>
               신청하기
             </button>
           </FormWrap>
