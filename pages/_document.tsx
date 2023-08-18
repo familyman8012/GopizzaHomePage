@@ -21,10 +21,10 @@ export default function Document() {
          function gtag(){dataLayer.push(arguments);}
          gtag('js', new Date());
        
-         gtag('config', 'AW-11121440258');
+         gtag('config', 'AW-10879228606');
         `}
         </Script>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11121440258" strategy="afterInteractive" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-10879228606" strategy="afterInteractive" />
         <Script id="naver-wcs" strategy="afterInteractive" src="//wcs.naver.net/wcslog.js" />
         {/* <Script id="naver-common" strategy="lazyOnload">
           {`

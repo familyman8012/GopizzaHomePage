@@ -100,6 +100,11 @@ const Consulting = observer(function Consulting() {
     });
   };
 
+  const handleClick = () => {
+    // gtag 함수 호출
+    (window as any).gtag("event", "conversion", { send_to: "AW-10879228606/AVDaCLTK0dMYEL61z8Mo" });
+  };
+
   return (
     <>
       <StartLayout className="wrap_inquiry">
@@ -216,7 +221,7 @@ const Consulting = observer(function Consulting() {
                 전문보기
               </button>
             </div>
-            <button className="submit" disabled={submitDisabled}>
+            <button className="submit" disabled={submitDisabled} onClick={handleClick}>
               신청하기
             </button>
           </FormWrap>
