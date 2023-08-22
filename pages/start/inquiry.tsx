@@ -73,18 +73,19 @@ const Consulting = observer(function Consulting() {
   const Inquiry = useMutation(["groupOrder"], (request: IInquiryReq) => fetchInquiry(request));
 
   const handleGoogleAnalytics = () => {
-    // gtag 함수 호출
-    (window as any).gtag("event", "conversion", { send_to: "AW-10879228606/AVDaCLTK0dMYEL61z8Mo" });
+    (window as any)?.gtag("event", "conversion", {
+      send_to: "AW-730698568/yqQFCN2r2aQBEMimttwC",
+    });
+    return;
   };
 
   const onSubmit = (data: Record<string, string>) => {
     // 버튼 비활성화시 더이상 submit 되지 않도록
-    if (submitDisabled) true;
+    if (submitDisabled) return;
     if (!agree) {
       return alert("개인정보취급방침에 동의해주세요.");
     }
 
-    handleGoogleAnalytics();
     setSubmitDisabled(true); // 요청 시작 시 버튼을 비활성화합니다.
 
     const sendData: any = {
@@ -94,6 +95,7 @@ const Consulting = observer(function Consulting() {
 
     Inquiry.mutate(sendData, {
       onSuccess: (data) => {
+        handleGoogleAnalytics();
         openStoreModal2();
         reset();
         setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
