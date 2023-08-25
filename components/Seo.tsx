@@ -717,16 +717,16 @@ export const MenuSeo = [
 export const CampSeo = [
   {
     canonical: "https://gopizza.kr/event/campaign/infiltration",
-    title: "고피자가 간다!",
-    description: "사연 보고 당첨되면 매주 한  팀씩 피자 90판 공짜로 쏜다!",
+    title: "전국 곳곳 고피자가 간다!",
+    description: "고피자 찐팬 모여라! 피자 90판 쏜다",
     openGraph: {
       type: "website",
-      title: "고피자가 간다!",
-      description: "사연 보고 당첨되면 매주 한  팀씩 피자 90판 공짜로 쏜다!",
+      title: "전국 곳곳 고피자가 간다! 행운의 선을 넘다",
+      description: "고피자 찐팬 모여라! 피자 90판 쏜다",
       url: "https://gopizza.kr/event/campaign/infiltration",
       images: [
         {
-          url: "/images/event/campaign/gopizza_go/img_hero.webp",
+          url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/gopizza_go2/img_hero.webp",
           alt: "",
         },
       ],
@@ -734,10 +734,10 @@ export const CampSeo = [
     twitter: {
       card: "summary_large_image",
       site: "@gopizza",
-      title: "고피자가 간다!",
-      description: "사연 보고 당첨되면 매주 한  팀씩 피자 90판 공짜로 쏜다!",
+      title: "전국 곳곳 고피자가 간다! 행운의 선을 넘다",
+      description: "고피자 찐팬 모여라! 피자 90판 쏜다",
       image: {
-        url: "/images/event/campaign/gopizza_go/img_hero.webp",
+        url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/gopizza_go2/img_hero.webp",
         alt: "",
       },
     },
