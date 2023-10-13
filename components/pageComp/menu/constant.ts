@@ -30,93 +30,93 @@ export const menuItem = [
   [
     {
       idx: "pizza1",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_pizza1.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item1x2.webp",
       name: "치킨앤콘 반반 피자",
       enName: "Chicken & Corn Half/Half Pizza",
     },
     {
       idx: "pizza2",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_pizza2.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item2x2.webp",
       name: "페퍼로니 앤 포테이토 반반 피자",
       enName: "Pepperoni & Potato Half/Half Pizza",
     },
     {
       idx: "pizza3",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_pizza3.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item3x2.webp",
       name: "슈퍼 콤비네이션 피자",
       enName: "Super Combination Pizza",
     },
     {
       idx: "pizza4",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_pizza4.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item4x2.webp",
       name: "K-불고기 피자",
       enName: "K-Bulgogi Pizza",
     },
     {
       idx: "pizza5",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_pizza5.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item5x2.webp",
       name: "스윗 치킨앤콘 피자",
       enName: "Sweet Chicken & Corn Pizza",
     },
     {
       idx: "pizza6",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_pizza6.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item6x2.webp",
       name: "스파이시 치킨앤콘 피자",
       enName: "Spicy Chicken & Corn Pizza",
     },
     {
       idx: "pizza7",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_pizza7.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item7x2.webp",
       name: "베이컨 포테이토 피자",
       enName: "Bacon Potato Pizza",
       badge: "best",
     },
     {
       idx: "pizza8",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_pizza8.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item8x2.webp",
       name: "매니악 페퍼로니 피자",
       enName: "Maniac Pepperoni Pizza",
       badge: "best",
     },
     {
       idx: "pizza9",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_pizza9.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item9x2.webp",
       name: "달콤 고구마 피자",
       enName: "Sweet Potato Pizza",
     },
     {
       idx: "pizza10",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_pizza10.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item10x2.webp",
       name: "오리지널 페퍼로니 피자",
       enName: "OG Pepperoni Pizza",
     },
     {
       idx: "pizza11",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_pizza11.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item11x2.webp",
       name: "마약 옥수수 피자",
       enName: "'Mayak' Corn Pizza",
     },
     {
       idx: "pizza12",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_pizza12.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item12x2.webp",
       name: "허니 고르곤졸라 피자",
       enName: "Honey Gorgonzola Pizza",
     },
     {
       idx: "pizza13",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_pizza13.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item13x2.webp",
       name: "크레이지 미트치즈 피자",
       enName: "Crazy Bolognese Pizza",
     },
     {
       idx: "pizza14",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_pizza14.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item14x2.webp",
       name: "클래식 마르게리타 피자",
       enName: "Classic Margherita Pizza",
     },
     {
       idx: "pizza15",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_pizza15.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item15x2.webp",
       name: "아메리칸 치즈 피자",
       enName: "American Cheese Pizza",
     },
@@ -124,60 +124,78 @@ export const menuItem = [
   [
     {
       idx: "pasta1",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pasta/img_pasta1.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pasta/img_item1x2.webp",
       name: "토마토 치즈 파스타",
       enName: "Tomato Cheese Pasta",
     },
     {
       idx: "pasta2",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pasta/img_pasta2.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pasta/img_item2x2.webp",
       name: "미트 치즈 파스타",
       enName: "Meat Cheese Pasta",
+    },
+    {
+      idx: "pasta3",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pasta/img_item2x2.webp",
+      name: "베이컨 로제 파스타",
+      enName: "Bacon Rosé Pasta",
     },
   ],
   [
     {
       idx: "tteokbokki1",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/tteokbokki/img_tteokbokki1.webp",
-      name: "화덕 떡볶이",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/tteokbokki/img_item1x2.webp",
+      name: "매콤 떡볶이",
       enName: "Tteokbokki",
       badge: "best",
     },
     {
       idx: "tteokbokki2",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/tteokbokki/img_tteokbokki2.webp",
-      name: "화덕 치즈 떡볶이",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/tteokbokki/img_item2x2.webp",
+      name: "매콤 치즈 떡볶이",
       enName: "Cheese Tteokbokki",
+    },
+    {
+      idx: "tteokbokki3",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/tteokbokki/img_item3x2.webp",
+      name: "마라 로제 떡볶이",
+      enName: "Mala Rosé Tteokbokki",
+    },
+    {
+      idx: "tteokbokki4",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/tteokbokki/img_item4x2.webp",
+      name: "마라 치즈 떡볶이",
+      enName: "Mala Cheese Tteokbokki",
     },
   ],
   [
     {
       idx: "sides1",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/sides/img_sides1.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/sides/img_item1x2.webp",
       name: "ALL 순살치킨",
       enName: "ALL Boneless Chicken",
     },
     {
       idx: "sides2",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/sides/img_sides2.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/sides/img_item2x2.webp",
       name: "순살치킨 앤 프라이",
       enName: "Boneless Chicken & Fries",
     },
     {
       idx: "sides3",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/sides/img_sides3.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/sides/img_item3x2.webp",
       name: "버팔로 윙/봉",
       enName: "Original Buffalo Wing",
     },
     {
       idx: "sides4",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/sides/img_sides4.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/sides/img_item4x2.webp",
       name: "프렌치 프라이",
       enName: "French Fries",
     },
     {
       idx: "sides5",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/sides/img_sides5.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/sides/img_item5x2.webp",
       name: "치즈스틱",
       enName: "Cheese Stick",
     },
@@ -185,37 +203,37 @@ export const menuItem = [
   [
     {
       idx: "set1",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_set1.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_item1x2.webp",
       name: "1인 피자 세트",
       enName: "Pizza & Side Set",
     },
     {
       idx: "set2",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_set2.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_item2x2.webp",
       name: "1.5인 피파 세트",
       enName: "Pizza & Pasta Set",
     },
     {
       idx: "set3",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_set3.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_item3x2.webp",
       name: "1.5인 피떡 세트",
       enName: "Pizza & Tteokbokki Set",
     },
     {
       idx: "set4",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_set4.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_item4x2.webp",
       name: "1.5인 피치 세트",
       enName: "Pizza & Chicken Set",
     },
     {
       idx: "set5",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_set5.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_item5x2.webp",
       name: "2인 피자 세트",
       enName: "Couple Set",
     },
     {
       idx: "set6",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_set6.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_item6x2.webp",
       name: "2.5인 피자 세트",
       enName: "Friends Set",
     },
@@ -223,19 +241,19 @@ export const menuItem = [
   [
     {
       idx: "powertime1",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/powertime/img_powertime1.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/powertime/img_item1x2.webp",
       name: "오리지널 페퍼로니 피자+콜라",
       enName: "OG Pepperoni Pizza",
     },
     {
       idx: "powertime2",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/powertime/img_powertime2.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/powertime/img_item2x2.webp",
       name: "허니 고르곤졸라 피자+콜라",
       enName: "Honey Gorgonzola Pizza",
     },
     {
       idx: "powertime3",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/powertime/img_powertime3.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/powertime/img_item3x2.webp",
       name: "이달의 피자+콜라",
       enName: "",
     },
@@ -281,6 +299,10 @@ export const Ingredients = [
   "마요네즈",
   "바질 오일",
   "마리네이드 토마토",
+  "로제소스",
+  "마라유",
+  "피쉬볼(오징어볼)",
+  "파마산 치즈",
 ];
 
 // detail
@@ -443,21 +465,46 @@ export const menuDetail: IMenuDetail = {
     자연 치즈가 어우러져 감칠맛이 가득`,
     ingredients: ["미트 소스", "올리브 오일", "파슬리", "모짜렐라 치즈"],
   },
+  pasta3: {
+    id: 3,
+    category: "pasta",
+    name: "베이컨 로제 파스타",
+    enName: "Bacon Rosé Pasta",
+    txt: `토마토와 크림의 조화에 풍미있는 베이컨이
+    더해져 풍성한 맛의 파스타`,
+    ingredients: ["로제소스", "베이컨", "양파", "파마산 치즈", "모짜렐라 치즈"],
+  },
   tteokbokki1: {
     id: 1,
     category: "tteokbokki",
-    name: "화덕 떡볶이",
+    name: "매콤 떡볶이",
     enName: "TTEOKBOKKI",
-    txt: `화덕에서 갓 구워 더 맛있는 갓 떡볶이, 군만두와\n 계란이 쏘옥`,
-    ingredients: ["고추장", "만두", "계란"],
+    txt: `오븐에서 갓 구워 더 맛있는 갓 떡볶이, 군만두가 쏘옥`,
+    ingredients: ["고추장", "만두"],
   },
   tteokbokki2: {
     id: 2,
     category: "tteokbokki",
-    name: "화덕 치즈 떡볶이",
+    name: "매콤 치즈 떡볶이",
     enName: "Cheese Tteokbokki",
-    txt: `화덕에서 갓 구워 더 맛있는 갓 치즈 떡볶이, 군만두와\n 계란이 쏘옥`,
-    ingredients: ["고추장", "만두", "계란", "모짜렐라 치즈"],
+    txt: `오븐에서 갓 구워 더 맛있는 치즈 떡볶이, 군만두가 쏘옥`,
+    ingredients: ["고추장", "만두", "모짜렐라 치즈"],
+  },
+  tteokbokki3: {
+    id: 3,
+    category: "tteokbokki",
+    name: "마라 로제 떡볶이",
+    enName: "Mala Rosé Tteokbokki",
+    txt: `강렬한 마라에 부드러운 로제 소스가 어우러진\n 중독성 있는 맛의 떡볶이`,
+    ingredients: ["고추장", "로제소스", "마라유", "만두", "피쉬볼(오징어볼)", "레드페퍼"],
+  },
+  tteokbokki4: {
+    id: 4,
+    category: "tteokbokki",
+    name: "마라 치즈 떡볶이",
+    enName: "Mala Cheese Tteokbokki",
+    txt: `마라로제떡볶이 위에 치즈를 가득 올려\n 부드럽게 매콤한 떡볶이`,
+    ingredients: ["고추장", "로제소스", "마라유", "만두", "피쉬볼(오징어볼)", "모짜렐라 치즈", "레드페퍼"],
   },
   sides1: {
     id: 1,
@@ -526,8 +573,8 @@ export const menuDetail: IMenuDetail = {
     enName: "Pizza & Tteokbokki Set",
     txt: `피자+떡볶이+음료
 
-    화덕 떡볶이
-    화덕 치즈 떡볶이 중 택1`,
+    매콤 떡볶이
+    매콤 치즈 떡볶이 중 택1`,
     ingredients: [],
   },
   set4: {
@@ -559,8 +606,8 @@ export const menuDetail: IMenuDetail = {
     
     토마토 치즈 파스타
     미트 치즈 파스타
-    화덕 떡볶이
-    화덕 치즈 떡볶이 중 택1`,
+    매콤 떡볶이
+    매콤 치즈 떡볶이 중 택1`,
     ingredients: [],
   },
   powertime1: {
