@@ -144,14 +144,14 @@ export const menuItem = [
   [
     {
       idx: "tteokbokki1",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/tteokbokki/img_item1x2.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/tteokbokki/img_item1x2.webp?v=2",
       name: "매콤 떡볶이",
       enName: "Tteokbokki",
       badge: "best",
     },
     {
       idx: "tteokbokki2",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/tteokbokki/img_item2x2.webp",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/tteokbokki/img_item2x2.webp?v=2",
       name: "매콤 치즈 떡볶이",
       enName: "Cheese Tteokbokki",
     },
