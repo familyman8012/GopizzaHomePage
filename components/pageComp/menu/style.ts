@@ -17,6 +17,10 @@ export const MenuWrap = styled.main`
 
   .list_tab li {
     padding: 9px;
+
+    &:last-of-type {
+      width: 20rem;
+    }
   }
 
   .menu_visual {

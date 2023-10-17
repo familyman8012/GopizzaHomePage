@@ -149,8 +149,8 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizza.kr/menu/tteokbokki</link>
-     <title>TTEOKBOKKI | 고피자</title>
+     <link>https://gopizza.kr/menu/topokki</link>
+     <title>TOPOKKI | 고피자</title>
      <description>고피자의 맛있는 떡볶이 메뉴를 만나보세요! 화덕 떡볶이와 화덕 치즈 떡볶이 등 고피자만의 특별한 맛을 경험해 보십시오. 혼자서도, 다 같이도 즐길 수 있는 맛있는 떡볶이!</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>3</ror:sortOrder>
@@ -333,7 +333,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizza.kr/menu/detail/tteokbokki1</link>
+     <link>https://gopizza.kr/menu/detail/topokki1</link>
      <title>화덕 떡볶이 | 고피자</title>
      <description>화덕에서 갓 구워 더 맛있는 갓 떡볶이, 군만두와
  계란이 쏘옥, 고피자의 화덕 떡볶이</description>
@@ -342,7 +342,7 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://gopizza.kr/menu/detail/tteokbokki2</link>
+     <link>https://gopizza.kr/menu/detail/topokki2</link>
      <title>화덕 치즈 떡볶이 | 고피자</title>
      <description>화덕에서 갓 구워 더 맛있는 갓 치즈 떡볶이, 군만두와
  계란이 쏘옥, 고피자의 화덕 치즈 떡볶이</description>

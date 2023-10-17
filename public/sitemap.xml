@@ -98,7 +98,7 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://gopizza.kr/menu/tteokbokki</loc>
+  <loc>https://gopizza.kr/menu/topokki</loc>
   <lastmod>2023-03-27T01:47:23+00:00</lastmod>
   <priority>0.51</priority>
 </url>
@@ -203,12 +203,12 @@
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://gopizza.kr/menu/detail/tteokbokki1</loc>
+  <loc>https://gopizza.kr/menu/detail/topokki1</loc>
   <lastmod>2023-03-27T01:47:23+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://gopizza.kr/menu/detail/tteokbokki2</loc>
+  <loc>https://gopizza.kr/menu/detail/topokki2</loc>
   <lastmod>2023-03-27T01:47:23+00:00</lastmod>
   <priority>0.41</priority>
 </url>

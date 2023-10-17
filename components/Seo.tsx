@@ -597,15 +597,15 @@ export const MenuSeo = [
     },
   },
   {
-    canonical: "https://gopizza.kr/menu/tteokbokki",
-    title: "TTEOKBOKKI | 고피자",
+    canonical: "https://gopizza.kr/menu/topokki",
+    title: "TOPOKKI | 고피자",
     description:
       "고피자의 맛있는 떡볶이 메뉴를 만나보세요! 화덕 떡볶이와 화덕 치즈 떡볶이 등 고피자만의 특별한 맛을 경험해 보십시오. 혼자서도, 다 같이도 즐길 수 있는 맛있는 떡볶이!",
     openGraph: {
       type: "website",
-      title: "TTEOKBOKKI | 고피자",
+      title: "TOPOKKI | 고피자",
       description: "다양한 고피자 떡볶이 메뉴를 만나보세요! 혼자서도, 다 같이도 즐길 수 있는 화덕 떡볶이와 화덕 치즈 떡볶이 등 맛있는 고피자 떡볶이를 경험해 보십시오.",
-      url: "https://gopizza.kr/menu/tteokbokki",
+      url: "https://gopizza.kr/menu/topokki",
       images: [
         {
           url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/img_menu_visual3x2.webp?v=2",
@@ -616,7 +616,7 @@ export const MenuSeo = [
     twitter: {
       card: "summary_large_image",
       site: "@gopizza",
-      title: "TTEOKBOKKI | 고피자",
+      title: "TOPOKKI | 고피자",
       description: "다양한 고피자 떡볶이 메뉴를 만나보세요! 혼자서도, 다 같이도 즐길 수 있는 화덕 떡볶이와 화덕 치즈 떡볶이 등 맛있는 고피자 떡볶이를 경험해 보십시오.",
       image: {
         url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/img_menu_visual3x2.webp?v=2",

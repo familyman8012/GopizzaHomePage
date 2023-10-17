@@ -16,7 +16,7 @@ https://gopizza.kr/start/guide
 https://gopizza.kr/start/technology
 https://gopizza.kr/start/media
 https://gopizza.kr/menu/pasta
-https://gopizza.kr/menu/tteokbokki
+https://gopizza.kr/menu/topokki
 https://gopizza.kr/menu/sides
 https://gopizza.kr/menu/set
 https://gopizza.kr/menu/powertime
@@ -37,8 +37,8 @@ https://gopizza.kr/menu/detail/pizza14
 https://gopizza.kr/menu/detail/pizza15
 https://gopizza.kr/menu/detail/pasta1
 https://gopizza.kr/menu/detail/pasta2
-https://gopizza.kr/menu/detail/tteokbokki1
-https://gopizza.kr/menu/detail/tteokbokki2
+https://gopizza.kr/menu/detail/topokki1
+https://gopizza.kr/menu/detail/topokki2
 https://gopizza.kr/menu/detail/sides1
 https://gopizza.kr/menu/detail/sides2
 https://gopizza.kr/menu/detail/sides3

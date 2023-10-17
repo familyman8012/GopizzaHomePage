@@ -8,8 +8,8 @@ export const menuTab = [
     menuName: "PASTA",
   },
   {
-    link: "/menu/tteokbokki",
-    menuName: "TTEOKBOKKI",
+    link: "/menu/topokki",
+    menuName: "TOPOKKI",
   },
   {
     link: "/menu/sides",
@@ -143,29 +143,29 @@ export const menuItem = [
   ],
   [
     {
-      idx: "tteokbokki1",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/tteokbokki/img_item1x2.webp?v=2",
+      idx: "topokki1",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/topokki/img_item1x2.webp?v=2",
       name: "매콤 떡볶이",
-      enName: "Tteokbokki",
+      enName: "Topokki",
       badge: "best",
     },
     {
-      idx: "tteokbokki2",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/tteokbokki/img_item2x2.webp?v=2",
+      idx: "topokki2",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/topokki/img_item2x2.webp?v=2",
       name: "매콤 치즈 떡볶이",
-      enName: "Cheese Tteokbokki",
+      enName: "Cheese Topokki",
     },
     {
-      idx: "tteokbokki3",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/tteokbokki/img_item3x2.webp",
+      idx: "topokki3",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/topokki/img_item3x2.webp",
       name: "마라 로제 떡볶이",
-      enName: "Mala Rosé Tteokbokki",
+      enName: "Mala Rosé Topokki",
     },
     {
-      idx: "tteokbokki4",
-      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/tteokbokki/img_item4x2.webp",
+      idx: "topokki4",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/topokki/img_item4x2.webp",
       name: "마라 치즈 떡볶이",
-      enName: "Mala Cheese Tteokbokki",
+      enName: "Mala Cheese Topokki",
     },
   ],
   [
@@ -217,7 +217,7 @@ export const menuItem = [
       idx: "set3",
       imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_item3x2.webp",
       name: "1.5인 피떡 세트",
-      enName: "Pizza & Tteokbokki Set",
+      enName: "Pizza & Topokki Set",
     },
     {
       idx: "set4",
@@ -474,35 +474,35 @@ export const menuDetail: IMenuDetail = {
     더해져 풍성한 맛의 파스타`,
     ingredients: ["로제소스", "베이컨", "양파", "파마산 치즈", "모짜렐라 치즈"],
   },
-  tteokbokki1: {
+  topokki1: {
     id: 1,
-    category: "tteokbokki",
+    category: "topokki",
     name: "매콤 떡볶이",
-    enName: "TTEOKBOKKI",
+    enName: "TOPOKKI",
     txt: `오븐에서 갓 구워 더 맛있는 갓 떡볶이, 군만두가 쏘옥`,
     ingredients: ["고추장", "만두"],
   },
-  tteokbokki2: {
+  topokki2: {
     id: 2,
-    category: "tteokbokki",
+    category: "topokki",
     name: "매콤 치즈 떡볶이",
-    enName: "Cheese Tteokbokki",
+    enName: "Cheese Topokki",
     txt: `오븐에서 갓 구워 더 맛있는 치즈 떡볶이, 군만두가 쏘옥`,
     ingredients: ["고추장", "만두", "모짜렐라 치즈"],
   },
-  tteokbokki3: {
+  topokki3: {
     id: 3,
-    category: "tteokbokki",
+    category: "topokki",
     name: "마라 로제 떡볶이",
-    enName: "Mala Rosé Tteokbokki",
+    enName: "Mala Rosé Topokki",
     txt: `강렬한 마라에 부드러운 로제 소스가 어우러진\n 중독성 있는 맛의 떡볶이`,
     ingredients: ["고추장", "로제소스", "마라유", "만두", "피쉬볼(오징어볼)", "레드페퍼"],
   },
-  tteokbokki4: {
+  topokki4: {
     id: 4,
-    category: "tteokbokki",
+    category: "topokki",
     name: "마라 치즈 떡볶이",
-    enName: "Mala Cheese Tteokbokki",
+    enName: "Mala Cheese Topokki",
     txt: `마라로제떡볶이 위에 치즈를 가득 올려\n 부드럽게 매콤한 떡볶이`,
     ingredients: ["고추장", "로제소스", "마라유", "만두", "피쉬볼(오징어볼)", "모짜렐라 치즈", "레드페퍼"],
   },
@@ -570,7 +570,7 @@ export const menuDetail: IMenuDetail = {
     id: 3,
     category: "set",
     name: "1.5인 피떡 세트",
-    enName: "Pizza & Tteokbokki Set",
+    enName: "Pizza & Topokki Set",
     txt: `피자+떡볶이+음료
 
     매콤 떡볶이

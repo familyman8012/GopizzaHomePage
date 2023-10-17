@@ -140,7 +140,7 @@ const TipArr = [
 function Menu({ seo }: { seo: object }) {
   const router = useRouter();
   const popref = useRef<any>(null);
-  const category = ["/pizza", "/pasta", "/tteokbokki", "/sides", "/set", "/powertime"];
+  const category = ["/pizza", "/pasta", "/topokki", "/sides", "/set", "/powertime"];
   const categoryNav = useMemo(() => category.indexOf(router.asPath.split("/menu")[1]), [router.asPath]);
 
   const [open, setOpen] = useState(false);
@@ -244,7 +244,7 @@ export default Menu;
 
 export const getStaticProps = async (context: any) => {
   const { index } = context.params;
-  const menu = ["pasta", "tteokbokki", "sides", "set", "powertime"];
+  const menu = ["pasta", "topokki", "sides", "set", "powertime"];
   return {
     props: { seo: index === undefined ? MenuSeo[0] : MenuSeo[menu.indexOf(index[0]) + 1] },
   };
@@ -254,7 +254,7 @@ export const getStaticPaths = async () => {
   const paths = [
     { params: { index: undefined } },
     { params: { index: ["pasta"] } },
-    { params: { index: ["tteokbokki"] } },
+    { params: { index: ["topokki"] } },
     { params: { index: ["sides"] } },
     { params: { index: ["set"] } },
     { params: { index: ["powertime"] } },

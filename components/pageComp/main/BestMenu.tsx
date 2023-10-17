@@ -48,7 +48,7 @@ const data = [
   {
     imgSrc: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/img_bestmenu6.webp",
     menuName: "화덕 떡볶이",
-    enName: "Tteokbokki",
+    enName: "Topokki",
     price: "6,500",
   },
   {
@@ -84,7 +84,7 @@ const data = [
   {
     imgSrc: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/main/img_bestmenu6.webp",
     menuName: "화덕 떡볶이",
-    enName: "Tteokbokki",
+    enName: "Topokki",
     price: "6,500",
   },
 ];

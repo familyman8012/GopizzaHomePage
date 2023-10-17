@@ -51,7 +51,7 @@ function DetailView({ seo }: any) {
   }, [idx, isMobile]);
 
   const currentMenu = useMemo(() => menuDetail[`${idx}`], [idx]);
-  const category = ["pizza", "pasta", "tteokbokki", "sides", "set", "powertime"];
+  const category = ["pizza", "pasta", "topokki", "sides", "set", "powertime"];
 
   const PrevHandler = useCallback(() => {
     if (currentMenu?.id > 1) {
@@ -62,10 +62,10 @@ function DetailView({ seo }: any) {
         return `powertime${menuItem[5].length}`;
       case "pasta":
         return `pizza${menuItem[0].length}`;
-      case "tteokbokki":
+      case "topokki":
         return `pasta${menuItem[1].length}`;
       case "sides":
-        return `tteokbokki${menuItem[2].length}`;
+        return `topokki${menuItem[2].length}`;
       case "set":
         return `sides${menuItem[3].length}`;
 
@@ -83,8 +83,8 @@ function DetailView({ seo }: any) {
       case "pizza":
         return `pasta1`;
       case "pasta":
-        return `tteokbokki1`;
-      case "tteokbokki":
+        return `topokki1`;
+      case "topokki":
         return `sides1`;
       case "sides":
         return `set1`;
