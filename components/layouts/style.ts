@@ -453,6 +453,7 @@ export const FooterMobileWrap = styled.footer`
       }
       ul {
         display: flex;
+        justify-content: center;
         margin: 10px 0 0;
         padding-bottom: 15.5px;
         li {

@@ -58,7 +58,6 @@ export const FooterPrivacy = {
 
 export const Global = [
   { menuName: "INDIA", url: "https://gopizza.in" },
-  { menuName: "HONG KONG", url: "https://www.facebook.com/gopizzahongkong" },
   { menuName: "SINGAPORE", url: "https://gopizza.sg" },
   { menuName: "INDONESIA", url: "https://www.gopizza.id" },
 ];
