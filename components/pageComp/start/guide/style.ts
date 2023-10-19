@@ -9,6 +9,10 @@ export const CostWrap = styled.section`
     margin-bottom: 1.25rem;
     line-height: 2.44;
 
+    &.bottom {
+      margin-top: 0.8rem;
+    }
+
     span {
       font-size: 1.8rem;
       opacity: 0.5;
@@ -56,31 +60,39 @@ export const CostWrap = styled.section`
       border-bottom: 0;
       background: rgb(255, 70, 0, 0.1);
 
+      span {
+        display: block;
+        &.txt1 {
+          font-size: 2.4rem;
+          font-weight: bold;
+          line-height: 1.83;
+          color: var(--color-orange);
+        }
+        &.txt2 {
+          font-size: 1.8rem;
+          font-weight: normal;
+          color: #00000080;
+        }
+      }
+
       &:nth-of-type(1) {
         width: 33.7rem;
+        background: #fbfbfb;
+
+        span.txt1 {
+          color: var(--color-black);
+        }
       }
       &:nth-of-type(2),
       &:nth-of-type(3) {
         width: 47.15rem;
-
-        span {
-          display: block;
-          &.txt1 {
-            font-size: 2.4rem;
-            font-weight: bold;
-            line-height: 1.83;
-            color: var(--color-orange);
-          }
-          &.txt2 {
-            font-size: 1.8rem;
-            font-weight: normal;
-            color: #00000080;
-          }
-        }
       }
     }
     td {
       &:nth-of-type(1) {
+        font-size: 2.4rem;
+      }
+      &:nth-of-type(3) {
         font-size: 2.4rem;
       }
       &:not(&:nth-of-type(1)) {
@@ -124,6 +136,10 @@ export const CostWrap = styled.section`
         color: #fff;
         border: 1px solid var(--color-orange);
         background: var(--color-orange) !important;
+
+        &:nth-of-type(1) {
+          border-right: 1px solid #ddd;
+        }
 
         .box_price {
           span {
@@ -177,22 +193,22 @@ export const CostWrap = styled.section`
       th {
         padding: 15px 0;
 
+        span {
+          &.txt1 {
+            font-size: 16px;
+            line-height: 1.83;
+          }
+          &.txt2 {
+            font-size: 12px;
+          }
+        }
+
         &:nth-of-type(1) {
           width: 86px;
         }
         &:nth-of-type(2),
         &:nth-of-type(3) {
           width: calc(50% - 43px);
-
-          span {
-            &.txt1 {
-              font-size: 16px;
-              line-height: 1.83;
-            }
-            &.txt2 {
-              font-size: 12px;
-            }
-          }
         }
       }
       td {
@@ -201,6 +217,10 @@ export const CostWrap = styled.section`
         }
         padding: 10px 0;
         font-size: 20px !important;
+
+        &:nth-of-type(3) {
+          font-size: 14px !important;
+        }
       }
     }
   }
