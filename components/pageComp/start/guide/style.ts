@@ -94,6 +94,7 @@ export const CostWrap = styled.section`
       }
       &:nth-of-type(3) {
         font-size: 2.4rem;
+        font-family: "Noto Sans KR" !important;
       }
       &:not(&:nth-of-type(1)) {
         font-family: "solano";
