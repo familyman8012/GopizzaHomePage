@@ -16,7 +16,7 @@ const GlobalListArr = [
   },
   {
     country: "SINGAPORE",
-    number: "20",
+    number: "22",
     title: `음식천국 싱가포르\n 핫플레이스에 고피자가 있다`,
     desc: `싱가포르는 제주도의 3분의 1만한 작은 도시 국가이지만
     높은 경제 수준을 이룩한 동남아 시장의 허브입니다.
@@ -25,7 +25,7 @@ const GlobalListArr = [
   },
   {
     country: "INDIA",
-    number: "22",
+    number: "32",
     title: `성장하는 인도의\n 피자 시장을 선도한다`,
     desc: `인도는 13억명의 인구 수와 높은 IT 기술력을 바탕으로
     경제가 빠르게성장하고 있는 초대형 시장입니다.
@@ -34,7 +34,7 @@ const GlobalListArr = [
   },
   {
     country: "INDONESIA",
-    number: "2",
+    number: "4",
     title: `젊은 열기가 가득한 인도네시아에\n 고피자라는 불을 붙이다`,
     desc: `인도네시아가 세계에서 4위로 인구가 많은 나라인 것을 아셨나요? 
     심지어 청년층이 많은 젊은 열기로 가득한 나라랍니다. 세계 4위 경제인구를 
