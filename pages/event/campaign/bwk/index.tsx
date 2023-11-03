@@ -76,6 +76,7 @@ const Bwk = () => {
   if (dayjs(today).isBefore(dayjs(eventStart))) {
     return (
       <>
+        <NextSeo {...CampSeo2[0]} />
         <Dimm />
         <BwkPromotionBeforeModal>
           <h2>이벤트 안내</h2>
