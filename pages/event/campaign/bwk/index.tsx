@@ -13,11 +13,13 @@ import { useForm } from "react-hook-form";
 import { BwkPromotionBeforeModal, BwkWrap, Dimm } from "./style";
 import dayjs from "dayjs";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Bwk = () => {
   const [agree, setAgree] = useState(false);
   const [open, setOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   const openStoreModal = useCallback(() => {
     setOpen(true);
@@ -36,8 +38,14 @@ const Bwk = () => {
   // 신청하기
   const Bwk = useMutation(["IInfiltration"], (request: IBwk) => fetchBwk(request));
 
+  const phoneRegex = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
   const onSubmit = (sendData: any) => {
     if (isLoading) return;
+    // if (!phoneRegex.test(sendData.phone)) {
+    //   alert("휴대폰 번호를 정확하게 입력하지 않았습니다. 예시: 01012341234 또는 010-1234-1234");
+    //   return;
+    // }
+
     if (!agree) {
       return alert("개인정보 활용에 동의하신 후 신청가능합니다.");
     }
@@ -47,6 +55,8 @@ const Bwk = () => {
 
     Bwk.mutate(sendData, {
       onSuccess: (data) => {
+        localStorage.setItem("bwk_campaign_reg", "yes");
+        router.push("/event/campaign/bwk/coupon");
         //alert("사연이 정상적으로 접수되었습니다.");
         console.log("data", data);
       },
@@ -61,7 +71,7 @@ const Bwk = () => {
   };
 
   const today = dayjs().format("YYYY-MM-DD");
-  const eventStart = "2023-11-07";
+  const eventStart = "2023-11-02";
 
   if (dayjs(today).isBefore(dayjs(eventStart))) {
     return (

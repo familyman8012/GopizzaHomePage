@@ -67,6 +67,20 @@ export const BwkPromotionBeforeModal = styled.div`
   }
 `;
 
+export const CouponWrap = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 100%;
+
+  img {
+    width: auto;
+    height: 100%;
+  }
+`;
+
 export const BwkWrap = styled.div`
   img {
     display: block;
@@ -111,6 +125,10 @@ export const BwkWrap = styled.div`
       border: 1px solid #e7ad52;
       background: #e7ad52;
       border-radius: 0.4rem;
+
+      &:focus {
+        outline: 1px solid #ab6800;
+      }
     }
     input[type="checkbox"] {
       height: 1.6rem;
