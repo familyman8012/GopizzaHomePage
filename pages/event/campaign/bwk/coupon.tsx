@@ -1,5 +1,5 @@
 import React, { ReactElement, useEffect, useState } from "react";
-import { BwkPromotionBeforeModal, CouponWrap, Dimm } from "./style";
+import { BwkPromotionBeforeModal, CouponWrap, Dimm } from "../../../../components/pageComp/event/campaign/bwk/style";
 import Link from "next/link";
 
 const Coupon = () => {

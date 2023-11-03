@@ -10,7 +10,7 @@ import DOMPurify from "isomorphic-dompurify";
 import { NextSeo } from "next-seo";
 import React, { ReactElement, useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
-import { BwkPromotionBeforeModal, BwkWrap, Dimm } from "./style";
+import { BwkPromotionBeforeModal, BwkWrap, Dimm } from "../../../../components/pageComp/event/campaign/bwk/style";
 import dayjs from "dayjs";
 import Link from "next/link";
 import { useRouter } from "next/router";
