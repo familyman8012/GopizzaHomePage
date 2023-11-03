@@ -149,7 +149,7 @@ const reset = css`
   }
 
   button:disabled {
-    background: #cccccc !important;
+    opacity: 0.5;
   }
 
   body,
