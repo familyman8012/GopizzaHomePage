@@ -747,16 +747,16 @@ export const CampSeo = [
 export const CampSeo2 = [
   {
     canonical: "https://gopizza.kr/event/campaign/infiltration",
-    title: "전국 곳곳 고피자가 간다!",
-    description: "고피자 찐팬 모여라! 피자 90판 쏜다",
+    title: "단 7일간! 매일 선착순 100명",
+    description: "날마다 다른 혜택. 오픈기념 SPECIAL 혜택안내",
     openGraph: {
       type: "website",
-      title: "전국 곳곳 고피자가 간다! 행운의 선을 넘다",
-      description: "고피자 찐팬 모여라! 피자 90판 쏜다",
-      url: "https://gopizza.kr/event/campaign/infiltration",
+      title: "단 7일간! 매일 선착순 100명",
+      description: "날마다 다른 혜택. 오픈기념 SPECIAL 혜택안내",
+      url: "https://gopizza.kr/event/campaign/bwk",
       images: [
         {
-          url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/gopizza_go2/img_hero.webp",
+          url: "/images/event/campaign/bwk/bwk2_1.png",
           alt: "",
         },
       ],
@@ -764,10 +764,10 @@ export const CampSeo2 = [
     twitter: {
       card: "summary_large_image",
       site: "@gopizza",
-      title: "전국 곳곳 고피자가 간다! 행운의 선을 넘다",
-      description: "고피자 찐팬 모여라! 피자 90판 쏜다",
+      title: "단 7일간! 매일 선착순 100명",
+      description: "날마다 다른 혜택. 오픈기념 SPECIAL 혜택안내",
       image: {
-        url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/gopizza_go2/img_hero.webp",
+        url: "/images/event/campaign/bwk/bwk2_1.png",
         alt: "",
       },
     },

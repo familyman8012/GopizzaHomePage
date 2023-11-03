@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { useMutation } from "@tanstack/react-query";
 import { fetchBwk } from "ApiFarm/home";
 import { IBwk } from "ApiFarm/interface/homeInterface";
-import { CampSeo } from "ComponentsFarm/Seo";
+import { CampSeo2 } from "ComponentsFarm/Seo";
 import Modal from "ComponentsFarm/common/Modal";
 import { PrivacyWrap } from "ComponentsFarm/popup/Privacy";
 import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
@@ -10,14 +10,16 @@ import DOMPurify from "isomorphic-dompurify";
 import { NextSeo } from "next-seo";
 import React, { ReactElement, useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
-import { BwkPromotionBeforeModal, BwkWrap, Dimm } from "./style";
+import { BwkPromotionBeforeModal, BwkWrap, Dimm } from "../../../../components/pageComp/event/campaign/bwk/style";
 import dayjs from "dayjs";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Bwk = () => {
   const [agree, setAgree] = useState(false);
   const [open, setOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   const openStoreModal = useCallback(() => {
     setOpen(true);
@@ -36,8 +38,14 @@ const Bwk = () => {
   // 신청하기
   const Bwk = useMutation(["IInfiltration"], (request: IBwk) => fetchBwk(request));
 
+  const phoneRegex = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
   const onSubmit = (sendData: any) => {
     if (isLoading) return;
+    // if (!phoneRegex.test(sendData.phone)) {
+    //   alert("휴대폰 번호를 정확하게 입력하지 않았습니다. 예시: 01012341234 또는 010-1234-1234");
+    //   return;
+    // }
+
     if (!agree) {
       return alert("개인정보 활용에 동의하신 후 신청가능합니다.");
     }
@@ -47,6 +55,8 @@ const Bwk = () => {
 
     Bwk.mutate(sendData, {
       onSuccess: (data) => {
+        localStorage.setItem("bwk_campaign_reg", "yes");
+        router.push("/event/campaign/bwk/coupon");
         //alert("사연이 정상적으로 접수되었습니다.");
         console.log("data", data);
       },
@@ -61,7 +71,7 @@ const Bwk = () => {
   };
 
   const today = dayjs().format("YYYY-MM-DD");
-  const eventStart = "2023-11-07";
+  const eventStart = "2023-11-02";
 
   if (dayjs(today).isBefore(dayjs(eventStart))) {
     return (
@@ -87,10 +97,10 @@ const Bwk = () => {
 
   return (
     <>
-      <NextSeo {...CampSeo[0]} />
+      <NextSeo {...CampSeo2[0]} />
       <BwkWrap>
         <div>
-          <img src="/images/event/campaign/bwk/bwk2_1.png" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/bwk/bwk2_1.png" />
           <div className="screen_out">
             <h1>GOPIZZA</h1>
             <h2>FREE COUPON</h2>
@@ -98,7 +108,7 @@ const Bwk = () => {
           </div>
         </div>
         <div>
-          <img src="/images/event/campaign/bwk/bwk2_2.png" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/bwk/bwk2_2.png" />
           <div className="screen_out">
             <h3>날마다 다른 혜택</h3>
             <h4>오픈 기념 SPECIAL 혜택 안내</h4>
@@ -110,7 +120,7 @@ const Bwk = () => {
           </div>
         </div>
         <div>
-          <img src="/images/event/campaign/bwk/bwk2_3.webp" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/bwk/bwk2_3.webp" />
 
           <h3 className="screen_out">개인 정보 입력</h3>
           <p className="screen_out">
