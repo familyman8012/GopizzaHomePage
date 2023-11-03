@@ -71,7 +71,7 @@ const Bwk = () => {
   };
 
   const today = dayjs().format("YYYY-MM-DD");
-  const eventStart = "2023-11-02";
+  const eventStart = "2023-11-07";
 
   if (dayjs(today).isBefore(dayjs(eventStart))) {
     return (
