@@ -63,7 +63,7 @@ export const BwkPromotionBeforeModal = styled.div`
     right: 1rem;
     width: 2.4rem;
     height: 2.4rem;
-    background: url("/images/event/campaign/bwk/ico_cross.svg") no-repeat center / 100%;
+    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/bwk/ico_cross.svg") no-repeat center / 100%;
   }
 `;
 
@@ -87,7 +87,7 @@ export const BwkWrap = styled.div`
   }
   .area_form {
     padding-top: 3.5rem;
-    background: url("/images/event/campaign/bwk/bwk2_4.webp") no-repeat left top / 100%;
+    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/bwk/bwk2_4.webp") no-repeat left top / 100%;
   }
   .wrap_form {
     width: 85%;
@@ -167,7 +167,7 @@ export const BwkWrap = styled.div`
     height: 72px;
     margin-top: 25px;
     cursor: pointer;
-    background: url("/images/event/campaign/bwk/button.png") no-repeat center / contain;
+    background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/bwk/button.png") no-repeat center / contain;
   }
   @media (max-width: 600px) {
     .area_register {

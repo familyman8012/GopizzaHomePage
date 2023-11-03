@@ -100,7 +100,7 @@ const Bwk = () => {
       <NextSeo {...CampSeo2[0]} />
       <BwkWrap>
         <div>
-          <img src="/images/event/campaign/bwk/bwk2_1.png" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/bwk/bwk2_1.png" />
           <div className="screen_out">
             <h1>GOPIZZA</h1>
             <h2>FREE COUPON</h2>
@@ -108,7 +108,7 @@ const Bwk = () => {
           </div>
         </div>
         <div>
-          <img src="/images/event/campaign/bwk/bwk2_2.png" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/bwk/bwk2_2.png" />
           <div className="screen_out">
             <h3>날마다 다른 혜택</h3>
             <h4>오픈 기념 SPECIAL 혜택 안내</h4>
@@ -120,7 +120,7 @@ const Bwk = () => {
           </div>
         </div>
         <div>
-          <img src="/images/event/campaign/bwk/bwk2_3.webp" />
+          <img src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/event/campaign/bwk/bwk2_3.webp" />
 
           <h3 className="screen_out">개인 정보 입력</h3>
           <p className="screen_out">
