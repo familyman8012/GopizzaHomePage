@@ -185,3 +185,9 @@ export interface IInfiltration {
 export interface IInfiltrationRes {
   info: IInfiltration;
 }
+
+export interface IBwk {
+  name: string;
+  phone: string;
+  email?: string;
+}
