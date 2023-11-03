@@ -90,14 +90,21 @@ export const BwkWrap = styled.div`
     background: url("/images/event/campaign/bwk/bwk2_4.webp") no-repeat left top / 100%;
   }
   .wrap_form {
-    width: 600px;
+    width: 85%;
     padding: 2.5rem 0;
     margin: 0 auto;
 
     .box_inp {
       display: flex;
       align-items: center;
-      height: 2.75rem;
+    }
+
+    .box_inp:not(.box_email_area) input,
+    .box_inp:not(.box_email_area) select,
+    .box_inp:not(.box_email_area) textarea {
+      width: 100%;
+      height: 35px;
+      border-radius: 2px;
     }
 
     input,

@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { useMutation } from "@tanstack/react-query";
 import { fetchBwk } from "ApiFarm/home";
 import { IBwk } from "ApiFarm/interface/homeInterface";
-import { CampSeo } from "ComponentsFarm/Seo";
+import { CampSeo, CampSeo2 } from "ComponentsFarm/Seo";
 import Modal from "ComponentsFarm/common/Modal";
 import { PrivacyWrap } from "ComponentsFarm/popup/Privacy";
 import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
@@ -97,7 +97,7 @@ const Bwk = () => {
 
   return (
     <>
-      <NextSeo {...CampSeo[0]} />
+      <NextSeo {...CampSeo2[0]} />
       <BwkWrap>
         <div>
           <img src="/images/event/campaign/bwk/bwk2_1.png" />
