@@ -1,5 +1,5 @@
 import AxiosUtil from "./index";
-import { IContactUsReq, ICustomerReq, IGroupOrderReq, IInfiltration, IInquiryReq, IPromotionDetailReq, IPromotionReq } from "./interface/homeInterface";
+import { IBwk, IContactUsReq, ICustomerReq, IGroupOrderReq, IInfiltration, IInquiryReq, IPromotionDetailReq, IPromotionReq } from "./interface/homeInterface";
 
 export const fetchMainVisual = async () => {
   const response = await AxiosUtil.get(`/ho/v1/brand/main/banner`);
@@ -91,6 +91,13 @@ export const fetchInquiry = async (params: IInquiryReq) => {
 //캠페인 - 침투
 export const fetchInfiltration = async (params: IInfiltration) => {
   const response = await AxiosUtil.post(`/ho/v1/letsgo/gopizza`, params);
+
+  return response.data;
+};
+
+//캠페인 - 부울경 프로모션
+export const fetchBwk = async (params: IBwk) => {
+  const response = await AxiosUtil.post(`/sys/v1/promotion/customer`, params);
 
   return response.data;
 };
