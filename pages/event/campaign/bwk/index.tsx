@@ -70,32 +70,6 @@ const Bwk = () => {
     });
   };
 
-  const today = dayjs().format("YYYY-MM-DD");
-  const eventStart = "2023-11-07";
-
-  if (dayjs(today).isBefore(dayjs(eventStart))) {
-    return (
-      <>
-        <NextSeo {...CampSeo2[0]} />
-        <Dimm />
-        <BwkPromotionBeforeModal>
-          <h2>이벤트 안내</h2>
-          <p>
-            11월 07일부터
-            <br />
-            쿠폰을 받으실 수 있습니다
-          </p>
-          <Link href="/main" className="btn_submit">
-            확인
-          </Link>
-          <Link href="/main" className="btn_close">
-            <span className="hiddenZoneV">닫기</span>
-          </Link>
-        </BwkPromotionBeforeModal>
-      </>
-    );
-  }
-
   return (
     <>
       <NextSeo {...CampSeo2[0]} />
