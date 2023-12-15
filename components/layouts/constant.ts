@@ -60,6 +60,7 @@ export const Global = [
   { menuName: "INDIA", url: "https://gopizza.in" },
   { menuName: "SINGAPORE", url: "https://gopizza.sg" },
   { menuName: "INDONESIA", url: "https://www.gopizza.id" },
+  { menuName: "THAILAND", url: "https://www.gopizza.co.th" },
 ];
 
 export const Sns = [
