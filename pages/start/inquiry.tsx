@@ -3,6 +3,7 @@ import { fetchInquiry } from "ApiFarm/home";
 import { IInquiryReq } from "ApiFarm/interface/homeInterface";
 import Modal from "ComponentsFarm/common/Modal";
 import StartLayout from "ComponentsFarm/layouts/pageLayouts/StartLayout";
+import { hangjungdong } from "ComponentsFarm/pageComp/find/constants";
 import { FormWrap } from "ComponentsFarm/pageComp/order/Form";
 import { Content } from "ComponentsFarm/pageComp/start/style";
 import { ApplicationWrap } from "ComponentsFarm/popup/Application";
@@ -15,6 +16,7 @@ import Head from "next/head";
 import Script from "next/script";
 import { useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
+import ReactPlayer from "react-player/lazy";
 
 const email = [
   "naver.com",
@@ -48,9 +50,6 @@ const Consulting = observer(function Consulting() {
   //textarea fake placeholder
   const [showPlaceholder, setShowPlaceholder] = useState(true);
 
-  //요청 여러번 못하게.
-  const [submitDisabled, setSubmitDisabled] = useState(false);
-
   const [agree, setAgree] = useState(false);
 
   const [open, setOpen] = useState(false);
@@ -81,12 +80,10 @@ const Consulting = observer(function Consulting() {
 
   const onSubmit = (data: Record<string, string>) => {
     // 버튼 비활성화시 더이상 submit 되지 않도록
-    if (submitDisabled) return;
+
     if (!agree) {
       return alert("개인정보취급방침에 동의해주세요.");
     }
-
-    setSubmitDisabled(true); // 요청 시작 시 버튼을 비활성화합니다.
 
     const sendData: any = {
       ...data,
@@ -98,12 +95,10 @@ const Consulting = observer(function Consulting() {
         handleGoogleAnalytics();
         openStoreModal2();
         reset();
-        setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
       },
       onError: (err) => {
         alert("문제가 발생하였습니다. 잠시 후 다시 신청해주시기 바랍니다.");
         console.log(err);
-        setSubmitDisabled(false); // 요청 완료 시 버튼을 다시 활성화합니다.
       },
     });
   };
@@ -120,7 +115,7 @@ const Consulting = observer(function Consulting() {
                 이름
               </label>
               <input type="text" className="s" id="name" {...register("name", { required: true })} />
-              {errors.name && <p className="error">이름을 입력해주세요.</p>}
+              {errors.name && <p className="txt_error">이름을 입력해주세요.</p>}
             </div>
             <div className="box_inp">
               <label htmlFor="phone" className="req">
@@ -135,7 +130,7 @@ const Consulting = observer(function Consulting() {
                   setValue("phone", e.target.value.replace(/[^0-9]/g, ""));
                 }}
               />
-              {errors.phone && watch("phone") === "" && <p className="error">연락처를 입력해주세요.</p>}
+              {errors.phone && watch("phone") === "" && <p className="txt_error">연락처를 입력해주세요.</p>}
             </div>
             <div className="box_inp box_email_area">
               <label htmlFor="email1" className="req">
@@ -156,21 +151,39 @@ const Consulting = observer(function Consulting() {
                   </option>
                 ))}
               </select>
-              {(errors.email1 || errors.email2) && <p className="error">이메일을 입력해주세요.</p>}
+              {(errors.email1 || errors.email2) && <p className="txt_error">이메일을 입력해주세요.</p>}
             </div>
             <div className="box_inp">
-              <label htmlFor="hope_call_time" className="req">
-                연락 가능 시간
+              <label htmlFor="hope_area" className="req">
+                희망 지역
               </label>
-              <input type="text" className="s" id="hope_call_time" {...register("hope_call_time", { required: true })} placeholder="ex. 오전 10시 ~ 오후 4시" />
-
-              {errors.hope_call_time && <p className="error">연락 가능 시간을 입력해주세요.</p>}
+              <select
+                id="hope_area"
+                className="s"
+                {...register("hope_area", {
+                  validate: (value) => value !== "" && value !== "희망 지역",
+                })}
+              >
+                <option defaultValue="">희망 지역</option>
+                {hangjungdong.sido.map((el) => (
+                  <option defaultValue={el.codeNm} key={el.codeNm}>
+                    {el.codeNm}
+                  </option>
+                ))}
+              </select>
+              {errors.hope_area && <p className="txt_error">희망 지역을 선택해주세요.</p>}
             </div>
             <div className="box_inp">
               <label htmlFor="inflow_path" className="req">
                 유입경로
               </label>
-              <select id="inflow_path" className="s" {...register("inflow_path", { required: true })}>
+              <select
+                id="inflow_path"
+                className="s"
+                {...register("inflow_path", {
+                  validate: (value) => value !== "" && value !== "유입경로",
+                })}
+              >
                 <option defaultValue="">유입경로</option>
                 {inflowArr.map((el) => (
                   <option defaultValue={el} key={el}>
@@ -178,7 +191,7 @@ const Consulting = observer(function Consulting() {
                   </option>
                 ))}
               </select>
-              {errors.inflow_path && <p className="error">유입경로를 선택해주세요.</p>}
+              {errors.inflow_path && <p className="txt_error">유입경로를 선택해주세요.</p>}
             </div>
             <div className="box_inp box_radio flex">
               <label htmlFor="is_experience" className="req">
@@ -224,7 +237,7 @@ const Consulting = observer(function Consulting() {
                 전문보기
               </button>
             </div>
-            <button className="submit" disabled={submitDisabled}>
+            <button className="submit" disabled={Inquiry.isLoading}>
               신청하기
             </button>
           </FormWrap>
