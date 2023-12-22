@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { useMutation } from "@tanstack/react-query";
 import { fetchBwk } from "ApiFarm/home";
 import { IBwk } from "ApiFarm/interface/homeInterface";
-import { CampSeo, CampSeo2 } from "ComponentsFarm/Seo";
+import { CampSeo2 } from "ComponentsFarm/Seo";
 import Modal from "ComponentsFarm/common/Modal";
 import { PrivacyWrap } from "ComponentsFarm/popup/Privacy";
 import { PrivacyArr } from "ComponentsFarm/popup/PrivacyContent";
@@ -10,10 +10,10 @@ import DOMPurify from "isomorphic-dompurify";
 import { NextSeo } from "next-seo";
 import React, { ReactElement, useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
-import { BwkPromotionBeforeModal, BwkWrap, Dimm } from "../../../../components/pageComp/event/campaign/bwk/style";
 import dayjs from "dayjs";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { BwkPromotionBeforeModal, BwkWrap, Dimm } from "ComponentsFarm/pageComp/event/campaign/bwk/style";
 
 const Bwk = () => {
   const [agree, setAgree] = useState(false);
@@ -69,31 +69,6 @@ const Bwk = () => {
       },
     });
   };
-
-  const today = dayjs().format("YYYY-MM-DD");
-  const eventStart = "2023-11-02";
-
-  if (dayjs(today).isBefore(dayjs(eventStart))) {
-    return (
-      <>
-        <Dimm />
-        <BwkPromotionBeforeModal>
-          <h2>이벤트 안내</h2>
-          <p>
-            11월 07일부터
-            <br />
-            쿠폰을 받으실 수 있습니다
-          </p>
-          <Link href="/main" className="btn_submit">
-            확인
-          </Link>
-          <Link href="/main" className="btn_close">
-            <span className="hiddenZoneV">닫기</span>
-          </Link>
-        </BwkPromotionBeforeModal>
-      </>
-    );
-  }
 
   return (
     <>
