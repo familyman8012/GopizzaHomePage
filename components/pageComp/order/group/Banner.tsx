@@ -31,7 +31,7 @@ function Banner() {
       <div className="bnrImg">
         <img
           src="https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/order/group/img_group2.webp"
-          alt="단체 주문 T.1800-8972 이벤트에 색다른 재미를 더해 보세요!"
+          alt="단체 주문 T.02-567-8972 이벤트에 색다른 재미를 더해 보세요!"
         />
       </div>
     </BannerWrap>
