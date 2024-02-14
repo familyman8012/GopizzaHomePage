@@ -102,11 +102,11 @@ const MobileHeader = () => {
           ))}
         </div>
       </div>
-      <a className="bnr" href="tel:1800-8972">
+      <a className="bnr" href="tel:02-567-8972">
         <span className="txt">
           가맹문의 전화
           <br />
-          1800-8972
+          02-567-8972
         </span>
       </a>
     </MobileHeaderWrap>

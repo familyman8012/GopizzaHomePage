@@ -25,22 +25,23 @@ function Order() {
         </ul>
         <span className="go_txt">가까운 고피자 매장을 찾아보세요</span>
       </OrderItem>
-      <span
-        onClick={(e: any) => {
-          e.stopPropagation();
-          router.push("/order");
-        }}
-        style={{ cursor: "pointer" }}
-      >
-        <OrderItem className="group">
+
+      <OrderItem className="group">
+        <div
+          onClick={(e: any) => {
+            e.stopPropagation();
+            router.push("/order");
+          }}
+          style={{ cursor: "pointer" }}
+        >
           <h2 className="subTitle">단체주문상담</h2>
-          <p className="tel pc"> 1800-8972</p>
-          <a href={`tel:1800-8972`} className="tel mobile" onClick={(e) => e.stopPropagation()}>
-            1800-8972
+          <p className="tel pc"> 02-567-8972</p>
+          <a href={`tel:02-567-8972`} className="tel mobile" onClick={(e) => e.stopPropagation()}>
+            02-567-8972
           </a>
           <span className="go_txt go_link">상담신청 바로가기</span>
-        </OrderItem>
-      </span>
+        </div>
+      </OrderItem>
     </OrderWrap>
   );
 }

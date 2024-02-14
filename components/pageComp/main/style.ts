@@ -348,7 +348,7 @@ export const OrderItem = styled.li`
   }
 
   .tel {
-    width: 33.4rem;
+    width: 100%;
     height: 12rem;
     margin: -0.5rem 0 1rem;
     font-size: 10rem;
@@ -378,17 +378,23 @@ export const OrderItem = styled.li`
     background-color: var(--color-orange);
   }
   &.group {
+    padding: 8rem 0;
     background-color: var(--color-bluedark);
   }
 
   ${mq[0]} {
     width: 100%;
     height: 185px;
-    padding: 24px 62px 0;
+    &.order {
+      padding: 24px 62px 0;
+    }
+    &.group {
+      padding: 24px 0 0;
+    }
     border-radius: 10px;
     text-align: center;
 
-    &:nth-last-of-type(1) {
+    &.order {
       margin-bottom: 20px;
     }
 
