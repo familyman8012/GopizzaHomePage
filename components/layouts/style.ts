@@ -22,7 +22,7 @@ export const HeaderWrap = styled.header`
     h1 {
       width: 12.7rem;
       height: 7.05rem;
-      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/h1_logo.svg") no-repeat left center / 100%;
+      background: url("/images/common/h1_logo.svg") no-repeat left center / 100%;
     }
     .menuArea {
       margin-left: auto;
@@ -123,7 +123,7 @@ export const MobileHeaderWrap = styled.div`
         width: 67px;
         height: 37.7px;
         margin-left: 20px;
-        background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/h1_logo.svg") no-repeat left center / 100%;
+        background: url("/images/common/h1_logo.svg") no-repeat left center / 100%;
       }
 
       .right {
@@ -241,7 +241,7 @@ export const FooterWrap = styled.footer`
     h1 {
       width: 12.7rem;
       height: 7.05rem;
-      background: url("https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/common/h1_logo.svg") no-repeat left center / 100%;
+      background: url("/images/common/h1_logo.svg") no-repeat left center / 100%;
     }
 
     dt {
