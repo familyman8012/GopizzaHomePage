@@ -5,16 +5,16 @@ export function CommonSeo() {
     additionalLinkTags: [
       {
         rel: "icon",
-        href: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/seo/favicon3_32.png",
+        href: "/images/seo/favicon3_32.png",
       },
       {
         rel: "apple-touch-icon",
-        href: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/seo/favicon3_64.png",
+        href: "/images/seo/favicon3_64.png",
         sizes: "76x76",
       },
       {
         rel: "apple-touch-icon",
-        href: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/seo/favicon3_64.png",
+        href: "/images/seo/favicon3_120.png",
         sizes: "120x120",
       },
     ],
