@@ -151,8 +151,6 @@ function Menu({ seo }: { seo: object }) {
     setOpen(false);
   }, []);
 
-  console.log("categoryNav", categoryNav);
-
   return (
     <>
       <NextSeo {...seo} />
