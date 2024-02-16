@@ -214,7 +214,7 @@ function Menu({ seo }: { seo: object }) {
                   <img
                     src={
                       categoryNav === -1
-                        ? `https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item${i + 1}x2.webp?v=2`
+                        ? `https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item${i + 1}x2.webp?v=3`
                         : `https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu${router.asPath.split("/menu")[1]}/img_item${i + 1}x2.webp?v=3`
                     }
                     alt="메뉴배경이미지"
