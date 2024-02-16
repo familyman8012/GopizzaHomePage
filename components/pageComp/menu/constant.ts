@@ -361,7 +361,7 @@ export const Ingredients = [
   "랜치 소스",
   "와사비 마요 소스",
   "대파",
-  "스리라차 마요 소스",
+  "스리라차 마요소스",
   "큰 새우",
   "케이준 시즈닝",
   "파인애플",
@@ -746,7 +746,7 @@ export const menuDetail: IMenuDetail = {
     enName: "Hot Shrimp Pizza",
     txt: `탱글한 식감의 새우에 스리라차 마요소스를 얹어
     매콤하면서 질리지 않는 프리미엄 피자`,
-    ingredients: ["스리라차 마요 소스", "큰 새우", "케이준 시즈닝", "파인애플"],
+    ingredients: ["스리라차 마요소스", "큰 새우", "케이준 시즈닝", "파인애플"],
   },
   special6: {
     id: 6,
