@@ -124,6 +124,12 @@ export const menuItem = [
       name: "아메리칸 치즈 피자",
       enName: "American Cheese Pizza",
     },
+    {
+      idx: "pizza16",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/pizza/img_item16x2.webp",
+      name: "불새 피자",
+      enName: "Bulgogi & Shrimp Pizza",
+    },
   ],
   [
     {
@@ -370,6 +376,8 @@ export const Ingredients = [
   "크리스피 어니언",
   "바베큐 마요 소스",
   "갈릭치즈 소스",
+  "레드커리 소스",
+  "페퍼",
 ];
 
 // detail
@@ -513,6 +521,15 @@ export const menuDetail: IMenuDetail = {
     txt: `고소한 풍미의 치즈와 신선한 토마토가
     어우러져 피자 본연의 맛에 충실한 피자`,
     ingredients: ["토마토 소스", "모짜렐라 치즈"],
+  },
+  pizza16: {
+    id: 16,
+    category: "pizza",
+    name: "불새 피자",
+    enName: "Bulgogi & Shrimp Pizza",
+    txt: `매콤달콤하고 쫄깃한 불고기와 감칠맛 가득
+    오동통한 통새우가 피자 한 판 가득`,
+    ingredients: ["레드커리 소스", "큰 새우", "파인애플", "소고기", "케이준 시즈닝", "페퍼"],
   },
   pasta1: {
     id: 1,
