@@ -23,6 +23,10 @@ export const menuTab = [
     link: "/menu/powertime",
     menuName: "POWER TIME",
   },
+  {
+    link: "/menu/special",
+    menuName: "SPECIAL",
+  },
 ];
 
 // list
@@ -258,6 +262,56 @@ export const menuItem = [
       enName: "",
     },
   ],
+  [
+    {
+      idx: "special1",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/special/img_item1x2.webp",
+      name: "치즈 폭탄 피자",
+      enName: "Overload Cheese Pizza",
+    },
+    {
+      idx: "special2",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/special/img_item2x2.webp",
+      name: "크림치즈 고구마 피자",
+      enName: `Cream Cheese & Sweet Potato Pizza`,
+    },
+    {
+      idx: "special3",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/special/img_item3x2.webp",
+      name: "고르곤 졸라 피자",
+      enName: "Gorgonzola Pizza",
+    },
+    {
+      idx: "special4",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/special/img_item4x2.webp",
+      name: "스테이크 피자",
+      enName: "Steak Pizza",
+    },
+    {
+      idx: "special5",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/special/img_item5x2.webp",
+      name: "핫 슈림프 피자",
+      enName: "Hot Shrimp Pizza",
+    },
+    {
+      idx: "special6",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/special/img_item6x2.webp",
+      name: "쏘옥쏘옥 피자",
+      enName: "Corn Sausage Pizza",
+    },
+    {
+      idx: "special7",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/special/img_item7x2.webp",
+      name: "크런치 어니언 슈림프 피자",
+      enName: "Crispy Onion Shrimp Pizza",
+    },
+    {
+      idx: "special8",
+      imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/special/img_item8x2.webp",
+      name: "눈꽃 치즈 스테이크 피자",
+      enName: "Snow Cheese Steak Pizza",
+    },
+  ],
 ];
 
 // 재료
@@ -303,6 +357,19 @@ export const Ingredients = [
   "마라유",
   "피쉬볼(오징어볼)",
   "파마산 치즈",
+  "크림 치즈",
+  "랜치 소스",
+  "와사비 마요 소스",
+  "대파",
+  "스리라차 마요 소스",
+  "큰 새우",
+  "케이준 시즈닝",
+  "파인애플",
+  "소시지",
+  "할라피뇨",
+  "크리스피 어니언",
+  "바베큐 마요 소스",
+  "갈릭치즈 소스",
 ];
 
 // detail
@@ -635,5 +702,77 @@ export const menuDetail: IMenuDetail = {
     enName: "",
     txt: ``,
     ingredients: [],
+  },
+  special1: {
+    id: 1,
+    category: "special",
+    name: "치즈 폭탄 피자",
+    enName: "Overload Cheese Pizza",
+    txt: `고소한 풍미의 치즈가 2배, 신선한 토마토가 
+    어우러져 피자 본연의 맛에 충실한 피자`,
+    ingredients: ["토마토 소스", "모짜렐라 치즈"],
+  },
+  special2: {
+    id: 2,
+    category: "special",
+    name: "크림치즈 고구마 피자",
+    enName: "Cream Cheese&Sweet Potato Pizza",
+    txt: `고구마 무스를 듬뿍 듬뿍, 고구마의 풍미를 
+    극대화한 부드럽고 달콤한 피자`,
+    ingredients: ["토마토 소스", "고구마 무스", "크림 치즈"],
+  },
+  special3: {
+    id: 3,
+    category: "special",
+    name: "고르곤졸라 피자",
+    enName: "Gorgonzola Pizza",
+    txt: `고르곤졸라 치즈를 포함한 3가지 치즈가 어우러져 
+    치즈의 풍미를 제대로 느낄 수 있는 피자`,
+    ingredients: ["랜치 소스", "고르곤졸라 치즈", "갈릭칩", "그라나파다노 치즈"],
+  },
+  special4: {
+    id: 4,
+    category: "special",
+    name: "스테이크 피자",
+    enName: "Steak Pizza",
+    txt: `안창살 스테이크, 매쉬 포테이토, 대파의 식감과 
+    풍미의 조화가 훌륭한 프리미엄 피자`,
+    ingredients: ["와사비 마요 소스", "대파", "감자", "소고기"],
+  },
+  special5: {
+    id: 5,
+    category: "special",
+    name: "핫 슈림프 피자",
+    enName: "Hot Shrimp Pizza",
+    txt: `탱글한 식감의 새우에 스리라차 마요소스를 얹어
+    매콤하면서 질리지 않는 프리미엄 피자`,
+    ingredients: ["스리라차 마요 소스", "큰 새우", "케이준 시즈닝", "파인애플"],
+  },
+  special6: {
+    id: 6,
+    category: "special",
+    name: "쏘옥쏘옥 피자",
+    enName: "Corn Sausage Pizza",
+    txt: `육즙 가득 소시지와 통통 터지는 옥수수가 
+    영화 보는 재미를 UP!`,
+    ingredients: ["콘소메 소스", "소시지", "옥수수"],
+  },
+  special7: {
+    id: 7,
+    category: "special",
+    name: "크런치 어니언 슈림프 피자",
+    enName: "Crispy Onion Shrimp Pizza",
+    txt: `타코 시즈닝으로 마리네이드한 새우 위에 프라이드 
+    어니언 토핑을 올려 크리스피한 식감의피자`,
+    ingredients: ["랜치 소스", "할라피뇨", "큰 새우", "크리스피 어니언"],
+  },
+  special8: {
+    id: 8,
+    category: "special",
+    name: "눈꽃 치즈 스테이크 피자",
+    enName: "Snow Cheese Steak Pizza",
+    txt: `진한 바비큐 소스에 부드러운 안창살과 어니언 
+    소스가 어우러진 풍미 가득한 스테이크 피자`,
+    ingredients: ["바베큐 마요 소스", "갈릭치즈 소스", "소고기", "그라나파다노 치즈"],
   },
 };

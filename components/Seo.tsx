@@ -712,6 +712,34 @@ export const MenuSeo = [
       },
     },
   },
+  //special
+  {
+    canonical: "https://gopizza.kr/menu/powertime",
+    title: "POWER TIME | 고피자",
+    description: "고피자 파워타임 메뉴를 즐겨보세요! 오리지널 페퍼로니 피자, 허니 고르곤졸라 피자, 이달의 피자 등 다양한 메뉴를 특별한 할인 가격으로 경험해 보십시오.",
+    openGraph: {
+      type: "website",
+      title: "POWER TIME | 고피자",
+      description: "고피자 파워타임 메뉴를 즐겨보세요! 오리지널 페퍼로니 피자, 허니 고르곤졸라 피자, 이달의 피자 등 다양한 메뉴를 특별한 할인 가격으로 경험해 보십시오.",
+      url: "https://gopizza.kr/menu/powertime",
+      images: [
+        {
+          url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/img_menu_visual6x2.webp",
+          alt: "",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@gopizza",
+      title: "POWER TIME | 고피자",
+      description: "고피자 파워타임 메뉴를 즐겨보세요! 오리지널 페퍼로니 피자, 허니 고르곤졸라 피자, 이달의 피자 등 다양한 메뉴를 특별한 할인 가격으로 경험해 보십시오.",
+      image: {
+        url: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/img_menu_visual6x2.webp",
+        alt: "",
+      },
+    },
+  },
 ];
 
 export const CampSeo = [
