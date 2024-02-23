@@ -68,6 +68,11 @@ const nextConfig = {
         destination: "/order",
         permanent: true,
       },
+      {
+        source: "/storemenu",
+        destination: "/menu",
+        permanent: true,
+      },
     ];
   },
   reactStrictMode: true,
