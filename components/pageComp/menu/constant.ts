@@ -17,7 +17,7 @@ export const menuTab = [
   },
   {
     link: "/menu/set",
-    menuName: "SET",
+    menuName: "COMBO",
   },
   {
     link: "/menu/powertime",
@@ -215,37 +215,37 @@ export const menuItem = [
       idx: "set1",
       imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_item1x2.webp",
       name: "1인 피자 세트",
-      enName: "Pizza & Side Set",
+      enName: "Pizza & Side Combo",
     },
     {
       idx: "set2",
       imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_item2x2.webp",
       name: "1.5인 피파 세트",
-      enName: "Pizza & Pasta Set",
+      enName: "Pizza & Pasta Combo",
     },
     {
       idx: "set3",
       imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_item3x2.webp",
       name: "1.5인 피떡 세트",
-      enName: "Pizza & Topokki Set",
+      enName: "Pizza & Topokki Combo",
     },
     {
       idx: "set4",
       imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_item4x2.webp",
       name: "1.5인 피치 세트",
-      enName: "Pizza & Chicken Set",
+      enName: "Pizza & Chicken Combo",
     },
     {
       idx: "set5",
       imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_item5x2.webp",
       name: "2인 피자 세트",
-      enName: "Couple Set",
+      enName: "Double Pizza & Side Combo",
     },
     {
       idx: "set6",
       imgUrl: "https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/set/img_item6x2.webp",
       name: "2.5인 피자 세트",
-      enName: "Friends Set",
+      enName: "Double Pizza & Pasta Combo",
     },
   ],
   [
@@ -638,7 +638,7 @@ export const menuDetail: IMenuDetail = {
     id: 1,
     category: "set",
     name: "1인 피자 세트",
-    enName: "Pizza & Side Set",
+    enName: "Pizza & Side Combo",
     txt: `피자+사이드+음료`,
     ingredients: [],
   },
@@ -646,7 +646,7 @@ export const menuDetail: IMenuDetail = {
     id: 2,
     category: "set",
     name: "1.5인 피파 세트",
-    enName: "Pizza & Pasta Set",
+    enName: "Pizza & Pasta Combo",
     txt: `피자+파스타+음료`,
     ingredients: [],
   },
@@ -654,7 +654,7 @@ export const menuDetail: IMenuDetail = {
     id: 3,
     category: "set",
     name: "1.5인 피떡 세트",
-    enName: "Pizza & Topokki Set",
+    enName: "Pizza & Topokki Combo",
     txt: `피자+떡볶이+음료
 
     매콤 떡볶이
@@ -665,7 +665,7 @@ export const menuDetail: IMenuDetail = {
     id: 4,
     category: "set",
     name: "1.5인 피치 세트",
-    enName: "Pizza & Chicken Set",
+    enName: "Pizza & Chicken Combo",
     txt: `피자+순살치킨+음료
 
     순살치킨앤프라이
@@ -676,7 +676,7 @@ export const menuDetail: IMenuDetail = {
     id: 5,
     category: "set",
     name: "2인 피자 세트",
-    enName: "Couple Set",
+    enName: "Double Pizza & Side Combo",
     txt: `피자2+사이드+음료2`,
     ingredients: [],
   },
@@ -684,7 +684,7 @@ export const menuDetail: IMenuDetail = {
     id: 6,
     category: "set",
     name: "2.5인 피자 세트",
-    enName: "Friends Set",
+    enName: "Double Pizza & Pasta Combo",
     txt: `피자2+떡볶이+사이드+음료2
     또는 피자2+파스타+사이드+음료2
     

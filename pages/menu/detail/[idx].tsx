@@ -130,7 +130,7 @@ function DetailView({ seo }: any) {
             <Info>
               <div {...handlers} className={`thumb ${currentMenu?.badge === "best" ? "badge best" : currentMenu?.badge === "new" ? "badge new" : ""}`}>
                 <img
-                  src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/${currentMenu?.category}/${idx}x2.webp?v=5`}
+                  src={`https://dev-gopizza-homepage.s3.ap-northeast-2.amazonaws.com/ui/images/menu/detail/${currentMenu?.category}/${idx}x2.webp?v=1`}
                   alt={currentMenu?.name}
                 />
               </div>
