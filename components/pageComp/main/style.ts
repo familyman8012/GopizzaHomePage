@@ -12,6 +12,18 @@ export const MainVisualWrap = styled.section`
     bottom: 5.5rem;
   }
 
+  @media (min-width: 768px) {
+    .img_box {
+      display: block;
+      position: relative;
+      width: 100vw;
+      height: 64rem;
+    }
+    .mobile_img {
+      display: none;
+    }
+  }
+
   img {
     width: 100%;
     height: 64rem;
@@ -21,6 +33,12 @@ export const MainVisualWrap = styled.section`
 
   ${mq[0]} {
     height: auto;
+    .pc_img {
+      display: none;
+    }
+    .mobile_img {
+      display: block;
+    }
     img {
       height: auto;
     }
