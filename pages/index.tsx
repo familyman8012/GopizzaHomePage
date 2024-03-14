@@ -30,7 +30,7 @@ function Index() {
                 <Link href="/main">
                   <span className="txt">홈페이지 바로가기</span>
                 </Link>
-                <Link href="/start">
+                <Link href="https://startup.gopizza.kr">
                   <span className="txt">가맹안내 바로가기</span>
                 </Link>
               </div>
